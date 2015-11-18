@@ -1,0 +1,770 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/uniDog/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+
+
+
+<link href="/uniDog/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uniDog/uniDog/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="給你一組標題字串，並告訴你那些是相對不重要的字，請你寫一個程式找出標題字串中所有關鍵字(Key Word In Context)，並依照關鍵字的字典順序依序列出。
+關鍵字是除了所有不重要的字以外的字，而我們會給你那些不重要的字。
+例如，不重要的字若為：``the, of, and, as, a’’，且有四組標題列：
+Descent of Man
+The Ascent of Man
+The Old">
+<meta property="og:type" content="article">
+<meta property="og:title" content="123 - Searching Quickly">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p123/index.html">
+<meta property="og:site_name" content="uniDog 的 ACM 園地">
+<meta property="og:description" content="給你一組標題字串，並告訴你那些是相對不重要的字，請你寫一個程式找出標題字串中所有關鍵字(Key Word In Context)，並依照關鍵字的字典順序依序列出。
+關鍵字是除了所有不重要的字以外的字，而我們會給你那些不重要的字。
+例如，不重要的字若為：``the, of, and, as, a’’，且有四組標題列：
+Descent of Man
+The Ascent of Man
+The Old">
+<meta property="og:updated_time" content="2015-11-18T12:56:23.468Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="123 - Searching Quickly">
+<meta name="twitter:description" content="給你一組標題字串，並告訴你那些是相對不重要的字，請你寫一個程式找出標題字串中所有關鍵字(Key Word In Context)，並依照關鍵字的字典順序依序列出。
+關鍵字是除了所有不重要的字以外的字，而我們會給你那些不重要的字。
+例如，不重要的字若為：``the, of, and, as, a’’，且有四組標題列：
+Descent of Man
+The Ascent of Man
+The Old">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> 123 - Searching Quickly | uniDog 的 ACM 園地 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/uniDog/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">uniDog 的 ACM 園地</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/uniDog" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/uniDog/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/uniDog/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/uniDog/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                123 - Searching Quickly
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2011-05-21T00:00:00+08:00" content="2011-05-21">
+              2011-05-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>給你一組標題字串，並告訴你那些是相對不重要的字，請你寫一個程式找出標題字串中所有關鍵字(Key Word In Context)，並依照關鍵字的字典順序依序列出。</p>
+<p>關鍵字是除了所有不重要的字以外的字，而我們會給你那些不重要的字。</p>
+<p>例如，不重要的字若為：``the, of, and, as, a’’，且有四組標題列：</p>
+<pre><code>Descent <span class="keyword">of</span> <span class="keyword">Man</span>
+The Ascent <span class="keyword">of</span> <span class="keyword">Man</span>
+The Old <span class="keyword">Man</span> and The Sea
+A Portrait <span class="keyword">of</span> The Artist As a Young <span class="keyword">Man</span>
+</code></pre><p>而我們需要你依字典順序找出所有關鍵字後，把整個標題列出，並把關鍵字改為大寫：</p>
+<pre><code>                      <span class="operator">a</span> portrait <span class="operator">of</span> <span class="operator">the</span> ARTIST <span class="keyword">as</span> <span class="operator">a</span> young man
+                              <span class="operator">the</span> ASCENT <span class="operator">of</span> man
+                                  DESCENT <span class="operator">of</span> man
+                       descent <span class="operator">of</span> MAN
+                    <span class="operator">the</span> ascent <span class="operator">of</span> MAN
+                          <span class="operator">the</span> old MAN <span class="operator">and</span> <span class="operator">the</span> sea
+<span class="operator">a</span> portrait <span class="operator">of</span> <span class="operator">the</span> artist <span class="keyword">as</span> <span class="operator">a</span> young MAN
+                              <span class="operator">the</span> OLD man <span class="operator">and</span> <span class="operator">the</span> sea
+                                <span class="operator">a</span> PORTRAIT <span class="operator">of</span> <span class="operator">the</span> artist <span class="keyword">as</span> <span class="operator">a</span> young man
+              <span class="operator">the</span> old man <span class="operator">and</span> <span class="operator">the</span> SEA
+    <span class="operator">a</span> portrait <span class="operator">of</span> <span class="operator">the</span> artist <span class="keyword">as</span> <span class="operator">a</span> YOUNG man
+</code></pre><a id="more"></a>
+<h2 id="Input">Input</h2><p>輸入的每一列都是一筆資料，上半部會給你所有「不重要的字」，下半部會給你所有標題列，中間以雙冒號(::)隔開，「不重要的字」會以英文小寫的型式出現，每一列都表示一個字，最多不會超過10個字元。而標題列也是一列表示一個標題，但是會有大小寫混合，標題中的字會以空白字元隔開，裡面的字最多15個字元。</p>
+<p>「不重要的字」最多50個，標題列最多200個，輸入資料的總字元數則不超過10,000個，除了英文大小寫(‘a’-‘z’, ‘A’-‘Z’)及空白字元外，不會出現其他字元。</p>
+<h2 id="Output">Output</h2><p>我們的目的是找出所有標題列中所有關鍵字(即扣除那些不重要的字)，但並非只把關鍵字列出即可，請列出整列標題。並以關鍵字的字典順序依序列出，如果標題內有多個相同的關鍵字，則亦必需重複列出此標題。</p>
+<p>所列出的標題中的關鍵字必須改為全大寫，而其他字則必須全小寫。不同標題若有相同的關鍵字，請依標題輸入的順序列出，同一標題內重複出現的關鍵字之輸出順序，請以由左到右的原則來做輸出。</p>
+<p>判繼哪些是「不重要的字」時，請無視大小寫的差異。</p>
+<p>輸出整列標題時不需要有多餘的空白字元，請勿依關鍵字向左或向右對齊，格式如下所示。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="keyword">is</span>
+the
+<span class="keyword">of</span>
+and
+as
+a
+but
+::
+Descent <span class="keyword">of</span> <span class="keyword">Man</span>
+The Ascent <span class="keyword">of</span> <span class="keyword">Man</span>
+The Old <span class="keyword">Man</span> and The Sea
+A Portrait <span class="keyword">of</span> The Artist As a Young <span class="keyword">Man</span>
+A <span class="keyword">Man</span> <span class="keyword">is</span> a <span class="keyword">Man</span> but Bubblesort <span class="keyword">IS</span> A DOG
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="operator">a</span> portrait <span class="operator">of</span> <span class="operator">the</span> ARTIST <span class="keyword">as</span> <span class="operator">a</span> young man
+<span class="operator">the</span> ASCENT <span class="operator">of</span> man
+<span class="operator">a</span> man is <span class="operator">a</span> man but BUBBLESORT is <span class="operator">a</span> dog
+DESCENT <span class="operator">of</span> man
+<span class="operator">a</span> man is <span class="operator">a</span> man but bubblesort is <span class="operator">a</span> DOG
+descent <span class="operator">of</span> MAN
+<span class="operator">the</span> ascent <span class="operator">of</span> MAN
+<span class="operator">the</span> old MAN <span class="operator">and</span> <span class="operator">the</span> sea
+<span class="operator">a</span> portrait <span class="operator">of</span> <span class="operator">the</span> artist <span class="keyword">as</span> <span class="operator">a</span> young MAN
+<span class="operator">a</span> MAN is <span class="operator">a</span> man but bubblesort is <span class="operator">a</span> dog
+<span class="operator">a</span> man is <span class="operator">a</span> MAN but bubblesort is <span class="operator">a</span> dog
+<span class="operator">the</span> OLD man <span class="operator">and</span> <span class="operator">the</span> sea
+<span class="operator">a</span> PORTRAIT <span class="operator">of</span> <span class="operator">the</span> artist <span class="keyword">as</span> <span class="operator">a</span> young man
+<span class="operator">the</span> old man <span class="operator">and</span> <span class="operator">the</span> SEA
+<span class="operator">a</span> portrait <span class="operator">of</span> <span class="operator">the</span> artist <span class="keyword">as</span> <span class="operator">a</span> YOUNG man
+</code></pre></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/uniDog/problem/231/" rel="next" title="231 - Testing the CATCHER">
+                <i class="fa fa-chevron-left"></i> 231 - Testing the CATCHER
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/uniDog/problem/p140/" rel="prev" title="140 - Bandwidth">
+                140 - Bandwidth <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/uniDog/images/default_avatar.jpg" alt="uniDog 團隊 @ pcshic" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">uniDog 團隊 @ pcshic</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/uniDog/archives">
+              <span class="site-state-item-count">194</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/uniDog/categories">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">分類</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/uniDog/tags">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/pcshic" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-number">1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-number">2.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Input"><span class="nav-number">3.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Output"><span class="nav-number">4.</span> <span class="nav-text">Sample Output</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">uniDog 團隊 @ pcshic</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/uniDog/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+    
+
+  
+
+
+  
+
+  
+  <script type="text/javascript" src="/uniDog/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/uniDog/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/uniDog/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/uniDog/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/uniDog/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/uniDog/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/uniDog/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/uniDog/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/uniDog/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/uniDog/js/bootstrap.js"></script>
+
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body>
+</html>

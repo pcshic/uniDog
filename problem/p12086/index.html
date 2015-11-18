@@ -1,0 +1,756 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/uniDog/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+
+
+
+<link href="/uniDog/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uniDog/uniDog/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="電位計 (potentiometer，簡稱 potmeter) 是一種有可變電阻的電子設備，它有兩個接點 (terminal) 和一些控制結構 (通常是刻度盤、齒輪或者滑塊) 使得我們可以調整兩接點間的電阻值從 0 (無電阻) 到一個最大值。電阻的單位是歐姆 (Ohm)，當有兩個以上的電阻串聯 (也就是一個接著一個連接) 在一起，總電阻就會是個別電阻的總和。
+在這個問題中，我們考慮 $N$&amp;lt;!--">
+<meta property="og:type" content="article">
+<meta property="og:title" content="12086 - Potentiometers">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p12086/index.html">
+<meta property="og:site_name" content="uniDog 的 ACM 園地">
+<meta property="og:description" content="電位計 (potentiometer，簡稱 potmeter) 是一種有可變電阻的電子設備，它有兩個接點 (terminal) 和一些控制結構 (通常是刻度盤、齒輪或者滑塊) 使得我們可以調整兩接點間的電阻值從 0 (無電阻) 到一個最大值。電阻的單位是歐姆 (Ohm)，當有兩個以上的電阻串聯 (也就是一個接著一個連接) 在一起，總電阻就會是個別電阻的總和。
+在這個問題中，我們考慮 $N$&amp;lt;!--">
+<meta property="og:updated_time" content="2015-11-18T12:56:23.459Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="12086 - Potentiometers">
+<meta name="twitter:description" content="電位計 (potentiometer，簡稱 potmeter) 是一種有可變電阻的電子設備，它有兩個接點 (terminal) 和一些控制結構 (通常是刻度盤、齒輪或者滑塊) 使得我們可以調整兩接點間的電阻值從 0 (無電阻) 到一個最大值。電阻的單位是歐姆 (Ohm)，當有兩個以上的電阻串聯 (也就是一個接著一個連接) 在一起，總電阻就會是個別電阻的總和。
+在這個問題中，我們考慮 $N$&amp;lt;!--">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> 12086 - Potentiometers | uniDog 的 ACM 園地 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/uniDog/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">uniDog 的 ACM 園地</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/uniDog" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/uniDog/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/uniDog/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/uniDog/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                12086 - Potentiometers
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2014-10-23T01:45:55+08:00" content="2014-10-23">
+              2014-10-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-120/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 120</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>電位計 (potentiometer，簡稱 potmeter) 是一種有可變電阻的電子設備，它有兩個接點 (terminal) 和一些控制結構 (通常是刻度盤、齒輪或者滑塊) 使得我們可以調整兩接點間的電阻值從 0 (無電阻) 到一個最大值。電阻的單位是歐姆 (Ohm)，當有兩個以上的電阻串聯 (也就是一個接著一個連接) 在一起，總電阻就會是個別電阻的總和。</p>
+<p>在這個問題中，我們考慮 <span>$N$</span><!-- Has MathJax --> 個串聯的電位計，從左到右分別編號為 1 號到 <span>$N$</span><!-- Has MathJax --> 號，第 <span>$x$</span><!-- Has MathJax --> 號的電位計左側接點和第 <span>$x-1$</span><!-- Has MathJax --> 號的右側相連，且第 <span>$x$</span><!-- Has MathJax --> 號的電位計右側接點和第 <span>$x+1$</span><!-- Has MathJax --> 號的左側相連，而 1 號電位計的左側接點和 <span>$N$</span><!-- Has MathJax --> 號的右側接點並沒有接上其他東西。</p>
+<p>一開始所有電位計會有介於 0 到 1000 歐姆的電阻，我們可以做兩件事：</p>
+<ul>
+<li>設定其中一個電位計為另一個電阻值</li>
+<li>測量任意兩個接點之間的電阻</li>
+</ul>
+<a id="more"></a>
+<h2 id="Input">Input</h2><p>輸入有不超過 3 組測資。每組測資一開始有一個 <span>$N$</span><!-- Has MathJax -->，代表電位計的數量，<span>$N$</span><!-- Has MathJax --> 可以大到 200000。接著有 <span>$N$</span><!-- Has MathJax --> 行，每行有一個介於 0 到 1000 的數字，代表 1 號到 <span>$N$</span><!-- Has MathJax --> 號電位計的初始電阻值。接著有數次操作，每行代表一個操作，操作數可達到 200000 次，這裡有 3 種操作：</p>
+<ul>
+<li>「S <span>$x$</span><!-- Has MathJax --> <span>$r$</span><!-- Has MathJax -->」- 設定第 <span>$x$</span><!-- Has MathJax --> 號電位計的電阻值為 <span>$r$</span><!-- Has MathJax --> 歐姆，<span>$x$</span><!-- Has MathJax --> 會是一個有效的電位計編號而 <span>$r$</span><!-- Has MathJax --> 介於 0 到 1000</li>
+<li>「M <span>$x$</span><!-- Has MathJax --> <span>$y$</span><!-- Has MathJax -->」- 測量 <span>$x$</span><!-- Has MathJax --> 號左側接點到 <span>$y$</span><!-- Has MathJax --> 號右側接點的電阻，兩個編號都會是有效的且 <span>$x$</span><!-- Has MathJax --> 小於等於 <span>$y$</span><!-- Has MathJax --></li>
+<li>「END」- 該筆測試資料的結束，只會在一系列操作的最尾端出現一次</li>
+</ul>
+<p>如果一筆 <span>$N=0$</span><!-- Has MathJax --> 的測資出現代表輸入結束，並且此筆測資不需處理。</p>
+<h2 id="Output">Output</h2><p>對於輸入的每筆測資，請先生出一行「<code>Case n:</code>」，而 <span>$n$</span><!-- Has MathJax --> 是從 1 開始的測資編號。</p>
+<p>而對於輸入中每次的測量操作，輸出包含一個數字的一行，此數字為測量到電阻值。這些操作會作用在依照輸入順序的電位計中。</p>
+<p>請在每組測資間輸出一個空白行。</p>
+<p><strong>注意:</strong> 輸入測資非常大 (~ 8 MB) 所以要用快一點的 IO 方法。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">3</span>
+<span class="number">100</span>
+<span class="number">100</span>
+<span class="number">100</span>
+M <span class="number">1</span> <span class="number">1</span>
+M <span class="number">1</span> <span class="number">3</span>
+S <span class="number">2</span> <span class="number">200</span>
+M <span class="number">1</span> <span class="number">2</span>
+S <span class="number">3</span> <span class="number">0</span>
+M <span class="number">2</span> <span class="number">3</span>
+END
+<span class="number">10</span>
+<span class="number">1</span>
+<span class="number">2</span>
+<span class="number">3</span>
+<span class="number">4</span>
+<span class="number">5</span>
+<span class="number">6</span>
+<span class="number">7</span>
+<span class="number">8</span>
+<span class="number">9</span>
+<span class="number">10</span>
+M <span class="number">1</span> <span class="number">10</span>
+END
+<span class="number">0</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Case <span class="number">1</span>:
+<span class="number">100</span>
+<span class="number">300</span>
+<span class="number">300</span>
+<span class="number">200</span>
+
+Case <span class="number">2</span>:
+<span class="number">55</span>
+</code></pre></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/uniDog/problem/p162/" rel="next" title="162 - Beggar My Neighbour">
+                <i class="fa fa-chevron-left"></i> 162 - Beggar My Neighbour
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/uniDog/problem/p11525/" rel="prev" title="11525 - Permutation">
+                11525 - Permutation <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/uniDog/images/default_avatar.jpg" alt="uniDog 團隊 @ pcshic" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">uniDog 團隊 @ pcshic</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/uniDog/archives">
+              <span class="site-state-item-count">194</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/uniDog/categories">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">分類</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/uniDog/tags">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/pcshic" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-number">1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-number">2.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Input"><span class="nav-number">3.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Output"><span class="nav-number">4.</span> <span class="nav-text">Sample Output</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">uniDog 團隊 @ pcshic</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/uniDog/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+    
+
+  
+
+
+  
+
+  
+  <script type="text/javascript" src="/uniDog/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/uniDog/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/uniDog/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/uniDog/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/uniDog/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/uniDog/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/uniDog/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/uniDog/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/uniDog/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/uniDog/js/bootstrap.js"></script>
+
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body>
+</html>

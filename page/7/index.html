@@ -1,0 +1,1444 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/uniDog/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+
+
+
+<link href="/uniDog/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uniDog/uniDog/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="uniDog 的 ACM 園地">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/page/7/index.html">
+<meta property="og:site_name" content="uniDog 的 ACM 園地">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="uniDog 的 ACM 園地">
+<meta name="twitter:description">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> uniDog 的 ACM 園地 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column 
+   page-home 
+">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/uniDog/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">uniDog 的 ACM 園地</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/uniDog" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/uniDog/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/uniDog/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/uniDog/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+  <section id="posts" class="posts-expand">
+
+    
+
+    
+    
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p119/" itemprop="url">
+                  119 - Greedy Gift Givers
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-08-25T00:00:00+08:00" content="2010-08-25">
+              2010-08-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>有一群會互相贈送禮物的朋友，每次收到與送出禮物的價值皆不同，本題要來計算每個人損益情形。</p>
+<p>本題中每人都設定一筆買禮物的預算，預算會平均分配買等值的禮物送給他的朋友們。</p>
+<p>然而，任何小團體中總有一些人比較慷慨(或是與其他的的關係比較好)，也總有一些人比較有錢。</p>
+<p>給你一群朋友的資料，包含每人買禮物的預算，及禮物會送給那些朋友。你必須寫一個程式來計算每個人的損益情形。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p119/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p117/" itemprop="url">
+                  117 - The Postal Worker Rings Once
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-08-24T00:00:00+08:00" content="2010-08-24">
+              2010-08-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Background">Background</h2><p>圖論是計算機科學的一個重要分支，至少可追朔到十八世紀尤拉(Euler)所解決著名的七橋問題(Seven Bridges of Königsberg)，許多最佳化問題都涉及到如何有效處理圖形問題。</p>
+<p>本問題要求計算郵差徒步送信的最短路徑。</p>
+<h2 id="The_Problem">The Problem</h2><p>給定數條街道的資訊(以十字路口連接不同道路)，你的程式必須計算走過全部的街道所需的最短距離，路徑的起點與終點必須一致。</p>
+<p>你可以想像在現實世界中有一位郵差，他先把車開到十字路口之後再走路到各個巷弄把附近需要遞送的郵件一一送完，之後再走到車子所在的路口開往下個地點送信。</p>
+<p>行經一條街道的距離直接等於街道的長度(不管該道路有沒有信要送，都必須走完整條道路的距離)。</p>
+<p>本問題中，在路口交會的所有道路數目被稱做該路口的”層級”(degree)，最多只會有兩個路口的”層級”為奇數，其他所有路口皆為偶數，也就是只會有偶數條道路在此路口交會。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p117/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p134/" itemprop="url">
+                  134 - Loglan-A Logical Language
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-08-23T05:20:00+08:00" content="2010-08-23">
+              2010-08-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>Loglan 是一種綜合型可發音的語言，設計它是用來驗證語言學上的一些原則性問題，比如薩皮爾—沃爾夫假說。它的句法精確明了，在文化上趨於中立，它的哲學是能省則省。該語言的語法集已經被過份的簡化——只有 200 條語法規則。</p>
+<p>Loglan 的語句由一系列的單詞和名稱組成，中間由空格隔開，並由一個點號（.）表示結束。</p>
+<p>Loglan 的單詞均以元音結束；名稱來自於該語言之外，由輔音結束。 Loglan 的單詞分為兩類——小單詞和謂詞。小單詞指定了句子的結構；謂詞的形式為“CCVCV”或“CVCCV”，其中C代表一個輔音，V代表一個元音。 （見下面的例子）</p>
+<p>我們考慮使用 Loglan 語言的一個子集，具有以下語法定義：</p>
+<pre><code>A → a |<span class="string"> e </span>|<span class="string"> i </span>|<span class="string"> o </span>|<span class="string"> u
+MOD → ga </span>|<span class="string"> ge </span>|<span class="string"> gi </span>|<span class="string"> go </span>|<span class="string"> gu
+BA → ba </span>|<span class="string"> be </span>|<span class="string"> bi </span>|<span class="string"> bo </span>|<span class="string"> bu
+DA → da </span>|<span class="string"> de </span>|<span class="string"> di </span>|<span class="string"> do </span>|<span class="string"> du
+LA → la </span>|<span class="string"> le </span>|<span class="string"> li </span>|<span class="string"> lo </span>|<span class="string"> lu
+NAM → {all names}
+PREDA → {all predicates}
+&lt;sentence&gt; → &lt;statement&gt; </span>|<span class="string"> &lt;predclaim&gt;
+&lt;predclaim&gt; → &lt;predname&gt; BA &lt;preds&gt; </span>|<span class="string"> DA &lt;preds&gt;
+&lt;preds&gt; → &lt;predstring&gt; </span>|<span class="string"> &lt;preds&gt; A &lt;predstring&gt;
+&lt;predname&gt; → LA &lt;predstring&gt; </span>|<span class="string"> NAM
+&lt;predstring&gt; → PREDA </span>|<span class="string"> &lt;predstring&gt; PREDA
+&lt;statement&gt; → &lt;predname&gt; &lt;verbpred&gt; &lt;predname&gt; </span>|<span class="string"> &lt;predname&gt; &lt;verbpred&gt;
+&lt;verbpred&gt; → MOD &lt;predstring&gt;</span>
+</code></pre><p>(譯註：上面文法中NAM為所有名稱的符號，PREDA為所有謂詞的符號）</p>
+<p>寫一個程序，讀入一組字符串並確定它們是不是正確的Loglan語句。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p134/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p150/" itemprop="url">
+                  150 - Double Time
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-08-21T22:51:00+08:00" content="2010-08-21">
+              2010-08-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>在公元前45年，凱撒大帝頒布了標準曆法——每年有365天，每4年閏一天，閏在2月的29日。然而此曆法並不能精確的表示一個太陽年，季節開始地越來越早引起了人們的注意。到1582年，教皇格利戈里八世規定了新的曆法，從那以後，所有能被100整除的年份中只有能被400整除的才是閏年。另外，當年的日曆要按照新曆法進行調整才能與季節吻合，1582年10月4日（週四）的後一天定為1582年10月15日（週五）。新曆法和調整方案被羅馬天​​主教國家迅速採用，但英國和美國（還包括其它一些國家）直到1752年才開始採用，是年9月2日（週三）的後一天定為9月14日（週四）。 （俄國直到1918才作出調整，而希臘則維持舊曆直到1923年）因此有很長一段時期的歷史是以兩種不同的紀年方式記載的。</p>
+<p>寫一個程序，讀入日期並確定是哪一種曆法，然後將該日期轉換到另一種曆法。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p150/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p135/" itemprop="url">
+                  135 - No Rectangles
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-08-20T23:40:00+08:00" content="2010-08-20">
+              2010-08-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>想像一個n行n列的網格，我們要在每行每列都標註k個交點，使得這些交點中的任意4個所構成的矩形（如果可以構成矩形），都不存在與網格線平行的邊。比如 k = 2 和 n = 3 的情況，可能的解如下：</p>
+<img src="/uniDog/images/1/p135.png">
+<p>易知，對於任意的 k，n 的最小值為：$k^{2}-k+1$。更進一步來講，n 也不會比這個值更大。</p>
+<p>寫一個程序，計算所有 k ≤ 32 的解。 k-1 可能是0，1 或任何素數。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p135/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p132/" itemprop="url">
+                  132 - Bumpy Objects
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-08-20T19:26:00+08:00" content="2010-08-20">
+              2010-08-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>觀察上圖中的三個物體。它們均由多邊形表示，並給定其重心和各頂點的坐標。在上圖中，重心由黑色方塊表示。頂點的編號按逆時針方向依次給出。</p>
+<p>將一個物體的輪廓多邊形上某兩個頂點連成一條線段，且該線段未穿越多邊形的內部，然後通過旋轉多邊形使該線段達到水平，若重心在這條線段之上且位於線段兩端點之間，就認為該物體可以擺放平穩。一般情況下，物體有多個可以放穩的位置，每個穩定位置均由對應的線段（稱作“基線”）表示。一條基線會經過至少兩個多邊形上的點（即端點），基線就由這些點中最大的編號表示。</p>
+<p>寫一個程序計算出編號最小的基線。對於上圖中的物體，“object 1”要求的基線為 6，“object 2”為6，“square”為 2。你可以假設物體都是規則的，即不存在自相交的輪廓多邊形，但有可能是凹多邊形。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p132/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p137/" itemprop="url">
+                  137 - Polygons
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-08-20T14:12:00+08:00" content="2010-08-20">
+              2010-08-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>給定兩個可能相互重疊的凸多邊形。如果存在重疊，其重疊的角度和方向各異。你要寫一個程序讀入兩個凸多邊形各角點的坐標，併計算出二者“異或”得到的區域的面積，也就是在二者全部區域中僅存在其中一個多邊形的區域。要求的面積如下圖所示：</p>
+<img src="/uniDog/images/1/p137.png">
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p137/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p10970/" itemprop="url">
+                  10970 - Big Chocolate
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-08-20T00:00:00+08:00" content="2010-08-20">
+              2010-08-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-109/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 109</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>Mohammad 到瑞士旅行，他決定買巧克力回來送給他的親友當禮物，不過端士巧克力很貴，他只買得起一塊巧克力 (Mohammad 其實一點也不小器啦)，蠻大一塊就對了 (如下圖)。就如同他相信人生而平等的道理一樣，他決定把巧克力切成相等大小送給每一個親友。</p>
+<p>巧克力的大小為 <span>$M\times{N}$</span><!-- Has MathJax --> 的四方形，可以切成大小相同的方塊共 <span>$M\times{N}$</span><!-- Has MathJax --> 塊，你可以假設 Mohammad 剛好有 <span>$M\times{N}$</span><!-- Has MathJax --> 個親友，每人都可分得一塊。</p>
+<p>可以直的切、或橫的切那塊大巧克力 (沿著中間凹下的切口)。他一塊塊地切下直到每一塊都被切開為止。不過，懶惰的他希望能用最少刀來完成這件事。</p>
+<p>你的任務是告訴他，把每一塊都切開最少需要切多少刀。</p>
+<img src="/uniDog/images/109/p10970d.jpg">
+<h2 id="Input">Input</h2><p>輸入會有多組測試資料，每組一列，每一列會有兩個整數 <span>$1\leq{M}\leq{300}, 1\leq{N}\leq{300}$</span><!-- Has MathJax -->，表示巧克力的大小，檔案最後以 EOF 結束。</p>
+<h2 id="Output">Output</h2><p>對每一組測試資料，你的程式要輸出一個整數，表示最少需要多少刀來把巧克力全部一塊塊地切開。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span> <span class="number">2</span>
+<span class="number">1</span> <span class="number">1</span>
+<span class="number">1</span> <span class="number">5</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">3</span>
+<span class="number">0</span>
+<span class="number">4</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p149/" itemprop="url">
+                  149 - Forests
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-08-18T23:30:00+08:00" content="2010-08-18">
+              2010-08-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>有句俗話 “不能見樹不見林”，這不僅僅是一句陳詞濫調，而且是錯誤的。真正的問題是你不能見林不見樹。如果你站在樹林（在新西蘭詞彙中是一片灌木的意思）的中間，樹木就會相互遮擋，你能分辨清楚的樹木很少。這種情況在樹木整齊的按行列排布（比如人工松林）時最為突出。本問題是要你來計算當站在人工松林中任意一個點時，你能看清的樹有多少。 </p>
+<img src="/uniDog/images/1/p149.png">
+<p>只要當一棵樹的樹幹完全沒有被附近的樹木遮擋時你才能看得清楚——也就是說樹幹的兩側都可以看到，而且兩側離那些更靠近你的樹木之間還有一個可以分辨的間隙。同樣，你不可能看到一棵“太細”的樹。 “不太細”和“可分辨間隙”的嚴格定義是相對你眼睛的視角要大於0.01度（你可以認為是用一隻眼睛來觀查的）。上圖中，按照視角的位置，那兩棵白色的樹至少將所有灰色的樹都擋住了。</p>
+<p>給定樹木的直徑，以及眼睛的坐標位置，你寫一個程序計算出在這些條件下能看清多少樹。由於網格無限大，坐標原點就無所謂了，所給的坐標值都介於0到1之間。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p149/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/299/" itemprop="url">
+                  299 - Train Swapping
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-08-16T00:00:00+08:00" content="2010-08-16">
+              2010-08-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-002/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 002</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>到老舊的火車站你也許會遇到少數僅存的”車箱置換員”，車箱置換員是車站的員工，他的工作是重新排列火車車箱。</p>
+<p>當每節車箱 (尤其是裝貨的車箱) 都經過適當的排列之後，火車司機在每個車站卸貨時只需從最後車箱一節一節依序放下即可。</p>
+<p>“車箱置換員”的職稱起源於一座位於河畔的火車站，鐵路橫跨在河的兩岸，當船隻要通行時，橋上的鐵路不像其他地方一樣會垂直升起，而是以河中央的橋墩為中心旋轉 90 度，此時船隻可從橋的左右兩旁經過。</p>
+<p>另外，首位車箱置換員發現一件有趣的事，當橋在作旋轉時最多可乘載兩節車箱的重量，所以當橋作 180 度的旋轉之後，其上的車箱就被掉換位置了，因此他就能重新排列車箱 (副作用就是車箱前後位置會相反，不過因為車箱被設計成可以前後移動，所以無所謂)。</p>
+<p>現在幾乎所有車箱置換員都死光了，鐵路公司必須做車箱掉換的自動化，需要寫一個程式來計算共需置換相鄰的車箱幾次才能使所有車箱依序排好，寫程式的工作就交給你了。</p>
+<h2 id="Input_Specification">Input Specification</h2><p>第一列有一個整數表示接下來有 N 組測試資料，每組測試資料兩列，第一列是一個整數 L (<span>$1\leq{L}\leq{50}$</span><!-- Has MathJax -->)，為車箱的長度，第二列為整數 1 ~ L 的一種排列組合，表示車箱的起始位置，最後車箱要依照編號 1 到 L 的順序依序排好。</p>
+<h2 id="Output_Specification">Output Specification</h2><p>每一列請輸出 <code>Optimal train swapping takes S swaps.</code>，S 為一整數，表示最少需要做幾次車箱置換的步驟。</p>
+<h2 id="Example_Input">Example Input</h2><pre><code><span class="number">3</span>
+<span class="number">3</span>
+<span class="number">1</span> <span class="number">3</span> <span class="number">2</span>
+<span class="number">4</span>
+<span class="number">4</span> <span class="number">3</span> <span class="number">2</span> <span class="number">1</span>
+<span class="number">2</span>
+<span class="number">2</span> <span class="number">1</span>
+</code></pre><h2 id="Example_Output">Example Output</h2><pre><code>Optimal train swapping takes <span class="number">1</span> swaps.
+Optimal train swapping takes <span class="number">6</span> swaps.
+Optimal train swapping takes <span class="number">1</span> swaps.
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/uniDog/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/uniDog/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/uniDog/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/uniDog/page/20/">20</a><a class="extend next" rel="next" href="/uniDog/page/8/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+        </div>
+
+        
+
+
+        
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/uniDog/images/default_avatar.jpg" alt="uniDog 團隊 @ pcshic" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">uniDog 團隊 @ pcshic</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/uniDog/archives">
+              <span class="site-state-item-count">194</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/uniDog/categories">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">分類</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/uniDog/tags">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/pcshic" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">uniDog 團隊 @ pcshic</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/uniDog/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+    
+
+  
+
+
+  
+
+  
+  <script type="text/javascript" src="/uniDog/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/uniDog/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/uniDog/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/uniDog/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/uniDog/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/uniDog/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/uniDog/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/uniDog/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+
+  <script type="text/javascript" src="/uniDog/js/bootstrap.js"></script>
+
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body>
+</html>

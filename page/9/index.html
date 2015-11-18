@@ -1,0 +1,1453 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/uniDog/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+
+
+
+<link href="/uniDog/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uniDog/uniDog/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="uniDog 的 ACM 園地">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/page/9/index.html">
+<meta property="og:site_name" content="uniDog 的 ACM 園地">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="uniDog 的 ACM 園地">
+<meta name="twitter:description">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> uniDog 的 ACM 園地 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column 
+   page-home 
+">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/uniDog/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">uniDog 的 ACM 園地</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/uniDog" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/uniDog/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/uniDog/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/uniDog/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+  <section id="posts" class="posts-expand">
+
+    
+
+    
+    
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p11787/" itemprop="url">
+                  11787 - Numeral Hieroglyphs
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-05-29T18:44:06+08:00" content="2010-05-29">
+              2010-05-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-117/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 117</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Background">Background</h2><p>西元前 3000 年，埃及人已有了象形文字做為書寫系統，而在數字表示上，埃及人使用 10 進位並以各種象形文字來表示，如圖，他們使用一根長棍代表一、倒轉 U 當作十、螺旋當作百、似紙的植物當作千、手指當做萬、蝌蚪當作十萬以及一個跪著的人當作一百萬。</p>
+<img src="/uniDog/images/117/p11787-1.gif">
+<p>舉例來說，如果要書寫出 276 這個數字，則需要十五個象形文字：兩個「百」、七個「十」和六個「一」的圖形。則 276 的表示法如下：</p>
+<img src="/uniDog/images/117/p11787-2.gif">
+<p>則數字 4622 將會以這樣子表示：</p>
+<img src="/uniDog/images/117/p11787-3.gif">
+<p>就如你所見，埃及人根據符號的大小，依序從左至右或者從右至左書寫。</p>
+<h2 id="The_Problem">The Problem</h2><p>你必須將象形文字所表示的數字轉為阿拉伯數字，而我們可利用下表將象形符號使用英文字母代表：</p>
+<img src="/uniDog/images/117/p11787-4.gif">
+<p>因此，我們可以將 276 表示為 SSUUUUUUUBBBBBB 或是 BBBBBBUUUUUUUSS，但每個符號不能書寫超過九次。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p11787/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p11789/" itemprop="url">
+                  11789 - Texas Hold'em Poker Solitaire!
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-05-27T22:27:05+08:00" content="2010-05-27">
+              2010-05-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-117/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 117</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Background">Background</h2><p>John Anthony Good 常常與他的好友在星期五的晚上通霄打牌，他們玩的是現今最熱門的撲克牌遊戲 Texas Hold’em，在 Texas Hold’em 的遊戲中，每位玩家運用 2 張蓋著的牌來跟 5 張攤開的牌做組合，以組成一副最大的 5 張牌牌組，當然玩家們可以用蓋牌的兩張、其中一張或是都不用來組成。</p>
+<p>一副撲克牌有 52 張牌，由四樣花色 (黑桃、紅心、磚塊和棉花) 以及每樣花色 13 支牌 (由小到大依序為 2、3、4、5、6、7、8、9、T、J、Q、K 和 A) 所組成。玩家可出的牌型只能依照下面其中一種：</p>
+<p><strong> 同花順 (Straight Flush) </strong>：五張牌數字連續並且相同花色。例：6H、7H、8H、9H、TH。注意 A 可以當作最小的牌接在 2 之後，例如：AS、2S、3S、4S、5S。如果出現兩個以上的同花順，則比較牌組中最大的牌，上述兩例中前者大於後者。</p>
+<p><strong> 鐵支 (Four of a Kind) </strong>：其中四支牌為相同數字。例：AS、AD、AH、AC、3S。如有兩者以上則比較四支牌的數字大小，然而為了避免打平的情況發生，則再需比較餘下一張牌的大小。</p>
+<p><strong> 葫蘆 (Full House) </strong>：其中三張牌為相同數字，餘下二張為另一組相同數字。例：7C、7S、7D、KH、KS。如有兩者以上則比較三張相同牌的數字大小，為了避免打平的情況發生，則再需比較餘下一對牌的大小。</p>
+<p><strong> 同花 (Flush) </strong>：五張牌為相同花色。例：5D、AD、KD、7D、QD。如有兩者以上則比較最大的牌，其次再比較第二大的牌，以此類推。</p>
+<p><strong> 順子 (Straight) </strong>：五張連續數字的牌。例：TH、JD、QC、KD、AS。注意 A 也可以當作最小的牌接在 2 之後。</p>
+<p><strong> 三條 (Three of a Kind) </strong>：三張相同數字的牌。例：QS、QH、QC、2D、3C。如有兩者以上則比較三張相同牌之大小，為了避免打平的情況發生，再比較其餘最大的牌，以此類推。</p>
+<p><strong> 兩對 (Two Pair) </strong>：各有兩副兩張相同數字的牌。例：2C、2H、6C、6S、4D。如有兩者以上則比較數字最大的一對牌，如果相同則比較另一對。若兩對數字皆相同，則比較剩下那一支牌。</p>
+<p><strong> 一對 (One Pair) </strong>：有一對牌的數字相同。例：2C、2H、4H、QH、KD。如有兩者以上相同則先比較一對的數字大小，接著比較餘下最大的牌，以此類推。</p>
+<p><strong> 散牌 (High Cards) </strong>：與上述皆不成立的手牌。例：3H、7D、JD、QD、AC。若有兩者以上則先比較最大的牌，再比較第二大，以此類推。</p>
+<p>John Anthony 每次和他的朋友打賭 5 歐元，但他總是賭輸，有時是因為他所認為自己的手牌比實際上來的低所導致，特別是當他拿到順子的時候。</p>
+<h2 id="The_Problem">The Problem</h2><p>為了讓他自己的牌技進步，John Anthony 創造了一個單人玩的牌戲，他先將牌洗均勻，然後拿出其中的 49 張牌攤開排成 7×7 的矩形。以下例來說明：</p>
+<pre><code><span class="number">2</span>C KC <span class="number">3</span>D <span class="number">7</span>S <span class="number">7</span>H <span class="number">5</span>D <span class="number">6</span>D
+<span class="number">2</span>H <span class="number">7</span>D <span class="number">4</span>H <span class="number">4</span>S TS <span class="number">3</span>H <span class="number">8</span>S
+<span class="number">3</span>S <span class="number">5</span>H AD <span class="number">5</span>S <span class="number">6</span>S <span class="number">3</span>C <span class="number">9</span>C
+<span class="number">9</span>S JC QC KD JH KS QS
+<span class="number">6</span>C <span class="number">8</span>H AC <span class="number">2</span>S <span class="number">6</span>H AH KH
+TC AS <span class="number">9</span>H QD <span class="number">7</span>C <span class="number">4</span>C <span class="number">8</span>C
+TH <span class="number">2</span>D JS <span class="number">9</span>D <span class="number">8</span>D <span class="number">5</span>C JD
+</code></pre><p>這時，他檢查每一橫列 (從上到下)、每一直行 (由左至右) 以及兩條對角線 (先檢查從左上至右下，再檢查從左下至右上) ，這 16 組牌組中，John 試著挑出其中 5 張讓這 5 張變成最大的牌組 (在Texas Hold’em中)。現在，他正央求你寫一個程式來確認他所選出的牌是不是最大的。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p11789/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p11790/" itemprop="url">
+                  11790 - Murcia's Skyline
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-05-25T00:09:42+08:00" content="2010-05-25">
+              2010-05-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-117/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 117</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Background">Background</h2><p>莫西亞 (Murcia，西班牙東南部的城市) 的摩天大樓成長得非常快速。從 15 世紀起，巴洛克式的 Glorieta 大教堂的輪廓就映照在這地平線上，但現在，新的摩天大樓開始矗立在莫西亞的田野 (huerta) 中。</p>
+<img src="/uniDog/images/117/11790.jpg">
+<p>有些人認為如果眼睛從左往右依序掃過，你可以觀察到一個越來越高的天際線，但其他人不認為是這樣，他們認為是越來越低的。</p>
+<h2 id="The_Problem">The Problem</h2><p>當我們的眼從左至右掃過莫西亞的天際，我們可以看到 N 個建築物，每個建築物有它自己的寬與高，你必須觀察出這些建築物是遞增還是遞減的排列著。我們定義如果建築群的最長遞增子序列 (longest increasing subsequence, LIS) 不小於最長遞減子序列 (longest decreasing subsequence, LDS) ，我們就稱它為遞增排列；反之，則稱為遞減排列。而子序列 (subsequence) 為原本序列在相同順序下的子集合，建築群的子序列長度為子序列中所有建築的寬之和。</p>
+<p>舉例來說，假設我們有六座建築，而它們的高分別為：10、100、50、30、80、10；寬依序是：50、10、10、15、20、10。這時我們可以得出一條包含 3 棟建築物的遞增序列 (註：高為 10、30、80 的建築物) 而它的長度和為 85，與一列包含 1 座建築的遞減序列 (註：高為 10 的建築物) 而它的長度和為 50 (當然這裡有一列含 4 棟建築的遞減序列，然而它的長度為 45)，所以在這組測試資料中，我們可以說它的天際線是遞增的，範例請參照下圖。</p>
+<img src="/uniDog/images/117/11790-2.png">
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p11790/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p11792/" itemprop="url">
+                  11792 - Krochanska is Here!
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-05-23T23:30:28+08:00" content="2010-05-23">
+              2010-05-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-117/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 117</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Background">Background</h2><p>這是一個在古老的鐵幕時代，有關間諜以及反間諜的問題。</p>
+<p>在自由世界的一個秘密情報局 CONTROL，必須與邪惡的國際組織 KAOS 對抗。為了將帳冊送至 CONTROL 在鐵幕的獨立機構中，特務 82 到特務 85 在東方快車 (Orient Express) 的車廂上，被神秘且邪惡的 KAOS 特工 Cirilo Krochanska 所暗殺。而你，Maxwell Smart，特務 86，必須搭上火車和特務 B-12 接觸，將加密的訊息「tnih sevig cilc thgir」傳給他，並且避免成為 Krochanska 手下第五位犧牲者！</p>
+<p>但是，Krochanska 在哪裡呢？我們知道他總是用火車來旅行，通常在歐洲某些重要的車站上，而且他已經準備好馬上去他想到達的目的地。</p>
+<img src="/uniDog/images/117/11792.jpg">
+<p>（如果你做過一點點情報工作的話，你將會發現 Cirilo Krochanska 其實是 …）</p>
+<h2 id="The_Problem">The Problem</h2><p>歐洲鐵路網有數條路線所構成，每條路線有它的起訖車站，路線中還有數個中繼站均勻分布在路線中。舉例來說，如果我們列舉出車站 1 至車站 13 所有的車站，我們可以列出以下三條路線：</p>
+<ul>
+<li>第一條 1 - 2 - 3 - 4 - 5 - 6 - 7。</li>
+<li>第二條 8 - 9 - 4 - 10 - 13。</li>
+<li>第三條 11 - 2 - 12 - 9 - 6 - 7。</li>
+</ul>
+<p>在每條路線中火車是雙向行進的，從某一站行進下一站的時間恆為 2 個小時。就像你所看到的，有些車站出現在不同路線上，我們稱呼它為「重點車站」，而其餘的稱呼為「次要車站」。我們相信 Krochanska 位在一個去其他地方都是最快的重點車站，尤其是，從他座落的重點車站到其他重點車站，行進時間的平均值會達到最小。你可以假設從一條路線切換到另一條路線不會耗時，你必須找出 Cirilo Krochanska 在哪裡。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p11792/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p11793/" itemprop="url">
+                  11793 - Electoral Districts
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2010-05-23T22:18:57+08:00" content="2010-05-23">
+              2010-05-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-117/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 117</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Background">Background</h2><p>在某些民主國家中，執政黨會重劃選區以便在下次選舉時對他們有利。每個選區選出一位代表，在兩黨制的政體中，每個地區選舉的票數只要高於對手即可。</p>
+<h2 id="The_Problem">The Problem</h2><p>某個國家被切割成 <span>$N\times{N}$</span><!-- Has MathJax --> 個正方形區域，這些區域將會被合併為 N 個選區，每個選區包含 N 個相連的區域，這代表著我們可以上、下、左、右，移動至選區內所有的區域。</p>
+<p>假定執政黨為 A，在野黨為 B，從上一次的選舉中，我們可以知道每個區域的投票情況。現在給你兩個 <span>$N\times{N}$</span><!-- Has MathJax --> 的矩陣，第一個是政黨 A 的投票情況，第二個則是政黨 B 的投票情況，對於每個選區，我們將包含在內所有區域的票數取總和，這時總票數多的政黨將會贏得選舉，如果兩黨的票數一樣，則此選區不會被選出代表。</p>
+<p>現在政黨 A 僱用你去計算出，在重劃選區的情況下，最大可能的代表數差。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p11793/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p11727/" itemprop="url">
+                  11727 - Cost Cutting
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2009-12-18T16:45:26+08:00" content="2009-12-18">
+              2009-12-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-117/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 117</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>給妳三個數字輸出中間的即可。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p11727/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p11597/" itemprop="url">
+                  11597 - Spanning Subtrees
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2009-12-18T16:45:26+08:00" content="2009-12-18">
+              2009-12-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-115/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 115</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>假設 <span>$K_n$</span><!-- Has MathJax --> 為 n 個節點的完全無向圖且 n 為偶數，換句話說，<span>$K_n$</span><!-- Has MathJax --> 中兩個點皆連通。你的任務就是去找出 <span>$K_n$</span><!-- Has MathJax --> 所有擴張樹最大數量，而且這些擴張樹之間皆沒有共同的邊。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p11597/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p11173/" itemprop="url">
+                  11173 - Grey Codes
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2009-11-12T23:29:41+08:00" content="2009-11-12">
+              2009-11-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-111/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 111</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>我們將用一種二分法的方式去產生一個數列，先從如下的數列開始：</p>
+<pre><code><span class="number">0</span>
+<span class="number">1</span>
+</code></pre><p>將此數列依照水平線做鏡射，接著上半部的數列前面加 0，下半部前面加 1，你將會得到如下數列：</p>
+<pre><code><span class="number">00</span>
+<span class="number">01</span>
+<span class="number">11</span>
+<span class="number">10</span>
+</code></pre><p>重覆此步驟，會再一次得到下面 8 個數字所構成的數列：</p>
+<pre><code><span class="number">000</span> <span class="number">0</span>
+<span class="number">001</span> <span class="number">1</span>
+<span class="number">011</span> <span class="number">3</span>
+<span class="number">010</span> <span class="number">2</span>
+<span class="number">110</span> <span class="number">6</span>
+<span class="number">111</span> <span class="number">7</span>
+<span class="number">101</span> <span class="number">5</span>
+<span class="number">100</span> <span class="number">4</span>
+</code></pre><p>這些 2 進位的數字的右側是其對應的數字。</p>
+<p>而這些數列分別被稱為 1 位元、2 位元及 3 位元的格雷碼 (Reflected Gray Code，或稱為 Gray Code)，一個 n 位元的格雷碼由 <span>$2^n$</span><!-- Has MathJax --> 個不同的數字所組成，而此數列上的數字，和其所相鄰的數字都差一個位元。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p11173/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p10908/" itemprop="url">
+                  10908 - Largest Square
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2009-11-12T21:55:36+08:00" content="2009-11-12">
+              2009-11-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-109/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 109</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>給你一個由字元構成的矩形以及座標 <span>$(r, c)$</span><!-- Has MathJax -->，請求出由相同字元所構成的最大正方形。<span>$(r, c)$</span><!-- Has MathJax --> 代表此最大正方形的中心，矩形的左上角座標為 <span>$(0, 0)$</span><!-- Has MathJax -->，右下角為 <span>$(M-1, N-1)$</span><!-- Has MathJax -->。以下圖來說，給你座標 <span>$(1, 2)$</span><!-- Has MathJax -->，則此最大正方形的邊長為 3。</p>
+<pre><code><span class="title">abbbaaaaaa</span>
+abbbaaaaaa
+abbbaaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+aaccaaaaaa
+aaccaaaaaa
+</code></pre>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p10908/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p10264/" itemprop="url">
+                  10264 - The Most Potent Corner
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2009-11-12T21:24:34+08:00" content="2009-11-12">
+              2009-11-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/volume-102/" itemprop="url" rel="index">
+                    <span itemprop="name">volume - 102</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Problem">Problem</h2><p>對於一個 N 維 (<span>$1 &lt; N &lt; 15$</span><!-- Has MathJax -->) 的單位正方體中，每個角落都有他的重量 (小於 256)。如果兩個角落有相同的邊，我們稱這兩個角相鄰 (neighbouring)。一個角落的效力 (Potency) 是其所有相鄰角之和。現在給你所有角落的重量，請求出二個相鄰角效力和的最大值。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p10264/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/uniDog/page/8/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/uniDog/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/uniDog/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/uniDog/page/20/">20</a><a class="extend next" rel="next" href="/uniDog/page/10/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+        </div>
+
+        
+
+
+        
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/uniDog/images/default_avatar.jpg" alt="uniDog 團隊 @ pcshic" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">uniDog 團隊 @ pcshic</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/uniDog/archives">
+              <span class="site-state-item-count">194</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/uniDog/categories">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">分類</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/uniDog/tags">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/pcshic" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">uniDog 團隊 @ pcshic</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/uniDog/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+    
+
+  
+
+
+  
+
+  
+  <script type="text/javascript" src="/uniDog/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/uniDog/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/uniDog/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/uniDog/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/uniDog/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/uniDog/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/uniDog/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/uniDog/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+
+  <script type="text/javascript" src="/uniDog/js/bootstrap.js"></script>
+
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body>
+</html>
