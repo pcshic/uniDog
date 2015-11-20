@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="子集合求和," />
 
 
 
@@ -53,22 +53,22 @@
 
 
 
-<meta name="description" content="給你一序列 N 個整數，然後在數字之間插入加或減號，這樣可以得到不同的運算結果。例如：給你 4 個整數：17, 5, -21, 15，就會有8種不同的結果：
+<meta name="description" content="給你一序列 N 個整數，然後在數字之間插入加或減號，這樣可以得到不同的運算結果。例如：給你 4 個整數：17, 5, -21, 15，就會有 8 種不同的結果：
 17    +    5    +    -21    +    15    =    16
 17    +    5    +    -21    -    15    =    -14
 17    +    5    -    -21">
 <meta property="og:type" content="article">
 <meta property="og:title" content="10036 - Divisibility">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p10036/index.html">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/10036/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="給你一序列 N 個整數，然後在數字之間插入加或減號，這樣可以得到不同的運算結果。例如：給你 4 個整數：17, 5, -21, 15，就會有8種不同的結果：
+<meta property="og:description" content="給你一序列 N 個整數，然後在數字之間插入加或減號，這樣可以得到不同的運算結果。例如：給你 4 個整數：17, 5, -21, 15，就會有 8 種不同的結果：
 17    +    5    +    -21    +    15    =    16
 17    +    5    +    -21    -    15    =    -14
 17    +    5    -    -21">
-<meta property="og:updated_time" content="2015-11-18T18:53:16.605Z">
+<meta property="og:updated_time" content="2015-11-20T18:46:00.450Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="10036 - Divisibility">
-<meta name="twitter:description" content="給你一序列 N 個整數，然後在數字之間插入加或減號，這樣可以得到不同的運算結果。例如：給你 4 個整數：17, 5, -21, 15，就會有8種不同的結果：
+<meta name="twitter:description" content="給你一序列 N 個整數，然後在數字之間插入加或減號，這樣可以得到不同的運算結果。例如：給你 4 個整數：17, 5, -21, 15，就會有 8 種不同的結果：
 17    +    5    +    -21    +    15    =    16
 17    +    5    +    -21    -    15    =    -14
 17    +    5    -    -21">
@@ -221,18 +221,16 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10036/">
+            <a href="/uniDog/problem/10036/">
               <span>Luckycat</span>
             </a>
           </span>
           
-          <span class="post-time">
+          <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <span class="post-translate-url">
-              <a href="http://luckycat.kshs.kh.edu.tw/homework/q10036.htm">
-                <span>Lucky 貓</span>
-              </a>
-            </span>
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10036.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
           </span>
           
           <span class="post-time">
@@ -260,6 +258,15 @@
           
 
           
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=977" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
             
           
 
@@ -276,7 +283,7 @@
       
 
       
-        <span itemprop="articleBody"><p>給你一序列 N 個整數，然後在數字之間插入加或減號，這樣可以得到不同的運算結果。例如：給你 4 個整數：17, 5, -21, 15，就會有8種不同的結果：</p>
+        <span itemprop="articleBody"><p>給你一序列 N 個整數，然後在數字之間插入加或減號，這樣可以得到不同的運算結果。例如：給你 4 個整數：17, 5, -21, 15，就會有 8 種不同的結果：</p>
 <pre><code><span class="number">17</span>    +    <span class="number">5</span>    +    -<span class="number">21</span>    +    <span class="number">15</span>    =    <span class="number">16</span>
 <span class="number">17</span>    +    <span class="number">5</span>    +    -<span class="number">21</span>    -    <span class="number">15</span>    =    -<span class="number">14</span>
 <span class="number">17</span>    +    <span class="number">5</span>    -    -<span class="number">21</span>    +    <span class="number">15</span>    =    <span class="number">58</span>
@@ -285,11 +292,11 @@
 <span class="number">17</span>    -    <span class="number">5</span>    +    -<span class="number">21</span>    -    <span class="number">15</span>    =    -<span class="number">24</span>
 <span class="number">17</span>    -    <span class="number">5</span>    -    -<span class="number">21</span>    +    <span class="number">15</span>    =    <span class="number">48</span>
 <span class="number">17</span>    -    <span class="number">5</span>    -    -<span class="number">21</span>    -    <span class="number">15</span>    =    <span class="number">18</span>
-</code></pre><p>假如其中任一運算的結果可以被 K 整除，我們稱這一序列的整數是 「可被 K 整除的 (divisible by K)」，在上例中，此一序列可被 7 整除 (17 + 5 + -21 - 15 = -14)，但是無法被 5 整除。</p>
+</code></pre><p>假如其中任一運算的結果可以被 <span>$K$</span><!-- Has MathJax --> 整除，我們稱這一序列的整數是 「可被 K 整除的 (<strong>divisible</strong> by <em>K</em>)」，在上例中，此一序列可被 <span>$7$</span><!-- Has MathJax --> 整除 (<span>$17+5+-21-15=-14$</span><!-- Has MathJax -->)，但是無法被 <span>$5$</span><!-- Has MathJax --> 整除。</p>
 <p>你的任務是寫一個程式判斷一序列整數的可整除性。</p>
-<h2 id="Input">Input</h2><p>輸入一開始會有一個整數 M 表示測試資料的組數。</p>
-<p>每組資料的第一列會有 2 個整數 <span>$N, K$</span><!-- Has MathJax --> (<span>$1\leq{N}\leq{10000}, 2\leq{K}\leq{100}$</span><!-- Has MathJax -->) 。第二列含有 <span>$N$</span><!-- Has MathJax --> 個整數，代表此序列中的 <span>$N$</span><!-- Has MathJax --> 個整數。每個數字的大小其絕對值不會超過 <span>$10000$</span><!-- Has MathJax -->。</p>
-<h2 id="Output">Output</h2><p>對每組測試資料，如果在這 N 個整數之間任意插入<code>+</code>或<code>-</code>運算的結果可以被 K 整除，請輸出 Divisible，否則請輸出 Not divisible。</p>
+<h2 id="Input">Input</h2><p>輸入一開始會有一個整數 <span>$M$</span><!-- Has MathJax --> 表示測試資料的組數。</p>
+<p>每組資料的第一列會有 2 個整數 <span>$N,K$</span><!-- Has MathJax --> (<span>$1\leq{N}\leq{10000}, 2\leq{K}\leq{100}$</span><!-- Has MathJax -->) 。第二列含有 <span>$N$</span><!-- Has MathJax --> 個整數，代表此序列中的 <span>$N$</span><!-- Has MathJax --> 個整數。每個數字的大小其絕對值不會超過 <span>$10000$</span><!-- Has MathJax -->。</p>
+<h2 id="Output">Output</h2><p>對每組測試資料，如果在這 <span>$N$</span><!-- Has MathJax --> 個整數之間任意插入 <code>+</code> 或 <code>-</code> 運算的結果可以被 <span>$K$</span><!-- Has MathJax --> 整除，請輸出 <code>Divisible</code>，否則請輸出 <code>Not divisible</code>。</p>
 <h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
 <span class="number">4</span> <span class="number">7</span>
 <span class="number">17</span> <span class="number">5</span> -<span class="number">21</span> <span class="number">15</span>
@@ -302,6 +309,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/子集合求和/" rel="tag">#子集合求和</a>
+          
+        </div>
       
 
       
@@ -400,7 +413,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

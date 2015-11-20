@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="逆序數對," />
 
 
 
@@ -53,22 +53,22 @@
 
 
 
-<meta name="description" content="到老舊的火車站你也許會遇到少數僅存的”車箱置換員”，車箱置換員是車站的員工，他的工作是重新排列火車車箱。
+<meta name="description" content="到老舊的火車站你也許會遇到少數僅存的「車箱置換員」(train swapper)，車箱置換員是車站的員工，他的工作是重新排列火車車箱。
 當每節車箱 (尤其是裝貨的車箱) 都經過適當的排列之後，火車司機在每個車站卸貨時只需從最後車箱一節一節依序放下即可。
-“車箱置換員”的職稱起源於一座位於河畔的火車站，鐵路橫跨在河的兩岸，當船隻要通行時，橋上的鐵路不像其他地方一樣會垂直升起，而是以河中央的橋墩為中心旋轉 90 度，此時船隻可從橋">
+「車箱置換員」的職稱起源於一座位於河畔的火車站，鐵路橫跨在河的兩岸，當船隻要通行時，橋上的鐵路不像其他地方一樣會垂直升起，而是以河中央的橋墩為中心">
 <meta property="og:type" content="article">
-<meta property="og:title" content="231 - Train Swapping">
+<meta property="og:title" content="299 - Train Swapping">
 <meta property="og:url" content="http://pcshic.github.io/uniDog/problem/299/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="到老舊的火車站你也許會遇到少數僅存的”車箱置換員”，車箱置換員是車站的員工，他的工作是重新排列火車車箱。
+<meta property="og:description" content="到老舊的火車站你也許會遇到少數僅存的「車箱置換員」(train swapper)，車箱置換員是車站的員工，他的工作是重新排列火車車箱。
 當每節車箱 (尤其是裝貨的車箱) 都經過適當的排列之後，火車司機在每個車站卸貨時只需從最後車箱一節一節依序放下即可。
-“車箱置換員”的職稱起源於一座位於河畔的火車站，鐵路橫跨在河的兩岸，當船隻要通行時，橋上的鐵路不像其他地方一樣會垂直升起，而是以河中央的橋墩為中心旋轉 90 度，此時船隻可從橋">
-<meta property="og:updated_time" content="2015-11-18T18:53:18.579Z">
+「車箱置換員」的職稱起源於一座位於河畔的火車站，鐵路橫跨在河的兩岸，當船隻要通行時，橋上的鐵路不像其他地方一樣會垂直升起，而是以河中央的橋墩為中心">
+<meta property="og:updated_time" content="2015-11-20T08:05:06.277Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="231 - Train Swapping">
-<meta name="twitter:description" content="到老舊的火車站你也許會遇到少數僅存的”車箱置換員”，車箱置換員是車站的員工，他的工作是重新排列火車車箱。
+<meta name="twitter:title" content="299 - Train Swapping">
+<meta name="twitter:description" content="到老舊的火車站你也許會遇到少數僅存的「車箱置換員」(train swapper)，車箱置換員是車站的員工，他的工作是重新排列火車車箱。
 當每節車箱 (尤其是裝貨的車箱) 都經過適當的排列之後，火車司機在每個車站卸貨時只需從最後車箱一節一節依序放下即可。
-“車箱置換員”的職稱起源於一座位於河畔的火車站，鐵路橫跨在河的兩岸，當船隻要通行時，橋上的鐵路不像其他地方一樣會垂直升起，而是以河中央的橋墩為中心旋轉 90 度，此時船隻可從橋">
+「車箱置換員」的職稱起源於一座位於河畔的火車站，鐵路橫跨在河的兩岸，當船隻要通行時，橋上的鐵路不像其他地方一樣會垂直升起，而是以河中央的橋墩為中心">
 
 
 
@@ -80,7 +80,7 @@
   };
 </script>
 
-  <title> 231 - Train Swapping | uniDog 的 ACM 園地 </title>
+  <title> 299 - Train Swapping | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -210,7 +210,7 @@
             
             
               
-                231 - Train Swapping
+                299 - Train Swapping
               
             
           </h1>
@@ -223,13 +223,11 @@
             </a>
           </span>
           
-          <span class="post-time">
+          <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <span class="post-translate-url">
-              <a href="http://rubyacm.blogspot.tw/2010/08/299-train-swapping.html">
-                <span>Ruby 兔</span>
-              </a>
-            </span>
+            <a href="http://rubyacm.blogspot.tw/2010/08/299-train-swapping.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
           </span>
           
           <span class="post-time">
@@ -257,6 +255,15 @@
           
 
           
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=235" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
             
           
 
@@ -273,13 +280,13 @@
       
 
       
-        <span itemprop="articleBody"><p>到老舊的火車站你也許會遇到少數僅存的”車箱置換員”，車箱置換員是車站的員工，他的工作是重新排列火車車箱。</p>
+        <span itemprop="articleBody"><p>到老舊的火車站你也許會遇到少數僅存的「車箱置換員」(train swapper)，車箱置換員是車站的員工，他的工作是重新排列火車車箱。</p>
 <p>當每節車箱 (尤其是裝貨的車箱) 都經過適當的排列之後，火車司機在每個車站卸貨時只需從最後車箱一節一節依序放下即可。</p>
-<p>“車箱置換員”的職稱起源於一座位於河畔的火車站，鐵路橫跨在河的兩岸，當船隻要通行時，橋上的鐵路不像其他地方一樣會垂直升起，而是以河中央的橋墩為中心旋轉 90 度，此時船隻可從橋的左右兩旁經過。</p>
+<p>「車箱置換員」的職稱起源於一座位於河畔的火車站，鐵路橫跨在河的兩岸，當船隻要通行時，橋上的鐵路不像其他地方一樣會垂直升起，而是以河中央的橋墩為中心旋轉 90 度，此時船隻可從橋的左右兩旁經過。</p>
 <p>另外，首位車箱置換員發現一件有趣的事，當橋在作旋轉時最多可乘載兩節車箱的重量，所以當橋作 180 度的旋轉之後，其上的車箱就被掉換位置了，因此他就能重新排列車箱 (副作用就是車箱前後位置會相反，不過因為車箱被設計成可以前後移動，所以無所謂)。</p>
 <p>現在幾乎所有車箱置換員都死光了，鐵路公司必須做車箱掉換的自動化，需要寫一個程式來計算共需置換相鄰的車箱幾次才能使所有車箱依序排好，寫程式的工作就交給你了。</p>
-<h2 id="Input_Specification">Input Specification</h2><p>第一列有一個整數表示接下來有 N 組測試資料，每組測試資料兩列，第一列是一個整數 L (<span>$1\leq{L}\leq{50}$</span><!-- Has MathJax -->)，為車箱的長度，第二列為整數 1 ~ L 的一種排列組合，表示車箱的起始位置，最後車箱要依照編號 1 到 L 的順序依序排好。</p>
-<h2 id="Output_Specification">Output Specification</h2><p>每一列請輸出 <code>Optimal train swapping takes S swaps.</code>，S 為一整數，表示最少需要做幾次車箱置換的步驟。</p>
+<h2 id="Input_Specification">Input Specification</h2><p>第一列有一個整數表示接下來有 <span>$N$</span><!-- Has MathJax --> 組測試資料，每組測試資料兩列，第一列是一個整數 <span>$L$</span><!-- Has MathJax --> (<span>$1\leq{L}\leq{50}$</span><!-- Has MathJax -->)，為車箱的長度，第二列為整數 1 ~ L 的一種排列組合，表示車箱的起始位置，最後車箱要依照編號 1 到 L 的順序依序排好。</p>
+<h2 id="Output_Specification">Output Specification</h2><p>每一列請輸出 <code>Optimal train swapping takes S swaps.</code>，<span>$S$</span><!-- Has MathJax --> 為一整數，表示最少需要做幾次車箱置換的步驟。</p>
 <h2 id="Example_Input">Example Input</h2><pre><code><span class="number">3</span>
 <span class="number">3</span>
 <span class="number">1</span> <span class="number">3</span> <span class="number">2</span>
@@ -296,21 +303,27 @@ Optimal train swapping takes <span class="number">1</span> swaps.
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/逆序數對/" rel="tag">#逆序數對</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p156/" rel="next" title="156 - Ananagrams">
-                <i class="fa fa-chevron-left"></i> 156 - Ananagrams
+              <a href="/uniDog/problem/p110/" rel="next" title="110 - Meta-Loopless Sorts">
+                <i class="fa fa-chevron-left"></i> 110 - Meta-Loopless Sorts
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p149/" rel="prev" title="149 - Forests">
-                149 - Forests <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p156/" rel="prev" title="156 - Ananagrams">
+                156 - Ananagrams <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -393,7 +406,7 @@ Optimal train swapping takes <span class="number">1</span> swaps.
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

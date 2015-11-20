@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="直觀解," />
 
 
 
@@ -53,58 +53,22 @@
 
 
 
-<meta name="description" content="把一個數字反轉並相加的方法很簡單：就是把數字反轉並加上原來的數字。假如這個和不是一個迴文（指這個數字從左到右和從右到左都相同），就一直重複這個程序。舉例說明：
-195 開始的數字
-591
------
-786
-687
------
-1473
-3741
------
-5214
-4125
------
-9339 迴文出現了
-在這個例子中，經過了 4 次相加後得到了迴文 9339。幾乎對所有的整數這個方法都會得">
+<meta name="description" content="有 $n$&amp;lt;!-- Has MathJax --&amp;gt; 個整數的序列我們稱為 jolly jumper，如果相鄰兩數的差的絕對值恰好為 $1$&amp;lt;!-- Has MathJax --&amp;gt; 到 $n-1$&amp;lt;!-- Has MathJax --&amp;gt;。例如：
+1 4 2 3
+就是 jolly jumper ($n=4$&amp;lt;!-- Has MathJax --&amp;gt;)。因為相鄰兩數的差的絕對值為 3,2,1，就是 $1$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="10018 - Reverse and Add">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p10018/index.html">
+<meta property="og:title" content="10038 - Jolly Jumpers">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/10038/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="把一個數字反轉並相加的方法很簡單：就是把數字反轉並加上原來的數字。假如這個和不是一個迴文（指這個數字從左到右和從右到左都相同），就一直重複這個程序。舉例說明：
-195 開始的數字
-591
------
-786
-687
------
-1473
-3741
------
-5214
-4125
------
-9339 迴文出現了
-在這個例子中，經過了 4 次相加後得到了迴文 9339。幾乎對所有的整數這個方法都會得">
-<meta property="og:updated_time" content="2015-11-18T18:53:17.138Z">
+<meta property="og:description" content="有 $n$&amp;lt;!-- Has MathJax --&amp;gt; 個整數的序列我們稱為 jolly jumper，如果相鄰兩數的差的絕對值恰好為 $1$&amp;lt;!-- Has MathJax --&amp;gt; 到 $n-1$&amp;lt;!-- Has MathJax --&amp;gt;。例如：
+1 4 2 3
+就是 jolly jumper ($n=4$&amp;lt;!-- Has MathJax --&amp;gt;)。因為相鄰兩數的差的絕對值為 3,2,1，就是 $1$">
+<meta property="og:updated_time" content="2015-11-20T18:50:24.777Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="10018 - Reverse and Add">
-<meta name="twitter:description" content="把一個數字反轉並相加的方法很簡單：就是把數字反轉並加上原來的數字。假如這個和不是一個迴文（指這個數字從左到右和從右到左都相同），就一直重複這個程序。舉例說明：
-195 開始的數字
-591
------
-786
-687
------
-1473
-3741
------
-5214
-4125
------
-9339 迴文出現了
-在這個例子中，經過了 4 次相加後得到了迴文 9339。幾乎對所有的整數這個方法都會得">
+<meta name="twitter:title" content="10038 - Jolly Jumpers">
+<meta name="twitter:description" content="有 $n$&amp;lt;!-- Has MathJax --&amp;gt; 個整數的序列我們稱為 jolly jumper，如果相鄰兩數的差的絕對值恰好為 $1$&amp;lt;!-- Has MathJax --&amp;gt; 到 $n-1$&amp;lt;!-- Has MathJax --&amp;gt;。例如：
+1 4 2 3
+就是 jolly jumper ($n=4$&amp;lt;!-- Has MathJax --&amp;gt;)。因為相鄰兩數的差的絕對值為 3,2,1，就是 $1$">
 
 
 
@@ -116,7 +80,7 @@
   };
 </script>
 
-  <title> 10018 - Reverse and Add | uniDog 的 ACM 園地 </title>
+  <title> 10038 - Jolly Jumpers | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -246,7 +210,7 @@
             
             
               
-                10018 - Reverse and Add
+                10038 - Jolly Jumpers
               
             
           </h1>
@@ -254,24 +218,22 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10018/">
+            <a href="/uniDog/problem/10038/">
               <span>Luckycat</span>
             </a>
           </span>
           
-          <span class="post-time">
+          <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <span class="post-translate-url">
-              <a href="http://luckycat.kshs.kh.edu.tw/homework/q10018.htm">
-                <span>Lucky 貓</span>
-              </a>
-            </span>
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10038.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-10-04T00:00:00+08:00" content="2002-10-04">
-              2002-10-04
+            <time itemprop="dateCreated" datetime="2002-12-25T00:00:00+08:00" content="2002-12-25">
+              2002-12-25
             </time>
           </span>
 
@@ -293,6 +255,15 @@
           
 
           
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=979" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
             
           
 
@@ -309,61 +280,45 @@
       
 
       
-        <span itemprop="articleBody"><p>把一個數字反轉並相加的方法很簡單：就是把數字反轉並加上原來的數字。假如這個和不是一個迴文（指這個數字從左到右和從右到左都相同），就一直重複這個程序。舉例說明：</p>
-<pre><code>195 開始的數字
-<span class="header">591
------</span>
-786
-<span class="header">687
------</span>
-1473
-<span class="header">3741
------</span>
-5214
-<span class="header">4125
------</span>
-9339 迴文出現了
-</code></pre><p>在這個例子中，經過了 4 次相加後得到了迴文 9339。幾乎對所有的整數這個方法都會得到迴文，但是也有有趣的例外。196 是第 1 個用這個方法找不到迴文的數字，然而並沒有證明該迴文不存在。</p>
-<p>現在給你一個開始的數字，你的任務就是求出經過多少次相加後，會產生哪一個迴文。對所有的測試資料，你可以假設：</p>
-<ol>
-<li>都會有 1 個答案。</li>
-<li>在 1000 個相加內都會得到答案。</li>
-<li>產生的迴文不會大於 4294967295。</li>
-</ol>
-<h2 id="Input">Input</h2><p>第1列有一個整數 N (<span>$0 &lt; N \leq 100$</span><!-- Has MathJax -->)，代表以下有幾組測試資料。每筆測試資料一列，各有 1 個整數 P，就是開始的數字。</p>
-<h2 id="Output">Output</h2><p>對每一測試資料，請輸出 2 個數字：得到迴文所需的最少次數的相加，以及該迴文。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span>
-<span class="number">195</span>
-<span class="number">265</span>
-<span class="number">750</span>
-<span class="number">2</span>
-<span class="number">99</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">4</span> <span class="number">9339</span>
-<span class="number">5</span> <span class="number">45254</span>
-<span class="number">3</span> <span class="number">6666</span>
-<span class="number">1</span> <span class="number">4</span>
-<span class="number">6</span> <span class="number">79497</span>
+        <span itemprop="articleBody"><p>有 <span>$n$</span><!-- Has MathJax --> 個整數的序列我們稱為 <em>jolly jumper</em>，如果相鄰兩數的差的絕對值恰好為 <span>$1$</span><!-- Has MathJax --> 到 <span>$n-1$</span><!-- Has MathJax -->。例如：</p>
+<p><code>1 4 2 3</code></p>
+<p>就是 jolly jumper (<span>$n=4$</span><!-- Has MathJax -->)。因為相鄰兩數的差的絕對值為 3,2,1，就是 <span>$1$</span><!-- Has MathJax --> 到 <span>$n-1$</span><!-- Has MathJax -->。但是</p>
+<p><code>1 4 2 -1 6</code></p>
+<p>不是 jolly jumper (<span>$n=5$</span><!-- Has MathJax -->)。因為相鄰兩數的差的絕對值為 3,2,3,7，並非 <span>$1$</span><!-- Has MathJax --> 到 <span>$n-1$</span><!-- Has MathJax -->。</p>
+<p>你的任務是寫一個程式來判斷一個整數序列是否為 jolly jumper。</p>
+<h2 id="Input">Input</h2><p>每組測試資料一列，第一個正整數為 <span>$n$</span><!-- Has MathJax --> (<span>$n &lt; 3000$</span><!-- Has MathJax -->)，代表此整數序列的長度。接下來有 <span>$n$</span><!-- Has MathJax --> 個整數，代表此整數序列。請參考 Sample Input。</p>
+<h2 id="Output">Output</h2><p>對每一組測試資料，輸出此整數序列是否為 jolly jumper。請參考 Sample Output。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">4</span> <span class="number">1</span> <span class="number">4</span> <span class="number">2</span> <span class="number">3</span>
+<span class="number">5</span> <span class="number">1</span> <span class="number">4</span> <span class="number">2</span> -<span class="number">1</span> <span class="number">6</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Jolly
+<span class="literal">Not</span> jolly
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/直觀解/" rel="tag">#直觀解</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p10008/" rel="next" title="10008 - What's Cryptanalysis">
-                <i class="fa fa-chevron-left"></i> 10008 - What's Cryptanalysis
+              <a href="/uniDog/problem/10004/" rel="next" title="10004 - Bicoloring">
+                <i class="fa fa-chevron-left"></i> 10004 - Bicoloring
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p113/" rel="prev" title="113 - Power of Cryptography">
-                113 - Power of Cryptography <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p120/" rel="prev" title="120 - Stacks of Flapjacks">
+                120 - Stacks of Flapjacks <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -446,7 +401,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

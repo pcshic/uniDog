@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="字串處理,模擬," />
 
 
 
@@ -59,7 +59,7 @@
 <meta property="og:url" content="http://pcshic.github.io/uniDog/problem/272/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
 <meta property="og:description" content="$\TeX$&amp;lt;!-- Has MathJax --&amp;gt; 是一種由 Donald Knuth 所發展出的一套文書排版軟體。這套軟體可以將原始文件檔加上一些像字型等型態後，轉成一份很漂亮的文件。而一份漂亮的文件是需要用 &amp;#96;&amp;#96; 和 &amp;quot; 來把別人說的話給「引」出來，而不是用大部份鍵盤上有的 &amp;quot;。雖然鍵盤裡通常不會有這種有方向的雙引號鍵，不過上面有左單引號 &amp;#96; (有">
-<meta property="og:updated_time" content="2015-11-18T18:53:19.221Z">
+<meta property="og:updated_time" content="2015-11-20T07:55:37.849Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="272 - TeX Quotes">
 <meta name="twitter:description" content="$\TeX$&amp;lt;!-- Has MathJax --&amp;gt; 是一種由 Donald Knuth 所發展出的一套文書排版軟體。這套軟體可以將原始文件檔加上一些像字型等型態後，轉成一份很漂亮的文件。而一份漂亮的文件是需要用 &amp;#96;&amp;#96; 和 &amp;quot; 來把別人說的話給「引」出來，而不是用大部份鍵盤上有的 &amp;quot;。雖然鍵盤裡通常不會有這種有方向的雙引號鍵，不過上面有左單引號 &amp;#96; (有">
@@ -217,13 +217,11 @@
             </a>
           </span>
           
-          <span class="post-time">
+          <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <span class="post-translate-url">
-              <a href="http://luckycat.kshs.kh.edu.tw/homework/q272.htm">
-                <span>Lucky 貓</span>
-              </a>
-            </span>
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q272.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
           </span>
           
           <span class="post-time">
@@ -251,6 +249,15 @@
           
 
           
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=208" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
             
           
 
@@ -271,9 +278,9 @@
 <p>如果原始文件檔內容是：</p>
 <p><code>&quot;To be or not to be,&quot; quoth the bard, &quot;that is the question.&quot;</code></p>
 <p>則 TeX 作出來的文件並不會是我們所想要的：</p>
-<p><code>&#96;&#96;To be or not to be,” quoth the bard, &#96;&#96;that is the question.”</code></p>
+<p><code>``To be or not to be,&quot; quoth the bard, ``that is the question.&quot;</code></p>
 <p>為了要得到上面的文件，我們需要把原始文件變成這個樣子：</p>
-<p><code>&#96;&#96;To be or not to be,’’ quoth the bard, &#96;&#96;that is the question.’’</code></p>
+<p><code>``To be or not to be,&#39;&#39; quoth the bard, ``that is the question.&#39;&#39;</code></p>
 <p>你現在必須要寫一個程式，將普通的雙引號 (<code>&quot;</code>)，轉成有方向性的雙引號，而其它文字則不變。而在把普通的雙引號換掉的時候，要特別注意，當要開始引述一句話時要用 <code>&#96;&#96;</code>，而結束引述時要用 <code>&#39;&#39;</code>。不用擔心會有多層巢狀引號的情形，也就是第一個引號一定是用 <code>&#96;&#96;</code> 來代替，再來用 <code>&#39;&#39;</code>，然後用 <code>&#96;&#96;</code>，接著用 <code>&#39;&#39;</code>，依此類推。</p>
 <h2 id="Input_and_Output">Input and Output</h2><p>輸入是若干列的文字，其中有偶數個雙引號 (<code>&quot;</code>)，以 end-of-file 做結束。輸出的文字必須和輸入的一模一樣，除了：</p>
 <ul>
@@ -293,6 +300,14 @@ The programming contestant replied: ``I must disagree.
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/字串處理/" rel="tag">#字串處理</a>
+          
+            <a href="/uniDog/tags/模擬/" rel="tag">#模擬</a>
+          
+        </div>
       
 
       
@@ -391,7 +406,7 @@ The programming contestant replied: ``I must disagree.
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
