@@ -481,7 +481,7 @@
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p10313/" itemprop="url">
+                <a class="post-title-link" href="/uniDog/problem/10313/" itemprop="url">
                   10313 - Pay the Price
                 </a>
               
@@ -491,7 +491,7 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10313/">
+            <a href="/uniDog/problem/10313/">
               <span>Luckycat</span>
             </a>
           </span>
@@ -557,11 +557,13 @@
           <span itemprop="articleBody">
             
               <p>從前有一個國家那裡的人民有非常有趣的習慣。有些人懶惰，有些人富有。有些人非常平窮，有些人小氣。明顯的有些有錢人小氣 (貧窮人絕不會小氣，因為他本來就沒多少東西) 並且懶惰，但是貧窮人也都懶惰 (這也是他們永遠都貧窮的原因)。以下的事在這個國家都是真實的：</p>
-<p>a. 由於有錢人小氣，沒有任何東西的價格會超過 300 元。<br>b. 由於貧窮人懶惰，每件東西的價格都是整數。(連乞丐要錢都至少要 1 元)<br>c. 硬幣的面值從 1 到 300 元，所以那些懶惰的有錢人可以只用一個硬幣付任何的價錢。</p>
-<p>你的任務是找出一個人要付一個價錢有多少種方法，條件是使用硬幣的數目是被限定的。例如：要用 3 個硬幣來付 6 元有 3 種方法：1+1+4、1+2+3、2+2+2。依此類推，一個人付 6 元最多使用 6 個硬幣的方法有 11 種。</p>
-<h2 id="Input">Input</h2><p>每組測試資料 1 列，每列可能含有 1 或 2 或 3 個整數。其中第一個整數一定是 N (<span>$0\leq{N}\leq{300}$</span><!-- Has MathJax -->)，代表要付的錢是多少。其他的數均大於等於 0，小於等於 1000。</p>
-<h2 id="Output">Output</h2><p>對每組測試資料輸出一列，代表付 N 元有多少種方法，分為以下三種：</p>
-<p>如果該組測試資料僅有 1 個整數，請輸出付 N 元的方法有多少種 (用多少個硬幣不拘)。<br>如果該組測試資料有 2 個整數 N、L1，請輸出付 N 元且最多用 L1 個硬幣的方法有多少種。<br>如果該組測試資料有 3 個整數 N、L1、L2，請輸出付 N 元且最少用 L1 個硬幣，最多用 L2 個硬幣的方法有多少種。在這裡 L1 一定小於等於 L2。</p>
+<p>a) 由於有錢人小氣，沒有任何東西的價格會超過 <span>$300$</span><!-- Has MathJax --> 元。<br>b) 由於貧窮人懶惰，每件東西的價格都是整數。(連乞丐要錢都至少要 <span>$1$</span><!-- Has MathJax --> 元)<br>c) 硬幣的面值從 <span>$1$</span><!-- Has MathJax --> 到 <span>$300$</span><!-- Has MathJax --> 元，所以那些懶惰的有錢人可以只用一個硬幣付任何的價錢。</p>
+<p>你的任務是找出一個人要付一個價錢有多少種方法，條件是使用硬幣的數目是被限定的。例如：要用 <span>$3$</span><!-- Has MathJax --> 個硬幣來付 <span>$6$</span><!-- Has MathJax --> 元有 <span>$3$</span><!-- Has MathJax --> 種方法：<span>$1+1+4$</span><!-- Has MathJax -->、<span>$1+2+3$</span><!-- Has MathJax -->、<span>$2+2+2$</span><!-- Has MathJax -->。依此類推，一個人付 <span>$6$</span><!-- Has MathJax --> 元最多使用 <span>$6$</span><!-- Has MathJax --> 個硬幣的方法有 <span>$11$</span><!-- Has MathJax --> 種。</p>
+<h2 id="Input">Input</h2><p>每組測試資料 <span>$1$</span><!-- Has MathJax --> 列，每列可能含有 <span>$1$</span><!-- Has MathJax --> 或 <span>$2$</span><!-- Has MathJax --> 或 <span>$3$</span><!-- Has MathJax --> 個整數。其中第一個整數一定是 <span>$N$</span><!-- Has MathJax --> (<span>$0\leq{N}\leq{300}$</span><!-- Has MathJax -->)，代表要付的錢是多少。其他的數均大於等於 <span>$0$</span><!-- Has MathJax -->，小於等於 <span>$1000$</span><!-- Has MathJax -->。</p>
+<h2 id="Output">Output</h2><p>對每組測試資料輸出一列，代表付 <span>$N$</span><!-- Has MathJax --> 元有多少種方法，分為以下三種：</p>
+<p>如果該組測試資料僅有 <span>$1$</span><!-- Has MathJax --> 個整數，請輸出付 <span>$N$</span><!-- Has MathJax --> 元的方法有多少種 (用多少個硬幣不拘)。</p>
+<p>如果該組測試資料有 <span>$2$</span><!-- Has MathJax --> 個整數 <span>$N$</span><!-- Has MathJax -->、<span>$L1$</span><!-- Has MathJax -->，請輸出付 <span>$N$</span><!-- Has MathJax --> 元且最多用 <span>$L1$</span><!-- Has MathJax --> 個硬幣的方法有多少種。</p>
+<p>如果該組測試資料有 <span>$3$</span><!-- Has MathJax --> 個整數 <span>$N$</span><!-- Has MathJax -->、<span>$L1$</span><!-- Has MathJax -->、<span>$L2$</span><!-- Has MathJax -->，請輸出付 <span>$N$</span><!-- Has MathJax --> 元且最少用 <span>$L1$</span><!-- Has MathJax --> 個硬幣，最多用 <span>$L2$</span><!-- Has MathJax --> 個硬幣的方法有多少種。在這裡 <span>$L1$</span><!-- Has MathJax --> 一定小於等於 <span>$L2$</span><!-- Has MathJax -->。</p>
 <h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">6</span>
 <span class="number">6</span> <span class="number">34</span>
 <span class="number">6</span> <span class="number">2</span> <span class="number">5</span>

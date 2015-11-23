@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="找零問題,背包問題," />
 
 
 
@@ -53,19 +53,16 @@
 
 
 
-<meta name="description" content="從前有一個國家那裡的人民有非常有趣的習慣。有些人懶惰，有些人富有。有些人非常平窮，有些人小氣。明顯的有些有錢人小氣 (貧窮人絕不會小氣，因為他本來就沒多少東西) 並且懶惰，但是貧窮人也都懶惰 (這也是他們永遠都貧窮的原因)。以下的事在這個國家都是真實的：
-a. 由於有錢人小氣，沒有任何東西的價格會超過 300 元。b. 由於貧窮人懶惰，每件東西的價格都是整數。(連乞丐要錢都至少要 1 元)c. 硬">
+<meta name="description" content="紐西蘭的貨幣包含了 \$100, \$50, \$20, \$10, \$5 的紙鈔和 \$2, \$1, 50c, 20c, 10c, 5c 的硬幣。給你某金額的數字，請你寫一個程式回答：使用這些面額的紙鈔或硬幣，有多少種不同的方法可以組合成這個金額。例如：20c 可以有 4 個方法可以得到：(改變金額的順序不會增加方法數，例如 $2\times{5c}+1\times{10c}$&amp;lt;!-- Ha">
 <meta property="og:type" content="article">
-<meta property="og:title" content="10313 - Pay the Price">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p10313/index.html">
+<meta property="og:title" content="147 - Dollars">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/147/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="從前有一個國家那裡的人民有非常有趣的習慣。有些人懶惰，有些人富有。有些人非常平窮，有些人小氣。明顯的有些有錢人小氣 (貧窮人絕不會小氣，因為他本來就沒多少東西) 並且懶惰，但是貧窮人也都懶惰 (這也是他們永遠都貧窮的原因)。以下的事在這個國家都是真實的：
-a. 由於有錢人小氣，沒有任何東西的價格會超過 300 元。b. 由於貧窮人懶惰，每件東西的價格都是整數。(連乞丐要錢都至少要 1 元)c. 硬">
-<meta property="og:updated_time" content="2015-11-22T08:52:07.746Z">
+<meta property="og:description" content="紐西蘭的貨幣包含了 \$100, \$50, \$20, \$10, \$5 的紙鈔和 \$2, \$1, 50c, 20c, 10c, 5c 的硬幣。給你某金額的數字，請你寫一個程式回答：使用這些面額的紙鈔或硬幣，有多少種不同的方法可以組合成這個金額。例如：20c 可以有 4 個方法可以得到：(改變金額的順序不會增加方法數，例如 $2\times{5c}+1\times{10c}$&amp;lt;!-- Ha">
+<meta property="og:updated_time" content="2015-11-23T17:14:37.446Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="10313 - Pay the Price">
-<meta name="twitter:description" content="從前有一個國家那裡的人民有非常有趣的習慣。有些人懶惰，有些人富有。有些人非常平窮，有些人小氣。明顯的有些有錢人小氣 (貧窮人絕不會小氣，因為他本來就沒多少東西) 並且懶惰，但是貧窮人也都懶惰 (這也是他們永遠都貧窮的原因)。以下的事在這個國家都是真實的：
-a. 由於有錢人小氣，沒有任何東西的價格會超過 300 元。b. 由於貧窮人懶惰，每件東西的價格都是整數。(連乞丐要錢都至少要 1 元)c. 硬">
+<meta name="twitter:title" content="147 - Dollars">
+<meta name="twitter:description" content="紐西蘭的貨幣包含了 \$100, \$50, \$20, \$10, \$5 的紙鈔和 \$2, \$1, 50c, 20c, 10c, 5c 的硬幣。給你某金額的數字，請你寫一個程式回答：使用這些面額的紙鈔或硬幣，有多少種不同的方法可以組合成這個金額。例如：20c 可以有 4 個方法可以得到：(改變金額的順序不會增加方法數，例如 $2\times{5c}+1\times{10c}$&amp;lt;!-- Ha">
 
 
 
@@ -77,7 +74,7 @@ a. 由於有錢人小氣，沒有任何東西的價格會超過 300 元。b. 由
   };
 </script>
 
-  <title> 10313 - Pay the Price | uniDog 的 ACM 園地 </title>
+  <title> 147 - Dollars | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -207,7 +204,7 @@ a. 由於有錢人小氣，沒有任何東西的價格會超過 300 元。b. 由
             
             
               
-                10313 - Pay the Price
+                147 - Dollars
               
             
           </h1>
@@ -215,22 +212,22 @@ a. 由於有錢人小氣，沒有任何東西的價格會超過 300 元。b. 由
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10313/">
+            <a href="/uniDog/problem/147/">
               <span>Luckycat</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10313.htm" target="_blank">
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q147.htm" target="_blank">
               <span>Lucky 貓</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2003-06-23T00:00:00+08:00" content="2003-06-23">
-              2003-06-23
+            <time itemprop="dateCreated" datetime="2005-04-04T00:00:00+08:00" content="2005-04-04">
+              2005-04-04
             </time>
           </span>
 
@@ -239,8 +236,8 @@ a. 由於有錢人小氣，沒有任何東西的價格會超過 300 元。b. 由
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-103/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 103</span>
+                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 001</span>
                   </a>
                 </span>
 
@@ -254,7 +251,7 @@ a. 由於有錢人小氣，沒有任何東西的價格會超過 300 元。b. 由
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1254" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=83" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -277,57 +274,61 @@ a. 由於有錢人小氣，沒有任何東西的價格會超過 300 元。b. 由
       
 
       
-        <span itemprop="articleBody"><p>從前有一個國家那裡的人民有非常有趣的習慣。有些人懶惰，有些人富有。有些人非常平窮，有些人小氣。明顯的有些有錢人小氣 (貧窮人絕不會小氣，因為他本來就沒多少東西) 並且懶惰，但是貧窮人也都懶惰 (這也是他們永遠都貧窮的原因)。以下的事在這個國家都是真實的：</p>
-<p>a. 由於有錢人小氣，沒有任何東西的價格會超過 300 元。<br>b. 由於貧窮人懶惰，每件東西的價格都是整數。(連乞丐要錢都至少要 1 元)<br>c. 硬幣的面值從 1 到 300 元，所以那些懶惰的有錢人可以只用一個硬幣付任何的價錢。</p>
-<p>你的任務是找出一個人要付一個價錢有多少種方法，條件是使用硬幣的數目是被限定的。例如：要用 3 個硬幣來付 6 元有 3 種方法：1+1+4、1+2+3、2+2+2。依此類推，一個人付 6 元最多使用 6 個硬幣的方法有 11 種。</p>
-<h2 id="Input">Input</h2><p>每組測試資料 1 列，每列可能含有 1 或 2 或 3 個整數。其中第一個整數一定是 N (<span>$0\leq{N}\leq{300}$</span><!-- Has MathJax -->)，代表要付的錢是多少。其他的數均大於等於 0，小於等於 1000。</p>
-<h2 id="Output">Output</h2><p>對每組測試資料輸出一列，代表付 N 元有多少種方法，分為以下三種：</p>
-<p>如果該組測試資料僅有 1 個整數，請輸出付 N 元的方法有多少種 (用多少個硬幣不拘)。<br>如果該組測試資料有 2 個整數 N、L1，請輸出付 N 元且最多用 L1 個硬幣的方法有多少種。<br>如果該組測試資料有 3 個整數 N、L1、L2，請輸出付 N 元且最少用 L1 個硬幣，最多用 L2 個硬幣的方法有多少種。在這裡 L1 一定小於等於 L2。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">6</span>
-<span class="number">6</span> <span class="number">34</span>
-<span class="number">6</span> <span class="number">2</span> <span class="number">5</span>
-<span class="number">6</span> <span class="number">1</span> <span class="number">6</span>
-<span class="number">0</span> 
-<span class="number">0</span> <span class="number">0</span> 
-<span class="number">0</span> <span class="number">1</span> 
-<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> 
-<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> 
-<span class="number">0</span> <span class="number">1</span> <span class="number">1</span> 
-<span class="number">0</span> <span class="number">1</span> <span class="number">2</span> 
-<span class="number">200</span> <span class="number">30</span> <span class="number">75</span> 
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">11</span>
-<span class="number">7</span>
-<span class="number">9</span>
-<span class="number">11</span>
-<span class="number">1</span>
-<span class="number">1</span>
-<span class="number">1</span>
-<span class="number">1</span>
-<span class="number">1</span>
-<span class="number">0</span>
-<span class="number">0</span>
-<span class="number">2347163627458</span>
+        <span itemprop="articleBody"><p>紐西蘭的貨幣包含了 \$100, \$50, \$20, \$10, \$5 的紙鈔和 \$2, \$1, 50c, 20c, 10c, 5c 的硬幣。給你某金額的數字，請你寫一個程式回答：使用這些面額的紙鈔或硬幣，有多少種不同的方法可以組合成這個金額。例如：20c 可以有 4 個方法可以得到：(改變金額的順序不會增加方法數，例如 <span>$2\times{5c}+1\times{10c}$</span><!-- Has MathJax --> 和下面第 3 種方法視為同一種)</p>
+<ul>
+<li><span>$1\times{20c}$</span><!-- Has MathJax --></li>
+<li><span>$2\times{10c}$</span><!-- Has MathJax --></li>
+<li><span>$1\times{10c}+2\times{5c}$</span><!-- Has MathJax --></li>
+<li><span>$4\times{5c}$</span><!-- Has MathJax -->
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="Input">Input</h2><p>輸入含有多組測試資料。</p>
+<p>每組測試資料一列，含有 1 個金額 (不大於 \$300.00)。這個金額一定是合法的，也就是一定是 5c 的倍數。</p>
+<p>當輸入為 0.00 時代表輸入結束，請參考 Sample Input。</p>
+<h2 id="Output">Output</h2><p>對每組測試資料輸出一列，包含輸入的金額 (小數點 2 位，總長度 6 位，靠右對齊) 以及有多少種不同的方法可以組合成這個金額 (總長度 17 位，靠右對齊)。請參考 Sample Output。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">0.20</span>
+<span class="number">2.00</span>
+<span class="number">0.50</span>
+<span class="number">1.00</span>
+<span class="number">100.95</span>
+<span class="number">300.00</span>
+<span class="number">0.00</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>  <span class="number">0.20</span>                <span class="number">4</span>
+  <span class="number">2.00</span>              <span class="number">293</span>
+  <span class="number">0.50</span>               <span class="number">13</span>
+  <span class="number">1.00</span>               <span class="number">50</span>
+<span class="number">100.95</span>      <span class="number">50619764500</span>
+<span class="number">300.00</span>  <span class="number">181490736388615</span>
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/找零問題/" rel="tag">#找零問題</a>
+          
+            <a href="/uniDog/tags/背包問題/" rel="tag">#背包問題</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p116/" rel="next" title="116 - Unidirectional TSP">
-                <i class="fa fa-chevron-left"></i> 116 - Unidirectional TSP
+              <a href="/uniDog/problem/p130/" rel="next" title="130 - Roman Roulette">
+                <i class="fa fa-chevron-left"></i> 130 - Roman Roulette
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p10534/" rel="prev" title="10534 - Wavio Sequence">
-                10534 - Wavio Sequence <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p106/" rel="prev" title="106 - Fermat vs. Pythagoras">
+                106 - Fermat vs. Pythagoras <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

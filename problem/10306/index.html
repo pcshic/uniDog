@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="找零問題,背包問題," />
 
 
 
@@ -53,16 +53,17 @@
 
 
 
-<meta name="description" content="紐西蘭的貨幣包含了 \$100, \$50, \$20, \$10, \$5 的紙鈔和 \$2, \$1, 50c, 20c, 10c, 5c 的硬幣。給你某金額的數字，請你寫一個程式回答：使用這些面額的紙鈔或硬幣，有多少種不同的方法可以組合成這個金額。例如：20c 可以有 4 個方法可以得到：(改變金額的順序不會增加方法數，例如 $2\times{5c}+1\times{10c}$&amp;lt;!-- Ha">
+<meta name="description" content="在 Department for Bills and Coins 中，現今貨幣制度提出新的擴展形式以適應新的經濟體系。將來一些被稱為 e-coin 的新貨幣會被製造出來，除了傳統的價值 (conventional value) 外，還會賦予稱為 InfoTechnological 的價值。當然，這種改良的目標就是為了落實經濟上的正義，尤其是針對那些為數眾多的網際網路公司 (dotcom compa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="147 - Dollars">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p147/index.html">
+<meta property="og:title" content="10306 - e-Coins">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/10306/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="紐西蘭的貨幣包含了 \$100, \$50, \$20, \$10, \$5 的紙鈔和 \$2, \$1, 50c, 20c, 10c, 5c 的硬幣。給你某金額的數字，請你寫一個程式回答：使用這些面額的紙鈔或硬幣，有多少種不同的方法可以組合成這個金額。例如：20c 可以有 4 個方法可以得到：(改變金額的順序不會增加方法數，例如 $2\times{5c}+1\times{10c}$&amp;lt;!-- Ha">
-<meta property="og:updated_time" content="2015-11-22T08:52:09.300Z">
+<meta property="og:description" content="在 Department for Bills and Coins 中，現今貨幣制度提出新的擴展形式以適應新的經濟體系。將來一些被稱為 e-coin 的新貨幣會被製造出來，除了傳統的價值 (conventional value) 外，還會賦予稱為 InfoTechnological 的價值。當然，這種改良的目標就是為了落實經濟上的正義，尤其是針對那些為數眾多的網際網路公司 (dotcom compa">
+<meta property="og:image" content="http://pcshic.github.io/uniDog/uniDog/images/103/p10306.jpg">
+<meta property="og:updated_time" content="2015-11-23T17:26:33.808Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="147 - Dollars">
-<meta name="twitter:description" content="紐西蘭的貨幣包含了 \$100, \$50, \$20, \$10, \$5 的紙鈔和 \$2, \$1, 50c, 20c, 10c, 5c 的硬幣。給你某金額的數字，請你寫一個程式回答：使用這些面額的紙鈔或硬幣，有多少種不同的方法可以組合成這個金額。例如：20c 可以有 4 個方法可以得到：(改變金額的順序不會增加方法數，例如 $2\times{5c}+1\times{10c}$&amp;lt;!-- Ha">
+<meta name="twitter:title" content="10306 - e-Coins">
+<meta name="twitter:description" content="在 Department for Bills and Coins 中，現今貨幣制度提出新的擴展形式以適應新的經濟體系。將來一些被稱為 e-coin 的新貨幣會被製造出來，除了傳統的價值 (conventional value) 外，還會賦予稱為 InfoTechnological 的價值。當然，這種改良的目標就是為了落實經濟上的正義，尤其是針對那些為數眾多的網際網路公司 (dotcom compa">
 
 
 
@@ -74,7 +75,7 @@
   };
 </script>
 
-  <title> 147 - Dollars | uniDog 的 ACM 園地 </title>
+  <title> 10306 - e-Coins | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -204,7 +205,7 @@
             
             
               
-                147 - Dollars
+                10306 - e-Coins
               
             
           </h1>
@@ -212,22 +213,22 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p147/">
-              <span>Luckycat</span>
+            <a href="/uniDog/problem/10306/">
+              <span>許胖</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q147.htm" target="_blank">
-              <span>Lucky 貓</span>
+            <a href="/uniDog/problem/10306/" target="_blank">
+              <span>uniDog</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2005-04-04T00:00:00+08:00" content="2005-04-04">
-              2005-04-04
+            <time itemprop="dateCreated" datetime="2013-01-13T12:34:00+08:00" content="2013-01-13">
+              2013-01-13
             </time>
           </span>
 
@@ -236,8 +237,8 @@
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
+                  <a href="/uniDog/categories/Volume-103/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 103</span>
                   </a>
                 </span>
 
@@ -251,7 +252,7 @@
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=83" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1247" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -274,53 +275,61 @@
       
 
       
-        <span itemprop="articleBody"><p>紐西蘭的貨幣包含了 \$100, \$50, \$20, \$10, \$5 的紙鈔和 \$2, \$1, 50c, 20c, 10c, 5c 的硬幣。給你某金額的數字，請你寫一個程式回答：使用這些面額的紙鈔或硬幣，有多少種不同的方法可以組合成這個金額。例如：20c 可以有 4 個方法可以得到：(改變金額的順序不會增加方法數，例如 <span>$2\times{5c}+1\times{10c}$</span><!-- Has MathJax --> 和下面第 3 種方法視為同一種)</p>
-<ul>
-<li><span>$1\times{20c}$</span><!-- Has MathJax --></li>
-<li><span>$2\times{10c}$</span><!-- Has MathJax --></li>
-<li><span>$1\times{10c}+2\times{5c}$</span><!-- Has MathJax --></li>
-<li><span>$4\times{5c}$</span><!-- Has MathJax -->
-</li>
-</ul>
+        <span itemprop="articleBody"><p>在 Department for Bills and Coins 中，現今貨幣制度提出新的擴展形式以適應新的經濟體系。將來一些被稱為 e-coin 的新貨幣會被製造出來，除了傳統的價值 (conventional value) 外，還會賦予稱為 InfoTechnological 的價值。當然，這種改良的目標就是為了落實經濟上的正義，尤其是針對那些為數眾多的網際網路公司 (dotcom company)，事實上，這些公司擁有很少的錢但卻擁有很多 IT 技術在裡面。因此，所有舊樣式的貨幣在新的制度下將會保持原本傳統的價值和零 InfoTechnological 值。</p>
+<p>為了成功在新的貨幣系統下做比較，因此引進一種叫做 e-modulus 的概念。他的計算方式是 <strong>SQRT(X*X+Y*Y)</strong>，其中 X 和 Y 分別是傳統價值和 InfoTechnological 值的總和，舉例來說，有 3 元的傳統價值和 4 元的 InfoTechnological 值的錢的 e-modulus 值將會是 5 元。請記得，你必須在算出 e-modulus 之前，先分別算出傳統價值和 InfoTechnological 值的總和。</p>
+<img src="/uniDog/images/103/p10306.jpg">
+<p>為了簡化 e-currency 這種措施，你被分派去寫一支程式。給你一個必須達到的 e-modulus 值和一列不同種類的 e-coin，計算最少需要多少 e-coin 來達到相應的 e-modulus 值。在這裡，每種 e-coin 在湊出相應的 e-modulus 時，e-coin 的使用數量上沒有限制。</p>
 <a id="more"></a>
-<h2 id="Input">Input</h2><p>輸入含有多組測試資料。</p>
-<p>每組測試資料一列，含有 1 個金額 (不大於 \$300.00)。這個金額一定是合法的，也就是一定是 5c 的倍數。</p>
-<p>當輸入為 0.00 時代表輸入結束，請參考 Sample Input。</p>
-<h2 id="Output">Output</h2><p>對每組測試資料輸出一列，包含輸入的金額 (小數點 2 位，總長度 6 位，靠右對齊) 以及有多少種不同的方法可以組合成這個金額 (總長度 17 位，靠右對齊)。請參考 Sample Output。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">0.20</span>
-<span class="number">2.00</span>
-<span class="number">0.50</span>
-<span class="number">1.00</span>
-<span class="number">100.95</span>
-<span class="number">300.00</span>
-<span class="number">0.00</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>  <span class="number">0.20</span>                <span class="number">4</span>
-  <span class="number">2.00</span>              <span class="number">293</span>
-  <span class="number">0.50</span>               <span class="number">13</span>
-  <span class="number">1.00</span>               <span class="number">50</span>
-<span class="number">100.95</span>      <span class="number">50619764500</span>
-<span class="number">300.00</span>  <span class="number">181490736388615</span>
+<h2 id="Input">Input</h2><p>第一行有一個整數 <span>$n$</span><!-- Has MathJax --> (<span>$0 &lt; n\leq{100}$</span><!-- Has MathJax -->) 代表問題的數量，接著有 n 個問題：</p>
+<p>其中第一行有兩個整數 <span>$m$</span><!-- Has MathJax --> (<span>$0 &lt; m\leq{40}$</span><!-- Has MathJax -->)、<span>$S$</span><!-- Has MathJax --> (<span>$0 &lt; S\leq{300}$</span><!-- Has MathJax -->)，其中 <span>$m$</span><!-- Has MathJax --> 是問題中 e-coin 的種類數，而 <span>$S$</span><!-- Has MathJax --> 代表需要達到的 e-modulus 值。</p>
+<p>接著 <span>$m$</span><!-- Has MathJax --> 行中，每一行由一對非負整數所組成，用以描述 e-coin 的價值。</p>
+<p>第一個整數代表傳統價值，而第二個整數代表 InfoTechnological 值。</p>
+<p>當多於一個數字在同一行時，它們將會被空白隔開。在每個問題之間會有空白行。</p>
+<h2 id="Output">Output</h2><p>輸出有 <span>$n$</span><!-- Has MathJax --> 行，每行有一個整數代表可以達到 e-modulus 需要的貨幣數量；或是如果 <span>$S$</span><!-- Has MathJax --> 沒辦法達到，則輸出「<code>not possible</code>」。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">3</span>
+<span class="number">2</span> <span class="number">5</span>
+<span class="number">0</span> <span class="number">2</span>
+<span class="number">2</span> <span class="number">0</span>
+<span class="number">3</span> <span class="number">20</span>
+<span class="number">0</span> <span class="number">2</span>
+<span class="number">2</span> <span class="number">0</span>
+<span class="number">2</span> <span class="number">1</span>
+<span class="number">3</span> <span class="number">5</span>
+<span class="number">3</span> <span class="number">0</span>
+<span class="number">0</span> <span class="number">4</span>
+<span class="number">5</span> <span class="number">5</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>not possible
+<span class="number">10</span>
+<span class="number">2</span>
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/找零問題/" rel="tag">#找零問題</a>
+          
+            <a href="/uniDog/tags/背包問題/" rel="tag">#背包問題</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p130/" rel="next" title="130 - Roman Roulette">
-                <i class="fa fa-chevron-left"></i> 130 - Roman Roulette
+              <a href="/uniDog/problem/p12575/" rel="next" title="12575 - Sin Cos Problem">
+                <i class="fa fa-chevron-left"></i> 12575 - Sin Cos Problem
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p106/" rel="prev" title="106 - Fermat vs. Pythagoras">
-                106 - Fermat vs. Pythagoras <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p10635/" rel="prev" title="10635 - Prince and Princess">
+                10635 - Prince and Princess <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

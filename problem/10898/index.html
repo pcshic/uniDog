@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="找零問題,背包問題," />
 
 
 
@@ -83,7 +83,7 @@ Value Meal (1 Hamburger, 1 Fries, 1 Pop) (超值套餐)
 \$4.79">
 <meta property="og:type" content="article">
 <meta property="og:title" content="10898 - Combo Deal">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p10898/index.html">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/10898/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
 <meta property="og:description" content="速食店除了提供食物的單點之外，通常也會提供「套餐」的選擇。例如：菜單可能像這樣：
 
@@ -113,7 +113,7 @@ Ice Cream (冰淇淋)
 
 Value Meal (1 Hamburger, 1 Fries, 1 Pop) (超值套餐)
 \$4.79">
-<meta property="og:updated_time" content="2015-11-22T08:52:08.112Z">
+<meta property="og:updated_time" content="2015-11-23T17:13:19.637Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="10898 - Combo Deal">
 <meta name="twitter:description" content="速食店除了提供食物的單點之外，通常也會提供「套餐」的選擇。例如：菜單可能像這樣：
@@ -293,7 +293,7 @@ Value Meal (1 Hamburger, 1 Fries, 1 Pop) (超值套餐)
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10898/">
+            <a href="/uniDog/problem/10898/">
               <span>Luckycat</span>
             </a>
           </span>
@@ -394,7 +394,11 @@ Value Meal (1 Hamburger, 1 Fries, 1 Pop) (超值套餐)
 <p>一個有很多小孩的媽媽面臨了一種情況：比方說，我需要 9 份漢堡，6 份薯條和 8 份爆米花，我要如何從菜單選擇可以買到我所需要的，而且付的錢最少？請注意：我是一個保守主義者，所以我<strong>絕不會買比需要多的食物</strong>。</p>
 <h2 id="Input">Input</h2><p>輸入含有多筆測資，每筆測資含有菜單及幾個訂單。</p>
 <ol>
-<li>菜單：先個別單點，然後是組合套餐。<br>(a) 個別單點：有一個整數 <span>$I$</span><!-- Has MathJax --> (<span>$I\leq{6}$</span><!-- Has MathJax -->)，然後是各單點的價格 (每項最多 \$10)<br>(b) 組合套餐：有一個整數代表有多少種組合套餐 (最多 8 種)。接下來就是每種組合套餐的內容：包含各項單點的 <span>$I$</span><!-- Has MathJax --> 個數目，然後是價錢。<br>以下的 Sample Input 的菜單即是上面所敘述的。</li>
+<li>菜單：先個別單點，然後是組合套餐。<ol>
+<li>個別單點：有一個整數 <span>$I$</span><!-- Has MathJax --> (<span>$I\leq{6}$</span><!-- Has MathJax -->)，然後是各單點的價格 (每項最多 \$10)</li>
+<li>組合套餐：有一個整數代表有多少種組合套餐 (最多 8 種)。接下來就是每種組合套餐的內容：包含各項單點的 <span>$I$</span><!-- Has MathJax --> 個數目，然後是價錢。<br>以下的 Sample Input 的菜單即是上面所敘述的。</li>
+</ol>
+</li>
 <li>訂單：訂單的數目 (最多 10)，然後是各訂單的內容 (<span>$I$</span><!-- Has MathJax --> 個數字代表所需各項目的數量，每個數字最多為 9)</li>
 </ol>
 <p>所有的價格均以分 (cent) 為單位。(1 dollar = 100 cent)</p>
@@ -413,6 +417,14 @@ Value Meal (1 Hamburger, 1 Fries, 1 Pop) (超值套餐)
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/找零問題/" rel="tag">#找零問題</a>
+          
+            <a href="/uniDog/tags/背包問題/" rel="tag">#背包問題</a>
+          
+        </div>
       
 
       

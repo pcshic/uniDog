@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="找零問題,背包問題," />
 
 
 
@@ -53,16 +53,16 @@
 
 
 
-<meta name="description" content="在 Department for Bills and Coins 中，現今貨幣制度提出新的擴展形式以適應新的經濟體系。將來一些被稱為 e-coin 的新貨幣會被製造出來，除了傳統的價值 (conventional value) 外，還會賦予稱為 InfoTechnological 的價值。當然，這種改良的目標就是為了落實經濟上的正義，尤其是針對那些為數眾多的網際網路公司 (dotcom compa">
+<meta name="description" content="經過在百貨公司的一場血拼之後，小梅發現她身上的零錢共有 17 分 (cent，美金貨幣單位，其他貨幣及面值請參考下方紅字部分)，分別是 1 個 dime，1 個 nickel，以及 2 個 penny。隔天，小梅去便利商店買完東西後發現她身上的零錢恰好又是 17 分，這次是 2 個 nickel 及 7 個 penny。小梅就在想，有幾種硬幣的組合可能湊成 17 分呢？經過仔細算算之後，發現共有">
 <meta property="og:type" content="article">
-<meta property="og:title" content="10306 - e-Coins">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p10306/index.html">
+<meta property="og:title" content="357 - Let Me Count The Ways">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/357/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="在 Department for Bills and Coins 中，現今貨幣制度提出新的擴展形式以適應新的經濟體系。將來一些被稱為 e-coin 的新貨幣會被製造出來，除了傳統的價值 (conventional value) 外，還會賦予稱為 InfoTechnological 的價值。當然，這種改良的目標就是為了落實經濟上的正義，尤其是針對那些為數眾多的網際網路公司 (dotcom compa">
-<meta property="og:updated_time" content="2015-11-22T08:52:07.708Z">
+<meta property="og:description" content="經過在百貨公司的一場血拼之後，小梅發現她身上的零錢共有 17 分 (cent，美金貨幣單位，其他貨幣及面值請參考下方紅字部分)，分別是 1 個 dime，1 個 nickel，以及 2 個 penny。隔天，小梅去便利商店買完東西後發現她身上的零錢恰好又是 17 分，這次是 2 個 nickel 及 7 個 penny。小梅就在想，有幾種硬幣的組合可能湊成 17 分呢？經過仔細算算之後，發現共有">
+<meta property="og:updated_time" content="2015-11-23T17:17:23.459Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="10306 - e-Coins">
-<meta name="twitter:description" content="在 Department for Bills and Coins 中，現今貨幣制度提出新的擴展形式以適應新的經濟體系。將來一些被稱為 e-coin 的新貨幣會被製造出來，除了傳統的價值 (conventional value) 外，還會賦予稱為 InfoTechnological 的價值。當然，這種改良的目標就是為了落實經濟上的正義，尤其是針對那些為數眾多的網際網路公司 (dotcom compa">
+<meta name="twitter:title" content="357 - Let Me Count The Ways">
+<meta name="twitter:description" content="經過在百貨公司的一場血拼之後，小梅發現她身上的零錢共有 17 分 (cent，美金貨幣單位，其他貨幣及面值請參考下方紅字部分)，分別是 1 個 dime，1 個 nickel，以及 2 個 penny。隔天，小梅去便利商店買完東西後發現她身上的零錢恰好又是 17 分，這次是 2 個 nickel 及 7 個 penny。小梅就在想，有幾種硬幣的組合可能湊成 17 分呢？經過仔細算算之後，發現共有">
 
 
 
@@ -74,7 +74,7 @@
   };
 </script>
 
-  <title> 10306 - e-Coins | uniDog 的 ACM 園地 </title>
+  <title> 357 - Let Me Count The Ways | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -204,7 +204,7 @@
             
             
               
-                10306 - e-Coins
+                357 - Let Me Count The Ways
               
             
           </h1>
@@ -212,22 +212,22 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10306/">
-              <span>許胖</span>
+            <a href="/uniDog/problem/357/">
+              <span>Luckycat</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="/uniDog/problem/p10306/" target="_blank">
-              <span>uniDog</span>
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q357.htm" target="_blank">
+              <span>Lucky 貓</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2013-01-13T12:34:00+08:00" content="2013-01-13">
-              2013-01-13
+            <time itemprop="dateCreated" datetime="2002-04-02T00:00:00+08:00" content="2002-04-02">
+              2002-04-02
             </time>
           </span>
 
@@ -236,8 +236,8 @@
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-103/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 103</span>
+                  <a href="/uniDog/categories/Volume-003/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 003</span>
                   </a>
                 </span>
 
@@ -251,7 +251,7 @@
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1247" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=293" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -274,51 +274,54 @@
       
 
       
-        <span itemprop="articleBody"><p>在 Department for Bills and Coins 中，現今貨幣制度提出新的擴展形式以適應新的經濟體系。將來一些被稱為 e-coin 的新貨幣會被製造出來，除了傳統的價值 (conventional value) 外，還會賦予稱為 InfoTechnological 的價值。當然，這種改良的目標就是為了落實經濟上的正義，尤其是針對那些為數眾多的網際網路公司 (dotcom company)，事實上，這些公司擁有很少的錢但卻擁有很多 IT 技術在裡面。因此，所有舊樣式的貨幣在新的制度下將會保持原本傳統的價值和零 InfoTechnological 值。</p>
-<p>為了成功在新的貨幣系統下做比較，因此引進一種叫做 e-modulus 的概念。他的計算方式是 <strong>SQRT(X*X+Y*Y)</strong>，其中 X 和 Y 分別是傳統價值和 InfoTechnological 值的總和，舉例來說，有 3 元的傳統價值和 4 元的 InfoTechnological 值的錢的 e-modulus 值將會是 5 元。請記得，你必須在算出 e-modulus 之前，先分別算出傳統價值和 InfoTechnological 值的總和。</p>
-<p>為了簡化 e-currency 這種措施，你被分派去寫一支程式。給你一個必須達到的 e-modulus 值和一列不同種類的 e-coin，計算最少需要多少 e-coin 來達到相應的 e-modulus 值。在這裡，每種 e-coin 在湊出相應的 e-modulus 時，e-coin 的使用數量上沒有限制。</p>
-<h2 id="Input">Input</h2><p>第一行有一個整數 n (<span>$0 &lt; n\leq{100}$</span><!-- Has MathJax -->) 代表問題的數量，接著有 n 個問題：</p>
-<p>其中第一行有兩個整數 m (<span>$0 &lt; m\leq{40}$</span><!-- Has MathJax -->)、S (<span>$0 &lt; S\leq{300}$</span><!-- Has MathJax -->)，其中 m 是問題中 e-coin 的種類數，而 S 代表需要達到的 e-modulus 值。</p>
-<p>接著 m 行中，每一行由一對非負整數所組成，用以描述 e-coin 的價值。</p>
-<p>第一個整數代表傳統價值，而第二個整數代表 InfoTechnological 值。</p>
-<p>當多於一個數字在同一行時，它們將會被空白隔開。在每個問題之間會有空白行。</p>
-<h2 id="Output">Output</h2><p>輸出有 n 行，每行有一個整數代表可以達到 e-modulus 需要的貨幣數量；或是如果 S 沒辦法達到，則輸出「<code>not possible</code>」。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">3</span>
-<span class="number">2</span> <span class="number">5</span>
-<span class="number">0</span> <span class="number">2</span>
-<span class="number">2</span> <span class="number">0</span>
-<span class="number">3</span> <span class="number">20</span>
-<span class="number">0</span> <span class="number">2</span>
-<span class="number">2</span> <span class="number">0</span>
-<span class="number">2</span> <span class="number">1</span>
-<span class="number">3</span> <span class="number">5</span>
-<span class="number">3</span> <span class="number">0</span>
-<span class="number">0</span> <span class="number">4</span>
-<span class="number">5</span> <span class="number">5</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>not possible
-<span class="number">10</span>
-<span class="number">2</span>
+        <span itemprop="articleBody"><p>經過在百貨公司的一場血拼之後，小梅發現她身上的零錢共有 17 分 (cent，美金貨幣單位，其他貨幣及面值請參考下方紅字部分)，分別是 1 個 dime，1 個 nickel，以及 2 個 penny。隔天，小梅去便利商店買完東西後發現她身上的零錢恰好又是 17 分，這次是 2 個 nickel 及 7 個 penny。小梅就在想，有幾種硬幣的組合可能湊成 17 分呢？經過仔細算算之後，發現共有 6 種。</p>
+<p>你的問題就是：給一個金額，請你回答共有多少種硬幣組合的方式。</p>
+<p>p.s 美國的零錢共有以下幾種硬幣以及其面值：</p>
+<ul>
+<li>penny, 1 cent</li>
+<li>nickel, 5 cents</li>
+<li>dime, 10 cents</li>
+<li>quarter, 25 cents</li>
+<li>half-dollar, 50 cents</li>
+</ul>
+<h2 id="Input">Input</h2><p>每組測試資料 1 列，有 1 個整數 <span>$n$</span><!-- Has MathJax --> (<span>$0\leq{n}\leq{30000}$</span><!-- Has MathJax -->)，代表零錢的總金額。</p>
+<h2 id="Output">Output</h2><p>對每組測試資料請輸出共有多少種硬幣組合方式。輸出格式為以下 2 種其中之一。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">There are m ways to produce n cents <span class="operator"><span class="keyword">change</span>.</span><br><span class="line">There <span class="keyword">is</span> <span class="keyword">only</span> <span class="number">1</span> way <span class="keyword">to</span> produce <span class="keyword">n</span> cents <span class="keyword">change</span>.</span></span><br></pre></td></tr></table></figure>
+<h2 id="Sample_input">Sample input</h2><pre><code><span class="number">17</span> 
+<span class="number">11</span>
+<span class="number">4</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>There are 6 ways to produce 17 cents <span class="operator"><span class="keyword">change</span>. 
+There <span class="keyword">are</span> <span class="number">4</span> ways <span class="keyword">to</span> produce <span class="number">11</span> cents <span class="keyword">change</span>. 
+There <span class="keyword">is</span> <span class="keyword">only</span> <span class="number">1</span> way <span class="keyword">to</span> produce <span class="number">4</span> cents <span class="keyword">change</span>.</span>
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/找零問題/" rel="tag">#找零問題</a>
+          
+            <a href="/uniDog/tags/背包問題/" rel="tag">#背包問題</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p12575/" rel="next" title="12575 - Sin Cos Problem">
-                <i class="fa fa-chevron-left"></i> 12575 - Sin Cos Problem
+              <a href="/uniDog/problem/p369/" rel="next" title="369 - Combinations">
+                <i class="fa fa-chevron-left"></i> 369 - Combinations
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p10635/" rel="prev" title="10635 - Prince and Princess">
-                10635 - Prince and Princess <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p10055/" rel="prev" title="10055 - Hashmat the brave warrior">
+                10055 - Hashmat the brave warrior <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -443,7 +446,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Input"><span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Output"><span class="nav-text">Sample Output</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_input"><span class="nav-text">Sample input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Output"><span class="nav-text">Sample Output</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

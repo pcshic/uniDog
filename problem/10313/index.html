@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="找零問題,背包問題," />
 
 
 
@@ -53,25 +53,19 @@
 
 
 
-<meta name="description" content="有一個國家叫「方塊國」，方塊國使用「方塊幣」當作流通的貨幣，這種貨幣是由方塊所組成，其面額是 1 ~ 21 的立方倍，也就是 1, 8, 27, …, 9261。
-你的任務是要計算用方塊幣付款的所有可能方式，例如付 21 元共有三種付款方式：
-(1) 付 21 個 1 元方塊幣(2) 付 1 個 8 元方塊幣加 13 個 1 元方塊幣(3) 付 2 個 8 元方塊幣加 5 個一元方塊幣。
-輸入的每">
+<meta name="description" content="從前有一個國家那裡的人民有非常有趣的習慣。有些人懶惰，有些人富有。有些人非常平窮，有些人小氣。明顯的有些有錢人小氣 (貧窮人絕不會小氣，因為他本來就沒多少東西) 並且懶惰，但是貧窮人也都懶惰 (這也是他們永遠都貧窮的原因)。以下的事在這個國家都是真實的：
+a) 由於有錢人小氣，沒有任何東西的價格會超過 $300$&amp;lt;!-- Has MathJax --&amp;gt; 元。b) 由於貧窮人懶惰，每件東西的價格都是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="11137 - Ingenuous Cubrency">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p11137/index.html">
+<meta property="og:title" content="10313 - Pay the Price">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/10313/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="有一個國家叫「方塊國」，方塊國使用「方塊幣」當作流通的貨幣，這種貨幣是由方塊所組成，其面額是 1 ~ 21 的立方倍，也就是 1, 8, 27, …, 9261。
-你的任務是要計算用方塊幣付款的所有可能方式，例如付 21 元共有三種付款方式：
-(1) 付 21 個 1 元方塊幣(2) 付 1 個 8 元方塊幣加 13 個 1 元方塊幣(3) 付 2 個 8 元方塊幣加 5 個一元方塊幣。
-輸入的每">
-<meta property="og:updated_time" content="2015-11-22T08:52:08.365Z">
+<meta property="og:description" content="從前有一個國家那裡的人民有非常有趣的習慣。有些人懶惰，有些人富有。有些人非常平窮，有些人小氣。明顯的有些有錢人小氣 (貧窮人絕不會小氣，因為他本來就沒多少東西) 並且懶惰，但是貧窮人也都懶惰 (這也是他們永遠都貧窮的原因)。以下的事在這個國家都是真實的：
+a) 由於有錢人小氣，沒有任何東西的價格會超過 $300$&amp;lt;!-- Has MathJax --&amp;gt; 元。b) 由於貧窮人懶惰，每件東西的價格都是">
+<meta property="og:updated_time" content="2015-11-23T17:08:17.548Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="11137 - Ingenuous Cubrency">
-<meta name="twitter:description" content="有一個國家叫「方塊國」，方塊國使用「方塊幣」當作流通的貨幣，這種貨幣是由方塊所組成，其面額是 1 ~ 21 的立方倍，也就是 1, 8, 27, …, 9261。
-你的任務是要計算用方塊幣付款的所有可能方式，例如付 21 元共有三種付款方式：
-(1) 付 21 個 1 元方塊幣(2) 付 1 個 8 元方塊幣加 13 個 1 元方塊幣(3) 付 2 個 8 元方塊幣加 5 個一元方塊幣。
-輸入的每">
+<meta name="twitter:title" content="10313 - Pay the Price">
+<meta name="twitter:description" content="從前有一個國家那裡的人民有非常有趣的習慣。有些人懶惰，有些人富有。有些人非常平窮，有些人小氣。明顯的有些有錢人小氣 (貧窮人絕不會小氣，因為他本來就沒多少東西) 並且懶惰，但是貧窮人也都懶惰 (這也是他們永遠都貧窮的原因)。以下的事在這個國家都是真實的：
+a) 由於有錢人小氣，沒有任何東西的價格會超過 $300$&amp;lt;!-- Has MathJax --&amp;gt; 元。b) 由於貧窮人懶惰，每件東西的價格都是">
 
 
 
@@ -83,7 +77,7 @@
   };
 </script>
 
-  <title> 11137 - Ingenuous Cubrency | uniDog 的 ACM 園地 </title>
+  <title> 10313 - Pay the Price | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -213,7 +207,7 @@
             
             
               
-                11137 - Ingenuous Cubrency
+                10313 - Pay the Price
               
             
           </h1>
@@ -221,22 +215,22 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p11137/">
-              <span>Purple People Eater</span>
+            <a href="/uniDog/problem/10313/">
+              <span>Luckycat</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://rubyacm.blogspot.tw/2011/07/11137-ingenuous-cubrency.html" target="_blank">
-              <span>Ruby 兔</span>
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10313.htm" target="_blank">
+              <span>Lucky 貓</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2011-07-29T00:00:00+08:00" content="2011-07-29">
-              2011-07-29
+            <time itemprop="dateCreated" datetime="2003-06-23T00:00:00+08:00" content="2003-06-23">
+              2003-06-23
             </time>
           </span>
 
@@ -245,8 +239,8 @@
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-111/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 111</span>
+                  <a href="/uniDog/categories/Volume-103/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 103</span>
                   </a>
                 </span>
 
@@ -260,7 +254,7 @@
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2078" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1254" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -283,39 +277,67 @@
       
 
       
-        <span itemprop="articleBody"><p>有一個國家叫「方塊國」，方塊國使用「方塊幣」當作流通的貨幣，這種貨幣是由方塊所組成，其面額是 1 ~ 21 的立方倍，也就是 1, 8, 27, …, 9261。</p>
-<p>你的任務是要計算用方塊幣付款的所有可能方式，例如付 21 元共有三種付款方式：</p>
-<p>(1) 付 21 個 1 元方塊幣<br>(2) 付 1 個 8 元方塊幣加 13 個 1 元方塊幣<br>(3) 付 2 個 8 元方塊幣加 5 個一元方塊幣。</p>
-<p>輸入的每一列會有一個整數，請你計算此金額的所有可能付款方式，此金額大小介於 1 ~ 10000 之間。</p>
-<h2 id="Sample_input">Sample input</h2><pre><code><span class="number">10</span> 
-<span class="number">21</span>
-<span class="number">77</span>
-<span class="number">9999</span>
-</code></pre><h2 id="Output_for_sample_input">Output for sample input</h2><pre><code><span class="number">2</span>
-<span class="number">3</span>
-<span class="number">22</span>
-<span class="number">440022018293</span>
+        <span itemprop="articleBody"><p>從前有一個國家那裡的人民有非常有趣的習慣。有些人懶惰，有些人富有。有些人非常平窮，有些人小氣。明顯的有些有錢人小氣 (貧窮人絕不會小氣，因為他本來就沒多少東西) 並且懶惰，但是貧窮人也都懶惰 (這也是他們永遠都貧窮的原因)。以下的事在這個國家都是真實的：</p>
+<p>a) 由於有錢人小氣，沒有任何東西的價格會超過 <span>$300$</span><!-- Has MathJax --> 元。<br>b) 由於貧窮人懶惰，每件東西的價格都是整數。(連乞丐要錢都至少要 <span>$1$</span><!-- Has MathJax --> 元)<br>c) 硬幣的面值從 <span>$1$</span><!-- Has MathJax --> 到 <span>$300$</span><!-- Has MathJax --> 元，所以那些懶惰的有錢人可以只用一個硬幣付任何的價錢。</p>
+<p>你的任務是找出一個人要付一個價錢有多少種方法，條件是使用硬幣的數目是被限定的。例如：要用 <span>$3$</span><!-- Has MathJax --> 個硬幣來付 <span>$6$</span><!-- Has MathJax --> 元有 <span>$3$</span><!-- Has MathJax --> 種方法：<span>$1+1+4$</span><!-- Has MathJax -->、<span>$1+2+3$</span><!-- Has MathJax -->、<span>$2+2+2$</span><!-- Has MathJax -->。依此類推，一個人付 <span>$6$</span><!-- Has MathJax --> 元最多使用 <span>$6$</span><!-- Has MathJax --> 個硬幣的方法有 <span>$11$</span><!-- Has MathJax --> 種。</p>
+<h2 id="Input">Input</h2><p>每組測試資料 <span>$1$</span><!-- Has MathJax --> 列，每列可能含有 <span>$1$</span><!-- Has MathJax --> 或 <span>$2$</span><!-- Has MathJax --> 或 <span>$3$</span><!-- Has MathJax --> 個整數。其中第一個整數一定是 <span>$N$</span><!-- Has MathJax --> (<span>$0\leq{N}\leq{300}$</span><!-- Has MathJax -->)，代表要付的錢是多少。其他的數均大於等於 <span>$0$</span><!-- Has MathJax -->，小於等於 <span>$1000$</span><!-- Has MathJax -->。</p>
+<h2 id="Output">Output</h2><p>對每組測試資料輸出一列，代表付 <span>$N$</span><!-- Has MathJax --> 元有多少種方法，分為以下三種：</p>
+<p>如果該組測試資料僅有 <span>$1$</span><!-- Has MathJax --> 個整數，請輸出付 <span>$N$</span><!-- Has MathJax --> 元的方法有多少種 (用多少個硬幣不拘)。</p>
+<p>如果該組測試資料有 <span>$2$</span><!-- Has MathJax --> 個整數 <span>$N$</span><!-- Has MathJax -->、<span>$L1$</span><!-- Has MathJax -->，請輸出付 <span>$N$</span><!-- Has MathJax --> 元且最多用 <span>$L1$</span><!-- Has MathJax --> 個硬幣的方法有多少種。</p>
+<p>如果該組測試資料有 <span>$3$</span><!-- Has MathJax --> 個整數 <span>$N$</span><!-- Has MathJax -->、<span>$L1$</span><!-- Has MathJax -->、<span>$L2$</span><!-- Has MathJax -->，請輸出付 <span>$N$</span><!-- Has MathJax --> 元且最少用 <span>$L1$</span><!-- Has MathJax --> 個硬幣，最多用 <span>$L2$</span><!-- Has MathJax --> 個硬幣的方法有多少種。在這裡 <span>$L1$</span><!-- Has MathJax --> 一定小於等於 <span>$L2$</span><!-- Has MathJax -->。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">6</span>
+<span class="number">6</span> <span class="number">34</span>
+<span class="number">6</span> <span class="number">2</span> <span class="number">5</span>
+<span class="number">6</span> <span class="number">1</span> <span class="number">6</span>
+<span class="number">0</span> 
+<span class="number">0</span> <span class="number">0</span> 
+<span class="number">0</span> <span class="number">1</span> 
+<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> 
+<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> 
+<span class="number">0</span> <span class="number">1</span> <span class="number">1</span> 
+<span class="number">0</span> <span class="number">1</span> <span class="number">2</span> 
+<span class="number">200</span> <span class="number">30</span> <span class="number">75</span> 
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">11</span>
+<span class="number">7</span>
+<span class="number">9</span>
+<span class="number">11</span>
+<span class="number">1</span>
+<span class="number">1</span>
+<span class="number">1</span>
+<span class="number">1</span>
+<span class="number">1</span>
+<span class="number">0</span>
+<span class="number">0</span>
+<span class="number">2347163627458</span>
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/找零問題/" rel="tag">#找零問題</a>
+          
+            <a href="/uniDog/tags/背包問題/" rel="tag">#背包問題</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p12002/" rel="next" title="12002 - Happy Birthday">
-                <i class="fa fa-chevron-left"></i> 12002 - Happy Birthday
+              <a href="/uniDog/problem/p116/" rel="next" title="116 - Unidirectional TSP">
+                <i class="fa fa-chevron-left"></i> 116 - Unidirectional TSP
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p11151/" rel="prev" title="11151 - Longest Palindrome">
-                11151 - Longest Palindrome <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p10534/" rel="prev" title="10534 - Wavio Sequence">
+                10534 - Wavio Sequence <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -440,7 +462,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_input"><span class="nav-text">Sample input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output_for_sample_input"><span class="nav-text">Output for sample input</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Input"><span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Output"><span class="nav-text">Sample Output</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

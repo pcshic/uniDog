@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="找零問題,背包問題," />
 
 
 
@@ -53,19 +53,31 @@
 
 
 
-<meta name="description" content="我們知道假設我們有無限多的各式硬幣時，我們可以有很多種方式組合出特定的金額。瘋狂的電腦科學家們於是稍微把這個問題複雜化，現在考慮我們買東西付錢時，我們不可能隨身攜帶無限多的各式硬幣，在這種情況下，可以組成特定金額的方式就會被我們身上現有的硬幣所限制。
-瘋狂的電腦科學家們好奇的是，假設店家手上有足夠的硬幣可以找錢，在這次交易中，我們付出去與店家找回來所使用的硬幣總數，最小可以是多少。(在這個問題中我">
+<meta name="description" content="有一個國家叫「方塊國」，方塊國使用「方塊幣」當作流通的貨幣，這種貨幣是由方塊所組成，其面額是 1 ~ 21 的立方倍，也就是 $1,8,27,\cdots{},9261$&amp;lt;!-- Has MathJax --&amp;gt;。
+你的任務是要計算用方塊幣付款的所有可能方式，例如付 21 元共有三種付款方式：
+
+付 21 個 1 元方塊幣
+付 1 個 8 元方塊幣加 13 個 1 元方塊幣
+付 2 個 8 元方塊幣">
 <meta property="og:type" content="article">
-<meta property="og:title" content="166 - Making Change">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p166/index.html">
+<meta property="og:title" content="11137 - Ingenuous Cubrency">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/11137/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="我們知道假設我們有無限多的各式硬幣時，我們可以有很多種方式組合出特定的金額。瘋狂的電腦科學家們於是稍微把這個問題複雜化，現在考慮我們買東西付錢時，我們不可能隨身攜帶無限多的各式硬幣，在這種情況下，可以組成特定金額的方式就會被我們身上現有的硬幣所限制。
-瘋狂的電腦科學家們好奇的是，假設店家手上有足夠的硬幣可以找錢，在這次交易中，我們付出去與店家找回來所使用的硬幣總數，最小可以是多少。(在這個問題中我">
-<meta property="og:updated_time" content="2015-11-22T08:52:09.416Z">
+<meta property="og:description" content="有一個國家叫「方塊國」，方塊國使用「方塊幣」當作流通的貨幣，這種貨幣是由方塊所組成，其面額是 1 ~ 21 的立方倍，也就是 $1,8,27,\cdots{},9261$&amp;lt;!-- Has MathJax --&amp;gt;。
+你的任務是要計算用方塊幣付款的所有可能方式，例如付 21 元共有三種付款方式：
+
+付 21 個 1 元方塊幣
+付 1 個 8 元方塊幣加 13 個 1 元方塊幣
+付 2 個 8 元方塊幣">
+<meta property="og:updated_time" content="2015-11-23T17:47:04.392Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="166 - Making Change">
-<meta name="twitter:description" content="我們知道假設我們有無限多的各式硬幣時，我們可以有很多種方式組合出特定的金額。瘋狂的電腦科學家們於是稍微把這個問題複雜化，現在考慮我們買東西付錢時，我們不可能隨身攜帶無限多的各式硬幣，在這種情況下，可以組成特定金額的方式就會被我們身上現有的硬幣所限制。
-瘋狂的電腦科學家們好奇的是，假設店家手上有足夠的硬幣可以找錢，在這次交易中，我們付出去與店家找回來所使用的硬幣總數，最小可以是多少。(在這個問題中我">
+<meta name="twitter:title" content="11137 - Ingenuous Cubrency">
+<meta name="twitter:description" content="有一個國家叫「方塊國」，方塊國使用「方塊幣」當作流通的貨幣，這種貨幣是由方塊所組成，其面額是 1 ~ 21 的立方倍，也就是 $1,8,27,\cdots{},9261$&amp;lt;!-- Has MathJax --&amp;gt;。
+你的任務是要計算用方塊幣付款的所有可能方式，例如付 21 元共有三種付款方式：
+
+付 21 個 1 元方塊幣
+付 1 個 8 元方塊幣加 13 個 1 元方塊幣
+付 2 個 8 元方塊幣">
 
 
 
@@ -77,7 +89,7 @@
   };
 </script>
 
-  <title> 166 - Making Change | uniDog 的 ACM 園地 </title>
+  <title> 11137 - Ingenuous Cubrency | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -207,7 +219,7 @@
             
             
               
-                166 - Making Change
+                11137 - Ingenuous Cubrency
               
             
           </h1>
@@ -215,22 +227,22 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p166/">
-              <span>Luckycat</span>
+            <a href="/uniDog/problem/11137/">
+              <span>Purple People Eater</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q166.htm" target="_blank">
-              <span>Lucky 貓</span>
+            <a href="http://rubyacm.blogspot.tw/2011/07/11137-ingenuous-cubrency.html" target="_blank">
+              <span>Ruby 兔</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-06-04T00:00:00+08:00" content="2002-06-04">
-              2002-06-04
+            <time itemprop="dateCreated" datetime="2011-07-29T00:00:00+08:00" content="2011-07-29">
+              2011-07-29
             </time>
           </span>
 
@@ -239,8 +251,8 @@
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
+                  <a href="/uniDog/categories/Volume-111/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 111</span>
                   </a>
                 </span>
 
@@ -254,7 +266,7 @@
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=102" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2078" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -277,39 +289,51 @@
       
 
       
-        <span itemprop="articleBody"><p>我們知道假設我們有無限多的各式硬幣時，我們可以有很多種方式組合出特定的金額。瘋狂的電腦科學家們於是稍微把這個問題複雜化，現在考慮我們買東西付錢時，我們不可能隨身攜帶無限多的各式硬幣，在這種情況下，可以組成特定金額的方式就會被我們身上現有的硬幣所限制。</p>
-<p>瘋狂的電腦科學家們好奇的是，假設店家手上有足夠的硬幣可以找錢，在這次交易中，我們付出去與店家找回來所使用的硬幣總數，最小可以是多少。(在這個問題中我們以紐西蘭的硬幣為例，共有：5c、10c、20c、50c、\$1、\$2 這六種硬幣，不考慮紙鈔)</p>
-<p>舉例來說，如果我們買了一個 55c 的物品，而且手上不幸剛好沒有 50c 的硬幣，所以一種可能的付法就是給店家 2*20c + 10c + 5c，這麼一來這次交易中總共就有四枚硬幣被使用到；如果我們選擇付 \$1 給店家，那麼店家要找回 45c，這麼一來總共還是需要用到四枚硬幣；但是，如果我們給店家 \$1 + 5c，則店家只需要找回 50c，這樣就只需要用到三枚硬幣，這就是這次交易中，所使用的最小硬幣總數。</p>
-<p>你的任務就是，寫個程式讀入我們有多少硬幣在手上、以及要付多少錢給店家，並找出所使用的最小硬幣總數。</p>
-<h2 id="Input">Input</h2><p>輸入會包含許多行，一行代表一次交易。每一行的六個整數代表前面提到的六種硬幣我們手上各有多少個 (分別對應到面提到的順序：5c、10c、20c、50c、\$1、\$2)，該行的最後一個數字會是一個小於五的實數，代表這次交易中要付多少錢。當程式讀到六個零時 (0 0 0 0 0 0)，代表測資結束。</p>
-<p>測資不會出現手上的零錢無法或不足以支付交易金額的情形，也就是說交易金額永遠是 5c 的倍數。</p>
-<h2 id="Output">Output</h2><p>對每一行測試資料，輸出一行包含最小被使用的硬幣總數。輸出長度為 3，靠右對齊。請參考 Sample Output。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span> <span class="number">4</span> <span class="number">2</span> <span class="number">2</span> <span class="number">1</span> <span class="number">0</span>  <span class="number">0.95</span>
-<span class="number">2</span> <span class="number">4</span> <span class="number">2</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>  <span class="number">0.55</span>
-<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">2</span>
+        <span itemprop="articleBody"><p>有一個國家叫「方塊國」，方塊國使用「方塊幣」當作流通的貨幣，這種貨幣是由方塊所組成，其面額是 1 ~ 21 的立方倍，也就是 <span>$1,8,27,\cdots{},9261$</span><!-- Has MathJax -->。</p>
+<p>你的任務是要計算用方塊幣付款的所有可能方式，例如付 21 元共有三種付款方式：</p>
+<ol>
+<li>付 21 個 1 元方塊幣</li>
+<li>付 1 個 8 元方塊幣加 13 個 1 元方塊幣</li>
+<li>付 2 個 8 元方塊幣加 5 個一元方塊幣。</li>
+</ol>
+<p>輸入的每一列會有一個整數，請你計算此金額的所有可能付款方式，此金額大小介於 1 ~ 10000 之間。</p>
+<h2 id="Sample_input">Sample input</h2><pre><code><span class="number">10</span> 
+<span class="number">21</span>
+<span class="number">77</span>
+<span class="number">9999</span>
+</code></pre><h2 id="Output_for_sample_input">Output for sample input</h2><pre><code><span class="number">2</span>
 <span class="number">3</span>
+<span class="number">22</span>
+<span class="number">440022018293</span>
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/找零問題/" rel="tag">#找零問題</a>
+          
+            <a href="/uniDog/tags/背包問題/" rel="tag">#背包問題</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p673/" rel="next" title="673 - Parentheses Balance">
-                <i class="fa fa-chevron-left"></i> 673 - Parentheses Balance
+              <a href="/uniDog/problem/p12002/" rel="next" title="12002 - Happy Birthday">
+                <i class="fa fa-chevron-left"></i> 12002 - Happy Birthday
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p694/" rel="prev" title="694 - The Collatz Sequence">
-                694 - The Collatz Sequence <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p11151/" rel="prev" title="11151 - Longest Palindrome">
+                11151 - Longest Palindrome <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -434,7 +458,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Input"><span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Output"><span class="nav-text">Sample Output</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_input"><span class="nav-text">Sample input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output_for_sample_input"><span class="nav-text">Output for sample input</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
