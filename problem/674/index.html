@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="找零問題,背包問題," />
 
 
 
@@ -53,19 +53,28 @@
 
 
 
-<meta name="description" content="我們有一些已知長度的金屬棒，請問可以找出所需的特定長度的金屬棒嗎？必要時，可以把幾根金屬棒焊接成更長的一根，但金屬棒不得切割。
-Input輸入的第一行含有一個整數 $t, 0\leq{t}\leq{50}$&amp;lt;!-- Has MathJax --&amp;gt;，表示測資的筆數。每筆測資三行，第一行有一個數字 $n, 0\leq{n}\leq{1000}$&amp;lt;!-- Has MathJax --&amp;gt;，表示我們所要的長">
+<meta name="description" content="給你一個金額 ($n$&amp;lt;!-- Has MathJax --&amp;gt; cents)，請你回答共有多少種硬幣組合的方式。例如：$n=11$&amp;lt;!-- Has MathJax --&amp;gt;，那麼你可以有以下 4 種硬幣的組合：
+
+1 個 10 cent 的硬幣加上 1 個 1 cent 的硬幣
+2 個 5 cent 的硬幣加上 1 個 1 cent 的硬幣
+1 個 5 cent 的硬幣加上 6 個 1 cent 的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="12455 - Bars">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p12455/index.html">
+<meta property="og:title" content="674 - Coin Change">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/674/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="我們有一些已知長度的金屬棒，請問可以找出所需的特定長度的金屬棒嗎？必要時，可以把幾根金屬棒焊接成更長的一根，但金屬棒不得切割。
-Input輸入的第一行含有一個整數 $t, 0\leq{t}\leq{50}$&amp;lt;!-- Has MathJax --&amp;gt;，表示測資的筆數。每筆測資三行，第一行有一個數字 $n, 0\leq{n}\leq{1000}$&amp;lt;!-- Has MathJax --&amp;gt;，表示我們所要的長">
-<meta property="og:updated_time" content="2015-11-18T18:53:02.845Z">
+<meta property="og:description" content="給你一個金額 ($n$&amp;lt;!-- Has MathJax --&amp;gt; cents)，請你回答共有多少種硬幣組合的方式。例如：$n=11$&amp;lt;!-- Has MathJax --&amp;gt;，那麼你可以有以下 4 種硬幣的組合：
+
+1 個 10 cent 的硬幣加上 1 個 1 cent 的硬幣
+2 個 5 cent 的硬幣加上 1 個 1 cent 的硬幣
+1 個 5 cent 的硬幣加上 6 個 1 cent 的">
+<meta property="og:updated_time" content="2015-11-23T15:02:23.425Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="12455 - Bars">
-<meta name="twitter:description" content="我們有一些已知長度的金屬棒，請問可以找出所需的特定長度的金屬棒嗎？必要時，可以把幾根金屬棒焊接成更長的一根，但金屬棒不得切割。
-Input輸入的第一行含有一個整數 $t, 0\leq{t}\leq{50}$&amp;lt;!-- Has MathJax --&amp;gt;，表示測資的筆數。每筆測資三行，第一行有一個數字 $n, 0\leq{n}\leq{1000}$&amp;lt;!-- Has MathJax --&amp;gt;，表示我們所要的長">
+<meta name="twitter:title" content="674 - Coin Change">
+<meta name="twitter:description" content="給你一個金額 ($n$&amp;lt;!-- Has MathJax --&amp;gt; cents)，請你回答共有多少種硬幣組合的方式。例如：$n=11$&amp;lt;!-- Has MathJax --&amp;gt;，那麼你可以有以下 4 種硬幣的組合：
+
+1 個 10 cent 的硬幣加上 1 個 1 cent 的硬幣
+2 個 5 cent 的硬幣加上 1 個 1 cent 的硬幣
+1 個 5 cent 的硬幣加上 6 個 1 cent 的">
 
 
 
@@ -77,7 +86,7 @@ Input輸入的第一行含有一個整數 $t, 0\leq{t}\leq{50}$&amp;lt;!-- Has M
   };
 </script>
 
-  <title> 12455 - Bars | uniDog 的 ACM 園地 </title>
+  <title> 674 - Coin Change | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -207,7 +216,7 @@ Input輸入的第一行含有一個整數 $t, 0\leq{t}\leq{50}$&amp;lt;!-- Has M
             
             
               
-                12455 - Bars
+                674 - Coin Change
               
             
           </h1>
@@ -215,22 +224,22 @@ Input輸入的第一行含有一個整數 $t, 0\leq{t}\leq{50}$&amp;lt;!-- Has M
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p12455/">
-              <span>snail</span>
+            <a href="/uniDog/problem/674/">
+              <span>Luckycat</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://zerojudge.tw/ShowProblem?problemid=a522" target="_blank">
-              <span>ZeroJudge</span>
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q674.htm" target="_blank">
+              <span>Lucky 貓</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2012-10-01T00:00:00+08:00" content="2012-10-01">
-              2012-10-01
+            <time itemprop="dateCreated" datetime="2002-06-04T00:00:00+08:00" content="2002-06-04">
+              2002-06-04
             </time>
           </span>
 
@@ -239,8 +248,8 @@ Input輸入的第一行含有一個整數 $t, 0\leq{t}\leq{50}$&amp;lt;!-- Has M
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-124/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 124</span>
+                  <a href="/uniDog/categories/Volume-006/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 006</span>
                   </a>
                 </span>
 
@@ -254,7 +263,7 @@ Input輸入的第一行含有一個整數 $t, 0\leq{t}\leq{50}$&amp;lt;!-- Has M
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3886" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=615" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -277,47 +286,67 @@ Input輸入的第一行含有一個整數 $t, 0\leq{t}\leq{50}$&amp;lt;!-- Has M
       
 
       
-        <span itemprop="articleBody"><p>我們有一些已知長度的金屬棒，請問可以找出所需的特定長度的金屬棒嗎？必要時，可以把幾根金屬棒焊接成更長的一根，但金屬棒不得切割。</p>
-<h2 id="Input">Input</h2><p>輸入的第一行含有一個整數 <span>$t, 0\leq{t}\leq{50}$</span><!-- Has MathJax -->，表示測資的筆數。每筆測資三行，第一行有一個數字 <span>$n, 0\leq{n}\leq{1000}$</span><!-- Has MathJax -->，表示我們所要的長度。第二行有一個數字 <span>$p, 1\leq{p}\leq{20}$</span><!-- Has MathJax -->，表示我們所擁有的金屬棒的數量。第三行有 <span>$p$</span><!-- Has MathJax --> 個數字，表示 <span>$p$</span><!-- Has MathJax --> 根金屬棒的長度。</p>
-<h2 id="Output">Output</h2><p>每筆測資輸出一行，依是否可能成功輸出 YES 或 NO。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">4</span>
-<span class="number">25</span>
+        <span itemprop="articleBody"><p>給你一個金額 (<span>$n$</span><!-- Has MathJax --> cents)，請你回答共有多少種硬幣組合的方式。例如：<span>$n=11$</span><!-- Has MathJax -->，那麼你可以有以下 4 種硬幣的組合：</p>
+<ol>
+<li>1 個 10 cent 的硬幣加上 1 個 1 cent 的硬幣</li>
+<li>2 個 5 cent 的硬幣加上 1 個 1 cent 的硬幣</li>
+<li>1 個 5 cent 的硬幣加上 6 個 1 cent 的硬幣</li>
+<li>11 個 1 cent 的硬幣</li>
+</ol>
+<p>p.s 美國的零錢共有以下 5 種硬幣以及其面值：</p>
+<ul>
+<li>penny, 1 cent</li>
+<li>nickel, 5 cents</li>
+<li>dime, 10 cents</li>
+<li>quarter, 25 cents</li>
+<li>half-dollar, 50 cents</li>
+</ul>
+<p>請注意：<span>$n=0$</span><!-- Has MathJax --> 我們算他是有一種方式。</p>
+<h2 id="Input">Input</h2><p>每組測試資料 1 列，有 1 個整數 <span>$n$</span><!-- Has MathJax --> (<span>$0\leq{n}\leq{7489}$</span><!-- Has MathJax -->)，代表零錢的總金額 (單位：cent)。</p>
+<h2 id="Output">Output</h2><p>對每組測試資料請輸出共有多少種硬幣組合方式。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">0</span>
+<span class="number">17</span> 
+<span class="number">11</span>
 <span class="number">4</span>
-<span class="number">10</span> <span class="number">12</span> <span class="number">5</span> <span class="number">7</span>
-<span class="number">925</span>
-<span class="number">10</span>
-<span class="number">45</span> <span class="number">15</span> <span class="number">120</span> <span class="number">500</span> <span class="number">235</span> <span class="number">58</span> <span class="number">6</span> <span class="number">12</span> <span class="number">175</span> <span class="number">70</span>
-<span class="number">120</span>
-<span class="number">5</span>
-<span class="number">25</span> <span class="number">25</span> <span class="number">25</span> <span class="number">25</span> <span class="number">25</span>
-<span class="number">0</span>
-<span class="number">2</span>
-<span class="number">13</span> <span class="number">567</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="keyword">NO</span>
-<span class="keyword">YES</span>
-<span class="keyword">NO</span>
-<span class="keyword">YES</span>
+<span class="number">1000</span>
+<span class="number">2000</span>
+<span class="number">7489</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">1</span>
+<span class="number">6</span>
+<span class="number">4</span>
+<span class="number">1</span>
+<span class="number">801451</span>
+<span class="number">11712101</span>
+<span class="number">2146113925</span>
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/找零問題/" rel="tag">#找零問題</a>
+          
+            <a href="/uniDog/tags/背包問題/" rel="tag">#背包問題</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p10898/" rel="next" title="10898 - Combo Deal">
-                <i class="fa fa-chevron-left"></i> 10898 - Combo Deal
+              <a href="/uniDog/problem/p445/" rel="next" title="445 - Marvelous Mazes">
+                <i class="fa fa-chevron-left"></i> 445 - Marvelous Mazes
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p11764/" rel="prev" title="11764 - Jumping Mario">
-                11764 - Jumping Mario <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p673/" rel="prev" title="673 - Parentheses Balance">
+                673 - Parentheses Balance <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -400,7 +429,7 @@ Input輸入的第一行含有一個整數 $t, 0\leq{t}\leq{50}$&amp;lt;!-- Has M
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

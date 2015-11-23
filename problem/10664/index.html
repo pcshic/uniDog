@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="子集合求和,背包問題," />
 
 
 
@@ -53,22 +53,25 @@
 
 
 
-<meta name="description" content="馬修與比爾兩人共同擁有一堆彈珠，他們打算平分所有彈珠，但是因為每顆彈珠的價值都不一樣，所以平分所有彈珠的工作並非那麼簡單。他們為每顆彈珠分別賦與 1~6 的價碼，希望平分後兩人所擁有的彈珠總值是一樣的。
-不過用這種方式並不保證一定能將所有彈珠分成等值的兩堆，例如價值 1~6 的彈珠顆數分別為：1, 0, 1, 2, 0, 0 時就無法等值平分。請你寫一個程式判斷是否存在能等值平分彈珠的方式。
-In">
+<meta name="description" content="Peter 和他的朋友打算開車去度假。他們共有 7 個人，打算開 2 部車。
+出發的時刻到了，他們正準備把行李裝上車。由於他們希望 2 部車上行李的重量一樣，他們要求你寫一個程式來判斷是否可能達成這個目標。請注意，每件行李是不可以打開的。
+Input輸入的第一列有一個整數代表以下共有多少組測試資料。
+每組測試資料一列。含有 $n$&amp;lt;!-- Has MathJax --&amp;gt; 個正整數 ($1\leq{">
 <meta property="og:type" content="article">
-<meta property="og:title" content="711 - Dividing up">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p711/index.html">
+<meta property="og:title" content="10664 - Luggage">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/10664/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="馬修與比爾兩人共同擁有一堆彈珠，他們打算平分所有彈珠，但是因為每顆彈珠的價值都不一樣，所以平分所有彈珠的工作並非那麼簡單。他們為每顆彈珠分別賦與 1~6 的價碼，希望平分後兩人所擁有的彈珠總值是一樣的。
-不過用這種方式並不保證一定能將所有彈珠分成等值的兩堆，例如價值 1~6 的彈珠顆數分別為：1, 0, 1, 2, 0, 0 時就無法等值平分。請你寫一個程式判斷是否存在能等值平分彈珠的方式。
-In">
-<meta property="og:updated_time" content="2015-11-18T18:52:50.750Z">
+<meta property="og:description" content="Peter 和他的朋友打算開車去度假。他們共有 7 個人，打算開 2 部車。
+出發的時刻到了，他們正準備把行李裝上車。由於他們希望 2 部車上行李的重量一樣，他們要求你寫一個程式來判斷是否可能達成這個目標。請注意，每件行李是不可以打開的。
+Input輸入的第一列有一個整數代表以下共有多少組測試資料。
+每組測試資料一列。含有 $n$&amp;lt;!-- Has MathJax --&amp;gt; 個正整數 ($1\leq{">
+<meta property="og:updated_time" content="2015-11-23T14:57:56.105Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="711 - Dividing up">
-<meta name="twitter:description" content="馬修與比爾兩人共同擁有一堆彈珠，他們打算平分所有彈珠，但是因為每顆彈珠的價值都不一樣，所以平分所有彈珠的工作並非那麼簡單。他們為每顆彈珠分別賦與 1~6 的價碼，希望平分後兩人所擁有的彈珠總值是一樣的。
-不過用這種方式並不保證一定能將所有彈珠分成等值的兩堆，例如價值 1~6 的彈珠顆數分別為：1, 0, 1, 2, 0, 0 時就無法等值平分。請你寫一個程式判斷是否存在能等值平分彈珠的方式。
-In">
+<meta name="twitter:title" content="10664 - Luggage">
+<meta name="twitter:description" content="Peter 和他的朋友打算開車去度假。他們共有 7 個人，打算開 2 部車。
+出發的時刻到了，他們正準備把行李裝上車。由於他們希望 2 部車上行李的重量一樣，他們要求你寫一個程式來判斷是否可能達成這個目標。請注意，每件行李是不可以打開的。
+Input輸入的第一列有一個整數代表以下共有多少組測試資料。
+每組測試資料一列。含有 $n$&amp;lt;!-- Has MathJax --&amp;gt; 個正整數 ($1\leq{">
 
 
 
@@ -80,7 +83,7 @@ In">
   };
 </script>
 
-  <title> 711 - Dividing up | uniDog 的 ACM 園地 </title>
+  <title> 10664 - Luggage | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -210,7 +213,7 @@ In">
             
             
               
-                711 - Dividing up
+                10664 - Luggage
               
             
           </h1>
@@ -218,22 +221,22 @@ In">
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p711/">
-              <span>Purple People Eater</span>
+            <a href="/uniDog/problem/10664/">
+              <span>Luckycat</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://rubyacm.blogspot.tw/2011/10/711-dividing-up.html" target="_blank">
-              <span>Ruby 兔</span>
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10664.htm" target="_blank">
+              <span>Lucky 貓</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2011-10-22T00:00:00+08:00" content="2011-10-22">
-              2011-10-22
+            <time itemprop="dateCreated" datetime="2004-12-28T00:00:00+08:00" content="2004-12-28">
+              2004-12-28
             </time>
           </span>
 
@@ -242,8 +245,8 @@ In">
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-007/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 007</span>
+                  <a href="/uniDog/categories/Volume-106/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 106</span>
                   </a>
                 </span>
 
@@ -257,7 +260,7 @@ In">
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=652" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1605" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -280,40 +283,50 @@ In">
       
 
       
-        <span itemprop="articleBody"><p>馬修與比爾兩人共同擁有一堆彈珠，他們打算平分所有彈珠，但是因為每顆彈珠的價值都不一樣，所以平分所有彈珠的工作並非那麼簡單。他們為每顆彈珠分別賦與 1~6 的價碼，希望平分後兩人所擁有的彈珠總值是一樣的。</p>
-<p>不過用這種方式並不保證一定能將所有彈珠分成等值的兩堆，例如價值 1~6 的彈珠顆數分別為：1, 0, 1, 2, 0, 0 時就無法等值平分。請你寫一個程式判斷是否存在能等值平分彈珠的方式。</p>
-<h2 id="Input">Input</h2><p>輸入的每一列表示一組測試資料，分別為價值 1~6 的彈珠數目，總彈珠數目不會超過 20000 顆。以六個零表示測試資料結束。</p>
-<h2 id="Output">Output</h2><p>每組測試資料的第一列請輸出<code>Collection #k:</code>，其中 k 表示測試資料的編號，若該組資料可被平分則在第二列輸出<code>Can be divided.</code>，否則請輸出<code>Can&#39;t be divided.</code>。請在每組測試資料後輸出一列空行。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">0</span> <span class="number">0</span>
-<span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span>
-<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Collection #<span class="number">1</span>:
-Can<span class="string">'t</span> <span class="keyword">be</span> divided.
-
-Collection #<span class="number">2</span>:
-Can <span class="keyword">be</span> divided.
-　
+        <span itemprop="articleBody"><p>Peter 和他的朋友打算開車去度假。他們共有 7 個人，打算開 2 部車。</p>
+<p>出發的時刻到了，他們正準備把行李裝上車。由於他們希望 2 部車上行李的重量一樣，他們要求你寫一個程式來判斷是否可能達成這個目標。請注意，每件行李是不可以打開的。</p>
+<h2 id="Input">Input</h2><p>輸入的第一列有一個整數代表以下共有多少組測試資料。</p>
+<p>每組測試資料一列。含有 <span>$n$</span><!-- Has MathJax --> 個正整數 (<span>$1\leq{n}\leq{20}$</span><!-- Has MathJax -->)，分別代表這 <span>$n$</span><!-- Has MathJax --> 個行李的重量。所有行李重量的總和不會超過 <span>$200$</span><!-- Has MathJax -->。</p>
+<p>請參考 Sample Input。</p>
+<h2 id="Output">Output</h2><p>對每組測試資料輸出一列，如果這 n 個行李可以分成總重量相同的 2 堆以放在 2 部車上，請輸出 <code>YES</code>，否則輸出 <code>NO</code>。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">4</span>
+<span class="number">1</span> <span class="number">2</span> <span class="number">1</span> <span class="number">2</span> <span class="number">1</span>
+<span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">1</span> <span class="number">2</span> <span class="number">5</span> <span class="number">10</span> <span class="number">50</span> <span class="number">3</span> <span class="number">50</span>
+<span class="number">3</span> <span class="number">5</span> <span class="number">2</span> <span class="number">7</span> <span class="number">1</span> <span class="number">7</span> <span class="number">5</span> <span class="number">2</span> <span class="number">8</span> <span class="number">9</span> <span class="number">1</span> <span class="number">25</span> <span class="number">15</span> <span class="number">8</span> <span class="number">3</span> <span class="number">1</span> <span class="number">38</span> <span class="number">45</span> <span class="number">8</span> <span class="number">1</span>
+<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> <span class="number">10</span> <span class="number">11</span> <span class="number">12</span> <span class="number">13</span> <span class="number">93</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="keyword">NO</span>
+<span class="keyword">YES</span>
+<span class="keyword">YES</span>
+<span class="keyword">NO</span>
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/子集合求和/" rel="tag">#子集合求和</a>
+          
+            <a href="/uniDog/tags/背包問題/" rel="tag">#背包問題</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p10130/" rel="next" title="10130 - SuperSale">
-                <i class="fa fa-chevron-left"></i> 10130 - SuperSale
+              <a href="/uniDog/problem/p10696/" rel="next" title="10696 - f91">
+                <i class="fa fa-chevron-left"></i> 10696 - f91
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p159/" rel="prev" title="159 - Word Crosses">
-                159 - Word Crosses <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p481/" rel="prev" title="481 - What Goes Up">
+                481 - What Goes Up <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -396,7 +409,7 @@ Can <span class="keyword">be</span> divided.
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="子集合求和,背包問題," />
 
 
 
@@ -53,28 +53,19 @@
 
 
 
-<meta name="description" content="你即將開車出遠門，當然希望在車上能聆聽一些美好的音樂。你的車上只有播放錄音帶的設備，但是你最喜歡的音樂卻都存放在 CD 上。所以你需要把 CD 上的音樂轉錄到錄音帶上。現在你必須解決的問題是：你的空白錄音帶長共 N 分鐘，你如何選擇 CD 上的歌使得盡可能的利用錄音帶的空間。以下是一些此問題的假設：
-
-CD 上的歌最多不會超過 20 首。
-沒有任何一首歌的長度超過 N 分鐘。
-要錄在錄音帶上的歌不">
+<meta name="description" content="馬修與比爾兩人共同擁有一堆彈珠，他們打算平分所有彈珠，但是因為每顆彈珠的價值都不一樣，所以平分所有彈珠的工作並非那麼簡單。他們為每顆彈珠分別賦予 1 ~ 6 的價碼，希望平分後兩人所擁有的彈珠總值是一樣的。
+不過用這種方式並不保證一定能將所有彈珠分成等值的兩堆，例如價值 1 ~ 6 的彈珠顆數分別為：1, 0, 1, 2, 0, 0 時就無法等值平分。請你寫一個程式判斷是否存在能等值平分彈珠的方式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="624 - CD">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p624/index.html">
+<meta property="og:title" content="711 - Dividing up">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/711/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="你即將開車出遠門，當然希望在車上能聆聽一些美好的音樂。你的車上只有播放錄音帶的設備，但是你最喜歡的音樂卻都存放在 CD 上。所以你需要把 CD 上的音樂轉錄到錄音帶上。現在你必須解決的問題是：你的空白錄音帶長共 N 分鐘，你如何選擇 CD 上的歌使得盡可能的利用錄音帶的空間。以下是一些此問題的假設：
-
-CD 上的歌最多不會超過 20 首。
-沒有任何一首歌的長度超過 N 分鐘。
-要錄在錄音帶上的歌不">
-<meta property="og:updated_time" content="2015-11-18T18:52:52.093Z">
+<meta property="og:description" content="馬修與比爾兩人共同擁有一堆彈珠，他們打算平分所有彈珠，但是因為每顆彈珠的價值都不一樣，所以平分所有彈珠的工作並非那麼簡單。他們為每顆彈珠分別賦予 1 ~ 6 的價碼，希望平分後兩人所擁有的彈珠總值是一樣的。
+不過用這種方式並不保證一定能將所有彈珠分成等值的兩堆，例如價值 1 ~ 6 的彈珠顆數分別為：1, 0, 1, 2, 0, 0 時就無法等值平分。請你寫一個程式判斷是否存在能等值平分彈珠的方式">
+<meta property="og:updated_time" content="2015-11-23T15:00:03.436Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="624 - CD">
-<meta name="twitter:description" content="你即將開車出遠門，當然希望在車上能聆聽一些美好的音樂。你的車上只有播放錄音帶的設備，但是你最喜歡的音樂卻都存放在 CD 上。所以你需要把 CD 上的音樂轉錄到錄音帶上。現在你必須解決的問題是：你的空白錄音帶長共 N 分鐘，你如何選擇 CD 上的歌使得盡可能的利用錄音帶的空間。以下是一些此問題的假設：
-
-CD 上的歌最多不會超過 20 首。
-沒有任何一首歌的長度超過 N 分鐘。
-要錄在錄音帶上的歌不">
+<meta name="twitter:title" content="711 - Dividing up">
+<meta name="twitter:description" content="馬修與比爾兩人共同擁有一堆彈珠，他們打算平分所有彈珠，但是因為每顆彈珠的價值都不一樣，所以平分所有彈珠的工作並非那麼簡單。他們為每顆彈珠分別賦予 1 ~ 6 的價碼，希望平分後兩人所擁有的彈珠總值是一樣的。
+不過用這種方式並不保證一定能將所有彈珠分成等值的兩堆，例如價值 1 ~ 6 的彈珠顆數分別為：1, 0, 1, 2, 0, 0 時就無法等值平分。請你寫一個程式判斷是否存在能等值平分彈珠的方式">
 
 
 
@@ -86,7 +77,7 @@ CD 上的歌最多不會超過 20 首。
   };
 </script>
 
-  <title> 624 - CD | uniDog 的 ACM 園地 </title>
+  <title> 711 - Dividing up | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -216,7 +207,7 @@ CD 上的歌最多不會超過 20 首。
             
             
               
-                624 - CD
+                711 - Dividing up
               
             
           </h1>
@@ -224,22 +215,22 @@ CD 上的歌最多不會超過 20 首。
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p624/">
-              <span>Luckycat</span>
+            <a href="/uniDog/problem/711/">
+              <span>Purple People Eater</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q624.htm" target="_blank">
-              <span>Lucky 貓</span>
+            <a href="http://rubyacm.blogspot.tw/2011/10/711-dividing-up.html" target="_blank">
+              <span>Ruby 兔</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2003-03-03T00:00:00+08:00" content="2003-03-03">
-              2003-03-03
+            <time itemprop="dateCreated" datetime="2011-10-22T00:00:00+08:00" content="2011-10-22">
+              2011-10-22
             </time>
           </span>
 
@@ -248,8 +239,8 @@ CD 上的歌最多不會超過 20 首。
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-006/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 006</span>
+                  <a href="/uniDog/categories/Volume-007/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 007</span>
                   </a>
                 </span>
 
@@ -263,7 +254,7 @@ CD 上的歌最多不會超過 20 首。
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=565" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=652" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -286,48 +277,49 @@ CD 上的歌最多不會超過 20 首。
       
 
       
-        <span itemprop="articleBody"><p>你即將開車出遠門，當然希望在車上能聆聽一些美好的音樂。你的車上只有播放錄音帶的設備，但是你最喜歡的音樂卻都存放在 CD 上。所以你需要把 CD 上的音樂轉錄到錄音帶上。現在你必須解決的問題是：你的空白錄音帶長共 N 分鐘，你如何選擇 CD 上的歌使得盡可能的利用錄音帶的空間。以下是一些此問題的假設：</p>
-<ul>
-<li>CD 上的歌最多不會超過 20 首。</li>
-<li>沒有任何一首歌的長度超過 N 分鐘。</li>
-<li>要錄在錄音帶上的歌不能重複。</li>
-<li>每首歌的長度以一整數表達。</li>
-<li>N 也是一個整數。</li>
-</ul>
-<p>你的程式必須找出該放哪些 CD 上的歌到錄音帶上 (按 CD 上的順序)，使得錄音帶空白的空間最小。</p>
-<h2 id="Input">Input</h2><p>每組測試資料一列，第一個整數為N，代表空白錄音帶的長度。第二個整數T代表CD上共有多少首歌。接下來的T個整數分別代表CD上每首歌的長度。以Sample Input中第一組測試資料為例說明：N=5, T=3, 第一首歌的長度為1分鐘，第二首歌的長度為3分鐘，第三首歌的長度為4分鐘。</p>
-<h2 id="Output">Output</h2><p>對每一組測試資料，輸出一列。內容為要放到錄音帶的各首歌的長度（注意：此部分答案並非唯一，以第五組測試資料來說，43 2 也是正確的答案。本程式有特殊的檢驗程式，所以只要是正確答案都可被接受），以及總長度。請參考Sample Output。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span> <span class="number">3</span> <span class="number">1</span> <span class="number">3</span> <span class="number">4</span>
-<span class="number">10</span> <span class="number">4</span> <span class="number">9</span> <span class="number">8</span> <span class="number">4</span> <span class="number">2</span>
-<span class="number">20</span> <span class="number">4</span> <span class="number">10</span> <span class="number">5</span> <span class="number">7</span> <span class="number">4</span>
-<span class="number">90</span> <span class="number">8</span> <span class="number">10</span> <span class="number">23</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">7</span>
-<span class="number">45</span> <span class="number">8</span> <span class="number">4</span> <span class="number">10</span> <span class="number">44</span> <span class="number">43</span> <span class="number">12</span> <span class="number">9</span> <span class="number">8</span> <span class="number">2</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">1</span> <span class="number">4</span> sum:<span class="number">5</span>
-<span class="number">8</span> <span class="number">2</span> sum:<span class="number">10</span>
-<span class="number">10</span> <span class="number">5</span> <span class="number">4</span> sum:<span class="number">19</span>
-<span class="number">10</span> <span class="number">23</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">7</span> sum:<span class="number">55</span>
-<span class="number">4</span> <span class="number">10</span> <span class="number">12</span> <span class="number">9</span> <span class="number">8</span> <span class="number">2</span> sum:<span class="number">45</span>
+        <span itemprop="articleBody"><p>馬修與比爾兩人共同擁有一堆彈珠，他們打算平分所有彈珠，但是因為每顆彈珠的價值都不一樣，所以平分所有彈珠的工作並非那麼簡單。他們為每顆彈珠分別賦予 1 ~ 6 的價碼，希望平分後兩人所擁有的彈珠總值是一樣的。</p>
+<p>不過用這種方式並不保證一定能將所有彈珠分成等值的兩堆，例如價值 1 ~ 6 的彈珠顆數分別為：<code>1, 0, 1, 2, 0, 0</code> 時就無法等值平分。請你寫一個程式判斷是否存在能等值平分彈珠的方式。</p>
+<h2 id="Input">Input</h2><p>輸入的每一列表示一組測試資料，分別為價值 1 ~ 6 的彈珠數目，總彈珠數目不會超過 20000 顆。以六個零表示測試資料結束。</p>
+<h2 id="Output">Output</h2><p>每組測試資料的第一列請輸出 <code>Collection #k:</code>，其中 k 表示測試資料的編號，若該組資料可被平分則在第二列輸出 <code>Can be divided.</code>，否則請輸出 <code>Can&#39;t be divided.</code>。</p>
+<p>請在每組測試資料後輸出一列空行。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">0</span> <span class="number">0</span>
+<span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span>
+<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Collection #<span class="number">1</span>:
+Can<span class="string">'t</span> <span class="keyword">be</span> divided.
+
+Collection #<span class="number">2</span>:
+Can <span class="keyword">be</span> divided.
+　
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/子集合求和/" rel="tag">#子集合求和</a>
+          
+            <a href="/uniDog/tags/背包問題/" rel="tag">#背包問題</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p562/" rel="next" title="562 - Dividing coins">
-                <i class="fa fa-chevron-left"></i> 562 - Dividing coins
+              <a href="/uniDog/problem/10130/" rel="next" title="10130 - SuperSale">
+                <i class="fa fa-chevron-left"></i> 10130 - SuperSale
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p103/" rel="prev" title="103 - Stacking Boxes">
-                103 - Stacking Boxes <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p148/" rel="prev" title="148 - Anagram checker">
+                148 - Anagram checker <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -410,7 +402,7 @@ CD 上的歌最多不會超過 20 首。
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="背包問題," />
 
 
 
@@ -53,25 +53,25 @@
 
 
 
-<meta name="description" content="Peter 和他的朋友打算開車去度假。他們共有 7 個人，打算開 2 部車。
-出發的時刻到了，他們正準備把行李裝上車。由於他們希望 2 部車上行李的重量一樣，他們要求你寫一個程式來判斷是否可能達成這個目標。請注意，每件行李是不可以打開的。
-Input輸入的第一列有一個整數代表以下共有多少組測試資料。
-每組測試資料一列。含有 $n$&amp;lt;!-- Has MathJax --&amp;gt; 個正整數 ($1\leq{">
+<meta name="description" content="你即將開車出遠門，當然希望在車上能聆聽一些美好的音樂。你的車上只有播放錄音帶的設備，但是你最喜歡的音樂卻都存放在 CD 上。所以你需要把 CD 上的音樂轉錄到錄音帶上。現在你必須解決的問題是：你的空白錄音帶長共 $N$&amp;lt;!-- Has MathJax --&amp;gt; 分鐘，你如何選擇 CD 上的歌使得盡可能的利用錄音帶的空間。以下是一些此問題的假設：
+
+CD 上的歌最多不會超過 20 首。
+沒有任何一首歌">
 <meta property="og:type" content="article">
-<meta property="og:title" content="10664 - Luggage">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p10664/index.html">
+<meta property="og:title" content="624 - CD">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/624/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="Peter 和他的朋友打算開車去度假。他們共有 7 個人，打算開 2 部車。
-出發的時刻到了，他們正準備把行李裝上車。由於他們希望 2 部車上行李的重量一樣，他們要求你寫一個程式來判斷是否可能達成這個目標。請注意，每件行李是不可以打開的。
-Input輸入的第一列有一個整數代表以下共有多少組測試資料。
-每組測試資料一列。含有 $n$&amp;lt;!-- Has MathJax --&amp;gt; 個正整數 ($1\leq{">
-<meta property="og:updated_time" content="2015-11-18T18:53:10.949Z">
+<meta property="og:description" content="你即將開車出遠門，當然希望在車上能聆聽一些美好的音樂。你的車上只有播放錄音帶的設備，但是你最喜歡的音樂卻都存放在 CD 上。所以你需要把 CD 上的音樂轉錄到錄音帶上。現在你必須解決的問題是：你的空白錄音帶長共 $N$&amp;lt;!-- Has MathJax --&amp;gt; 分鐘，你如何選擇 CD 上的歌使得盡可能的利用錄音帶的空間。以下是一些此問題的假設：
+
+CD 上的歌最多不會超過 20 首。
+沒有任何一首歌">
+<meta property="og:updated_time" content="2015-11-23T14:30:52.957Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="10664 - Luggage">
-<meta name="twitter:description" content="Peter 和他的朋友打算開車去度假。他們共有 7 個人，打算開 2 部車。
-出發的時刻到了，他們正準備把行李裝上車。由於他們希望 2 部車上行李的重量一樣，他們要求你寫一個程式來判斷是否可能達成這個目標。請注意，每件行李是不可以打開的。
-Input輸入的第一列有一個整數代表以下共有多少組測試資料。
-每組測試資料一列。含有 $n$&amp;lt;!-- Has MathJax --&amp;gt; 個正整數 ($1\leq{">
+<meta name="twitter:title" content="624 - CD">
+<meta name="twitter:description" content="你即將開車出遠門，當然希望在車上能聆聽一些美好的音樂。你的車上只有播放錄音帶的設備，但是你最喜歡的音樂卻都存放在 CD 上。所以你需要把 CD 上的音樂轉錄到錄音帶上。現在你必須解決的問題是：你的空白錄音帶長共 $N$&amp;lt;!-- Has MathJax --&amp;gt; 分鐘，你如何選擇 CD 上的歌使得盡可能的利用錄音帶的空間。以下是一些此問題的假設：
+
+CD 上的歌最多不會超過 20 首。
+沒有任何一首歌">
 
 
 
@@ -83,7 +83,7 @@ Input輸入的第一列有一個整數代表以下共有多少組測試資料。
   };
 </script>
 
-  <title> 10664 - Luggage | uniDog 的 ACM 園地 </title>
+  <title> 624 - CD | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -213,7 +213,7 @@ Input輸入的第一列有一個整數代表以下共有多少組測試資料。
             
             
               
-                10664 - Luggage
+                624 - CD
               
             
           </h1>
@@ -221,22 +221,22 @@ Input輸入的第一列有一個整數代表以下共有多少組測試資料。
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10664/">
+            <a href="/uniDog/problem/624/">
               <span>Luckycat</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10664.htm" target="_blank">
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q624.htm" target="_blank">
               <span>Lucky 貓</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2004-12-28T00:00:00+08:00" content="2004-12-28">
-              2004-12-28
+            <time itemprop="dateCreated" datetime="2003-03-03T00:00:00+08:00" content="2003-03-03">
+              2003-03-03
             </time>
           </span>
 
@@ -245,8 +245,8 @@ Input輸入的第一列有一個整數代表以下共有多少組測試資料。
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-106/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 106</span>
+                  <a href="/uniDog/categories/Volume-006/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 006</span>
                   </a>
                 </span>
 
@@ -260,7 +260,7 @@ Input輸入的第一列有一個整數代表以下共有多少組測試資料。
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1605" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=565" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -283,42 +283,54 @@ Input輸入的第一列有一個整數代表以下共有多少組測試資料。
       
 
       
-        <span itemprop="articleBody"><p>Peter 和他的朋友打算開車去度假。他們共有 7 個人，打算開 2 部車。</p>
-<p>出發的時刻到了，他們正準備把行李裝上車。由於他們希望 2 部車上行李的重量一樣，他們要求你寫一個程式來判斷是否可能達成這個目標。請注意，每件行李是不可以打開的。</p>
-<h2 id="Input">Input</h2><p>輸入的第一列有一個整數代表以下共有多少組測試資料。</p>
-<p>每組測試資料一列。含有 <span>$n$</span><!-- Has MathJax --> 個正整數 (<span>$1\leq{n}\leq{20}$</span><!-- Has MathJax -->)，分別代表這 <span>$n$</span><!-- Has MathJax --> 個行李的重量。所有行李重量的總和不會超過 <span>$200$</span><!-- Has MathJax -->。</p>
-<p>請參考 Sample Input。</p>
-<h2 id="Output">Output</h2><p>對每組測試資料輸出一列，如果這 n 個行李可以分成總重量相同的 2 堆以放在 2 部車上，請輸出 YES，否則輸出 NO。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">4</span>
-<span class="number">1</span> <span class="number">2</span> <span class="number">1</span> <span class="number">2</span> <span class="number">1</span>
-<span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">1</span> <span class="number">2</span> <span class="number">5</span> <span class="number">10</span> <span class="number">50</span> <span class="number">3</span> <span class="number">50</span>
-<span class="number">3</span> <span class="number">5</span> <span class="number">2</span> <span class="number">7</span> <span class="number">1</span> <span class="number">7</span> <span class="number">5</span> <span class="number">2</span> <span class="number">8</span> <span class="number">9</span> <span class="number">1</span> <span class="number">25</span> <span class="number">15</span> <span class="number">8</span> <span class="number">3</span> <span class="number">1</span> <span class="number">38</span> <span class="number">45</span> <span class="number">8</span> <span class="number">1</span>
-<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> <span class="number">10</span> <span class="number">11</span> <span class="number">12</span> <span class="number">13</span> <span class="number">93</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="keyword">NO</span>
-<span class="keyword">YES</span>
-<span class="keyword">YES</span>
-<span class="keyword">NO</span>
+        <span itemprop="articleBody"><p>你即將開車出遠門，當然希望在車上能聆聽一些美好的音樂。你的車上只有播放錄音帶的設備，但是你最喜歡的音樂卻都存放在 CD 上。所以你需要把 CD 上的音樂轉錄到錄音帶上。現在你必須解決的問題是：你的空白錄音帶長共 <span>$N$</span><!-- Has MathJax --> 分鐘，你如何選擇 CD 上的歌使得盡可能的利用錄音帶的空間。以下是一些此問題的假設：</p>
+<ul>
+<li>CD 上的歌最多不會超過 20 首。</li>
+<li>沒有任何一首歌的長度超過 <span>$N$</span><!-- Has MathJax --> 分鐘。</li>
+<li>要錄在錄音帶上的歌不能重複。</li>
+<li>每首歌的長度以一整數表達。</li>
+<li><span>$N$</span><!-- Has MathJax --> 也是一個整數。</li>
+</ul>
+<p>你的程式必須找出該放哪些 CD 上的歌到錄音帶上 (按 CD 上的順序)，使得錄音帶空白的空間最小。</p>
+<h2 id="Input">Input</h2><p>每組測試資料一列，第一個整數為 <span>$N$</span><!-- Has MathJax -->，代表空白錄音帶的長度。第二個整數 <span>$T$</span><!-- Has MathJax --> 代表 CD 上共有多少首歌。接下來的 <span>$T$</span><!-- Has MathJax --> 個整數分別代表 CD 上每首歌的長度。以 Sample Input 中第一組測試資料為例說明：<span>$N=5, T=3$</span><!-- Has MathJax -->, 第一首歌的長度為 1 分鐘，第二首歌的長度為 3 分鐘，第三首歌的長度為 4 分鐘。</p>
+<h2 id="Output">Output</h2><p>對每一組測試資料，輸出一列。內容為要放到錄音帶的各首歌的長度 (注意：此部分答案並非唯一，以第五組測試資料來說，<code>43 2</code> 也是正確的答案。本程式有特殊的檢驗程式，所以只要是正確答案都可被接受)，以及總長度。請參考 Sample Output。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span> <span class="number">3</span> <span class="number">1</span> <span class="number">3</span> <span class="number">4</span>
+<span class="number">10</span> <span class="number">4</span> <span class="number">9</span> <span class="number">8</span> <span class="number">4</span> <span class="number">2</span>
+<span class="number">20</span> <span class="number">4</span> <span class="number">10</span> <span class="number">5</span> <span class="number">7</span> <span class="number">4</span>
+<span class="number">90</span> <span class="number">8</span> <span class="number">10</span> <span class="number">23</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">7</span>
+<span class="number">45</span> <span class="number">8</span> <span class="number">4</span> <span class="number">10</span> <span class="number">44</span> <span class="number">43</span> <span class="number">12</span> <span class="number">9</span> <span class="number">8</span> <span class="number">2</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">1</span> <span class="number">4</span> sum:<span class="number">5</span>
+<span class="number">8</span> <span class="number">2</span> sum:<span class="number">10</span>
+<span class="number">10</span> <span class="number">5</span> <span class="number">4</span> sum:<span class="number">19</span>
+<span class="number">10</span> <span class="number">23</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">7</span> sum:<span class="number">55</span>
+<span class="number">4</span> <span class="number">10</span> <span class="number">12</span> <span class="number">9</span> <span class="number">8</span> <span class="number">2</span> sum:<span class="number">45</span>
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/背包問題/" rel="tag">#背包問題</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p10696/" rel="next" title="10696 - f91">
-                <i class="fa fa-chevron-left"></i> 10696 - f91
+              <a href="/uniDog/problem/562/" rel="next" title="562 - Dividing coins">
+                <i class="fa fa-chevron-left"></i> 562 - Dividing coins
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p481/" rel="prev" title="481 - What Goes Up">
-                481 - What Goes Up <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p103/" rel="prev" title="103 - Stacking Boxes">
+                103 - Stacking Boxes <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -401,7 +413,7 @@ Input輸入的第一列有一個整數代表以下共有多少組測試資料。
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

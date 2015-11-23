@@ -344,8 +344,8 @@ dringend verbessert werden
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p10600/" itemprop="url">
-                  10600 - ACM Contest and Blackout
+                <a class="post-title-link" href="/uniDog/problem/p362/" itemprop="url">
+                  362 - 18,000 Seconds Remaining
                 </a>
               
             
@@ -354,14 +354,14 @@ dringend verbessert werden
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10600/">
+            <a href="/uniDog/problem/p362/">
               <span>Purple People Eater</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://rubyacm.blogspot.tw/2011/08/10600-acm-contest-and-blackout.html" target="_blank">
+            <a href="http://rubyacm.blogspot.tw/2011/11/362-18000-seconds-remaining.html" target="_blank">
               <span>Ruby 兔</span>
             </a>
           </span>
@@ -378,8 +378,8 @@ dringend verbessert werden
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-106/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 106</span>
+                  <a href="/uniDog/categories/Volume-003/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 003</span>
                   </a>
                 </span>
 
@@ -393,7 +393,7 @@ dringend verbessert werden
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1541" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=298" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -419,42 +419,67 @@ dringend verbessert werden
         
           <span itemprop="articleBody">
             
-              <p>為了舉辦「國際ACM世界學校競賽」，市長決定為每所學校提供穩定可靠的電力，為了達成這個目標，其中某一所學校的電力系統必須與發電廠直接連接，且部份學校間的電力系統亦需互相連接。</p>
-<p>用來評估一所學校的電力是否穩定的原則為：</p>
-<ol>
-<li>若某學校的電力系統與發電廠直接相連，則該學校的電力是穩定的，</li>
-<li>或某學校與另一所電力穩定的學校直接相連，則該學校的電力也是穩定的。</li>
-</ol>
-<p>給定學校間彼此連線的成本，市長必須決定兩種可能的連線路線使得成本最小。成本 的計算為學校間的連線成本總和。請你幫市長找出兩種最便宜的連線路徑。</p>
-<h2 id="Input">Input</h2><p>輸入的一開始有一個整數 T (<span>$1\leq{T}\leq{15}$</span><!-- Has MathJax -->) 表示測試資料的組數，接下有來 T 組測試資料，每組資料的一開始有兩個以空白字元隔開的整數 N、M，N (<span>$3\leq{N}\leq{100}$</span><!-- Has MathJax -->) 表示學校的總數，M 表示學校間可能的連線數，接下來有 M 組連線，每組有三個整數 <span>$A_i, B_i, C_i$</span><!-- Has MathJax -->，<span>$C_i$</span><!-- Has MathJax --> (<span>$1\leq{C_i}\leq{300}$</span><!-- Has MathJax -->) 表示 <span>$A_i$</span><!-- Has MathJax --> 與 <span>$B_i$</span><!-- Has MathJax --> 兩所學校的連線成本。學校的編號為 1 到 N。</p>
-<h2 id="Output">Output</h2><p>每組測試資料輸出一列，每列有兩個以空白字元隔開的整數 <span>$S_1, S_2$</span><!-- Has MathJax -->，分別表示最低連線成本與次低連線成本，<span>$S_1\leq{S_2}$</span><!-- Has MathJax -->。你可以假設 <span>$S_1, S_2$</span><!-- Has MathJax --> 必存在。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
-<span class="number">5</span> <span class="number">8</span>
-<span class="number">1</span> <span class="number">3</span> <span class="number">75</span>
-<span class="number">3</span> <span class="number">4</span> <span class="number">51</span>
-<span class="number">2</span> <span class="number">4</span> <span class="number">19</span>
-<span class="number">3</span> <span class="number">2</span> <span class="number">95</span>
-<span class="number">2</span> <span class="number">5</span> <span class="number">42</span>
-<span class="number">5</span> <span class="number">4</span> <span class="number">31</span>
-<span class="number">1</span> <span class="number">2</span> <span class="number">9</span>
-<span class="number">3</span> <span class="number">5</span> <span class="number">66</span>
-<span class="number">9</span> <span class="number">14</span>
-<span class="number">1</span> <span class="number">2</span> <span class="number">4</span>
-<span class="number">1</span> <span class="number">8</span> <span class="number">8</span>
-<span class="number">2</span> <span class="number">8</span> <span class="number">11</span>
-<span class="number">3</span> <span class="number">2</span> <span class="number">8</span>
-<span class="number">8</span> <span class="number">9</span> <span class="number">7</span>
-<span class="number">8</span> <span class="number">7</span> <span class="number">1</span>
-<span class="number">7</span> <span class="number">9</span> <span class="number">6</span>
-<span class="number">9</span> <span class="number">3</span> <span class="number">2</span>
-<span class="number">3</span> <span class="number">4</span> <span class="number">7</span>
-<span class="number">3</span> <span class="number">6</span> <span class="number">4</span>
-<span class="number">7</span> <span class="number">6</span> <span class="number">2</span>
-<span class="number">4</span> <span class="number">6</span> <span class="number">14</span>
-<span class="number">4</span> <span class="number">5</span> <span class="number">9</span>
-<span class="number">5</span> <span class="number">6</span> <span class="number">10</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">110</span> <span class="number">121</span>
-<span class="number">37</span> <span class="number">37</span>
+              <p>檔案傳輸程式通常都會估計並顯示剩餘的傳輸時間，用來估計剩餘時間的原則為：將剩餘欲傳送的資料大小 (bytes) 除以前幾秒的平均傳輸率。本題請你寫程式模擬這個功能。</p>
+<h2 id="Input">Input</h2><p>輸入會有多組測試資料，每組資料表示一次的檔案傳輸。每組資料的第一列為一個非零的整數表示檔案的大小 (bytes)，接下來的每一列依序為每一秒所傳輸的資料量 (bytes)，傳輸的總資料量會等於檔案的大小。</p>
+<p>當檔案大小等於 0 時表示測試資料結束。</p>
+<h2 id="Output">Output</h2><p>每組輸出資料的第一列請輸出該組資料編號及檔案的大小，接下來每 5 秒輸出一次剩餘檔案傳輸所需的秒數。</p>
+<p>計算所需的秒數時請先計算前五秒的平均傳輸率 (bytes/秒)，若這 5 秒沒有傳輸任何資料表示這次的傳輸為 <em>stalled</em>，你的程式必須輸出這種情況，否則請將剩餘資料量除以前 5 秒的平均傳輸率，得到剩餘秒數。剩餘秒數必須為整數，請無條件進位到整數 (例如 12.2 進位到 13)。</p>
+<p>請在每組輸出資料的最後輸出該次傳輸共耗時多少秒，其格式請參考範例資料。</p>
+<p>每組輸出之後請額外輸出一列空行。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">100</span>
+<span class="number">10</span>
+<span class="number">20</span>
+<span class="number">20</span>
+<span class="number">0</span>
+<span class="number">10</span>
+<span class="number">0</span>
+<span class="number">10</span>
+<span class="number">0</span>
+<span class="number">10</span>
+<span class="number">0</span>
+<span class="number">20</span>
+<span class="number">200</span>
+<span class="number">60</span>
+<span class="number">30</span>
+<span class="number">100</span>
+<span class="number">10</span>
+<span class="number">50</span>
+<span class="number">5</span>
+<span class="number">5</span>
+<span class="number">5</span>
+<span class="number">5</span>
+<span class="number">25</span>
+<span class="number">0</span>
+<span class="number">0</span>
+<span class="number">0</span>
+<span class="number">0</span>
+<span class="number">0</span>
+<span class="number">0</span>
+<span class="number">0</span>
+<span class="number">0</span>
+<span class="number">0</span>
+<span class="number">0</span>
+<span class="number">1</span>
+<span class="number">1</span>
+<span class="number">1</span>
+<span class="number">1</span>
+<span class="number">1</span>
+<span class="number">0</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Output for data <span class="operator"><span class="keyword">set</span> <span class="number">1</span>, <span class="number">100</span> <span class="keyword">bytes</span>:
+   <span class="keyword">Time</span> remaining: <span class="number">4</span> seconds
+   <span class="keyword">Time</span> remaining: <span class="number">5</span> seconds
+Total <span class="keyword">time</span>: <span class="number">11</span> seconds
+
+<span class="keyword">Output</span> <span class="keyword">for</span> <span class="keyword">data</span> <span class="keyword">set</span> <span class="number">2</span>, <span class="number">200</span> <span class="keyword">bytes</span>:
+Total <span class="keyword">time</span>: <span class="number">4</span> seconds
+
+<span class="keyword">Output</span> <span class="keyword">for</span> <span class="keyword">data</span> <span class="keyword">set</span> <span class="number">3</span>, <span class="number">50</span> <span class="keyword">bytes</span>:
+   <span class="keyword">Time</span> remaining: <span class="number">1</span> seconds
+   <span class="keyword">Time</span> remaining: stalled
+   <span class="keyword">Time</span> remaining: stalled
+   <span class="keyword">Time</span> remaining: <span class="number">0</span> seconds
+Total <span class="keyword">time</span>: <span class="number">20</span> seconds
+　</span>
 </code></pre>
             
           </span>
@@ -627,8 +652,8 @@ dringend verbessert werden
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p362/" itemprop="url">
-                  362 - 18,000 Seconds Remaining
+                <a class="post-title-link" href="/uniDog/problem/p10600/" itemprop="url">
+                  10600 - ACM Contest and Blackout
                 </a>
               
             
@@ -637,14 +662,14 @@ dringend verbessert werden
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p362/">
+            <a href="/uniDog/problem/p10600/">
               <span>Purple People Eater</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://rubyacm.blogspot.tw/2011/11/362-18000-seconds-remaining.html" target="_blank">
+            <a href="http://rubyacm.blogspot.tw/2011/08/10600-acm-contest-and-blackout.html" target="_blank">
               <span>Ruby 兔</span>
             </a>
           </span>
@@ -661,8 +686,8 @@ dringend verbessert werden
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-003/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 003</span>
+                  <a href="/uniDog/categories/Volume-106/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 106</span>
                   </a>
                 </span>
 
@@ -676,7 +701,7 @@ dringend verbessert werden
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=298" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1541" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -702,67 +727,42 @@ dringend verbessert werden
         
           <span itemprop="articleBody">
             
-              <p>檔案傳輸程式通常都會估計並顯示剩餘的傳輸時間，用來估計剩餘時間的原則為：將剩餘欲傳送的資料大小 (bytes) 除以前幾秒的平均傳輸率。本題請你寫程式模擬這個功能。</p>
-<h2 id="Input">Input</h2><p>輸入會有多組測試資料，每組資料表示一次的檔案傳輸。每組資料的第一列為一個非零的整數表示檔案的大小 (bytes)，接下來的每一列依序為每一秒所傳輸的資料量 (bytes)，傳輸的總資料量會等於檔案的大小。</p>
-<p>當檔案大小等於 0 時表示測試資料結束。</p>
-<h2 id="Output">Output</h2><p>每組輸出資料的第一列請輸出該組資料編號及檔案的大小，接下來每 5 秒輸出一次剩餘檔案傳輸所需的秒數。</p>
-<p>計算所需的秒數時請先計算前五秒的平均傳輸率 (bytes/秒)，若這 5 秒沒有傳輸任何資料表示這次的傳輸為 <em>stalled</em>，你的程式必須輸出這種情況，否則請將剩餘資料量除以前 5 秒的平均傳輸率，得到剩餘秒數。剩餘秒數必須為整數，請無條件進位到整數 (例如 12.2 進位到 13)。</p>
-<p>請在每組輸出資料的最後輸出該次傳輸共耗時多少秒，其格式請參考範例資料。</p>
-<p>每組輸出之後請額外輸出一列空行。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">100</span>
-<span class="number">10</span>
-<span class="number">20</span>
-<span class="number">20</span>
-<span class="number">0</span>
-<span class="number">10</span>
-<span class="number">0</span>
-<span class="number">10</span>
-<span class="number">0</span>
-<span class="number">10</span>
-<span class="number">0</span>
-<span class="number">20</span>
-<span class="number">200</span>
-<span class="number">60</span>
-<span class="number">30</span>
-<span class="number">100</span>
-<span class="number">10</span>
-<span class="number">50</span>
-<span class="number">5</span>
-<span class="number">5</span>
-<span class="number">5</span>
-<span class="number">5</span>
-<span class="number">25</span>
-<span class="number">0</span>
-<span class="number">0</span>
-<span class="number">0</span>
-<span class="number">0</span>
-<span class="number">0</span>
-<span class="number">0</span>
-<span class="number">0</span>
-<span class="number">0</span>
-<span class="number">0</span>
-<span class="number">0</span>
-<span class="number">1</span>
-<span class="number">1</span>
-<span class="number">1</span>
-<span class="number">1</span>
-<span class="number">1</span>
-<span class="number">0</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Output for data <span class="operator"><span class="keyword">set</span> <span class="number">1</span>, <span class="number">100</span> <span class="keyword">bytes</span>:
-   <span class="keyword">Time</span> remaining: <span class="number">4</span> seconds
-   <span class="keyword">Time</span> remaining: <span class="number">5</span> seconds
-Total <span class="keyword">time</span>: <span class="number">11</span> seconds
-
-<span class="keyword">Output</span> <span class="keyword">for</span> <span class="keyword">data</span> <span class="keyword">set</span> <span class="number">2</span>, <span class="number">200</span> <span class="keyword">bytes</span>:
-Total <span class="keyword">time</span>: <span class="number">4</span> seconds
-
-<span class="keyword">Output</span> <span class="keyword">for</span> <span class="keyword">data</span> <span class="keyword">set</span> <span class="number">3</span>, <span class="number">50</span> <span class="keyword">bytes</span>:
-   <span class="keyword">Time</span> remaining: <span class="number">1</span> seconds
-   <span class="keyword">Time</span> remaining: stalled
-   <span class="keyword">Time</span> remaining: stalled
-   <span class="keyword">Time</span> remaining: <span class="number">0</span> seconds
-Total <span class="keyword">time</span>: <span class="number">20</span> seconds
-　</span>
+              <p>為了舉辦「國際ACM世界學校競賽」，市長決定為每所學校提供穩定可靠的電力，為了達成這個目標，其中某一所學校的電力系統必須與發電廠直接連接，且部份學校間的電力系統亦需互相連接。</p>
+<p>用來評估一所學校的電力是否穩定的原則為：</p>
+<ol>
+<li>若某學校的電力系統與發電廠直接相連，則該學校的電力是穩定的，</li>
+<li>或某學校與另一所電力穩定的學校直接相連，則該學校的電力也是穩定的。</li>
+</ol>
+<p>給定學校間彼此連線的成本，市長必須決定兩種可能的連線路線使得成本最小。成本 的計算為學校間的連線成本總和。請你幫市長找出兩種最便宜的連線路徑。</p>
+<h2 id="Input">Input</h2><p>輸入的一開始有一個整數 T (<span>$1\leq{T}\leq{15}$</span><!-- Has MathJax -->) 表示測試資料的組數，接下有來 T 組測試資料，每組資料的一開始有兩個以空白字元隔開的整數 N、M，N (<span>$3\leq{N}\leq{100}$</span><!-- Has MathJax -->) 表示學校的總數，M 表示學校間可能的連線數，接下來有 M 組連線，每組有三個整數 <span>$A_i, B_i, C_i$</span><!-- Has MathJax -->，<span>$C_i$</span><!-- Has MathJax --> (<span>$1\leq{C_i}\leq{300}$</span><!-- Has MathJax -->) 表示 <span>$A_i$</span><!-- Has MathJax --> 與 <span>$B_i$</span><!-- Has MathJax --> 兩所學校的連線成本。學校的編號為 1 到 N。</p>
+<h2 id="Output">Output</h2><p>每組測試資料輸出一列，每列有兩個以空白字元隔開的整數 <span>$S_1, S_2$</span><!-- Has MathJax -->，分別表示最低連線成本與次低連線成本，<span>$S_1\leq{S_2}$</span><!-- Has MathJax -->。你可以假設 <span>$S_1, S_2$</span><!-- Has MathJax --> 必存在。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
+<span class="number">5</span> <span class="number">8</span>
+<span class="number">1</span> <span class="number">3</span> <span class="number">75</span>
+<span class="number">3</span> <span class="number">4</span> <span class="number">51</span>
+<span class="number">2</span> <span class="number">4</span> <span class="number">19</span>
+<span class="number">3</span> <span class="number">2</span> <span class="number">95</span>
+<span class="number">2</span> <span class="number">5</span> <span class="number">42</span>
+<span class="number">5</span> <span class="number">4</span> <span class="number">31</span>
+<span class="number">1</span> <span class="number">2</span> <span class="number">9</span>
+<span class="number">3</span> <span class="number">5</span> <span class="number">66</span>
+<span class="number">9</span> <span class="number">14</span>
+<span class="number">1</span> <span class="number">2</span> <span class="number">4</span>
+<span class="number">1</span> <span class="number">8</span> <span class="number">8</span>
+<span class="number">2</span> <span class="number">8</span> <span class="number">11</span>
+<span class="number">3</span> <span class="number">2</span> <span class="number">8</span>
+<span class="number">8</span> <span class="number">9</span> <span class="number">7</span>
+<span class="number">8</span> <span class="number">7</span> <span class="number">1</span>
+<span class="number">7</span> <span class="number">9</span> <span class="number">6</span>
+<span class="number">9</span> <span class="number">3</span> <span class="number">2</span>
+<span class="number">3</span> <span class="number">4</span> <span class="number">7</span>
+<span class="number">3</span> <span class="number">6</span> <span class="number">4</span>
+<span class="number">7</span> <span class="number">6</span> <span class="number">2</span>
+<span class="number">4</span> <span class="number">6</span> <span class="number">14</span>
+<span class="number">4</span> <span class="number">5</span> <span class="number">9</span>
+<span class="number">5</span> <span class="number">6</span> <span class="number">10</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">110</span> <span class="number">121</span>
+<span class="number">37</span> <span class="number">37</span>
 </code></pre>
             
           </span>
@@ -1613,7 +1613,7 @@ Ordered
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="背包問題," />
 
 
 
@@ -55,23 +55,20 @@
 
 <meta name="description" content="John 是一位寶物獵人，他知道附近海域所有沉在海裡的金幣的位置及深度，及其金幣的數量，不過他只帶了一個氧氣桶過來，所需的氧氣量可能不夠讓他將所有的寶物全都打撈上來，請你幫忙計算他最多可帶回多少金幣，需符合下列限制條件： 
 
-金幣所在 n 個不同的位置，以 {(d1, v1), (d2, v2), …, (dn, vn)} 表示這 n 個位置的 (深度, 金幣的數量)，n 最大為 30。
-氧氧桶最">
+金幣所在 $n$&amp;lt;!-- Has MathJax --&amp;gt; 個不同的位置，以 $\{(d_1,v_1), (d_2,v_2), \cdots{},(d_n,v_n)\}$&amp;lt;!-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="990 - Diving for Gold">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p990/index.html">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/990/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
 <meta property="og:description" content="John 是一位寶物獵人，他知道附近海域所有沉在海裡的金幣的位置及深度，及其金幣的數量，不過他只帶了一個氧氣桶過來，所需的氧氣量可能不夠讓他將所有的寶物全都打撈上來，請你幫忙計算他最多可帶回多少金幣，需符合下列限制條件： 
 
-金幣所在 n 個不同的位置，以 {(d1, v1), (d2, v2), …, (dn, vn)} 表示這 n 個位置的 (深度, 金幣的數量)，n 最大為 30。
-氧氧桶最">
-<meta property="og:updated_time" content="2015-11-18T18:52:49.728Z">
+金幣所在 $n$&amp;lt;!-- Has MathJax --&amp;gt; 個不同的位置，以 $\{(d_1,v_1), (d_2,v_2), \cdots{},(d_n,v_n)\}$&amp;lt;!-">
+<meta property="og:updated_time" content="2015-11-23T14:47:01.628Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="990 - Diving for Gold">
 <meta name="twitter:description" content="John 是一位寶物獵人，他知道附近海域所有沉在海裡的金幣的位置及深度，及其金幣的數量，不過他只帶了一個氧氣桶過來，所需的氧氣量可能不夠讓他將所有的寶物全都打撈上來，請你幫忙計算他最多可帶回多少金幣，需符合下列限制條件： 
 
-金幣所在 n 個不同的位置，以 {(d1, v1), (d2, v2), …, (dn, vn)} 表示這 n 個位置的 (深度, 金幣的數量)，n 最大為 30。
-氧氧桶最">
+金幣所在 $n$&amp;lt;!-- Has MathJax --&amp;gt; 個不同的位置，以 $\{(d_1,v_1), (d_2,v_2), \cdots{},(d_n,v_n)\}$&amp;lt;!-">
 
 
 
@@ -221,7 +218,7 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p990/">
+            <a href="/uniDog/problem/990/">
               <span>Purple People Eater</span>
             </a>
           </span>
@@ -285,15 +282,17 @@
       
         <span itemprop="articleBody"><p>John 是一位寶物獵人，他知道附近海域所有沉在海裡的金幣的位置及深度，及其金幣的數量，不過他只帶了一個氧氣桶過來，所需的氧氣量可能不夠讓他將所有的寶物全都打撈上來，請你幫忙計算他最多可帶回多少金幣，需符合下列限制條件： </p>
 <ul>
-<li>金幣所在 n 個不同的位置，以 {(d1, v1), (d2, v2), …, (dn, vn)} 表示這 n 個位置的 (深度, 金幣的數量)，n 最大為 30。</li>
-<li>氧氧桶最多可使用 t 秒，t 最多 1000 秒。</li>
+<li>金幣所在 <span>$n$</span><!-- Has MathJax --> 個不同的位置，以 <span>$\{(d_1,v_1), (d_2,v_2), \cdots{},(d_n,v_n)\}$</span><!-- Has MathJax --> 表示這 <span>$n$</span><!-- Has MathJax --> 個位置的 (深度, 金幣的數量)，<span>$n$</span><!-- Has MathJax --> 最大為 30。</li>
+<li>氧氧桶最多可使用 <span>$t$</span><!-- Has MathJax --> 秒，<span>$t$</span><!-- Has MathJax --> 最多 1000 秒。</li>
 <li>每一次潛下水面，他可帶回所有沉在該位置的金幣。</li>
-<li>下沉所需的時間為 w * di，w 為一常數，di 表示深度。</li>
-<li>浮起所需的時間為 2w * di，w為一常數，di 表示深度。</li>
+<li>下沉所需的時間 <span>${td}_i$</span><!-- Has MathJax --> 為 <span>$w\times{d_i}$</span><!-- Has MathJax -->，<span>$w$</span><!-- Has MathJax --> 為一常數。</li>
+<li>浮起所需的時間 <span>${ta}_i$</span><!-- Has MathJax --> 為 <span>$2w\times{d_i}$</span><!-- Has MathJax -->，<span>$w$</span><!-- Has MathJax --> 為一常數。</li>
 <li>輸入的所有數值皆為整數。</li>
 </ul>
-<h2 id="Input">Input</h2><p>輸入有多組測試資料，每組資料的第一列有兩個整數分別表示 t, w，第二列有一個整數為 n，接下來的 n 列，每列有兩個整數分別表示金幣所在的深度di及數量vi。<br>每組測試資料間有一空行隔開。</p>
-<h2 id="Output">Output</h2><p>請在每組測試資料的第一列輸出 John 可找到的所有金幣的數量，第二列輸出共需潛水幾次，之後的每一列輸出每次潛水的深度及帶回的金幣數量，其輸出順序需與輸入資料的金幣出現順序相同。<br>請在每組輸出資料間以一列空行隔開。</p>
+<h2 id="Input">Input</h2><p>輸入有多組測試資料，每組資料的第一列有兩個整數分別表示 <span>$t,w$</span><!-- Has MathJax -->，第二列有一個整數為 <span>$n$</span><!-- Has MathJax -->，接下來的 <span>$n$</span><!-- Has MathJax --> 列，每列有兩個整數分別表示金幣所在的深度 <span>$d_i$</span><!-- Has MathJax --> 及數量 <span>$v_i$</span><!-- Has MathJax -->。</p>
+<p>每組測試資料間有一空行隔開。</p>
+<h2 id="Output">Output</h2><p>請在每組測試資料的第一列輸出 John 可找到的所有金幣的數量，第二列輸出共需潛水幾次，之後的每一列輸出每次潛水的深度及帶回的金幣數量，其輸出順序需與輸入資料的金幣出現順序相同。</p>
+<p>請在每組輸出資料間以一列空行隔開。</p>
 <h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">210</span> <span class="number">4</span>
 <span class="number">3</span>
 <span class="number">10</span> <span class="number">5</span>
@@ -308,6 +307,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/背包問題/" rel="tag">#背包問題</a>
+          
+        </div>
       
 
       
@@ -406,7 +411,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

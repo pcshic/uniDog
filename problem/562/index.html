@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="子集合求和,背包問題," />
 
 
 
@@ -53,19 +53,22 @@
 
 
 
-<meta name="description" content="在 SuperHiperMarket 有一個超級拍賣。每一個人每樣商品只能拿一個，也就是一台電視機，一根紅蘿蔔，一台腳踏車，但是一個人不能拿 2 台電視機。現在有一家人到超級拍賣會去。每個人可以盡可能的拿商品，只要他搬的動。我們手上有所有商品的價格及重量，我們也知道這家人每個人最多能搬的重量。請問這家人能從超級拍賣會搬到的最大價格是多少？
-Input輸入的第一列有一個整數代表以下有多少組測試資料。">
+<meta name="description" content="很多人都知道銅線是荷蘭人發明的。聽說是有 2 個荷蘭人在爭奪一個銅幣，由於搶的太激烈，銅幣被約拉越長，最後銅線就被發明出來了。
+現在，你要來幫助處理一個關於銅幣的問題。給你一袋銅幣 (裡面最多有 100 個，面值可能有 1 分錢到 500 分錢，但單一銅幣是不可分割的)。若要把銅幣分成 2 堆，並且使得這 2 堆銅幣的面值和盡可能接近，你必須回答這 2 堆銅幣面值和的差是多少。
+Input輸入的第">
 <meta property="og:type" content="article">
-<meta property="og:title" content="10130 - SuperSale">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p10130/index.html">
+<meta property="og:title" content="562 - Dividing coins">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/562/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="在 SuperHiperMarket 有一個超級拍賣。每一個人每樣商品只能拿一個，也就是一台電視機，一根紅蘿蔔，一台腳踏車，但是一個人不能拿 2 台電視機。現在有一家人到超級拍賣會去。每個人可以盡可能的拿商品，只要他搬的動。我們手上有所有商品的價格及重量，我們也知道這家人每個人最多能搬的重量。請問這家人能從超級拍賣會搬到的最大價格是多少？
-Input輸入的第一列有一個整數代表以下有多少組測試資料。">
-<meta property="og:updated_time" content="2015-11-18T18:53:14.937Z">
+<meta property="og:description" content="很多人都知道銅線是荷蘭人發明的。聽說是有 2 個荷蘭人在爭奪一個銅幣，由於搶的太激烈，銅幣被約拉越長，最後銅線就被發明出來了。
+現在，你要來幫助處理一個關於銅幣的問題。給你一袋銅幣 (裡面最多有 100 個，面值可能有 1 分錢到 500 分錢，但單一銅幣是不可分割的)。若要把銅幣分成 2 堆，並且使得這 2 堆銅幣的面值和盡可能接近，你必須回答這 2 堆銅幣面值和的差是多少。
+Input輸入的第">
+<meta property="og:updated_time" content="2015-11-23T14:56:02.497Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="10130 - SuperSale">
-<meta name="twitter:description" content="在 SuperHiperMarket 有一個超級拍賣。每一個人每樣商品只能拿一個，也就是一台電視機，一根紅蘿蔔，一台腳踏車，但是一個人不能拿 2 台電視機。現在有一家人到超級拍賣會去。每個人可以盡可能的拿商品，只要他搬的動。我們手上有所有商品的價格及重量，我們也知道這家人每個人最多能搬的重量。請問這家人能從超級拍賣會搬到的最大價格是多少？
-Input輸入的第一列有一個整數代表以下有多少組測試資料。">
+<meta name="twitter:title" content="562 - Dividing coins">
+<meta name="twitter:description" content="很多人都知道銅線是荷蘭人發明的。聽說是有 2 個荷蘭人在爭奪一個銅幣，由於搶的太激烈，銅幣被約拉越長，最後銅線就被發明出來了。
+現在，你要來幫助處理一個關於銅幣的問題。給你一袋銅幣 (裡面最多有 100 個，面值可能有 1 分錢到 500 分錢，但單一銅幣是不可分割的)。若要把銅幣分成 2 堆，並且使得這 2 堆銅幣的面值和盡可能接近，你必須回答這 2 堆銅幣面值和的差是多少。
+Input輸入的第">
 
 
 
@@ -77,7 +80,7 @@ Input輸入的第一列有一個整數代表以下有多少組測試資料。">
   };
 </script>
 
-  <title> 10130 - SuperSale | uniDog 的 ACM 園地 </title>
+  <title> 562 - Dividing coins | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -207,7 +210,7 @@ Input輸入的第一列有一個整數代表以下有多少組測試資料。">
             
             
               
-                10130 - SuperSale
+                562 - Dividing coins
               
             
           </h1>
@@ -215,22 +218,22 @@ Input輸入的第一列有一個整數代表以下有多少組測試資料。">
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10130/">
+            <a href="/uniDog/problem/562/">
               <span>Luckycat</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10130.htm" target="_blank">
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q562.htm" target="_blank">
               <span>Lucky 貓</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2011-10-06T00:00:00+08:00" content="2011-10-06">
-              2011-10-06
+            <time itemprop="dateCreated" datetime="2003-02-26T00:00:00+08:00" content="2003-02-26">
+              2003-02-26
             </time>
           </span>
 
@@ -239,8 +242,8 @@ Input輸入的第一列有一個整數代表以下有多少組測試資料。">
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-101/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 101</span>
+                  <a href="/uniDog/categories/Volume-005/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 005</span>
                   </a>
                 </span>
 
@@ -254,7 +257,7 @@ Input輸入的第一列有一個整數代表以下有多少組測試資料。">
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1071" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=503" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -277,52 +280,47 @@ Input輸入的第一列有一個整數代表以下有多少組測試資料。">
       
 
       
-        <span itemprop="articleBody"><p>在 SuperHiperMarket 有一個超級拍賣。每一個人每樣商品只能拿一個，也就是一台電視機，一根紅蘿蔔，一台腳踏車，但是一個人不能拿 2 台電視機。現在有一家人到超級拍賣會去。每個人可以盡可能的拿商品，只要他搬的動。我們手上有所有商品的價格及重量，我們也知道這家人每個人最多能搬的重量。請問這家人能從超級拍賣會搬到的最大價格是多少？</p>
-<h2 id="Input">Input</h2><p>輸入的第一列有一個整數代表以下有多少組測試資料。</p>
-<p>每組測試資料的第一列有一個整數 <span>$N$</span><!-- Has MathJax --> (<span>$1\leq{N}\leq{1000}$</span><!-- Has MathJax -->) 代表有多少種商品。接下來的 <span>$N$</span><!-- Has MathJax --> 列每列有 <span>$2$</span><!-- Has MathJax --> 個整數 <span>$P$</span><!-- Has MathJax --> 和 <span>$W$</span><!-- Has MathJax -->，分別代表該項商品的價格和重量 (<span>$1\leq{P}\leq{1000}, 1\leq{W}\leq{30}$</span><!-- Has MathJax -->)。再下一列有一個整數 <span>$G$</span><!-- Has MathJax --> 代表這家共有多少人，再接下來的 <span>$G$</span><!-- Has MathJax --> 列每列有一個整數 <span>$MW$</span><!-- Has MathJax --> (<span>$1\leq{MW}\leq{30}$</span><!-- Has MathJax -->) 代表某個人最多能搬的重量。請參考 Sample Input。</p>
-<h2 id="Output">Output</h2><p>每組測試資料輸出這個家庭能搬到的最大價格是多少。</p>
+        <span itemprop="articleBody"><p>很多人都知道銅線是荷蘭人發明的。聽說是有 2 個荷蘭人在爭奪一個銅幣，由於搶的太激烈，銅幣被約拉越長，最後銅線就被發明出來了。</p>
+<p>現在，你要來幫助處理一個關於銅幣的問題。給你一袋銅幣 (裡面最多有 100 個，面值可能有 1 分錢到 500 分錢，但單一銅幣是不可分割的)。若要把銅幣分成 2 堆，並且使得這 2 堆銅幣的面值和盡可能接近，你必須回答這 2 堆銅幣面值和的差是多少。</p>
+<h2 id="Input">Input</h2><p>輸入的第一列有一個整數，代表以下有幾組測試資料。</p>
+<p>每組測試資料 2 列，其中第一列有 1 個不為負的整數 <span>$m$</span><!-- Has MathJax --> (<span>$m\leq{100}$</span><!-- Has MathJax -->)，代表袋中銅幣的數目。接下來的一列有 <span>$m$</span><!-- Has MathJax --> 個正整數，代表袋中各銅幣的面值。</p>
+<h2 id="Output">Output</h2><p>對每一組測試資料，輸出 2 堆銅幣面值和的差是多少。</p>
 <h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
 <span class="number">3</span>
-<span class="number">72</span> <span class="number">17</span>
-<span class="number">44</span> <span class="number">23</span>
-<span class="number">31</span> <span class="number">24</span>
-<span class="number">1</span>
-<span class="number">26</span>
-<span class="number">6</span>
-<span class="number">64</span> <span class="number">26</span>
-<span class="number">85</span> <span class="number">22</span>
-<span class="number">52</span> <span class="number">4</span>
-<span class="number">99</span> <span class="number">18</span>
-<span class="number">39</span> <span class="number">13</span>
-<span class="number">54</span> <span class="number">9</span>
+<span class="number">2</span> <span class="number">3</span> <span class="number">5</span>
 <span class="number">4</span>
-<span class="number">23</span>
-<span class="number">20</span>
-<span class="number">20</span>
-<span class="number">26</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">72</span>
-<span class="number">514</span>
+<span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">6</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">0</span>
+<span class="number">1</span>
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/子集合求和/" rel="tag">#子集合求和</a>
+          
+            <a href="/uniDog/tags/背包問題/" rel="tag">#背包問題</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p11332/" rel="next" title="11332 - Summing Digits">
-                <i class="fa fa-chevron-left"></i> 11332 - Summing Digits
+              <a href="/uniDog/problem/p10041/" rel="next" title="10041 - Vito's family">
+                <i class="fa fa-chevron-left"></i> 10041 - Vito's family
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p711/" rel="prev" title="711 - Dividing up">
-                711 - Dividing up <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/624/" rel="prev" title="624 - CD">
+                624 - CD <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -405,7 +403,7 @@ Input輸入的第一列有一個整數代表以下有多少組測試資料。">
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
