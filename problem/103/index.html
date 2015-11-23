@@ -1,0 +1,759 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/uniDog/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+
+
+
+<link href="/uniDog/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="LIS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uniDog/uniDog/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="在數學或電腦科學裡，有些概念在一維或二維時還蠻簡單的，但到 N 維就會顯得非常複雜。試想一個 $n$&amp;lt;!-- Has MathJax --&amp;gt; 維的「盒子」：在二維空間裡，盒子 $(2,3)$&amp;lt;!-- Has MathJax --&amp;gt; 可代表一個長為 2 個單位，寬為 3 個單位的盒子；在三維空間裡，盒子 $(4,8,9)$&amp;lt;!-- Has MathJax --&amp;gt; 則是一個 $4\times{8}\t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="103 - Stacking Boxes">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/103/index.html">
+<meta property="og:site_name" content="uniDog 的 ACM 園地">
+<meta property="og:description" content="在數學或電腦科學裡，有些概念在一維或二維時還蠻簡單的，但到 N 維就會顯得非常複雜。試想一個 $n$&amp;lt;!-- Has MathJax --&amp;gt; 維的「盒子」：在二維空間裡，盒子 $(2,3)$&amp;lt;!-- Has MathJax --&amp;gt; 可代表一個長為 2 個單位，寬為 3 個單位的盒子；在三維空間裡，盒子 $(4,8,9)$&amp;lt;!-- Has MathJax --&amp;gt; 則是一個 $4\times{8}\t">
+<meta property="og:updated_time" content="2015-11-23T19:55:04.004Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="103 - Stacking Boxes">
+<meta name="twitter:description" content="在數學或電腦科學裡，有些概念在一維或二維時還蠻簡單的，但到 N 維就會顯得非常複雜。試想一個 $n$&amp;lt;!-- Has MathJax --&amp;gt; 維的「盒子」：在二維空間裡，盒子 $(2,3)$&amp;lt;!-- Has MathJax --&amp;gt; 可代表一個長為 2 個單位，寬為 3 個單位的盒子；在三維空間裡，盒子 $(4,8,9)$&amp;lt;!-- Has MathJax --&amp;gt; 則是一個 $4\times{8}\t">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> 103 - Stacking Boxes | uniDog 的 ACM 園地 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/uniDog/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">uniDog 的 ACM 園地</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/uniDog" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/uniDog/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/uniDog/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/uniDog/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                103 - Stacking Boxes
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/103/">
+              <span>untitled</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q103.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2003-03-18T00:00:00+08:00" content="2003-03-18">
+              2003-03-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=39" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>在數學或電腦科學裡，有些概念在一維或二維時還蠻簡單的，但到 N 維就會顯得非常複雜。試想一個 <span>$n$</span><!-- Has MathJax --> 維的「盒子」：在二維空間裡，盒子 <span>$(2,3)$</span><!-- Has MathJax --> 可代表一個長為 2 個單位，寬為 3 個單位的盒子；在三維空間裡，盒子 <span>$(4,8,9)$</span><!-- Has MathJax --> 則是一個 <span>$4\times{8}\times{9}$</span><!-- Has MathJax --> (長、寬、高) 的盒子。至於在六維空間裡，也許我們不清楚 <span>$(4,5,6,7,8,9)$</span><!-- Has MathJax --> 長得怎樣，不過我們還是可以分析這些盒子的特性。</p>
+<p>在此問題裡，我們要算出一組 <span>$n$</span><!-- Has MathJax --> 維盒子裡，它們的「最長套入串列」：<span>$b_1,b_2,\cdots{},b_k$</span><!-- Has MathJax -->，其中每個盒子 <span>$b_i$</span><!-- Has MathJax --> 都可以「放入」盒子 <span>$b_{i+1}$</span><!-- Has MathJax --> 中 (<span>$1\leq{i} &lt; k$</span><!-- Has MathJax -->)。</p>
+<p>考慮兩個盒子 <span>$D=(d_1,d_2,\cdots{},d_n)$</span><!-- Has MathJax -->、<span>$E=(e_1,e_2,\cdots{},e_n)$</span><!-- Has MathJax -->。如果盒子 <span>$D$</span><!-- Has MathJax --> 的 <span>$n$</span><!-- Has MathJax --> 個維，能夠存在一種重排，使得重排後， <span>$D$</span><!-- Has MathJax --> 每一維的量度都比 <span>$E$</span><!-- Has MathJax --> 中相對應的維的量度還要小，則我們說盒子 <span>$D$</span><!-- Has MathJax --> 能「放入」盒子 <span>$E$</span><!-- Has MathJax -->。(用比較不嚴謹的講法，這就好像我們將盒子 <span>$D$</span><!-- Has MathJax --> 翻來翻去，看看能不能擺到 <span>$E$</span><!-- Has MathJax --> 裡面去。不過因為我們考慮的是任一重排，所以實際上盒子不只可轉來轉去，甚至還可以扭曲。)(還是看看下面的例子說明好了)。</p>
+<p>譬如說，盒子 <span>$D=(2,6)$</span><!-- Has MathJax --> 能夠被放入盒子 <span>$E=(7,3)$</span><!-- Has MathJax --> 裡，因為 <span>$D$</span><!-- Has MathJax --> 可以重排變為 <span>$(6,2)$</span><!-- Has MathJax -->，這樣子 <span>$D$</span><!-- Has MathJax --> 的每個維的量度都比 <span>$E$</span><!-- Has MathJax --> 裡對應的維還要小。而盒子 <span>$D=(9,5,7,3)$</span><!-- Has MathJax --> 就沒辦法放進盒子 <span>$E=(2,10,6,8)$</span><!-- Has MathJax -->，因為就算再怎麼重排 <span>$D$</span><!-- Has MathJax --> 裡的維度，還是沒辦法符合「放入」的條件。不過 <span>$F=(9,5,7,1)$</span><!-- Has MathJax --> 就可以放入 <span>$E$</span><!-- Has MathJax --> 了，因為 <span>$F$</span><!-- Has MathJax --> 可以重排成 <span>$(1,9,5,7)$</span><!-- Has MathJax -->，這樣就符合了放入的條件。</p>
+<p>我們今定義「放入」如下：對於任兩個盒子 <span>$D=(d_1,d_2,\cdots{},d_n)$</span><!-- Has MathJax --> 和 <span>$E=(e_1,e_2,\cdots{},e_n)$</span><!-- Has MathJax -->，如果存在一種 <span>$1\cdots{n}$</span><!-- Has MathJax --> 的重排 <span>$\pi$</span><!-- Has MathJax -->，使得對於任何的 <span>$1\leq{i}\leq{n}$</span><!-- Has MathJax -->，皆有 <span>$d_{\pi{(i)}} &lt; e_i$</span><!-- Has MathJax -->，則我們說盒子 <span>$D$</span><!-- Has MathJax --> 能「放入」盒子 <span>$E$</span><!-- Has MathJax -->。</p>
+<a id="more"></a>
+<h2 id="Input">Input</h2><p>輸入包含多組測試資料。每組測試資料的第一列有兩個數字：第一個是盒子的數量 <span>$k$</span><!-- Has MathJax --> ，然後是盒子的維數 <span>$n$</span><!-- Has MathJax -->。</p>
+<p>接下來有 <span>$k$</span><!-- Has MathJax --> 列，每列有 <span>$n$</span><!-- Has MathJax --> 個整數表示一個盒子的 <span>$n$</span><!-- Has MathJax --> 個維的量度，量度之間由一個以上的空白做區隔。第一列表示第一個盒子，第二列表示第二個盒子，依此類推。</p>
+<p>此問題裡，盒子的維數最小是 1，最大是 10，並且每組測試資料中盒子的個數最多為 30 個。</p>
+<h2 id="Output">Output</h2><p>對於每一組測試資料，你必須輸出兩列數字：第一列是「最長套入串列」的長度，第二列是按照內外順序，印出「最長套入串列」裡盒子的編號 (其中編號是按照在輸入檔案的每組數列裡所出現的順序，例如第一個盒子就是 1 號 …等等。) 最裡面的盒子 (或是最小的) 擺在第一個，再來是次小的，依此類推。</p>
+<p>如果對於每一組的盒子，存在兩個以上的「最長套入串列」，輸出任何一個均可。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span> <span class="number">2</span>
+<span class="number">3</span> <span class="number">7</span>
+<span class="number">8</span> <span class="number">10</span>
+<span class="number">5</span> <span class="number">2</span>
+<span class="number">9</span> <span class="number">11</span>
+<span class="number">21</span> <span class="number">18</span>
+<span class="number">8</span> <span class="number">6</span>
+<span class="number">5</span> <span class="number">2</span> <span class="number">20</span> <span class="number">1</span> <span class="number">30</span> <span class="number">10</span>
+<span class="number">23</span> <span class="number">15</span> <span class="number">7</span> <span class="number">9</span> <span class="number">11</span> <span class="number">3</span>
+<span class="number">40</span> <span class="number">50</span> <span class="number">34</span> <span class="number">24</span> <span class="number">14</span> <span class="number">4</span>
+<span class="number">9</span> <span class="number">10</span> <span class="number">11</span> <span class="number">12</span> <span class="number">13</span> <span class="number">14</span>
+<span class="number">31</span> <span class="number">4</span> <span class="number">18</span> <span class="number">8</span> <span class="number">27</span> <span class="number">17</span>
+<span class="number">44</span> <span class="number">32</span> <span class="number">13</span> <span class="number">19</span> <span class="number">41</span> <span class="number">19</span>
+<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span>
+<span class="number">80</span> <span class="number">37</span> <span class="number">47</span> <span class="number">18</span> <span class="number">21</span> <span class="number">9</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">5</span>
+<span class="number">3</span> <span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">5</span>
+<span class="number">4</span>
+<span class="number">7</span> <span class="number">2</span> <span class="number">5</span> <span class="number">6</span>
+</code></pre></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/LIS/" rel="tag">#LIS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/uniDog/problem/624/" rel="next" title="624 - CD">
+                <i class="fa fa-chevron-left"></i> 624 - CD
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/uniDog/problem/p118/" rel="prev" title="118 - Mutant Flatworld Expolrers">
+                118 - Mutant Flatworld Expolrers <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/uniDog/images/default_avatar.jpg" alt="uniDog 團隊 @ pcshic" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">uniDog 團隊 @ pcshic</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/uniDog/archives">
+              <span class="site-state-item-count">194</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/uniDog/categories">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">分類</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/uniDog/tags">
+              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/pcshic" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Input"><span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Output"><span class="nav-text">Sample Output</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">uniDog 團隊 @ pcshic</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/uniDog/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+    
+
+  
+
+
+  
+
+  
+  <script type="text/javascript" src="/uniDog/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/uniDog/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/uniDog/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/uniDog/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/uniDog/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/uniDog/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/uniDog/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/uniDog/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/uniDog/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/uniDog/js/bootstrap.js"></script>
+
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body>
+</html>

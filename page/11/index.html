@@ -499,7 +499,7 @@ Corrupt</span>
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p11069/" itemprop="url">
+                <a class="post-title-link" href="/uniDog/problem/11069/" itemprop="url">
                   11069 - A Graph Problem
                 </a>
               
@@ -509,7 +509,7 @@ Corrupt</span>
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p11069/">
+            <a href="/uniDog/problem/11069/">
               <span>TimeString</span>
             </a>
           </span>
@@ -574,14 +574,14 @@ Corrupt</span>
         
           <span itemprop="articleBody">
             
-              <p>給一個有 n (<span>$1\leq{n}\leq{76}$</span><!-- Has MathJax -->) 個節點的無向圖形 (圖形如下)：</p>
+              <p>給一個有 <span>$n$</span><!-- Has MathJax --> (<span>$1\leq{n}\leq{76}$</span><!-- Has MathJax -->) 個節點的無向圖形 (圖形如下)：</p>
 <img src="/uniDog/images/110/p11069.png">
-<p>你的任務是：給你 n ，請算出這個圖形有以下性質的節點子集合共有多少個。</p>
+<p>你的任務是：給你 <span>$n$</span><!-- Has MathJax -->，請算出這個圖形有以下性質的節點子集合共有多少個。</p>
 <ul>
-<li>集合裡不能有兩個相鄰的點。例如圖形中有 n=3 個節點，則集合 {1,2} 是違法的，而集合 {1,3} 是合法的。</li>
-<li>當這個集合能再加入任一節點，卻可以不和其它節點相鄰，則這個集合是違法的。例如圖形中有 n=5 個節點，則集合 {1,5} 是違法的，因為這個集合再加入節點 3 仍不和其它節點相鄰，而集合 {1,3,5} 則是合法的。</li>
+<li>集合裡不能有兩個相鄰的點。例如圖形中有 <span>$n=3$</span><!-- Has MathJax --> 個節點，則集合 <span>$\{1,2\}$</span><!-- Has MathJax --> 是違法的，而集合 <span>$\{1,3\}$</span><!-- Has MathJax --> 是合法的。</li>
+<li>當這個集合能再加入任一節點，卻可以不和其它節點相鄰，則這個集合是違法的。例如圖形中有 <span>$n=5$</span><!-- Has MathJax --> 個節點，則集合 <span>${1,5}$</span><!-- Has MathJax --> 是違法的，因為這個集合再加入節點 3 仍不和其它節點相鄰，而集合 <span>$\{1,3,5\}$</span><!-- Has MathJax --> 則是合法的。</li>
 </ul>
-<p>所以，當圖形有 n=5 個節點時，應該有 4 個合法的集合：{1,3,5}, {2,4}, {2,5}, {1,4}.</p>
+<p>所以，當圖形有 <span>$n=5$</span><!-- Has MathJax --> 個節點時，應該有 4 個合法的集合：<span>$\{1,3,5\},\{2,4\},\{2,5\},\{1,4\}$</span><!-- Has MathJax -->.</p>
 <h2 id="Input">Input</h2><p>測試資料中有很多個測資，每個測資一列，每列包含一個數字 <span>$n$</span><!-- Has MathJax -->，<span>$1\leq{n}\leq{76}$</span><!-- Has MathJax -->。請用 EOF 來判斷檔案結束。</p>
 <h2 id="Output">Output</h2><p>請輸出一列含有上述性質的子集合的數目。你可以假設答案不會超過 <span>$2^{31}$</span><!-- Has MathJax -->。</p>
 <h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">1</span>
@@ -638,7 +638,7 @@ Corrupt</span>
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p11000/" itemprop="url">
+                <a class="post-title-link" href="/uniDog/problem/11000/" itemprop="url">
                   11000 - Bee
                 </a>
               
@@ -648,7 +648,7 @@ Corrupt</span>
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p11000/">
+            <a href="/uniDog/problem/11000/">
               <span>Luckycat</span>
             </a>
           </span>
@@ -714,10 +714,10 @@ Corrupt</span>
           <span itemprop="articleBody">
             
               <p>在非洲有一種非常特別的蜜蜂。每一年母蜂會生一隻公蜂，而公蜂會生一隻公蜂和一隻母蜂，然後死去。</p>
-<p>現在，科學家在偶然中發現了一隻這種品種的母蜂，而且這是一隻「神奇」的母蜂，因為她永遠都不會死，而且每年都可以像其他正常的母蜂一樣生一隻公蜂。科學家想要知道，在 N 年後會有多少隻蜜蜂。請寫一個程式幫他們算出在 N 年後公蜂的數目以及所有蜜蜂的數目。</p>
-<h2 id="Input">Input</h2><p>輸入含有多組測試資料。每組測試資料一列，有 1 個正整數 N (<span>$N\geq{0}$</span><!-- Has MathJax -->)。</p>
-<p>當 N = -1 時代表輸入結束。請參考Sample Input。</p>
-<h2 id="Output">Output</h2><p>對每一組測試資料輸出一列，第一個數字為N年後公蜂的數目，第二個數字為N年後所有蜜蜂的數目。</p>
+<p>現在，科學家在偶然中發現了一隻這種品種的母蜂，而且這是一隻「神奇」的母蜂，因為她永遠都不會死，而且每年都可以像其他正常的母蜂一樣生一隻公蜂。科學家想要知道，在 <span>$N$</span><!-- Has MathJax --> 年後會有多少隻蜜蜂。請寫一個程式幫他們算出在 <span>$N$</span><!-- Has MathJax --> 年後公蜂的數目以及所有蜜蜂的數目。</p>
+<h2 id="Input">Input</h2><p>輸入含有多組測試資料。每組測試資料一列，有 1 個正整數 <span>$N$</span><!-- Has MathJax --> (<span>$N\geq{0}$</span><!-- Has MathJax -->)。</p>
+<p>當 <span>$N=-1$</span><!-- Has MathJax --> 時代表輸入結束。請參考 Sample Input。</p>
+<h2 id="Output">Output</h2><p>對每一組測試資料輸出一列，第一個數字為 <span>$N$</span><!-- Has MathJax --> 年後公蜂的數目，第二個數字為 <span>$N$</span><!-- Has MathJax --> 年後所有蜜蜂的數目。</p>
 <p>這2個數都不會超過 <span>$2^{32}$</span><!-- Has MathJax -->。</p>
 <h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">1</span>
 <span class="number">3</span>
@@ -1138,7 +1138,7 @@ N! = N * (N-1)!$$</span><!-- Has MathJax -->
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p10918/" itemprop="url">
+                <a class="post-title-link" href="/uniDog/problem/10918/" itemprop="url">
                   10918 - Tri Tiling
                 </a>
               
@@ -1148,7 +1148,7 @@ N! = N * (N-1)!$$</span><!-- Has MathJax -->
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10918/">
+            <a href="/uniDog/problem/10918/">
               <span>Luckycat</span>
             </a>
           </span>
@@ -1214,11 +1214,11 @@ N! = N * (N-1)!$$</span><!-- Has MathJax -->
           <span itemprop="articleBody">
             
               <img src="/uniDog/images/109/p10918a.jpg">
-<p>要用大小為 2 * 1 的磁磚<strong>貼滿</strong>面積 3 * n 的矩形共有多少種方法？以下是 n=12 的一種貼法。</p>
+<p>要用大小為 <span>$2\times{1}$</span><!-- Has MathJax --> 的磁磚<strong>貼滿</strong>面積 <span>$3\times{n}$</span><!-- Has MathJax --> 的矩形共有多少種方法？以下是 <span>$n=12$</span><!-- Has MathJax --> 的一種貼法。</p>
 <img src="/uniDog/images/109/p10918b.gif">
 <h2 id="Input">Input</h2><p>輸入含有多組測試資料。</p>
-<p>每組測試資料一列有一個整數 n (<span>$0\leq{n}\leq{30}$</span><!-- Has MathJax -->)。</p>
-<p>當 n=-1 代表輸入結束。請參考 Sample Input。</p>
+<p>每組測試資料一列有一個整數 <span>$n$</span><!-- Has MathJax --> (<span>$0\leq{n}\leq{30}$</span><!-- Has MathJax -->)。</p>
+<p>當 <span>$n=-1$</span><!-- Has MathJax --> 代表輸入結束。請參考 Sample Input。</p>
 <h2 id="Output">Output</h2><p>對每一組測試資料輸出一列，輸出貼磁磚的方法共有多少種。</p>
 <h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
 <span class="number">3</span>
@@ -1556,7 +1556,7 @@ N! = N * (N-1)!$$</span><!-- Has MathJax -->
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">27</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

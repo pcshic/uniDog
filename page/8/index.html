@@ -591,274 +591,6 @@
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p10050/" itemprop="url">
-                  10050 - Hartals
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p10050/">
-              <span>Purple People Eater</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://rubyacm.blogspot.tw/2010/07/10050-hartals.html" target="_blank">
-              <span>Ruby 兔</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2010-07-30T00:00:00+08:00" content="2010-07-30">
-              2010-07-30
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 100</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=991" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>社會研究組識決定採用一組簡單的參數，用來模擬我國政黨運作的行為，其中一個參數為正整數 h (稱為 “罷會參數 (hartal parameter)”) 用來表示同一個政黨連續兩次罷會的間隔時間，雖然這個參數太過簡略了，但還是可以用來預測政黨罷會所帶來的負面影響。接下來的例子會有清楚的說明：</p>
-<p>考慮有三個政黨的情況，假設 <span>$h_1 = 3, h_2 = 4, h_3 = 8$</span><!-- Has MathJax -->，其中 <span>$h_i$</span><!-- Has MathJax --> 為政黨 i (i=1, 2, 3) 的 “罷會參數”，接下來我們摸擬這三個政黨在 N = 14 天內的罷會行為，模擬的情況總是設定第一天為星期日，並且每週的例假日 (星期五與星期六) 不會有罷會的情況。</p>
-<table>
-<thead>
-<tr>
-<th>Days</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>Su</td>
-<td>Mo</td>
-<td>Tu</td>
-<td>We</td>
-<td>Th</td>
-<td>Fr</td>
-<td>Sa</td>
-</tr>
-<tr>
-<td>Party 1</td>
-<td></td>
-<td></td>
-<td>x</td>
-<td></td>
-<td></td>
-<td>x</td>
-<td></td>
-</tr>
-<tr>
-<td>Party 2</td>
-<td></td>
-<td></td>
-<td></td>
-<td>x</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Party 3</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Hartals</td>
-<td></td>
-<td></td>
-<td>1</td>
-<td>2</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Days</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-<th>11</th>
-<th>12</th>
-<th>13</th>
-<th>14</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>Su</td>
-<td>Mo</td>
-<td>Tu</td>
-<td>We</td>
-<td>Th</td>
-<td>Fr</td>
-<td>Sa</td>
-</tr>
-<tr>
-<td>Party 1</td>
-<td></td>
-<td>x</td>
-<td></td>
-<td></td>
-<td>x</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Party 2</td>
-<td>x</td>
-<td></td>
-<td></td>
-<td></td>
-<td>x</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Party 3</td>
-<td>x</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>3</td>
-<td>4</td>
-<td></td>
-<td></td>
-<td>5</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>上述的模擬結果顯示 14 天內將罷會 5 天 (第 3, 4, 8, 9, 12 日)，而第 6 天沒有罷會是因為該天是例假日星期五，因此可看出兩週的議程已去掉了 5 天。</p>
-<p>本問題會給定各個黨政的 “罷會參數” 與總議程的天數 N，你的任務是算出在 N 天內共有多少個工作天因為各政黨的罷會而導致議程延宕。</p>
-<h2 id="Input">Input</h2><p>輸入的第一列為一個用來表示有幾組測試資料的整數 T。</p>
-<p>每組測試資料的第一列為整數 N (<span>$7 \leq N \leq 3650$</span><!-- Has MathJax -->) ，用來表示所模擬議程的天數。下一列為另一個整數 P (<span>$1 \leq P \leq 100$</span><!-- Has MathJax -->) 表示共有 P 個政黨，接下來的 P 列分別為各政黨的 “罷會參數” (絕不會為 7 的倍數)。</p>
-<h2 id="Output">Output</h2><p>輸出的每一列表示每一組測試資料所模擬出來的罷會天數 (損失多少個工作天)。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
-<span class="number">14</span>
-<span class="number">3</span>
-<span class="number">3</span>
-<span class="number">4</span>
-<span class="number">8</span>
-<span class="number">100</span>
-<span class="number">4</span>
-<span class="number">12</span>
-<span class="number">15</span>
-<span class="number">25</span>
-<span class="number">40</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">5</span>
-<span class="number">15</span>
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/uniDog/problem/p401/" itemprop="url">
                   401 - Palindromes
                 </a>
@@ -1090,6 +822,274 @@ ISAPALINILAPASI <span class="comment">-- is a regular palindrome.</span>
 
 ATOYOTA <span class="comment">-- is a mirrored palindrome.</span>
 　
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p10050/" itemprop="url">
+                  10050 - Hartals
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p10050/">
+              <span>Purple People Eater</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://rubyacm.blogspot.tw/2010/07/10050-hartals.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2010-07-30T00:00:00+08:00" content="2010-07-30">
+              2010-07-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 100</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=991" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>社會研究組識決定採用一組簡單的參數，用來模擬我國政黨運作的行為，其中一個參數為正整數 h (稱為 “罷會參數 (hartal parameter)”) 用來表示同一個政黨連續兩次罷會的間隔時間，雖然這個參數太過簡略了，但還是可以用來預測政黨罷會所帶來的負面影響。接下來的例子會有清楚的說明：</p>
+<p>考慮有三個政黨的情況，假設 <span>$h_1 = 3, h_2 = 4, h_3 = 8$</span><!-- Has MathJax -->，其中 <span>$h_i$</span><!-- Has MathJax --> 為政黨 i (i=1, 2, 3) 的 “罷會參數”，接下來我們摸擬這三個政黨在 N = 14 天內的罷會行為，模擬的情況總是設定第一天為星期日，並且每週的例假日 (星期五與星期六) 不會有罷會的情況。</p>
+<table>
+<thead>
+<tr>
+<th>Days</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Su</td>
+<td>Mo</td>
+<td>Tu</td>
+<td>We</td>
+<td>Th</td>
+<td>Fr</td>
+<td>Sa</td>
+</tr>
+<tr>
+<td>Party 1</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+</tr>
+<tr>
+<td>Party 2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Party 3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hartals</td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Days</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Su</td>
+<td>Mo</td>
+<td>Tu</td>
+<td>We</td>
+<td>Th</td>
+<td>Fr</td>
+<td>Sa</td>
+</tr>
+<tr>
+<td>Party 1</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Party 2</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Party 3</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>4</td>
+<td></td>
+<td></td>
+<td>5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>上述的模擬結果顯示 14 天內將罷會 5 天 (第 3, 4, 8, 9, 12 日)，而第 6 天沒有罷會是因為該天是例假日星期五，因此可看出兩週的議程已去掉了 5 天。</p>
+<p>本問題會給定各個黨政的 “罷會參數” 與總議程的天數 N，你的任務是算出在 N 天內共有多少個工作天因為各政黨的罷會而導致議程延宕。</p>
+<h2 id="Input">Input</h2><p>輸入的第一列為一個用來表示有幾組測試資料的整數 T。</p>
+<p>每組測試資料的第一列為整數 N (<span>$7 \leq N \leq 3650$</span><!-- Has MathJax -->) ，用來表示所模擬議程的天數。下一列為另一個整數 P (<span>$1 \leq P \leq 100$</span><!-- Has MathJax -->) 表示共有 P 個政黨，接下來的 P 列分別為各政黨的 “罷會參數” (絕不會為 7 的倍數)。</p>
+<h2 id="Output">Output</h2><p>輸出的每一列表示每一組測試資料所模擬出來的罷會天數 (損失多少個工作天)。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
+<span class="number">14</span>
+<span class="number">3</span>
+<span class="number">3</span>
+<span class="number">4</span>
+<span class="number">8</span>
+<span class="number">100</span>
+<span class="number">4</span>
+<span class="number">12</span>
+<span class="number">15</span>
+<span class="number">25</span>
+<span class="number">40</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">5</span>
+<span class="number">15</span>
 </code></pre>
             
           </span>
@@ -1847,7 +1847,7 @@ Hlo <span class="number">2</span>
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">27</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

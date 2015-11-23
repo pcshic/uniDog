@@ -212,7 +212,7 @@
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p103/" itemprop="url">
+                <a class="post-title-link" href="/uniDog/problem/103/" itemprop="url">
                   103 - Stacking Boxes
                 </a>
               
@@ -222,7 +222,7 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p103/">
+            <a href="/uniDog/problem/103/">
               <span>untitled</span>
             </a>
           </span>
@@ -285,13 +285,13 @@
 
       
         
-          <p>在數學或電腦科學裡，有些概念在一維或二維時還蠻簡單的，但到 N 維就會顯得非常複雜。試想一個 n 維的「盒子」：在二維空間裡，盒子 ( 2 , 3 ) 可代表一個長為 2 個單位，寬為 3 個單位的盒子；在三維空間裡，盒子 ( 4 , 8 , 9 ) 則是一個 4<em>8</em>9（長、寬、高）的盒子。至於在六維空間裡，也許我們不清楚 ( 4 , 5 , 6 , 7 , 8 , 9 ) 長得怎樣，不過我們還是可以分析這些盒子的特性。</p>
-<p>在此問題裡，我們要算出一組 n 維盒子裡，它們的「最長套入串列」： b1, b2, ……,bk，其中每個盒子  bi 都可以「放入」盒子  bi+1 中（1 &lt;= i &lt; k）</p>
-<p>考慮兩個盒子 D =（ d1, d2, ……,dn ）， E =（ e1, e2, ……,en ）。如果盒子 D 的 n 個維，能夠存在一種重排，使得重排後， D 每一維的量度都比 E 中相對應的維的量度還要小，則我們說盒子 D 能「放入」盒子 E 。（用比較不嚴謹的講法，這就好像我們將盒子 D 翻來翻去，看看能不能擺到 E 裡面去。不過因為我們考慮的是任一重排，所以實際上盒子不只可轉來轉去，甚至還可以扭曲。）（還是看看下面的例子說明好了）。</p>
-<p>譬如說，盒子 D = ( 2 , 6 ) 能夠被放入盒子 E = ( 7 , 3 ) 裡，因為 D 可以重排變為 ( 6 , 2 ) ，這樣子 D 的每個維的量度都比 E 裡對應的維還要小。而盒子 D = ( 9 , 5 , 7 , 3 ) 就沒辦法放進盒子 E = ( 2 , 10 , 6 , 8 ) ，因為就算再怎摸重排 D 裡的維，還是沒辦法符合「放入」的條件。不過 F = ( 9 , 5 , 7 , 1 ) 就可以放入 E 了，因為 F 可以重排成 ( 1 , 9 , 5 , 7 ) ，這樣就符合了放入的條件。</p>
-<p>我們今定義「放入」如下：對於任兩個盒子 D =（ d1, d2, ……,dn）和 E =（ e1, e2, ……,en ），如果存在一種 1..n 的重排π，使得對於任何的 1 &lt;= i &lt;= n，皆有 dπ(i) &lt; ei，則我們說盒子 D 能「放入」盒子 E 。</p>
+          <p>在數學或電腦科學裡，有些概念在一維或二維時還蠻簡單的，但到 N 維就會顯得非常複雜。試想一個 <span>$n$</span><!-- Has MathJax --> 維的「盒子」：在二維空間裡，盒子 <span>$(2,3)$</span><!-- Has MathJax --> 可代表一個長為 2 個單位，寬為 3 個單位的盒子；在三維空間裡，盒子 <span>$(4,8,9)$</span><!-- Has MathJax --> 則是一個 <span>$4\times{8}\times{9}$</span><!-- Has MathJax --> (長、寬、高) 的盒子。至於在六維空間裡，也許我們不清楚 <span>$(4,5,6,7,8,9)$</span><!-- Has MathJax --> 長得怎樣，不過我們還是可以分析這些盒子的特性。</p>
+<p>在此問題裡，我們要算出一組 <span>$n$</span><!-- Has MathJax --> 維盒子裡，它們的「最長套入串列」：<span>$b_1,b_2,\cdots{},b_k$</span><!-- Has MathJax -->，其中每個盒子 <span>$b_i$</span><!-- Has MathJax --> 都可以「放入」盒子 <span>$b_{i+1}$</span><!-- Has MathJax --> 中 (<span>$1\leq{i} &lt; k$</span><!-- Has MathJax -->)。</p>
+<p>考慮兩個盒子 <span>$D=(d_1,d_2,\cdots{},d_n)$</span><!-- Has MathJax -->、<span>$E=(e_1,e_2,\cdots{},e_n)$</span><!-- Has MathJax -->。如果盒子 <span>$D$</span><!-- Has MathJax --> 的 <span>$n$</span><!-- Has MathJax --> 個維，能夠存在一種重排，使得重排後， <span>$D$</span><!-- Has MathJax --> 每一維的量度都比 <span>$E$</span><!-- Has MathJax --> 中相對應的維的量度還要小，則我們說盒子 <span>$D$</span><!-- Has MathJax --> 能「放入」盒子 <span>$E$</span><!-- Has MathJax -->。(用比較不嚴謹的講法，這就好像我們將盒子 <span>$D$</span><!-- Has MathJax --> 翻來翻去，看看能不能擺到 <span>$E$</span><!-- Has MathJax --> 裡面去。不過因為我們考慮的是任一重排，所以實際上盒子不只可轉來轉去，甚至還可以扭曲。)(還是看看下面的例子說明好了)。</p>
+<p>譬如說，盒子 <span>$D=(2,6)$</span><!-- Has MathJax --> 能夠被放入盒子 <span>$E=(7,3)$</span><!-- Has MathJax --> 裡，因為 <span>$D$</span><!-- Has MathJax --> 可以重排變為 <span>$(6,2)$</span><!-- Has MathJax -->，這樣子 <span>$D$</span><!-- Has MathJax --> 的每個維的量度都比 <span>$E$</span><!-- Has MathJax --> 裡對應的維還要小。而盒子 <span>$D=(9,5,7,3)$</span><!-- Has MathJax --> 就沒辦法放進盒子 <span>$E=(2,10,6,8)$</span><!-- Has MathJax -->，因為就算再怎麼重排 <span>$D$</span><!-- Has MathJax --> 裡的維度，還是沒辦法符合「放入」的條件。不過 <span>$F=(9,5,7,1)$</span><!-- Has MathJax --> 就可以放入 <span>$E$</span><!-- Has MathJax --> 了，因為 <span>$F$</span><!-- Has MathJax --> 可以重排成 <span>$(1,9,5,7)$</span><!-- Has MathJax -->，這樣就符合了放入的條件。</p>
+<p>我們今定義「放入」如下：對於任兩個盒子 <span>$D=(d_1,d_2,\cdots{},d_n)$</span><!-- Has MathJax --> 和 <span>$E=(e_1,e_2,\cdots{},e_n)$</span><!-- Has MathJax -->，如果存在一種 <span>$1\cdots{n}$</span><!-- Has MathJax --> 的重排 <span>$\pi$</span><!-- Has MathJax -->，使得對於任何的 <span>$1\leq{i}\leq{n}$</span><!-- Has MathJax -->，皆有 <span>$d_{\pi{(i)}} &lt; e_i$</span><!-- Has MathJax -->，則我們說盒子 <span>$D$</span><!-- Has MathJax --> 能「放入」盒子 <span>$E$</span><!-- Has MathJax -->。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p103/#more" rel="contents">
+            <a class="btn" href="/uniDog/problem/103/#more" rel="contents">
               閱讀全文 &raquo;
             </a>
           </div>
@@ -866,7 +866,7 @@ Number of Tiles : <span class="number">6</span>
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p111/" itemprop="url">
+                <a class="post-title-link" href="/uniDog/problem/111/" itemprop="url">
                   111 - History Grading
                 </a>
               
@@ -876,7 +876,7 @@ Number of Tiles : <span class="number">6</span>
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p111/">
+            <a href="/uniDog/problem/111/">
               <span>Luckycat</span>
             </a>
           </span>
@@ -940,15 +940,15 @@ Number of Tiles : <span class="number">6</span>
       
         
           <p>在資訊科學中有一些是關於在某些條件限制下，找出一些計算的最大值。</p>
-<p>以歷史考試來說好了，學生被要求對一些歷史事件根據其發生的年代順序來排列。所有事件順序都正確的學生無疑的可以得滿分。但是那些沒有全對的人又該如何給分呢？以下有2種可能的給分方式：</p>
+<p>以歷史考試來說好了，學生被要求對一些歷史事件根據其發生的年代順序來排列。所有事件順序都正確的學生無疑的可以得滿分。但是那些沒有全對的人又該如何給分呢？以下有 2 種可能的給分方式：</p>
 <ol>
-<li>每個與標準答案的順序相同的事件得1分</li>
-<li>每個在最長（但不一定要連續）的序列事件中，其相對的順序亦可以在標準答案發現者，每個事件得1分。</li>
+<li>每個與標準答案的順序相同的事件得 1 分</li>
+<li>每個在最長 (但不一定要連續) 的序列事件中，其相對的順序亦可以在標準答案發現者，每個事件得 1 分。</li>
 </ol>
-<p>舉例說明：如果有 4 個事件其發生時間的順序依次是 1 2 3 4（就是標準答案啦，意思是第 1 個事件發生順序為 1，第 2 個事件發生的順序為 2，……）。所以如果學生回答此4個事件發生的順序依次是 1 3 2 4 的話，根據上面第 1 種方法可以得 2 分（第 1 個及第 4 個事件）。但是如果以上面第 2 種方法可以得 3 分（1 2 4 或者 1 3 4 其相對的順序可以在標準答案發現）</p>
-<p>在本問題中，請你寫一個程式以第2個方法算出學生該得多少分。</p>
+<p>舉例說明：如果有 4 個事件其發生時間的順序依次是 <code>1 2 3 4</code> (就是標準答案啦，意思是第 1 個事件發生順序為 1、第 2 個事件發生的順序為 2、…)。所以如果學生回答此 4 個事件發生的順序依次是 <code>1 3 2 4</code> 的話，根據上面第 1 種方法可以得 2 分 (第 1 個及第 4 個事件)。但是如果以上面第 2 種方法可以得 3 分 (<code>1 2 4</code> 或者 <code>1 3 4</code> 其相對的順序可以在標準答案發現)</p>
+<p>在本問題中，請你寫一個程式以第 2 個方法算出學生該得多少分。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p111/#more" rel="contents">
+            <a class="btn" href="/uniDog/problem/111/#more" rel="contents">
               閱讀全文 &raquo;
             </a>
           </div>
@@ -1524,7 +1524,7 @@ Number of Tiles : <span class="number">6</span>
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">27</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

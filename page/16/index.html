@@ -452,7 +452,7 @@
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p10131/" itemprop="url">
+                <a class="post-title-link" href="/uniDog/problem/10131/" itemprop="url">
                   10131 - Is Bigger Smarter ?
                 </a>
               
@@ -462,7 +462,7 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10131/">
+            <a href="/uniDog/problem/10131/">
               <span>Luckycat</span>
             </a>
           </span>
@@ -528,10 +528,10 @@
           <span itemprop="articleBody">
             
               <p>有些人認為大象是越大隻的越聰明。為了要反證這項說法，你想要用收集到的大象資料列出一個大象數目最大的子集合，在這個子集合中，大象的體重是漸增的，而智商是漸減的。</p>
-<h2 id="Input">Input</h2><p>只有一組測試資料，包含了最多 1000 隻大象的體重及智商的資料。每隻大象一列，有 2 個整數 <span>$W_i$</span><!-- Has MathJax --> 及 <span>$S_i$</span><!-- Has MathJax --> (介於 1 和 10000 之間) 分別代表第 i 隻大象的體重及智商。大象的編號從 1 開始。</p>
+<h2 id="Input">Input</h2><p>只有一組測試資料，包含了最多 1000 隻大象的體重及智商的資料。每隻大象一列，有 2 個整數 <span>$W_i$</span><!-- Has MathJax --> 及 <span>$S_i$</span><!-- Has MathJax --> (介於 1 和 10000 之間) 分別代表第 <span>$i$</span><!-- Has MathJax --> 隻大象的體重及智商。大象的編號從 1 開始。</p>
 <p>不同的大象可能有相同的重量，相同的智商，或相同的重量及智商。</p>
-<h2 id="Output">Output</h2><p>第一列輸出一個整數 n，代表你可以找到的子集合最大的大象數目。接下來的 n 列，每列有一個正整數，代表某隻大象的編號。</p>
-<p>如果這 n 個正整數是 <span>$a_1,a_2,\ldots{},a_n$</span><!-- Has MathJax -->，那它應該要符合</p>
+<h2 id="Output">Output</h2><p>第一列輸出一個整數 <span>$n$</span><!-- Has MathJax -->，代表你可以找到的子集合最大的大象數目。接下來的 <span>$n$</span><!-- Has MathJax --> 列，每列有一個正整數，代表某隻大象的編號。</p>
+<p>如果這 <span>$n$</span><!-- Has MathJax --> 個正整數是 <span>$a_1,a_2,\ldots{},a_n$</span><!-- Has MathJax -->，那它應該要符合</p>
 <span>$W_{a_1} &lt; W_{a_2} &lt; \ldots{} &lt; W_{a_n}$</span><!-- Has MathJax -->，且<br><br><span>$S_{a_1} &gt; S_{a_2} &gt; \ldots{} &gt; S_{a_n}$</span><!-- Has MathJax -->
 <p>解答可能不只一個，請輸出其中任何一個即可。</p>
 <h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">6008</span> <span class="number">1300</span>
@@ -1008,6 +1008,146 @@ ababac
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/10008/" itemprop="url">
+                  10008 - What's Cryptanalysis
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/10008/">
+              <span>Luckycat</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10008.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2002-10-04T00:00:00+08:00" content="2002-10-04">
+              2002-10-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 100</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=949" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>密碼翻譯 (cryptanalysis) 是指把某個人寫的密文 (cryptographic writing) 加以分解。這個程序通常會對密文訊息做統計分析。你的任務就是寫一個程式來對密文作簡單的分析。</p>
+<h2 id="Input">Input</h2><p>輸入的第 1 列有一個正整數 n，代表以下有多少列需要作分析的密文。</p>
+<p>接下來的 n 列，每列含有 0 或多個字元 (可能包含空白字元)</p>
+<h2 id="Output">Output</h2><p>每列包含一個大寫字元 (<code>A</code> ~ <code>Z</code>) 和一個正整數。這個正整數代表該字元在輸入中出現的次數。輸入中大小寫 (例如：<code>A</code> 及 <code>a</code>) 視為相同的字元。輸出時請按照字元出現的次數由大到小排列，如果有 2 個以上的字元出現次數相同的話，則按照字元的大小 (例如：<code>A</code> 在 <code>H</code> 之前) 由小到大排列。</p>
+<p>請注意：如果某一字元未出現在輸入中，那他也不應出現在輸出中。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">3</span>
+This is a test.
+Count me <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5.</span>
+Wow!!!! Is <span class="keyword">this</span> question easy?
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>S <span class="number">7</span>
+T <span class="number">6</span>
+I <span class="number">5</span>
+E <span class="number">4</span>
+O <span class="number">3</span>
+A <span class="number">2</span>
+H <span class="number">2</span>
+N <span class="number">2</span>
+U <span class="number">2</span>
+W <span class="number">2</span>
+C <span class="number">1</span>
+M <span class="number">1</span>
+Q <span class="number">1</span>
+Y <span class="number">1</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/10018/" itemprop="url">
                   10018 - Reverse and Add
                 </a>
@@ -1117,146 +1257,6 @@ ababac
 <span class="number">3</span> <span class="number">6666</span>
 <span class="number">1</span> <span class="number">4</span>
 <span class="number">6</span> <span class="number">79497</span>
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/10008/" itemprop="url">
-                  10008 - What's Cryptanalysis
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/10008/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10008.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-10-04T00:00:00+08:00" content="2002-10-04">
-              2002-10-04
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 100</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=949" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>密碼翻譯 (cryptanalysis) 是指把某個人寫的密文 (cryptographic writing) 加以分解。這個程序通常會對密文訊息做統計分析。你的任務就是寫一個程式來對密文作簡單的分析。</p>
-<h2 id="Input">Input</h2><p>輸入的第 1 列有一個正整數 n，代表以下有多少列需要作分析的密文。</p>
-<p>接下來的 n 列，每列含有 0 或多個字元 (可能包含空白字元)</p>
-<h2 id="Output">Output</h2><p>每列包含一個大寫字元 (<code>A</code> ~ <code>Z</code>) 和一個正整數。這個正整數代表該字元在輸入中出現的次數。輸入中大小寫 (例如：<code>A</code> 及 <code>a</code>) 視為相同的字元。輸出時請按照字元出現的次數由大到小排列，如果有 2 個以上的字元出現次數相同的話，則按照字元的大小 (例如：<code>A</code> 在 <code>H</code> 之前) 由小到大排列。</p>
-<p>請注意：如果某一字元未出現在輸入中，那他也不應出現在輸出中。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">3</span>
-This is a test.
-Count me <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5.</span>
-Wow!!!! Is <span class="keyword">this</span> question easy?
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>S <span class="number">7</span>
-T <span class="number">6</span>
-I <span class="number">5</span>
-E <span class="number">4</span>
-O <span class="number">3</span>
-A <span class="number">2</span>
-H <span class="number">2</span>
-N <span class="number">2</span>
-U <span class="number">2</span>
-W <span class="number">2</span>
-C <span class="number">1</span>
-M <span class="number">1</span>
-Q <span class="number">1</span>
-Y <span class="number">1</span>
 </code></pre>
             
           </span>
@@ -1445,8 +1445,8 @@ Max hits: <span class="number">2</span>
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p10334/" itemprop="url">
-                  10334 - Ray Through Glasses
+                <a class="post-title-link" href="/uniDog/problem/p10300/" itemprop="url">
+                  10300 - Ecological Premium
                 </a>
               
             
@@ -1455,14 +1455,14 @@ Max hits: <span class="number">2</span>
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10334/">
+            <a href="/uniDog/problem/p10300/">
               <span>Luckycat</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10334.htm" target="_blank">
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10300.htm" target="_blank">
               <span>Lucky 貓</span>
             </a>
           </span>
@@ -1494,7 +1494,7 @@ Max hits: <span class="number">2</span>
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1275" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1241" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -1520,16 +1520,28 @@ Max hits: <span class="number">2</span>
         
           <span itemprop="articleBody">
             
-              <p>假設我們有2塊背對背合在一起的玻璃。當一道光線射進此玻璃時，可能穿透或反射。若以n代表一道光線射進此玻璃時反射的次數，<span>$a_n$</span><!-- Has MathJax --> 即是代即是表一道光線射進玻璃反射 n 次的方法數，這個問題要請你求出 <span>$a_n$</span><!-- Has MathJax -->。下圖展現出當 n=0, 1, 2 的情形。</p>
-<img src="/uniDog/images/103/p10334.jpg">
-<h2 id="Input">Input</h2><p>每一列有 1 個整數 n (<span>$0\leq{n}\leq{1000}$</span><!-- Has MathJax -->)。</p>
-<h2 id="Output">Output</h2><p>每列測試資料輸出 <span>$a_n$</span><!-- Has MathJax -->。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">0</span>
-<span class="number">1</span>
-<span class="number">2</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">1</span>
-<span class="number">2</span>
+              <p>德國的農夫根據他們農場的條件被發給獎金。想像以下簡單的規則：你知道農場的大小也知道有多少動物住在裡面。在這裡我們並不去分別不同的動物有什麼不同之處 (雖然這跟現實有些不合)。除此之外，你還知道農夫使用環保設備及習慣的等級 (稱之環保等級)，這等級以大於 0 的整數來表示。</p>
+<p>農夫得到的獎金是根據以下的計算：首先算出每隻動物平均居住的空間，然後乘以該農夫的環保等級，這樣你就得到每隻動物可以領多少獎金。最後再把這個值乘以所有動物的數目，就可以算出該農夫可得到獎金的數目了。</p>
+<h2 id="Input">Input</h2><p>輸入的第一列有一個整數 n (<span>$n &lt; 20$</span><!-- Has MathJax -->)，代表以下有幾組測試資料。每組測試資料的第一列有 1 個整數 f (<span>$0 &lt; f &lt; 20$</span><!-- Has MathJax -->) 代表在這組測試資料中有多少個農夫。接下來有 f 列，每列有 3 個正整數，分別代表各農夫農場的面積，農場裡動物的數目，該農夫的環保等級。所有輸入的整數都不會比 100000 大，也不會比 0 小。</p>
+<h2 id="Output">Output</h2><p>對每組測試資料，請輸出 1 個整數，代表要發給農夫的獎金的總數。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">3</span>
+<span class="number">5</span>
+<span class="number">1</span> <span class="number">1</span> <span class="number">1</span>
+<span class="number">2</span> <span class="number">2</span> <span class="number">2</span>
+<span class="number">3</span> <span class="number">3</span> <span class="number">3</span>
+<span class="number">2</span> <span class="number">3</span> <span class="number">4</span>
+<span class="number">8</span> <span class="number">9</span> <span class="number">2</span>
 <span class="number">3</span>
+<span class="number">9</span> <span class="number">1</span> <span class="number">8</span>
+<span class="number">6</span> <span class="number">12</span> <span class="number">1</span>
+<span class="number">8</span> <span class="number">1</span> <span class="number">1</span>
+<span class="number">3</span>
+<span class="number">10</span> <span class="number">30</span> <span class="number">40</span>
+<span class="number">9</span> <span class="number">8</span> <span class="number">5</span>
+<span class="number">100</span> <span class="number">1000</span> <span class="number">70</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">38</span>
+<span class="number">86</span>
+<span class="number">7445</span>
 </code></pre>
             
           </span>
@@ -1611,7 +1623,7 @@ Max hits: <span class="number">2</span>
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-count">27</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
