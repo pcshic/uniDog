@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="LCS,路徑問題," />
 
 
 
@@ -53,37 +53,24 @@
 
 
 
-<meta name="description" content="有 N 個盒子 (編號從 1 到 N)。所有盒子大小形狀都一樣。現在我們要根據以下的規則把盒子疊起來：
+<meta name="description" content="在一個 $n\times{n}$&amp;lt;!-- Has MathJax --&amp;gt; 的棋盤，王子和公主玩一個遊戲。棋盤的格子以 $1,2,3,\ldots{},n\times{n}$&amp;lt;!-- Has MathJax --&amp;gt; 來編號，如下圖：
 
-每個盒子之上只能直接放一個盒子。
-編號較小的盒子不能放在編號較大的盒子上方。
-給你每個盒子的重量以及能承載的重量。每個盒子上方的盒子總重量不能超過該盒子所能承載的重量。
-
-根據以上的規則，請你寫一個程式找出最多能疊起多少個盒子。
-Input輸入含有多組測試資料。每組測試資料的第一列有一個正整數">
+王子從在格子 $1$&amp;lt;!-- Has MathJax --&amp;gt;，跳了 $p$&amp;lt;!-- Has MathJax --&amp;gt; 步之後抵達格子 n * n。他進入一個格子最多一次">
 <meta property="og:type" content="article">
-<meta property="og:title" content="11003 - Boxes">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p11003/index.html">
+<meta property="og:title" content="10635 - Prince and Princess">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/10635/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="有 N 個盒子 (編號從 1 到 N)。所有盒子大小形狀都一樣。現在我們要根據以下的規則把盒子疊起來：
+<meta property="og:description" content="在一個 $n\times{n}$&amp;lt;!-- Has MathJax --&amp;gt; 的棋盤，王子和公主玩一個遊戲。棋盤的格子以 $1,2,3,\ldots{},n\times{n}$&amp;lt;!-- Has MathJax --&amp;gt; 來編號，如下圖：
 
-每個盒子之上只能直接放一個盒子。
-編號較小的盒子不能放在編號較大的盒子上方。
-給你每個盒子的重量以及能承載的重量。每個盒子上方的盒子總重量不能超過該盒子所能承載的重量。
-
-根據以上的規則，請你寫一個程式找出最多能疊起多少個盒子。
-Input輸入含有多組測試資料。每組測試資料的第一列有一個正整數">
-<meta property="og:updated_time" content="2015-11-22T08:52:08.315Z">
+王子從在格子 $1$&amp;lt;!-- Has MathJax --&amp;gt;，跳了 $p$&amp;lt;!-- Has MathJax --&amp;gt; 步之後抵達格子 n * n。他進入一個格子最多一次">
+<meta property="og:image" content="http://pcshic.github.io/uniDog/uniDog/images/106/p10635a.jpg">
+<meta property="og:image" content="http://pcshic.github.io/uniDog/uniDog/images/106/p10635b.jpg">
+<meta property="og:updated_time" content="2015-11-24T13:47:58.993Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="11003 - Boxes">
-<meta name="twitter:description" content="有 N 個盒子 (編號從 1 到 N)。所有盒子大小形狀都一樣。現在我們要根據以下的規則把盒子疊起來：
+<meta name="twitter:title" content="10635 - Prince and Princess">
+<meta name="twitter:description" content="在一個 $n\times{n}$&amp;lt;!-- Has MathJax --&amp;gt; 的棋盤，王子和公主玩一個遊戲。棋盤的格子以 $1,2,3,\ldots{},n\times{n}$&amp;lt;!-- Has MathJax --&amp;gt; 來編號，如下圖：
 
-每個盒子之上只能直接放一個盒子。
-編號較小的盒子不能放在編號較大的盒子上方。
-給你每個盒子的重量以及能承載的重量。每個盒子上方的盒子總重量不能超過該盒子所能承載的重量。
-
-根據以上的規則，請你寫一個程式找出最多能疊起多少個盒子。
-Input輸入含有多組測試資料。每組測試資料的第一列有一個正整數">
+王子從在格子 $1$&amp;lt;!-- Has MathJax --&amp;gt;，跳了 $p$&amp;lt;!-- Has MathJax --&amp;gt; 步之後抵達格子 n * n。他進入一個格子最多一次">
 
 
 
@@ -95,7 +82,7 @@ Input輸入含有多組測試資料。每組測試資料的第一列有一個正
   };
 </script>
 
-  <title> 11003 - Boxes | uniDog 的 ACM 園地 </title>
+  <title> 10635 - Prince and Princess | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -225,7 +212,7 @@ Input輸入含有多組測試資料。每組測試資料的第一列有一個正
             
             
               
-                11003 - Boxes
+                10635 - Prince and Princess
               
             
           </h1>
@@ -233,22 +220,22 @@ Input輸入含有多組測試資料。每組測試資料的第一列有一個正
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p11003/">
+            <a href="/uniDog/problem/10635/">
               <span>Luckycat</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q11003.htm" target="_blank">
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10635.htm" target="_blank">
               <span>Lucky 貓</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2006-10-11T00:00:00+08:00" content="2006-10-11">
-              2006-10-11
+            <time itemprop="dateCreated" datetime="2013-06-13T00:00:00+08:00" content="2013-06-13">
+              2013-06-13
             </time>
           </span>
 
@@ -257,8 +244,8 @@ Input輸入含有多組測試資料。每組測試資料的第一列有一個正
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-110/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 110</span>
+                  <a href="/uniDog/categories/Volume-106/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 106</span>
                   </a>
                 </span>
 
@@ -272,7 +259,7 @@ Input輸入含有多組測試資料。每組測試資料的第一列有一個正
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1944" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1576" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -295,49 +282,49 @@ Input輸入含有多組測試資料。每組測試資料的第一列有一個正
       
 
       
-        <span itemprop="articleBody"><p>有 N 個盒子 (編號從 1 到 N)。所有盒子大小形狀都一樣。現在我們要根據以下的規則把盒子疊起來：</p>
-<ol>
-<li>每個盒子之上只能直接放一個盒子。</li>
-<li>編號較小的盒子不能放在編號較大的盒子上方。</li>
-<li>給你每個盒子的重量以及能承載的重量。每個盒子上方的盒子總重量不能超過該盒子所能承載的重量。</li>
-</ol>
-<p>根據以上的規則，請你寫一個程式找出最多能疊起多少個盒子。</p>
-<h2 id="Input">Input</h2><p>輸入含有多組測試資料。每組測試資料的第一列有一個正整數 N (<span>$1\leq{N}\leq{1000}$</span><!-- Has MathJax -->)，接下來的 N 列，每列有 2 個正整數 (<span>$\leq{3000}$</span><!-- Has MathJax -->) 分別代表編號第 1 到第 N 個盒子的重量以及能承載的重量。</p>
-<p>當 n = 0 時代表輸入結束。</p>
-<h2 id="Output">Output</h2><p>每組測試資料輸出一列，輸出最多能疊起多少個盒子。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span>
-<span class="number">19</span> <span class="number">15</span>
-<span class="number">7</span> <span class="number">13</span>
-<span class="number">5</span> <span class="number">7</span>
-<span class="number">6</span> <span class="number">8</span>
-<span class="number">1</span> <span class="number">2</span>
-<span class="number">2</span>
-<span class="number">10</span> <span class="number">10</span>
-<span class="number">10</span> <span class="number">10</span>
-<span class="number">0</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">4</span>
-<span class="number">2</span>
+        <span itemprop="articleBody"><p>在一個 <span>$n\times{n}$</span><!-- Has MathJax --> 的棋盤，王子和公主玩一個遊戲。棋盤的格子以 <span>$1,2,3,\ldots{},n\times{n}$</span><!-- Has MathJax --> 來編號，如下圖：</p>
+<img src="/uniDog/images/106/p10635a.jpg">
+<p>王子從在格子 <span>$1$</span><!-- Has MathJax -->，跳了 <span>$p$</span><!-- Has MathJax --> 步之後抵達格子 n * n。他進入一個格子最多一次。所以如果我們用 <span>$x_i$</span><!-- Has MathJax --> 代表他 <span>$i$</span><!-- Has MathJax --> 個進入的格子，那 <span>$x_1,x_2,x_3,\ldots{},x_{p+1}$</span><!-- Has MathJax --> 都是不同的。請注意 <span>$x_1=1,x_{p+1}=n\times{n}$</span><!-- Has MathJax -->。公主也做類似的動作，從格子 <span>$1$</span><!-- Has MathJax --> 開始，跳了 <span>$q$</span><!-- Has MathJax --> 次後抵達格子 n * n。我們用 <span>$y_1,y_2,y_3,\ldots{},y_{q+1}$</span><!-- Has MathJax --> 來表示這過程經過的格子。同樣的這 <span>$q+1$</span><!-- Has MathJax --> 個數也都不相同。下面圖 2 為一個 3 * 3 的格子矩陣，王子和公主有不同的跳躍路徑。</p>
+<img src="/uniDog/images/106/p10635b.jpg">
+<p>王子的路徑：<span>$1 \rightarrow{7} \rightarrow{5} \rightarrow{4} \rightarrow{8} \rightarrow{3} \rightarrow{9}$</span><!-- Has MathJax --> (黑色箭頭)<br>公主的路徑：<span>$1 \rightarrow{4} \rightarrow{3} \rightarrow{5} \rightarrow{6} \rightarrow{2} \rightarrow{8} \rightarrow{9}$</span><!-- Has MathJax --> (白色箭頭)</p>
+<p>王子和公主的父親，也就是國王，看到他們玩的遊戲，他說：「為什麼要分開跳？你們是兄妹啊！忽略某些跳躍，使得你們總是在一起。」<br>假如王子忽略了他的第 2、第 3、第 6 跳，他的路徑變成 <span>$1 \rightarrow{4} \rightarrow{8} \rightarrow{9}$</span><!-- Has MathJax -->。假如公主忽略了她的第 3、第 4、第 5、第 6 跳，她的路徑變成 <span>$1 \rightarrow{4} \rightarrow{8} \rightarrow{9}$</span><!-- Has MathJax -->。這共同的路徑 (如圖 3) 就滿足了國王的要求。</p>
+<p>國王想要知道王子和公主可以一起移動的最長路徑是多少，你能告訴他嗎？</p>
+<h2 id="Input">Input</h2><p>輸入的第一列有一個整數，代表以下有多筆測資。<br>每筆測資的第一列有 3 個整數 <span>$n,p,q$</span><!-- Has MathJax --> (<span>$2\leq{n}\leq{250},1\leq{p,q}&lt; n\times{n}$</span><!-- Has MathJax -->)，其代表的意義如題目所述。接下來的一列有 <span>$p+1$</span><!-- Has MathJax --> 個整數，代表王子的路徑，再接下來的一列有 <span>$q+1$</span><!-- Has MathJax --> 個整數，代表公主的路徑。</p>
+<h2 id="Output">Output</h2><p>每組測資輸出這是第幾組測資以及王子和公主最長共同路徑是多長。輸出格式請參考 Sample Output。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">1</span>
+<span class="number">3</span> <span class="number">6</span> <span class="number">7</span>
+<span class="number">1</span> <span class="number">7</span> <span class="number">5</span> <span class="number">4</span> <span class="number">8</span> <span class="number">3</span> <span class="number">9</span>
+<span class="number">1</span> <span class="number">4</span> <span class="number">3</span> <span class="number">5</span> <span class="number">6</span> <span class="number">2</span> <span class="number">8</span> <span class="number">9</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Case <span class="number">1</span>: <span class="number">4</span>
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/LCS/" rel="tag">#LCS</a>
+          
+            <a href="/uniDog/tags/路徑問題/" rel="tag">#路徑問題</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p541/" rel="next" title="541 - Error Correction">
-                <i class="fa fa-chevron-left"></i> 541 - Error Correction
+              <a href="/uniDog/problem/10306/" rel="next" title="10306 - e-Coins">
+                <i class="fa fa-chevron-left"></i> 10306 - e-Coins
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p11172/" rel="prev" title="11172 - Relational Operators">
-                11172 - Relational Operators <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p12498/" rel="prev" title="12498 - Ant's Shopping Mall">
+                12498 - Ant's Shopping Mall <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -406,7 +393,7 @@ Input輸入含有多組測試資料。每組測試資料的第一列有一個正
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">194</span>
+              <span class="site-state-item-count">196</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -420,7 +407,7 @@ Input輸入含有多組測試資料。每組測試資料的第一列有一個正
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">31</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

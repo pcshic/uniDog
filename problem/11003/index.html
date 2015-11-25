@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="LIS," />
 
 
 
@@ -53,28 +53,28 @@
 
 
 
-<meta name="description" content="給你 2 個字串，請你輸出他們的最長共同子字串 (longest common subsequence) 的長度。例如：給你以下 2 個字串：
-abcdghaedfhr
-他們的最長共同子字串為 adh，長度為 3。
-Input輸入含有多組測試資料。每一組測試資料 2 列，分別代表這 2 個字串 (最多 1000 個字元)。
-Output每組測試資料輸出他們的最長共同子字串 (longest com">
+<meta name="description" content="有 $N$&amp;lt;!-- Has MathJax --&amp;gt; 個盒子 (編號從 $1$&amp;lt;!-- Has MathJax --&amp;gt; 到 $N$&amp;lt;!-- Has MathJax --&amp;gt;)。所有盒子大小形狀都一樣。現在我們要根據以下的規則把盒子疊起來：
+
+每個盒子之上只能直接放一個盒子。
+編號較小的盒子不能放在編號較大的盒子上方。
+給你每個盒子的重量以及能承載的重量。每個盒子上方的盒子總重量不能超過該盒子所能承載的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="10405 - Longest Common Subsequence">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p10405/index.html">
+<meta property="og:title" content="11003 - Boxes">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/11003/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="給你 2 個字串，請你輸出他們的最長共同子字串 (longest common subsequence) 的長度。例如：給你以下 2 個字串：
-abcdghaedfhr
-他們的最長共同子字串為 adh，長度為 3。
-Input輸入含有多組測試資料。每一組測試資料 2 列，分別代表這 2 個字串 (最多 1000 個字元)。
-Output每組測試資料輸出他們的最長共同子字串 (longest com">
-<meta property="og:updated_time" content="2015-11-22T08:52:07.892Z">
+<meta property="og:description" content="有 $N$&amp;lt;!-- Has MathJax --&amp;gt; 個盒子 (編號從 $1$&amp;lt;!-- Has MathJax --&amp;gt; 到 $N$&amp;lt;!-- Has MathJax --&amp;gt;)。所有盒子大小形狀都一樣。現在我們要根據以下的規則把盒子疊起來：
+
+每個盒子之上只能直接放一個盒子。
+編號較小的盒子不能放在編號較大的盒子上方。
+給你每個盒子的重量以及能承載的重量。每個盒子上方的盒子總重量不能超過該盒子所能承載的">
+<meta property="og:updated_time" content="2015-11-24T11:41:19.267Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="10405 - Longest Common Subsequence">
-<meta name="twitter:description" content="給你 2 個字串，請你輸出他們的最長共同子字串 (longest common subsequence) 的長度。例如：給你以下 2 個字串：
-abcdghaedfhr
-他們的最長共同子字串為 adh，長度為 3。
-Input輸入含有多組測試資料。每一組測試資料 2 列，分別代表這 2 個字串 (最多 1000 個字元)。
-Output每組測試資料輸出他們的最長共同子字串 (longest com">
+<meta name="twitter:title" content="11003 - Boxes">
+<meta name="twitter:description" content="有 $N$&amp;lt;!-- Has MathJax --&amp;gt; 個盒子 (編號從 $1$&amp;lt;!-- Has MathJax --&amp;gt; 到 $N$&amp;lt;!-- Has MathJax --&amp;gt;)。所有盒子大小形狀都一樣。現在我們要根據以下的規則把盒子疊起來：
+
+每個盒子之上只能直接放一個盒子。
+編號較小的盒子不能放在編號較大的盒子上方。
+給你每個盒子的重量以及能承載的重量。每個盒子上方的盒子總重量不能超過該盒子所能承載的">
 
 
 
@@ -86,7 +86,7 @@ Output每組測試資料輸出他們的最長共同子字串 (longest com">
   };
 </script>
 
-  <title> 10405 - Longest Common Subsequence | uniDog 的 ACM 園地 </title>
+  <title> 11003 - Boxes | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -216,7 +216,7 @@ Output每組測試資料輸出他們的最長共同子字串 (longest com">
             
             
               
-                10405 - Longest Common Subsequence
+                11003 - Boxes
               
             
           </h1>
@@ -224,22 +224,22 @@ Output每組測試資料輸出他們的最長共同子字串 (longest com">
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10405/">
+            <a href="/uniDog/problem/11003/">
               <span>Luckycat</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10405.htm" target="_blank">
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q11003.htm" target="_blank">
               <span>Lucky 貓</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-11-25T00:00:00+08:00" content="2002-11-25">
-              2002-11-25
+            <time itemprop="dateCreated" datetime="2006-10-11T00:00:00+08:00" content="2006-10-11">
+              2006-10-11
             </time>
           </span>
 
@@ -248,8 +248,8 @@ Output每組測試資料輸出他們的最長共同子字串 (longest com">
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-104/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 104</span>
+                  <a href="/uniDog/categories/Volume-110/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 110</span>
                   </a>
                 </span>
 
@@ -263,7 +263,7 @@ Output每組測試資料輸出他們的最長共同子字串 (longest com">
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1346" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1944" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -286,44 +286,55 @@ Output每組測試資料輸出他們的最長共同子字串 (longest com">
       
 
       
-        <span itemprop="articleBody"><p>給你 2 個字串，請你輸出他們的最長共同子字串 (longest common subsequence) 的長度。例如：給你以下 2 個字串：</p>
-<p>abcdgh<br>aedfhr</p>
-<p>他們的最長共同子字串為 adh，長度為 3。</p>
-<h2 id="Input">Input</h2><p>輸入含有多組測試資料。每一組測試資料 2 列，分別代表這 2 個字串 (最多 1000 個字元)。</p>
-<h2 id="Output">Output</h2><p>每組測試資料輸出他們的最長共同子字串 (longest common subsequence) 的長度。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code>a<span class="number">1b2c3d4</span>e
-zz1yy2xx3ww4vv
-abcdgh
-aedfhr
-abcdefghijklmnopqrstuvwxyz
-a<span class="number">0b0c0d0</span>e<span class="number">0f0g0h0</span>i<span class="number">0j0k0l0</span>m<span class="number">0n0o0p0</span>q<span class="number">0r0s0t0</span>u<span class="number">0v0w0x0</span>y0z0
-abcdefghijklmnzyxwvutsrqpo
-opqrstuvwxyzabcdefghijklmn
+        <span itemprop="articleBody"><p>有 <span>$N$</span><!-- Has MathJax --> 個盒子 (編號從 <span>$1$</span><!-- Has MathJax --> 到 <span>$N$</span><!-- Has MathJax -->)。所有盒子大小形狀都一樣。現在我們要根據以下的規則把盒子疊起來：</p>
+<ol>
+<li>每個盒子之上只能直接放一個盒子。</li>
+<li>編號較小的盒子不能放在編號較大的盒子上方。</li>
+<li>給你每個盒子的重量以及能承載的重量。每個盒子上方的盒子總重量不能超過該盒子所能承載的重量。</li>
+</ol>
+<p>根據以上的規則，請你寫一個程式找出最多能疊起多少個盒子。</p>
+<h2 id="Input">Input</h2><p>輸入含有多組測試資料。每組測試資料的第一列有一個正整數 <span>$N$</span><!-- Has MathJax --> (<span>$1\leq{N}\leq{1000}$</span><!-- Has MathJax -->)，接下來的 <span>$N$</span><!-- Has MathJax --> 列，每列有 2 個正整數 (<span>$\leq{3000}$</span><!-- Has MathJax -->) 分別代表編號第 <span>$1$</span><!-- Has MathJax --> 到第 <span>$N$</span><!-- Has MathJax --> 個盒子的重量以及能承載的重量。</p>
+<p>當 <span>$n=0$</span><!-- Has MathJax --> 時代表輸入結束。</p>
+<h2 id="Output">Output</h2><p>每組測試資料輸出一列，輸出最多能疊起多少個盒子。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span>
+<span class="number">19</span> <span class="number">15</span>
+<span class="number">7</span> <span class="number">13</span>
+<span class="number">5</span> <span class="number">7</span>
+<span class="number">6</span> <span class="number">8</span>
+<span class="number">1</span> <span class="number">2</span>
+<span class="number">2</span>
+<span class="number">10</span> <span class="number">10</span>
+<span class="number">10</span> <span class="number">10</span>
+<span class="number">0</span>
 </code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">4</span>
-<span class="number">3</span>
-<span class="number">26</span>
-<span class="number">14</span>
+<span class="number">2</span>
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/LIS/" rel="tag">#LIS</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p10192/" rel="next" title="10192 - Vacation">
-                <i class="fa fa-chevron-left"></i> 10192 - Vacation
+              <a href="/uniDog/problem/p541/" rel="next" title="541 - Error Correction">
+                <i class="fa fa-chevron-left"></i> 541 - Error Correction
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p458/" rel="prev" title="458 - The Decoder">
-                458 - The Decoder <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p11172/" rel="prev" title="11172 - Relational Operators">
+                11172 - Relational Operators <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -392,7 +403,7 @@ opqrstuvwxyzabcdefghijklmn
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">194</span>
+              <span class="site-state-item-count">196</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -406,7 +417,7 @@ opqrstuvwxyzabcdefghijklmn
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">31</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

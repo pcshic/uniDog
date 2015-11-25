@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="DP,編輯距離," />
 
 
 
@@ -53,34 +53,34 @@
 
 
 
-<meta name="description" content="給你 2 個字串 s、t，請你寫一個程式判斷是否 s 是 t 的子字串。也就是說當你移走 t 字串中的某些字元後，剩下的字串就是 s。
-Input每筆測試資料一列。每列有 2 個字串，s 及 t，以空白分隔。
-Output對每一列輸入，請輸出是否 s 是 t 的子字串。
-Sample Inputabc abc
-sequence subsequence
-person compression
-VERD">
+<meta name="description" content="Extel 推出最新型的電腦「X9091 字串處理機」，主要用途在於密碼學上的應用。該電腦可藉由編程由一組輸入字串產生另一組字串，該電腦用的是精簡指令集晶片 (RSIC)，只有三個指令：
+
+刪除 (D) 特定位置上的字元。
+插入 (I) 一個字元到特定位置。
+改變 (C) 特定位置上的字元。
+
+電腦程式是由機器語言所寫成，且每個指令為固定長度，格式為 ZXdd，Z 表示刪除 (D)、插入 (i)、">
 <meta property="og:type" content="article">
-<meta property="og:title" content="10340 - All in All">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p10340/index.html">
+<meta property="og:title" content="164 - String Computer">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/164/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="給你 2 個字串 s、t，請你寫一個程式判斷是否 s 是 t 的子字串。也就是說當你移走 t 字串中的某些字元後，剩下的字串就是 s。
-Input每筆測試資料一列。每列有 2 個字串，s 及 t，以空白分隔。
-Output對每一列輸入，請輸出是否 s 是 t 的子字串。
-Sample Inputabc abc
-sequence subsequence
-person compression
-VERD">
-<meta property="og:updated_time" content="2015-11-22T08:52:07.813Z">
+<meta property="og:description" content="Extel 推出最新型的電腦「X9091 字串處理機」，主要用途在於密碼學上的應用。該電腦可藉由編程由一組輸入字串產生另一組字串，該電腦用的是精簡指令集晶片 (RSIC)，只有三個指令：
+
+刪除 (D) 特定位置上的字元。
+插入 (I) 一個字元到特定位置。
+改變 (C) 特定位置上的字元。
+
+電腦程式是由機器語言所寫成，且每個指令為固定長度，格式為 ZXdd，Z 表示刪除 (D)、插入 (i)、">
+<meta property="og:updated_time" content="2015-11-24T14:05:19.459Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="10340 - All in All">
-<meta name="twitter:description" content="給你 2 個字串 s、t，請你寫一個程式判斷是否 s 是 t 的子字串。也就是說當你移走 t 字串中的某些字元後，剩下的字串就是 s。
-Input每筆測試資料一列。每列有 2 個字串，s 及 t，以空白分隔。
-Output對每一列輸入，請輸出是否 s 是 t 的子字串。
-Sample Inputabc abc
-sequence subsequence
-person compression
-VERD">
+<meta name="twitter:title" content="164 - String Computer">
+<meta name="twitter:description" content="Extel 推出最新型的電腦「X9091 字串處理機」，主要用途在於密碼學上的應用。該電腦可藉由編程由一組輸入字串產生另一組字串，該電腦用的是精簡指令集晶片 (RSIC)，只有三個指令：
+
+刪除 (D) 特定位置上的字元。
+插入 (I) 一個字元到特定位置。
+改變 (C) 特定位置上的字元。
+
+電腦程式是由機器語言所寫成，且每個指令為固定長度，格式為 ZXdd，Z 表示刪除 (D)、插入 (i)、">
 
 
 
@@ -92,7 +92,7 @@ VERD">
   };
 </script>
 
-  <title> 10340 - All in All | uniDog 的 ACM 園地 </title>
+  <title> 164 - String Computer | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -222,7 +222,7 @@ VERD">
             
             
               
-                10340 - All in All
+                164 - String Computer
               
             
           </h1>
@@ -230,22 +230,22 @@ VERD">
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10340/">
-              <span>Luckycat</span>
+            <a href="/uniDog/problem/164/">
+              <span>Purple People Eater</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10340.htm" target="_blank">
-              <span>Lucky 貓</span>
+            <a href="http://rubyacm.blogspot.tw/2011/05/164-string-computer.html" target="_blank">
+              <span>Ruby 兔</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-09-17T00:00:00+08:00" content="2002-09-17">
-              2002-09-17
+            <time itemprop="dateCreated" datetime="2011-05-24T00:00:00+08:00" content="2011-05-24">
+              2011-05-24
             </time>
           </span>
 
@@ -254,8 +254,8 @@ VERD">
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-103/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 103</span>
+                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 001</span>
                   </a>
                 </span>
 
@@ -269,7 +269,7 @@ VERD">
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1281" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=100" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -292,40 +292,84 @@ VERD">
       
 
       
-        <span itemprop="articleBody"><p>給你 2 個字串 s、t，請你寫一個程式判斷是否 s 是 t 的子字串。也就是說當你移走 t 字串中的某些字元後，剩下的字串就是 s。</p>
-<h2 id="Input">Input</h2><p>每筆測試資料一列。每列有 2 個字串，s 及 t，以空白分隔。</p>
-<h2 id="Output">Output</h2><p>對每一列輸入，請輸出是否 s 是 t 的子字串。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="keyword">abc</span> <span class="keyword">abc</span>
-sequence subsequence
-person compression
-VERDI vivaVittorioEmanueleReDiItalia
-caseDoesMatter CaseDoesMatter
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="keyword">Yes</span>
-<span class="keyword">Yes</span>
-<span class="keyword">No</span>
-<span class="keyword">Yes</span>
-<span class="keyword">No</span>
+        <span itemprop="articleBody"><p>Extel 推出最新型的電腦「X9091 字串處理機」，主要用途在於密碼學上的應用。該電腦可藉由編程由一組輸入字串產生另一組字串，該電腦用的是精簡指令集晶片 (RSIC)，只有三個指令：</p>
+<ol>
+<li>刪除 (<code>D</code>) 特定位置上的字元。</li>
+<li>插入 (<code>I</code>) 一個字元到特定位置。</li>
+<li>改變 (<code>C</code>) 特定位置上的字元。</li>
+</ol>
+<p>電腦程式是由機器語言所寫成，且每個指令為固定長度，格式為 <code>ZXdd</code>，<code>Z</code> 表示刪除 (<code>D</code>)、插入 (<code>i</code>)、改變(<code>C</code>) 其中之一，<code>X</code> 表示字元，<code>dd</code> 表示兩位數字。程式的結束以一個特殊的結束指令 <code>E</code> 來表示。</p>
+<p>以一個例子來說明，若輸入字串為 <code>abcde</code>，我們希望藉由字串的運算得到 <code>bcgfe</code>，以下是一個比較簡單的運算方式：</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>字串</th>
+<th>備註</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><code>abcde</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Da01</code></td>
+<td><code>bcde</code></td>
+<td>% a 是必要的</td>
+</tr>
+<tr>
+<td><code>Cg03</code></td>
+<td><code>bcge</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>If04</code></td>
+<td><code>bcgfe</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>E</code></td>
+<td><code>bcgef</code></td>
+<td>% 程式結束</td>
+</tr>
+</tbody>
+</table>
+<p>寫一個程式讀入兩組字串 (輸入字串與目標字串)，並找到由輸入字串轉換成目標字串最少所需的指令總數，若有多種可能的解法，只要輸出任一種就可以了。</p>
+<h1 id="Input_and_Output">Input and Output</h1><p>輸入有許多列，每列有兩個字串，並以一個空白字元分隔。字串長度不會超過 20 個小寫字元，以 <code>#</code> 表示輸入結束。</p>
+<h1 id="Sample_input">Sample input</h1><pre><code><span class="title">abcde</span> bcgfe
+<span class="comment">#</span>
+</code></pre><h1 id="Sample_output">Sample output</h1><pre><code>Da<span class="number">01</span>C<span class="keyword">g03</span><span class="keyword">If</span><span class="number">04</span>E
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/DP/" rel="tag">#DP</a>
+          
+            <a href="/uniDog/tags/編輯距離/" rel="tag">#編輯距離</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/10154/" rel="next" title="10154 - Weights and Measures">
-                <i class="fa fa-chevron-left"></i> 10154 - Weights and Measures
+              <a href="/uniDog/problem/p152/" rel="next" title="152 - Tree's a Crowd">
+                <i class="fa fa-chevron-left"></i> 152 - Tree's a Crowd
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/10334/" rel="prev" title="10334 - Ray Through Glasses">
-                10334 - Ray Through Glasses <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p141/" rel="prev" title="141 - The Spot Game">
+                141 - The Spot Game <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -394,7 +438,7 @@ caseDoesMatter CaseDoesMatter
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">194</span>
+              <span class="site-state-item-count">196</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -408,7 +452,7 @@ caseDoesMatter CaseDoesMatter
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">31</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
@@ -450,7 +494,7 @@ caseDoesMatter CaseDoesMatter
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Input"><span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Output"><span class="nav-text">Sample Output</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Input_and_Output"><span class="nav-text">Input and Output</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sample_input"><span class="nav-text">Sample input</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sample_output"><span class="nav-text">Sample output</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

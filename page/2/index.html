@@ -1169,7 +1169,7 @@
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p10635/" itemprop="url">
+                <a class="post-title-link" href="/uniDog/problem/10635/" itemprop="url">
                   10635 - Prince and Princess
                 </a>
               
@@ -1179,7 +1179,7 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10635/">
+            <a href="/uniDog/problem/10635/">
               <span>Luckycat</span>
             </a>
           </span>
@@ -1246,12 +1246,12 @@
             
               <p>在一個 <span>$n\times{n}$</span><!-- Has MathJax --> 的棋盤，王子和公主玩一個遊戲。棋盤的格子以 <span>$1,2,3,\ldots{},n\times{n}$</span><!-- Has MathJax --> 來編號，如下圖：</p>
 <img src="/uniDog/images/106/p10635a.jpg">
-<p>王子從在格子 1，跳了 p 步之後抵達格子 n *n。他進入一個格子最多一次。所以如果我們用 <span>$x_i$</span><!-- Has MathJax --> 代表他 i 個進入的格子，那 <span>$x_1,x_2,x_3,\ldots{},x_{p+1}$</span><!-- Has MathJax --> 都是不同的。請注意 <span>$x_1=1,x_{p+1}=n\times{n}$</span><!-- Has MathJax -->。公主也做類似的動作，從格子 1 開始，跳了 q 次後抵達格子 n * n。我們用 <span>$y_1,y_2,y_3,\ldots{},y_{q+1}$</span><!-- Has MathJax --> 來表示這過程經過的格子。同樣的這 q + 1 個數也都不相同。下面圖 2 為一個 3 * 3 的格子矩陣，王子和公主有不同的跳躍路徑。</p>
+<p>王子從在格子 <span>$1$</span><!-- Has MathJax -->，跳了 <span>$p$</span><!-- Has MathJax --> 步之後抵達格子 n * n。他進入一個格子最多一次。所以如果我們用 <span>$x_i$</span><!-- Has MathJax --> 代表他 <span>$i$</span><!-- Has MathJax --> 個進入的格子，那 <span>$x_1,x_2,x_3,\ldots{},x_{p+1}$</span><!-- Has MathJax --> 都是不同的。請注意 <span>$x_1=1,x_{p+1}=n\times{n}$</span><!-- Has MathJax -->。公主也做類似的動作，從格子 <span>$1$</span><!-- Has MathJax --> 開始，跳了 <span>$q$</span><!-- Has MathJax --> 次後抵達格子 n * n。我們用 <span>$y_1,y_2,y_3,\ldots{},y_{q+1}$</span><!-- Has MathJax --> 來表示這過程經過的格子。同樣的這 <span>$q+1$</span><!-- Has MathJax --> 個數也都不相同。下面圖 2 為一個 3 * 3 的格子矩陣，王子和公主有不同的跳躍路徑。</p>
 <img src="/uniDog/images/106/p10635b.jpg">
-<p>王子的路徑： 1 –&gt; 7 –&gt; 5 –&gt; 4 –&gt; 8 –&gt; 3 –&gt; 9 (黑色箭頭)<br>公主的路徑：1 –&gt; 4 –&gt; 3 –&gt; 5 –&gt; 6 –&gt; 2 –&gt; 8 –&gt; 9 (白色箭頭)</p>
-<p>王子和公主的父親，也就是國王，看到他們玩的遊戲，他說：「為什麼要分開跳？你們是兄妹啊！忽略某些跳躍，使得你們總是在一起。」<br>假如王子忽略了他的第 2、第 3、第 6 跳，他的路徑變成 1 –&gt; 4 –&gt; 8 –&gt; 9。假如公主忽略了她的第 3、第 4、第 5、第 6 跳，她的路徑變成 1 –&gt; 4 –&gt; 8 –&gt; 9。這共同的路徑 (如圖 3) 就滿足了國王的要求。</p>
+<p>王子的路徑：<span>$1 \rightarrow{7} \rightarrow{5} \rightarrow{4} \rightarrow{8} \rightarrow{3} \rightarrow{9}$</span><!-- Has MathJax --> (黑色箭頭)<br>公主的路徑：<span>$1 \rightarrow{4} \rightarrow{3} \rightarrow{5} \rightarrow{6} \rightarrow{2} \rightarrow{8} \rightarrow{9}$</span><!-- Has MathJax --> (白色箭頭)</p>
+<p>王子和公主的父親，也就是國王，看到他們玩的遊戲，他說：「為什麼要分開跳？你們是兄妹啊！忽略某些跳躍，使得你們總是在一起。」<br>假如王子忽略了他的第 2、第 3、第 6 跳，他的路徑變成 <span>$1 \rightarrow{4} \rightarrow{8} \rightarrow{9}$</span><!-- Has MathJax -->。假如公主忽略了她的第 3、第 4、第 5、第 6 跳，她的路徑變成 <span>$1 \rightarrow{4} \rightarrow{8} \rightarrow{9}$</span><!-- Has MathJax -->。這共同的路徑 (如圖 3) 就滿足了國王的要求。</p>
 <p>國王想要知道王子和公主可以一起移動的最長路徑是多少，你能告訴他嗎？</p>
-<h2 id="Input">Input</h2><p>輸入的第一列有一個整數，代表以下有多筆測資。<br>每筆測資的第一列有 3 個整數 n, p, q (<span>$2\leq{n}\leq{250},1\leq{p,q}&lt; n\times{n}$</span><!-- Has MathJax -->)，其代表的意義如題目所述。接下來的一列有 p + 1 個整數，代表王子的路徑，再接下來的一列有 q + 1 個整數，代表公主的路徑。</p>
+<h2 id="Input">Input</h2><p>輸入的第一列有一個整數，代表以下有多筆測資。<br>每筆測資的第一列有 3 個整數 <span>$n,p,q$</span><!-- Has MathJax --> (<span>$2\leq{n}\leq{250},1\leq{p,q}&lt; n\times{n}$</span><!-- Has MathJax -->)，其代表的意義如題目所述。接下來的一列有 <span>$p+1$</span><!-- Has MathJax --> 個整數，代表王子的路徑，再接下來的一列有 <span>$q+1$</span><!-- Has MathJax --> 個整數，代表公主的路徑。</p>
 <h2 id="Output">Output</h2><p>每組測資輸出這是第幾組測資以及王子和公主最長共同路徑是多長。輸出格式請參考 Sample Output。</p>
 <h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">1</span>
 <span class="number">3</span> <span class="number">6</span> <span class="number">7</span>
@@ -1564,7 +1564,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">194</span>
+              <span class="site-state-item-count">196</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1578,7 +1578,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">31</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

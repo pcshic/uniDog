@@ -212,6 +212,268 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/272/" itemprop="url">
+                  272 - TeX Quotes
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/272/">
+              <span>untitled</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q272.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2003-03-21T00:00:00+08:00" content="2003-03-21">
+              2003-03-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-002/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 002</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=208" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p><span>$\TeX$</span><!-- Has MathJax --> 是一種由 Donald Knuth 所發展出的一套文書排版軟體。這套軟體可以將原始文件檔加上一些像字型等型態後，轉成一份很漂亮的文件。而一份漂亮的文件是需要用 <code>&#96;&#96;</code> 和 <code>&quot;</code> 來把別人說的話給「引」出來，而不是用大部份鍵盤上有的 <code>&quot;</code>。雖然鍵盤裡通常不會有這種有方向的雙引號鍵，不過上面有左單引號 <code>&#96;</code> (有人叫 backquote)，和右單引號 <code>&#39;</code> (有人叫 apostrophe 或 quote)。你可以在你的鍵盤上找一下，不過要小心不要將 <code>&#96;</code> 與 <code>\</code> (backslash 鍵) 搞混了。而在 <span>$\TeX$</span><!-- Has MathJax --> 裡，使用者可以輸入兩個左單引號 <code>&#96;&#96;</code> 來構成一個左雙引號 <code>&#96;&#96;</code>，或者是兩個右單引號 <code>&#39;&#39;</code> 來構造一個右雙引號 <code>&#39;&#39;</code>，不過呢，通常大家打字時都很習慣用普通的雙引號 <code>&quot;</code> 來引述別人的話。</p>
+<p>如果原始文件檔內容是：</p>
+<p><code>&quot;To be or not to be,&quot; quoth the bard, &quot;that is the question.&quot;</code></p>
+<p>則 TeX 作出來的文件並不會是我們所想要的：</p>
+<p><code>``To be or not to be,&quot; quoth the bard, ``that is the question.&quot;</code></p>
+<p>為了要得到上面的文件，我們需要把原始文件變成這個樣子：</p>
+<p><code>``To be or not to be,&#39;&#39; quoth the bard, ``that is the question.&#39;&#39;</code></p>
+<p>你現在必須要寫一個程式，將普通的雙引號 (<code>&quot;</code>)，轉成有方向性的雙引號，而其它文字則不變。而在把普通的雙引號換掉的時候，要特別注意，當要開始引述一句話時要用 <code>&#96;&#96;</code>，而結束引述時要用 <code>&#39;&#39;</code>。不用擔心會有多層巢狀引號的情形，也就是第一個引號一定是用 <code>&#96;&#96;</code> 來代替，再來用 <code>&#39;&#39;</code>，然後用 <code>&#96;&#96;</code>，接著用 <code>&#39;&#39;</code>，依此類推。</p>
+<h2 id="Input_and_Output">Input and Output</h2><p>輸入是若干列的文字，其中有偶數個雙引號 (<code>&quot;</code>)，以 end-of-file 做結束。輸出的文字必須和輸入的一模一樣，除了：</p>
+<ul>
+<li>每一組雙引號的第一個 <code>&quot;</code> 必須用兩個 <code>&#96;</code> 字元 (就是 <code>&#96;&#96;</code>) 來代替</li>
+<li>每一組雙引號的第二個 <code>&quot;</code> 必須用兩個 <code>&#39;</code> 字元 (就是 <code>&#39;&#39;</code>) 來代替。</li>
+</ul>
+<h2 id="Sample_Input">Sample Input</h2><pre><code>"To <span class="keyword">be</span> <span class="keyword">or</span> <span class="keyword">not</span> to <span class="keyword">be</span>," quoth the Bard, "<span class="keyword">that</span>
+<span class="keyword">is</span> the question".
+The programming contestant replied: "I must disagree.
+To `C' <span class="keyword">or</span> <span class="keyword">not</span> to `C', <span class="keyword">that</span> <span class="keyword">is</span> The Question!"
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>``<span class="keyword">To</span> be <span class="keyword">or</span> <span class="keyword">not</span> <span class="keyword">to</span> be,<span class="string">''</span> quoth the Bard, ``that
+<span class="keyword">is</span> the question<span class="string">''</span>.
+The programming contestant replied: ``I must disagree.
+<span class="keyword">To</span> `C<span class="string">' or not to `C'</span>, that <span class="keyword">is</span> The Question!<span class="string">''</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p118/" itemprop="url">
+                  118 - Mutant Flatworld Expolrers
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p118/">
+              <span>untitled</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q118.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2003-03-20T00:00:00+08:00" content="2003-03-20">
+              2003-03-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=54" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>給你一塊矩形土地的長寬，再依序給定每個機器人的初始位置狀況及一連串的指令集，你必須用你的程式求出每個機器人最後的位置狀況。</p>
+<p>一個機器人的位置狀況包括了其坐標（ x 坐標， y 坐標），和它面向的方向（用 N , S , E , W 來分別代表北、南、東、西）。至於一個機器人所收到的指令集，是一個由字母 ‘ L ‘ ， ‘ R ‘ ， 和 ‘ F ‘ 所構成的字串，其分別代表：</p>
+<pre><code>左轉（<span class="keyword">Left</span>）：機器人在原地往左轉 <span class="number">90</span> 度。
+右轉（<span class="keyword">Right</span>）: 機器人在原地往右轉 <span class="number">90</span> 度。
+前進（<span class="keyword">Forward</span>）: 機器人往其面向的方向向前走一格，且不改變其面向之方向。
+</code></pre><p>從坐標 (x,y) 走至 (x,y+1) 的這個方向我們定義為北方。</p>
+<p>因為此矩形土地是有邊界的，所以一旦一個機器人走出邊界掉落下去，就相當於永遠消失了。不過這個掉下去的機器人會留下「標記 ( scent ) 」，提醒以後的機器人，避免他們從同一個地方掉下去。掉下去的機器人會把標記，留在他掉落之前所在的最後一個坐標點。所以對於以後的機器人，當他正位在有標記的地方時，這個機器人就會忽略會讓他掉下去的指令。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p118/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/103/" itemprop="url">
                   103 - Stacking Boxes
                 </a>
@@ -730,7 +992,7 @@
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p10066/" itemprop="url">
+                <a class="post-title-link" href="/uniDog/problem/10066/" itemprop="url">
                   10066 - The Twin Towers
                 </a>
               
@@ -740,7 +1002,7 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10066/">
+            <a href="/uniDog/problem/10066/">
               <span>Luckycat</span>
             </a>
           </span>
@@ -806,11 +1068,11 @@
           <span itemprop="articleBody">
             
               <p>從前從前在古帝國有 2 座高塔位於 2 座城市中，他們的形狀不太相同。但是他們都是用圓柱形的石塊一個堆在另一個上面建起來的。每個圓柱形石塊的高度都相同 (定為 1)，但是半徑卻不一。所以，雖然 2 座高塔的形狀不一樣，但事實上他們可能有許多石塊是相同的。</p>
-<p>在高塔建成的一千年後，國王要求建築師拿掉高塔的某些石塊，使得 2 座高塔的形狀大小和高度一樣。但同時要盡可能讓高塔的高度越高越好。新高塔的石塊的順序也必須和原來的高塔一樣。國王認為這樣可以代表 2 座城市之間的和諧與平等。他為這 2 座高塔命名為「雙子星塔」</p>
+<p>在高塔建成的一千年後，國王要求建築師拿掉高塔的某些石塊，使得 2 座高塔的形狀大小和高度一樣。但同時要盡可能讓高塔的高度越高越好。新高塔的石塊的順序也必須和原來的高塔一樣。國王認為這樣可以代表 2 座城市之間的和諧與平等。他為這 2 座高塔命名為「雙子星塔」。</p>
 <p>現在，你的任務是就是算出這雙子星塔的高度。</p>
 <h2 id="Input">Input</h2><p>輸入含有多組測試資料，每組測試資料 3 列，代表原來 2 座高塔的資料。</p>
-<p>每組測試資料的第一列有 2 個整數 N1 和 N2 (<span>$1\leq{N1,N2}\leq{100}$</span><!-- Has MathJax -->)，代表這 2 座高塔原來的高度。接下來的一列有 N1 個正整數，代表第一座高塔石塊的半徑 (由高到低)。再接下來的一列有 N2 個正整數，代表第二座高塔石塊的半徑 (由高到低)。</p>
-<p>N1 = 0、N2 = 0 代表輸入結束。</p>
+<p>每組測試資料的第一列有 2 個整數 <span>$N_1$</span><!-- Has MathJax --> 和 <span>$N_2$</span><!-- Has MathJax --> (<span>$1\leq{N_1,N_2}\leq{100}$</span><!-- Has MathJax -->)，代表這 2 座高塔原來的高度。接下來的一列有 <span>$N_1$</span><!-- Has MathJax --> 個正整數，代表第一座高塔石塊的半徑 (由高到低)。再接下來的一列有 <span>$N_2$</span><!-- Has MathJax --> 個正整數，代表第二座高塔石塊的半徑 (由高到低)。</p>
+<p><span>$N_1=0, N_2=0$</span><!-- Has MathJax --> 代表輸入結束。</p>
 <h2 id="Output">Output</h2><p>對每一組測試資料，輸出這是第幾組測試資料以及這2座塔後來的高度。每組測試資料後請空一列。請參考 Sample Output。</p>
 <h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">7</span> <span class="number">6</span>
 <span class="number">20</span> <span class="number">15</span> <span class="number">10</span> <span class="number">15</span> <span class="number">25</span> <span class="number">20</span> <span class="number">15</span>
@@ -824,6 +1086,7 @@ Number of Tiles : <span class="number">4</span>
 
 Twin Towers <span class="preprocessor">#<span class="number">2</span></span>
 Number of Tiles : <span class="number">6</span>
+　
 </code></pre>
             
           </span>
@@ -1216,254 +1479,6 @@ Number of Tiles : <span class="number">6</span>
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p108/" itemprop="url">
-                  108 - Maximum Sum
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p108/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q108.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2003-01-22T00:00:00+08:00" content="2003-01-22">
-              2003-01-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=44" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>給你一個 NxN 的陣列，請你找出有最大和的子區域 (sub-rectangle) 其和為多少。一個區域的和指的是該區域中所有元素值的和。一個區域是指相連的任意大小的子陣列。例如，對以下的二維陣列：</p>
-<img src="/uniDog/images/1/p108-1.gif">
-<p>其最大和的子區域位於左下角，並且其和為 15。如下所示：</p>
-<img src="/uniDog/images/1/p108-2.gif">
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p108/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p120/" itemprop="url">
-                  120 - Stacks of Flapjacks
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p120/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q120.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2003-01-07T00:00:00+08:00" content="2003-01-07">
-              2003-01-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=56" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>給你一疊薄煎餅，請你寫一個程式來指出要如何安排才能使這些薄煎餅由上到下依薄煎餅的半徑由小到大排好。所有的薄煎餅半徑均不相同。</p>
-<p>要把薄煎餅排好序需要對這些薄煎餅做翻面（flip）的動作。方法是以一抹刀插入一疊薄煎餅中，然後做翻面的動作（也就是說在抹刀上面的薄煎餅經翻面後，會依相反的次序排列）。若一疊共有n個薄煎餅，我們定義最底下的薄煎餅的位置為1，最上面的薄煎餅位置為n。當抹刀插入位置為k時，代表從位置k到位置n的薄煎餅要做翻面的動作。</p>
-<p>一開始時，這疊薄煎餅隨意堆放，並以半徑大小來表示。例如：以下3疊薄煎餅（最左邊那一疊8是最上面一個薄煎餅的半徑）</p>
-<pre><code><span class="number">8</span>           <span class="number">7</span>           <span class="number">2</span>
-<span class="number">4</span>           <span class="number">6</span>           <span class="number">5</span>
-<span class="number">6</span>           <span class="number">4</span>           <span class="number">8</span>
-<span class="number">7</span>           <span class="number">8</span>           <span class="number">4</span>
-<span class="number">5</span>           <span class="number">5</span>           <span class="number">6</span>
-<span class="number">2</span>           <span class="number">2</span>           <span class="number">7</span>
-</code></pre><p>對最左邊那疊薄煎餅，如果我們把抹刀插在位置3（就是半徑為7的那塊薄煎餅的下面）的地方做翻面，就會得到中間那疊，如果我們再把抹刀插在位置1（就是半徑為2的那塊薄煎餅的下面）的地方做翻面，就會得到最右邊那疊。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p120/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1510,7 +1525,7 @@ Number of Tiles : <span class="number">6</span>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">194</span>
+              <span class="site-state-item-count">196</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1524,7 +1539,7 @@ Number of Tiles : <span class="number">6</span>
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">31</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
