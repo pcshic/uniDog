@@ -212,6 +212,144 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/p11210/" itemprop="url">
+                  11210 - Chinese Mahjong
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p11210/">
+              <span>許胖</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="/uniDog/problem/p11210/" target="_blank">
+              <span>uniDog</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2010-05-30T16:02:11+08:00" content="2010-05-30">
+              2010-05-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-112/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 112</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2151" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>麻將是起源於中國的一種牌戲，類似骨牌並且有許多花色。通常由四個人玩，輪番摸牌棄牌直到有人湊成四個面子 (三個一組的) 和一個雀頭 (兩張相同的)。在各地一副麻將的張數都不大相同，雖然來自美國和日本有許多種玩法，但通常為 136 張和 144 張牌。一副擁有 136 張牌的麻將包括：</p>
+<p><strong> 筒子 (Dots) </strong>：以每張牌有圓圈而命名的，每個圓代表一個外圓內方的古銅幣 (Tong)。在這個問題中，一筒到九筒以 1T、2T、3T、4T、5T、6T、7T、8T、9T 代表。</p>
+<img src="/uniDog/images/112/p11210-1.png">
+<p><strong> 索子 / 條子(Bams) </strong>：以每張牌有竹棒而命名的 (除了一索外)，每根竹棒代表一串穿過一百個銅幣的繩子 (Suo)。在這個問題中，以 1S、2S、3S、4S、5S、6S、7S、8S、9S 代表。</p>
+<img src="/uniDog/images/112/p11210-2.png">
+<p><strong> 萬子 (Craks) </strong>：以每張牌代表萬個銅幣而命名的 (Wan)。在這個問題中，以 1W、2W、3W、4W、5W、6W、7W、8W、9W 代表。</p>
+<img src="/uniDog/images/112/p11210-3.png">
+<p><strong> 風牌 (Wind tiles) </strong>：東、南、西、北。在這個問題中，以 DONG、NAN、XI、BEI 代表。</p>
+<img src="/uniDog/images/112/p11210-4.png">
+<p><strong> 三元牌 (Dragon tiles) </strong>：紅中、青發和白皮 (或白板)。Dragon tile 這個詞是 Joseph Park Babcock 在 1920 年出版的書中向美國大眾介紹麻將。最初這些牌的起源與中國科舉 (Chinese Imperial Examination) 相關，紅中意味著你能通過科舉而被任官，青發代表之後家境就會富裕而白皮代表應該作為一個清廉的官員。在這個問題中，以 ZHONG、FA、BAI 代表。</p>
+<img src="/uniDog/images/112/p11210-5.png">
+<p>因此現在有 9*3+4+3=34 種牌，每種牌有 4 個，所以總共為 136 張牌。而 144 張麻將還會包括：</p>
+<p><strong> 花牌 (Flower tiles) </strong>：<br>是一組可自由選擇的牌，每張上面畫著不同的圖。在這問題中我們不考慮這 8 張牌。</p>
+<img src="/uniDog/images/112/p11210-6.png">
+<p>麻將是非常複雜的，然而我們幾乎不需要去知道其中的規則就能解決這個問題。面子 (meld) 是將數張牌湊成一組的方法，這裡有三種面子你必須知道 (給已經知道麻將的人：不考慮槓子 (Kong) 的情況)。</p>
+<p><strong> 刻子 (Pong) </strong>：三張相同的牌組成的面子。例如：<img style="display: inline-block;" src="/images/112/p11210-7.png">、<img style="display: inline-block;" src="/images/112/p11210-8.png">。<br><strong> 順子 (Chow) </strong>：三張數字連續的牌組成的面子，但這三張牌必須相同花色，且多於三張牌連續是不能組成同一順子的 (除非可以組成一個以上的順子)。顯然地，風牌和三元牌不能組成順子。例如：<img style="display: inline-block;" src="/images/112/p11210-9.png">、<img style="display: inline-block;" src="/images/112/p11210-10.png">。<br><strong> 雀頭 (Eye，或稱將、眼) </strong>：有一對相同的牌所組成，然而這種不算是一種面子，通常是最後標準牌型的構成要素。</p>
+<p>一位玩家要贏得此牌局需要創作一套標準牌型 (standard mahjong hand)，這意味著你的手牌必須由一個雀頭以及數個順子和刻子所組成，但請注意每張牌只能算在雀頭、順子或刻子其中一種。</p>
+<p>當手牌只差一張就可以勝利時，這時稱為聽牌 (ready hand)，「on the pot」為象徵的說法。當玩家聽牌時代表他正在聽某張牌，例如：</p>
+<img src="/uniDog/images/112/p11210-11.png">
+<p>就在聽<img style="display: inline-block;" src="/images/112/p11210-12.png">、<img style="display: inline-block;" src="/images/112/p11210-13.png">和<img style="display: inline-block;" src="/images/112/p11210-14.png">三張牌。<br>(譯者註：應該沒有人不會打台灣麻將吧？不懂的去咕狗一下吧……被打)</p>
+<p>給知道麻將更多的人：不用考慮如「七對子」等特殊胡牌型。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p11210/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/p11785/" itemprop="url">
                   11785 - Hypercube
                 </a>
@@ -1104,124 +1242,6 @@ TH <span class="number">2</span>D JS <span class="number">9</span>D <span class=
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p11597/" itemprop="url">
-                  11597 - Spanning Subtrees
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p11597/">
-              <span>許胖</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="/uniDog/problem/p11597/" target="_blank">
-              <span>uniDog</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2009-12-18T16:45:26+08:00" content="2009-12-18">
-              2009-12-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-115/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 115</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2644" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>假設 <span>$K_n$</span><!-- Has MathJax --> 為 n 個節點的完全無向圖且 n 為偶數，換句話說，<span>$K_n$</span><!-- Has MathJax --> 中兩個點皆連通。你的任務就是去找出 <span>$K_n$</span><!-- Has MathJax --> 所有擴張樹最大數量，而且這些擴張樹之間皆沒有共同的邊。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p11597/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/uniDog/problem/p11727/" itemprop="url">
                   11727 - Cost Cutting
                 </a>
@@ -1340,8 +1360,8 @@ TH <span class="number">2</span>D JS <span class="number">9</span>D <span class=
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p11173/" itemprop="url">
-                  11173 - Grey Codes
+                <a class="post-title-link" href="/uniDog/problem/p11597/" itemprop="url">
+                  11597 - Spanning Subtrees
                 </a>
               
             
@@ -1350,22 +1370,22 @@ TH <span class="number">2</span>D JS <span class="number">9</span>D <span class=
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p11173/">
+            <a href="/uniDog/problem/p11597/">
               <span>許胖</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="/uniDog/problem/p11173/" target="_blank">
+            <a href="/uniDog/problem/p11597/" target="_blank">
               <span>uniDog</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2009-11-12T23:29:41+08:00" content="2009-11-12">
-              2009-11-12
+            <time itemprop="dateCreated" datetime="2009-12-18T16:45:26+08:00" content="2009-12-18">
+              2009-12-18
             </time>
           </span>
 
@@ -1374,8 +1394,8 @@ TH <span class="number">2</span>D JS <span class="number">9</span>D <span class=
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-111/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 111</span>
+                  <a href="/uniDog/categories/Volume-115/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 115</span>
                   </a>
                 </span>
 
@@ -1389,7 +1409,7 @@ TH <span class="number">2</span>D JS <span class="number">9</span>D <span class=
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2114" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2644" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -1413,27 +1433,9 @@ TH <span class="number">2</span>D JS <span class="number">9</span>D <span class=
 
       
         
-          <p>我們將用一種二分法的方式去產生一個數列，先從如下的數列開始：</p>
-<pre><code><span class="number">0</span>
-<span class="number">1</span>
-</code></pre><p>將此數列依照水平線做鏡射，接著上半部的數列前面加 0，下半部前面加 1，你將會得到如下數列：</p>
-<pre><code><span class="number">00</span>
-<span class="number">01</span>
-<span class="number">11</span>
-<span class="number">10</span>
-</code></pre><p>重覆此步驟，會再一次得到下面 8 個數字所構成的數列：</p>
-<pre><code><span class="number">000</span> <span class="number">0</span>
-<span class="number">001</span> <span class="number">1</span>
-<span class="number">011</span> <span class="number">3</span>
-<span class="number">010</span> <span class="number">2</span>
-<span class="number">110</span> <span class="number">6</span>
-<span class="number">111</span> <span class="number">7</span>
-<span class="number">101</span> <span class="number">5</span>
-<span class="number">100</span> <span class="number">4</span>
-</code></pre><p>這些 2 進位的數字的右側是其對應的數字。</p>
-<p>而這些數列分別被稱為 1 位元、2 位元及 3 位元的格雷碼 (Reflected Gray Code，或稱為 Gray Code)，一個 n 位元的格雷碼由 <span>$2^n$</span><!-- Has MathJax --> 個不同的數字所組成，而此數列上的數字，和其所相鄰的數字都差一個位元。</p>
+          <p>假設 <span>$K_n$</span><!-- Has MathJax --> 為 n 個節點的完全無向圖且 n 為偶數，換句話說，<span>$K_n$</span><!-- Has MathJax --> 中兩個點皆連通。你的任務就是去找出 <span>$K_n$</span><!-- Has MathJax --> 所有擴張樹最大數量，而且這些擴張樹之間皆沒有共同的邊。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p11173/#more" rel="contents">
+            <a class="btn" href="/uniDog/problem/p11597/#more" rel="contents">
               閱讀全文 &raquo;
             </a>
           </div>
@@ -1501,7 +1503,7 @@ TH <span class="number">2</span>D JS <span class="number">9</span>D <span class=
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">196</span>
+              <span class="site-state-item-count">197</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>

@@ -212,8 +212,8 @@
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p382/" itemprop="url">
-                  382 - Perfection
+                <a class="post-title-link" href="/uniDog/problem/10032/" itemprop="url">
+                  10032 - Tug of War
                 </a>
               
             
@@ -222,22 +222,22 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p382/">
+            <a href="/uniDog/problem/10032/">
               <span>Luckycat</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q382.htm" target="_blank">
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10032.htm" target="_blank">
               <span>Lucky 貓</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-04-02T00:00:00+08:00" content="2002-04-02">
-              2002-04-02
+            <time itemprop="dateCreated" datetime="2002-04-16T00:00:00+08:00" content="2002-04-16">
+              2002-04-16
             </time>
           </span>
 
@@ -246,8 +246,8 @@
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-003/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 003</span>
+                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 100</span>
                   </a>
                 </span>
 
@@ -261,7 +261,7 @@
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=318" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=973" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -287,154 +287,27 @@
         
           <span itemprop="articleBody">
             
-              <p>一個整數 b 如果可以被另一個整數 a 整除 (在這裡 <span>$a &gt; b$</span><!-- Has MathJax -->)，我們稱 b 是 a 的一個因數。</p>
-<p>Perfect Number 是一個正整數並且等於其所有因數的和。例如：6 和 28 都是 perfect number。因為 <span>$6=1+2+3$</span><!-- Has MathJax -->，<span>$28=1+2+4+7+14$</span><!-- Has MathJax -->。如果一個正整數不是 perfect，那他就是 deficient 或者是 abundant，根據其所有因數的和是小於或大於這個數本身。因此，9 是 deficient 因為 <span>$1+3&lt;9$</span><!-- Has MathJax -->。而 12 是 abundant 因為 <span>$1+2+3+4+6&gt;12$</span><!-- Has MathJax -->。<br>請寫一個程式求出某一個數是 perfect、deficient 或者 abundant。</p>
-<h2 id="Input">Input</h2><p>有一連串 (不會超過 100 個) 的正整數 n (<span>$1\leq{n} &lt; 60000$</span><!-- Has MathJax -->)，<span>$n=0$</span><!-- Has MathJax --> 代表輸入結束。</p>
-<h2 id="Output">Output</h2><p>請參考 Sample Output。</p>
-<p>數字部分佔 5 個字元長度，靠右對齊。與後方的敘述間空 2 個空白格。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">15</span> <span class="number">28</span> <span class="number">6</span> <span class="number">56</span> <span class="number">60000</span> <span class="number">22</span> <span class="number">496</span> <span class="number">0</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>PERFECTION OUTPUT
-   <span class="number">15</span>  DEFICIENT
-   <span class="number">28</span>  PERFECT
-    <span class="number">6</span>  PERFECT
-   <span class="number">56</span>  ABUNDANT
-<span class="number">60000</span>  ABUNDANT
-   <span class="number">22</span>  DEFICIENT
-  <span class="number">496</span>  PERFECT
-END OF OUTPUT
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
+              <p>有 n 個人參加拔河比賽，分成 2 隊，2 隊的人數最多只能相差 1 個人。因為拔河的勝負通常與體重有很大的關係，所以我們希望 2 隊總體重盡可能接近。</p>
+<h2 id="Input">Input</h2><p>第一列有一個整數，代表以下有幾組測試資料。每筆測試資料的第1列有一個整數 <span>$n$</span><!-- Has MathJax --> (<span>$n\leq{100}$</span><!-- Has MathJax -->)，代表共有 <span>$n$</span><!-- Has MathJax --> 個人參加拔河。接下來的 <span>$n$</span><!-- Has MathJax --> 列，代表這 <span>$n$</span><!-- Has MathJax --> 個人的體重，體重均介於 1 到 450 之間。測試資料間有空一列。請參考 Sample Input</p>
+<h2 id="Output">Output</h2><p>每一筆測試資料請輸出一列，包含 2 個整數，代表 2 隊的總體重。如果這 2 個數不相同，小的在前面。測試資料間有空一列。請參考 Sample Output。</p>
+<h2 id="Sample_input">Sample input</h2><pre><code><span class="number">2</span>
 
-    <footer class="post-footer">
-      
+<span class="number">3</span>
+<span class="number">100</span>
+<span class="number">90</span>
+<span class="number">200</span>
 
-      
+<span class="number">7</span>
+<span class="number">1</span>
+<span class="number">2</span>
+<span class="number">3</span>
+<span class="number">444</span>
+<span class="number">4</span>
+<span class="number">5</span>
+<span class="number">6</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">190</span> <span class="number">200</span>
 
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p369/" itemprop="url">
-                  369 - Combinations
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p369/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q369.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-04-02T00:00:00+08:00" content="2002-04-02">
-              2002-04-02
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-003/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 003</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=305" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>為了呼應台灣電腦彩券的發行，我們特別推出跟組合有關的題目。以台灣的彩券來說，從 46 個球中取出 6 個，共有 C(46,6)=9366819 種組合。(中特獎的機率：1/936681989，夠低了吧！) 給你：</p>
-<span>$5\leq{N}\leq{100}, 5\leq{M}\leq{100}, M\leq{N}$</span><!-- Has MathJax -->
-<p>我們可以根據下面的公式算出從 N 個東西中取出 M 個東西的組合數：</p>
-<span>$C={\frac{N!}{(N-M)!M!}}$</span><!-- Has MathJax -->
-<p>你可以假設你的答案 <span>$C$</span><!-- Has MathJax --> 不會超出 long int 的範圍。</p>
-<h2 id="Input">Input</h2><p>每筆測試資料一行，有 2 個正整數 <span>$N, M$</span><!-- Has MathJax -->。<span>$N=0$</span><!-- Has MathJax -->，<span>$M=0$</span><!-- Has MathJax --> 代表輸入結束。</p>
-<h2 id="Output">Output</h2><p>以下列的格式輸出：</p>
-<p><code>N things taken M at a time is C exactly.</code></p>
-<p>請參考 Sample Output。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">100</span>  <span class="number">6</span>
- <span class="number">20</span>  <span class="number">5</span>
- <span class="number">18</span>  <span class="number">6</span>
-  <span class="number">0</span>  <span class="number">0</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">100</span> things taken <span class="number">6</span> at <span class="tag">a</span> <span class="tag">time</span> is <span class="number">1192052400</span> exactly.
-<span class="number">20</span> things taken <span class="number">5</span> at <span class="tag">a</span> <span class="tag">time</span> is <span class="number">15504</span> exactly.
-<span class="number">18</span> things taken <span class="number">6</span> at <span class="tag">a</span> <span class="tag">time</span> is <span class="number">18564</span> exactly.
+<span class="number">18</span> <span class="number">447</span>
 </code></pre>
             
           </span>
@@ -613,6 +486,139 @@ There <span class="keyword">is</span> <span class="keyword">only</span> <span cl
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/p369/" itemprop="url">
+                  369 - Combinations
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p369/">
+              <span>Luckycat</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q369.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2002-04-02T00:00:00+08:00" content="2002-04-02">
+              2002-04-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-003/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 003</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=305" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>為了呼應台灣電腦彩券的發行，我們特別推出跟組合有關的題目。以台灣的彩券來說，從 46 個球中取出 6 個，共有 C(46,6)=9366819 種組合。(中特獎的機率：1/936681989，夠低了吧！) 給你：</p>
+<span>$5\leq{N}\leq{100}, 5\leq{M}\leq{100}, M\leq{N}$</span><!-- Has MathJax -->
+<p>我們可以根據下面的公式算出從 N 個東西中取出 M 個東西的組合數：</p>
+<span>$C={\frac{N!}{(N-M)!M!}}$</span><!-- Has MathJax -->
+<p>你可以假設你的答案 <span>$C$</span><!-- Has MathJax --> 不會超出 long int 的範圍。</p>
+<h2 id="Input">Input</h2><p>每筆測試資料一行，有 2 個正整數 <span>$N, M$</span><!-- Has MathJax -->。<span>$N=0$</span><!-- Has MathJax -->，<span>$M=0$</span><!-- Has MathJax --> 代表輸入結束。</p>
+<h2 id="Output">Output</h2><p>以下列的格式輸出：</p>
+<p><code>N things taken M at a time is C exactly.</code></p>
+<p>請參考 Sample Output。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">100</span>  <span class="number">6</span>
+ <span class="number">20</span>  <span class="number">5</span>
+ <span class="number">18</span>  <span class="number">6</span>
+  <span class="number">0</span>  <span class="number">0</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">100</span> things taken <span class="number">6</span> at <span class="tag">a</span> <span class="tag">time</span> is <span class="number">1192052400</span> exactly.
+<span class="number">20</span> things taken <span class="number">5</span> at <span class="tag">a</span> <span class="tag">time</span> is <span class="number">15504</span> exactly.
+<span class="number">18</span> things taken <span class="number">6</span> at <span class="tag">a</span> <span class="tag">time</span> is <span class="number">18564</span> exactly.
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/p374/" itemprop="url">
                   374 - Big Mod
                 </a>
@@ -749,8 +755,8 @@ There <span class="keyword">is</span> <span class="keyword">only</span> <span cl
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p10079/" itemprop="url">
-                  10079 - Pizza Cutting
+                <a class="post-title-link" href="/uniDog/problem/p382/" itemprop="url">
+                  382 - Perfection
                 </a>
               
             
@@ -759,22 +765,22 @@ There <span class="keyword">is</span> <span class="keyword">only</span> <span cl
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10079/">
+            <a href="/uniDog/problem/p382/">
               <span>Luckycat</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10079.htm" target="_blank">
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q382.htm" target="_blank">
               <span>Lucky 貓</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-03-27T00:00:00+08:00" content="2002-03-27">
-              2002-03-27
+            <time itemprop="dateCreated" datetime="2002-04-02T00:00:00+08:00" content="2002-04-02">
+              2002-04-02
             </time>
           </span>
 
@@ -783,8 +789,8 @@ There <span class="keyword">is</span> <span class="keyword">only</span> <span cl
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 100</span>
+                  <a href="/uniDog/categories/Volume-003/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 003</span>
                   </a>
                 </span>
 
@@ -798,7 +804,7 @@ There <span class="keyword">is</span> <span class="keyword">only</span> <span cl
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1020" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=318" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -824,16 +830,21 @@ There <span class="keyword">is</span> <span class="keyword">only</span> <span cl
         
           <span itemprop="articleBody">
             
-              <p>Pizza 大家都吃過吧！我個人是偏愛達美樂 Pizza 啦！現在問題來了：給你一塊 Pizza，如果切一刀可以切成 2 塊，切 2 刀最多可切成 4 塊，切 3 刀最多可切成 7 塊 (如下圖)，那切 N 刀最多可以切成幾塊呢？</p>
-<img src="/uniDog/images/100/p10079.gif">
-<h2 id="Input">Input</h2><p>輸入的每一筆測試資料有 1 個整數 N (<span>$0 \leq N \leq 210000000$</span><!-- Has MathJax -->) 代表切幾刀。</p>
-<p>如果 N 為負數，代表輸入結束。</p>
-<h2 id="Output">Output</h2><p>對每一輸入 N，輸出切 N 刀最多可以切成幾塊 Pizza。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span>
-<span class="number">10</span>
--<span class="number">100</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">16</span>
-<span class="number">56</span>
+              <p>一個整數 b 如果可以被另一個整數 a 整除 (在這裡 <span>$a &gt; b$</span><!-- Has MathJax -->)，我們稱 b 是 a 的一個因數。</p>
+<p>Perfect Number 是一個正整數並且等於其所有因數的和。例如：6 和 28 都是 perfect number。因為 <span>$6=1+2+3$</span><!-- Has MathJax -->，<span>$28=1+2+4+7+14$</span><!-- Has MathJax -->。如果一個正整數不是 perfect，那他就是 deficient 或者是 abundant，根據其所有因數的和是小於或大於這個數本身。因此，9 是 deficient 因為 <span>$1+3&lt;9$</span><!-- Has MathJax -->。而 12 是 abundant 因為 <span>$1+2+3+4+6&gt;12$</span><!-- Has MathJax -->。<br>請寫一個程式求出某一個數是 perfect、deficient 或者 abundant。</p>
+<h2 id="Input">Input</h2><p>有一連串 (不會超過 100 個) 的正整數 n (<span>$1\leq{n} &lt; 60000$</span><!-- Has MathJax -->)，<span>$n=0$</span><!-- Has MathJax --> 代表輸入結束。</p>
+<h2 id="Output">Output</h2><p>請參考 Sample Output。</p>
+<p>數字部分佔 5 個字元長度，靠右對齊。與後方的敘述間空 2 個空白格。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">15</span> <span class="number">28</span> <span class="number">6</span> <span class="number">56</span> <span class="number">60000</span> <span class="number">22</span> <span class="number">496</span> <span class="number">0</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>PERFECTION OUTPUT
+   <span class="number">15</span>  DEFICIENT
+   <span class="number">28</span>  PERFECT
+    <span class="number">6</span>  PERFECT
+   <span class="number">56</span>  ABUNDANT
+<span class="number">60000</span>  ABUNDANT
+   <span class="number">22</span>  DEFICIENT
+  <span class="number">496</span>  PERFECT
+END OF OUTPUT
 </code></pre>
             
           </span>
@@ -1010,6 +1021,257 @@ There <span class="keyword">is</span> <span class="keyword">only</span> <span cl
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/p10071/" itemprop="url">
+                  10071 - Back to High School Physics
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p10071/">
+              <span>Luckycat</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10071.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2002-03-27T00:00:00+08:00" content="2002-03-27">
+              2002-03-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 100</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1012" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>某一個粒子有一初速度和等加速度。假設在 t 秒後此粒子的速度為 v ，請問這個粒子在 <span>$2t$</span><!-- Has MathJax --> 秒後所經過的距離是多少。</p>
+<h2 id="Input">Input</h2><p>每組測試資料 1 列，有 2 個整數，分別代表 v (<span>$-100\leq{v}\leq{100}$</span><!-- Has MathJax -->) 和 t (<span>$0\leq{t}\leq{200}$</span><!-- Has MathJax -->)。</p>
+<h2 id="Output">Output</h2><p>對每組測試資料請輸出這個粒子在 <span>$2t$</span><!-- Has MathJax --> 秒後所經過的距離是多少。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">0</span> <span class="number">0</span>
+<span class="number">5</span> <span class="number">12</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">0</span>
+<span class="number">120</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p10079/" itemprop="url">
+                  10079 - Pizza Cutting
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p10079/">
+              <span>Luckycat</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10079.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2002-03-27T00:00:00+08:00" content="2002-03-27">
+              2002-03-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 100</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1020" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>Pizza 大家都吃過吧！我個人是偏愛達美樂 Pizza 啦！現在問題來了：給你一塊 Pizza，如果切一刀可以切成 2 塊，切 2 刀最多可切成 4 塊，切 3 刀最多可切成 7 塊 (如下圖)，那切 N 刀最多可以切成幾塊呢？</p>
+<img src="/uniDog/images/100/p10079.gif">
+<h2 id="Input">Input</h2><p>輸入的每一筆測試資料有 1 個整數 N (<span>$0 \leq N \leq 210000000$</span><!-- Has MathJax -->) 代表切幾刀。</p>
+<p>如果 N 為負數，代表輸入結束。</p>
+<h2 id="Output">Output</h2><p>對每一輸入 N，輸出切 N 刀最多可以切成幾塊 Pizza。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span>
+<span class="number">10</span>
+-<span class="number">100</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">16</span>
+<span class="number">56</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/p10370/" itemprop="url">
                   10370 - Above Average
                 </a>
@@ -1099,130 +1361,6 @@ There <span class="keyword">is</span> <span class="keyword">only</span> <span cl
 <span class="number">33.333</span>%
 <span class="number">66.667</span>%
 <span class="number">55.556</span>%
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p10071/" itemprop="url">
-                  10071 - Back to High School Physics
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p10071/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10071.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-03-27T00:00:00+08:00" content="2002-03-27">
-              2002-03-27
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 100</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1012" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>某一個粒子有一初速度和等加速度。假設在 t 秒後此粒子的速度為 v ，請問這個粒子在 <span>$2t$</span><!-- Has MathJax --> 秒後所經過的距離是多少。</p>
-<h2 id="Input">Input</h2><p>每組測試資料 1 列，有 2 個整數，分別代表 v (<span>$-100\leq{v}\leq{100}$</span><!-- Has MathJax -->) 和 t (<span>$0\leq{t}\leq{200}$</span><!-- Has MathJax -->)。</p>
-<h2 id="Output">Output</h2><p>對每組測試資料請輸出這個粒子在 <span>$2t$</span><!-- Has MathJax --> 秒後所經過的距離是多少。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">0</span> <span class="number">0</span>
-<span class="number">5</span> <span class="number">12</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">0</span>
-<span class="number">120</span>
 </code></pre>
             
           </span>
@@ -1398,124 +1536,6 @@ Field <span class="preprocessor">#<span class="number">2</span>:</span>
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p102/" itemprop="url">
-                  102 - Ecological Bin Packing
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p102/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q102.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-02-04T00:00:00+08:00" content="2002-02-04">
-              2002-02-04
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=38" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>有 3 個桶子用來裝回收的玻璃瓶，玻璃瓶的顏色有三種：棕色 (Brown)、綠色 (Green)、透明色 (Clear)。在這個問題裡我們會告訴你每個桶子裏的玻璃瓶的顏色及數量，現在要搬移桶子裏的玻璃瓶使得最後每個桶子裡都只有單一顏色的玻璃瓶，以方便回收。你的任務就是要算出最小搬移的瓶子數。你可以假設每個桶子的容量無限大，並且總共搬移的瓶子數不會超過 <span>$2^{31}$</span><!-- Has MathJax -->。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p102/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1562,7 +1582,7 @@ Field <span class="preprocessor">#<span class="number">2</span>:</span>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">196</span>
+              <span class="site-state-item-count">197</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
