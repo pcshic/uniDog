@@ -212,6 +212,361 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/p186/" itemprop="url">
+                  186 - Trip Routing
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p186/">
+              <span>M</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="/uniDog/problem/p186/" target="_blank">
+              <span>uniDog</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2013-08-13T18:25:00+08:00" content="2013-08-13">
+              2013-08-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=122" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>加州汽車俱樂部(CCC)打算提供會員旅行路線服務，寫一個程式讀取道路資訊以及詢問的兩地，計算出兩地的最短距離。</p>
+<p>對於每組詢問， 輸出經過的城市名稱、道路名稱、距離。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p186/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p11201/" itemprop="url">
+                  11201 - The problem of the crazy linguist
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p11201/">
+              <span>M</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="/uniDog/problem/p11201/" target="_blank">
+              <span>uniDog</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2013-07-23T02:19:00+08:00" content="2013-07-23">
+              2013-07-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-112/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 112</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2142" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="Background">Background</h2><p>請幫助這個瘋狂語言學家，他陷入於自己的瘋狂，發展了一套文字專用的「西班牙美女準則」(Spanish Beauty Criterion)，對於一個單字</p>
+<span>$w=x_{1}x_{2}x_{3}\ldots{}x_{n}$</span><!-- Has MathJax -->
+<p>其中 n 可以表示為單字的長度，而每個位置有相對應的字母限制：</p>
+<span>$$x_{i} \in \left\{
+\begin{matrix}
+\left\{ \texttt{bcdfghjklmnpqrstvwxyz} \right\} &amp; \text{if }\mathit{i}\text{ is odd}\\
+\left\{ \texttt{aeiou} \right\} &amp; \text{if }\mathit{i}\text{ is even} \end{matrix}
+\right.$$</span><!-- Has MathJax -->
+<p>對於任意 i, j, k 不可滿足 <span>$x_{i} = x_{j} = x_{k}$</span><!-- Has MathJax -->，即一個字元最多出現兩次。</p>
+<p>而「西班牙美女準則」(SBC) 定義如下：</p>
+<span>$SBC(w) = \sum_{i\in{1\ldots{n}}} {i*P(x_{i})}$</span><!-- Has MathJax -->
+<p>其中的 P 對應西班牙語中字母出現的頻率，其對應的數值如下表：</p>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>d</th>
+<th>e</th>
+<th>f</th>
+<th>g </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 12.53</td>
+<td>1.42</td>
+<td>4.68</td>
+<td>5.86</td>
+<td>13.68</td>
+<td>0.69</td>
+<td>1.01</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>h</th>
+<th>i</th>
+<th>j</th>
+<th>k</th>
+<th>l</th>
+<th>m</th>
+<th>n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 0.70</td>
+<td>6.25</td>
+<td>0.44</td>
+<td>0.00</td>
+<td>4.97</td>
+<td>3.15</td>
+<td>6.71</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>o</th>
+<th>p</th>
+<th>q</th>
+<th>r</th>
+<th>s</th>
+<th>t</th>
+<th>u</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 8.68</td>
+<td>2.51</td>
+<td>0.88</td>
+<td>6.87</td>
+<td>7.98</td>
+<td>4.63</td>
+<td>3.93</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>v</th>
+<th>w</th>
+<th>x</th>
+<th>y</th>
+<th>z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 0.90</td>
+<td>0.02</td>
+<td>0.22</td>
+<td>0.90</td>
+<td>0.52</td>
+</tr>
+</tbody>
+</table>
+<p>給定一個 w , 問在與 w 相同首字元的情況下，w 的 SBC 是否高於平均值？<br>平均值由相同首字元且長度為 n，建造的方式如上描述。</p>
+<h2 id="The_Input">The Input</h2><p>輸入第一行會有一個整數 N 表示有多少測資組。</p>
+<p>對於每組測資，有一個字串 w，長度 &lt;= 7，而且所有 w  保證也會在上述給定的條件下。</p>
+<h2 id="The_Output">The Output</h2><p>對於每組輸出，高於(含)平均<code>above or equal</code>，反之輸出<code>below</code>。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span>
+<span class="keyword">bubu
+</span><span class="label">terabit</span>
+<span class="label">hacer</span>
+<span class="label">qed</span>
+<span class="label">loco</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="keyword">below</span>
+<span class="keyword">above</span> <span class="keyword">or</span> <span class="keyword">equal</span>
+<span class="keyword">above</span> <span class="keyword">or</span> <span class="keyword">equal</span>
+<span class="keyword">above</span> <span class="keyword">or</span> <span class="keyword">equal</span>
+<span class="keyword">above</span> <span class="keyword">or</span> <span class="keyword">equal</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/p12515/" itemprop="url">
                   12515 - Movie Police
                 </a>
@@ -1179,317 +1534,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/12455/" itemprop="url">
-                  12455 - Bars
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/12455/">
-              <span>snail</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://zerojudge.tw/ShowProblem?problemid=a522" target="_blank">
-              <span>ZeroJudge</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2012-10-01T00:00:00+08:00" content="2012-10-01">
-              2012-10-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-124/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 124</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3886" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>我們有一些已知長度的金屬棒，請問可以找出所需的特定長度的金屬棒嗎？必要時，可以把幾根金屬棒焊接成更長的一根，但金屬棒不得切割。</p>
-<h2 id="Input">Input</h2><p>輸入的第一行含有一個整數 <span>$t$</span><!-- Has MathJax -->、<span>$0\leq{t}\leq{50}$</span><!-- Has MathJax -->，表示測資的筆數。每筆測資三行，第一行有一個數字 <span>$n$</span><!-- Has MathJax -->、<span>$0\leq{n}\leq{1000}$</span><!-- Has MathJax -->，表示我們所要的長度。第二行有一個數字 <span>$p$</span><!-- Has MathJax -->、<span>$1\leq{p}\leq{20}$</span><!-- Has MathJax -->，表示我們所擁有的金屬棒的數量。第三行有 <span>$p$</span><!-- Has MathJax --> 個數字，表示 <span>$p$</span><!-- Has MathJax --> 根金屬棒的長度。</p>
-<h2 id="Output">Output</h2><p>每筆測資輸出一行，依是否可能成功輸出 <code>YES</code> 或 <code>NO</code>。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">4</span>
-<span class="number">25</span>
-<span class="number">4</span>
-<span class="number">10</span> <span class="number">12</span> <span class="number">5</span> <span class="number">7</span>
-<span class="number">925</span>
-<span class="number">10</span>
-<span class="number">45</span> <span class="number">15</span> <span class="number">120</span> <span class="number">500</span> <span class="number">235</span> <span class="number">58</span> <span class="number">6</span> <span class="number">12</span> <span class="number">175</span> <span class="number">70</span>
-<span class="number">120</span>
-<span class="number">5</span>
-<span class="number">25</span> <span class="number">25</span> <span class="number">25</span> <span class="number">25</span> <span class="number">25</span>
-<span class="number">0</span>
-<span class="number">2</span>
-<span class="number">13</span> <span class="number">567</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="keyword">NO</span>
-<span class="keyword">YES</span>
-<span class="keyword">NO</span>
-<span class="keyword">YES</span>
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/10898/" itemprop="url">
-                  10898 - Combo Deal
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/10898/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10898.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2012-09-27T00:00:00+08:00" content="2012-09-27">
-              2012-09-27
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-108/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 108</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1839" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>速食店除了提供食物的單點之外，通常也會提供「套餐」的選擇。例如：菜單可能像這樣：</p>
-<table>
-<thead>
-<tr>
-<th>品名</th>
-<th>價格   </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Hamburger (漢堡)</td>
-<td>\$3.49</td>
-</tr>
-<tr>
-<td>Fries (薯條)</td>
-<td>\$0.99</td>
-</tr>
-<tr>
-<td>Pop (爆米花)</td>
-<td>\$1.09</td>
-</tr>
-<tr>
-<td>Ice Cream (冰淇淋)</td>
-<td>\$2.19</td>
-</tr>
-<tr>
-<td>Value Meal (1 Hamburger, 1 Fries, 1 Pop) (超值套餐)</td>
-<td>\$4.79</td>
-</tr>
-<tr>
-<td>Lovers-Only (2 Hamburgers, 2 Fries, 2 Pops, 1 Ice Cream) (情侶套餐)</td>
-<td>\$9.99</td>
-</tr>
-</tbody>
-</table>
-<p>買套餐組合會比各項單獨買來的便宜。(廢話，否則誰會買套餐。)</p>
-<p>一個有很多小孩的媽媽面臨了一種情況：比方說，我需要 9 份漢堡，6 份薯條和 8 份爆米花，我要如何從菜單選擇可以買到我所需要的，而且付的錢最少？請注意：我是一個保守主義者，所以我<strong>絕不會買比需要多的食物</strong>。</p>
-<h2 id="Input">Input</h2><p>輸入含有多筆測資，每筆測資含有菜單及幾個訂單。</p>
-<ol>
-<li>菜單：先個別單點，然後是組合套餐。<ol>
-<li>個別單點：有一個整數 <span>$I$</span><!-- Has MathJax --> (<span>$I\leq{6}$</span><!-- Has MathJax -->)，然後是各單點的價格 (每項最多 \$10)</li>
-<li>組合套餐：有一個整數代表有多少種組合套餐 (最多 8 種)。接下來就是每種組合套餐的內容：包含各項單點的 <span>$I$</span><!-- Has MathJax --> 個數目，然後是價錢。<br>以下的 Sample Input 的菜單即是上面所敘述的。</li>
-</ol>
-</li>
-<li>訂單：訂單的數目 (最多 10)，然後是各訂單的內容 (<span>$I$</span><!-- Has MathJax --> 個數字代表所需各項目的數量，每個數字最多為 9)</li>
-</ol>
-<p>所有的價格均以分 (cent) 為單位。(1 dollar = 100 cent)</p>
-<h2 id="Output">Output</h2><p>對於每筆測資的每個訂單，輸出一列，最少要付多少錢才能買到他所需要的食物。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">4</span> <span class="number">349</span> <span class="number">99</span> <span class="number">109</span> <span class="number">219</span>
-<span class="number">2</span>
-<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">479</span>
-<span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">1</span> <span class="number">999</span>
-<span class="number">2</span>
-<span class="number">9</span> <span class="number">6</span> <span class="number">8</span> <span class="number">0</span>
-<span class="number">9</span> <span class="number">6</span> <span class="number">8</span> <span class="number">5</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">4139</span>
-<span class="number">4700</span>
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1536,7 +1580,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">202</span>
+              <span class="site-state-item-count">204</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1550,7 +1594,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">37</span>
+              <span class="site-state-item-count">36</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

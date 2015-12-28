@@ -212,6 +212,266 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/103/" itemprop="url">
+                  103 - Stacking Boxes
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/103/">
+              <span>untitled</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q103.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2003-03-18T00:00:00+08:00" content="2003-03-18">
+              2003-03-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=39" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>在數學或電腦科學裡，有些概念在一維或二維時還蠻簡單的，但到 N 維就會顯得非常複雜。試想一個 <span>$n$</span><!-- Has MathJax --> 維的「盒子」：在二維空間裡，盒子 <span>$(2,3)$</span><!-- Has MathJax --> 可代表一個長為 2 個單位，寬為 3 個單位的盒子；在三維空間裡，盒子 <span>$(4,8,9)$</span><!-- Has MathJax --> 則是一個 <span>$4\times{8}\times{9}$</span><!-- Has MathJax --> (長、寬、高) 的盒子。至於在六維空間裡，也許我們不清楚 <span>$(4,5,6,7,8,9)$</span><!-- Has MathJax --> 長得怎樣，不過我們還是可以分析這些盒子的特性。</p>
+<p>在此問題裡，我們要算出一組 <span>$n$</span><!-- Has MathJax --> 維盒子裡，它們的「最長套入串列」：<span>$b_1,b_2,\cdots{},b_k$</span><!-- Has MathJax -->，其中每個盒子 <span>$b_i$</span><!-- Has MathJax --> 都可以「放入」盒子 <span>$b_{i+1}$</span><!-- Has MathJax --> 中 (<span>$1\leq{i} &lt; k$</span><!-- Has MathJax -->)。</p>
+<p>考慮兩個盒子 <span>$D=(d_1,d_2,\cdots{},d_n)$</span><!-- Has MathJax -->、<span>$E=(e_1,e_2,\cdots{},e_n)$</span><!-- Has MathJax -->。如果盒子 <span>$D$</span><!-- Has MathJax --> 的 <span>$n$</span><!-- Has MathJax --> 個維，能夠存在一種重排，使得重排後， <span>$D$</span><!-- Has MathJax --> 每一維的量度都比 <span>$E$</span><!-- Has MathJax --> 中相對應的維的量度還要小，則我們說盒子 <span>$D$</span><!-- Has MathJax --> 能「放入」盒子 <span>$E$</span><!-- Has MathJax -->。(用比較不嚴謹的講法，這就好像我們將盒子 <span>$D$</span><!-- Has MathJax --> 翻來翻去，看看能不能擺到 <span>$E$</span><!-- Has MathJax --> 裡面去。不過因為我們考慮的是任一重排，所以實際上盒子不只可轉來轉去，甚至還可以扭曲。)(還是看看下面的例子說明好了)。</p>
+<p>譬如說，盒子 <span>$D=(2,6)$</span><!-- Has MathJax --> 能夠被放入盒子 <span>$E=(7,3)$</span><!-- Has MathJax --> 裡，因為 <span>$D$</span><!-- Has MathJax --> 可以重排變為 <span>$(6,2)$</span><!-- Has MathJax -->，這樣子 <span>$D$</span><!-- Has MathJax --> 的每個維的量度都比 <span>$E$</span><!-- Has MathJax --> 裡對應的維還要小。而盒子 <span>$D=(9,5,7,3)$</span><!-- Has MathJax --> 就沒辦法放進盒子 <span>$E=(2,10,6,8)$</span><!-- Has MathJax -->，因為就算再怎麼重排 <span>$D$</span><!-- Has MathJax --> 裡的維度，還是沒辦法符合「放入」的條件。不過 <span>$F=(9,5,7,1)$</span><!-- Has MathJax --> 就可以放入 <span>$E$</span><!-- Has MathJax --> 了，因為 <span>$F$</span><!-- Has MathJax --> 可以重排成 <span>$(1,9,5,7)$</span><!-- Has MathJax -->，這樣就符合了放入的條件。</p>
+<p>我們今定義「放入」如下：對於任兩個盒子 <span>$D=(d_1,d_2,\cdots{},d_n)$</span><!-- Has MathJax --> 和 <span>$E=(e_1,e_2,\cdots{},e_n)$</span><!-- Has MathJax -->，如果存在一種 <span>$1\cdots{n}$</span><!-- Has MathJax --> 的重排 <span>$\pi$</span><!-- Has MathJax -->，使得對於任何的 <span>$1\leq{i}\leq{n}$</span><!-- Has MathJax -->，皆有 <span>$d_{\pi{(i)}} &lt; e_i$</span><!-- Has MathJax -->，則我們說盒子 <span>$D$</span><!-- Has MathJax --> 能「放入」盒子 <span>$E$</span><!-- Has MathJax -->。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/103/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/624/" itemprop="url">
+                  624 - CD
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/624/">
+              <span>Luckycat</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q624.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2003-03-03T00:00:00+08:00" content="2003-03-03">
+              2003-03-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-006/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 006</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=565" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>你即將開車出遠門，當然希望在車上能聆聽一些美好的音樂。你的車上只有播放錄音帶的設備，但是你最喜歡的音樂卻都存放在 CD 上。所以你需要把 CD 上的音樂轉錄到錄音帶上。現在你必須解決的問題是：你的空白錄音帶長共 <span>$N$</span><!-- Has MathJax --> 分鐘，你如何選擇 CD 上的歌使得盡可能的利用錄音帶的空間。以下是一些此問題的假設：</p>
+<ul>
+<li>CD 上的歌最多不會超過 20 首。</li>
+<li>沒有任何一首歌的長度超過 <span>$N$</span><!-- Has MathJax --> 分鐘。</li>
+<li>要錄在錄音帶上的歌不能重複。</li>
+<li>每首歌的長度以一整數表達。</li>
+<li><span>$N$</span><!-- Has MathJax --> 也是一個整數。</li>
+</ul>
+<p>你的程式必須找出該放哪些 CD 上的歌到錄音帶上 (按 CD 上的順序)，使得錄音帶空白的空間最小。</p>
+<h2 id="Input">Input</h2><p>每組測試資料一列，第一個整數為 <span>$N$</span><!-- Has MathJax -->，代表空白錄音帶的長度。第二個整數 <span>$T$</span><!-- Has MathJax --> 代表 CD 上共有多少首歌。接下來的 <span>$T$</span><!-- Has MathJax --> 個整數分別代表 CD 上每首歌的長度。以 Sample Input 中第一組測試資料為例說明：<span>$N=5, T=3$</span><!-- Has MathJax -->, 第一首歌的長度為 1 分鐘，第二首歌的長度為 3 分鐘，第三首歌的長度為 4 分鐘。</p>
+<h2 id="Output">Output</h2><p>對每一組測試資料，輸出一列。內容為要放到錄音帶的各首歌的長度 (注意：此部分答案並非唯一，以第五組測試資料來說，<code>43 2</code> 也是正確的答案。本程式有特殊的檢驗程式，所以只要是正確答案都可被接受)，以及總長度。請參考 Sample Output。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span> <span class="number">3</span> <span class="number">1</span> <span class="number">3</span> <span class="number">4</span>
+<span class="number">10</span> <span class="number">4</span> <span class="number">9</span> <span class="number">8</span> <span class="number">4</span> <span class="number">2</span>
+<span class="number">20</span> <span class="number">4</span> <span class="number">10</span> <span class="number">5</span> <span class="number">7</span> <span class="number">4</span>
+<span class="number">90</span> <span class="number">8</span> <span class="number">10</span> <span class="number">23</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">7</span>
+<span class="number">45</span> <span class="number">8</span> <span class="number">4</span> <span class="number">10</span> <span class="number">44</span> <span class="number">43</span> <span class="number">12</span> <span class="number">9</span> <span class="number">8</span> <span class="number">2</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">1</span> <span class="number">4</span> sum:<span class="number">5</span>
+<span class="number">8</span> <span class="number">2</span> sum:<span class="number">10</span>
+<span class="number">10</span> <span class="number">5</span> <span class="number">4</span> sum:<span class="number">19</span>
+<span class="number">10</span> <span class="number">23</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">7</span> sum:<span class="number">55</span>
+<span class="number">4</span> <span class="number">10</span> <span class="number">12</span> <span class="number">9</span> <span class="number">8</span> <span class="number">2</span> sum:<span class="number">45</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/562/" itemprop="url">
                   562 - Dividing coins
                 </a>
@@ -732,6 +992,128 @@ Number of Tiles : <span class="number">6</span>
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/p122/" itemprop="url">
+                  122 - Trees on the level
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p122/">
+              <span>Luckycat</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q122.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2003-02-10T00:00:00+08:00" content="2003-02-10">
+              2003-02-10
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=58" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>樹狀結構在電腦科學的許多領域中都相當重要。本問題牽涉到建立樹及走訪樹。</p>
+<p>給你一二元樹，你的任務是寫一個程式來列印依「階層（level-order）」走訪的結果。在本問題中，二元樹的每個節點含有一個正整數，並且節點的數目最少1個，最多256個。</p>
+<p>在「階層」走訪中，依階層從低到高，同階層從左到右的次序來列印。例如以下的二元樹階層走訪的結果為：5, 4, 8, 11, 13, 4, 7, 2, 1</p>
+<img src="/uniDog/images/1/p122.gif">
+<p>在本問題中，二元樹以節點來表示。每個節點以一對(n,s)來表示。n代表此節點的值，s為一字串，代表從根節點到達此節點的路徑。其中L代表往左，R代表往右。所以在上方的圖中內容為13的節點其表示法為(13,RL)，而內容為2的節點其表示法為(2,LLR)，而根節點為(5,)。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p122/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/p112/" itemprop="url">
                   112 - Tree Summing
                 </a>
@@ -814,128 +1196,6 @@ Number of Tiles : <span class="number">6</span>
 <p>既然空樹不存在任何根到葉的路徑，任何對空樹是否有某個和的詢問，其答案都是否定的。</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/uniDog/problem/p112/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p122/" itemprop="url">
-                  122 - Trees on the level
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p122/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q122.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2003-02-10T00:00:00+08:00" content="2003-02-10">
-              2003-02-10
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=58" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>樹狀結構在電腦科學的許多領域中都相當重要。本問題牽涉到建立樹及走訪樹。</p>
-<p>給你一二元樹，你的任務是寫一個程式來列印依「階層（level-order）」走訪的結果。在本問題中，二元樹的每個節點含有一個正整數，並且節點的數目最少1個，最多256個。</p>
-<p>在「階層」走訪中，依階層從低到高，同階層從左到右的次序來列印。例如以下的二元樹階層走訪的結果為：5, 4, 8, 11, 13, 4, 7, 2, 1</p>
-<img src="/uniDog/images/1/p122.gif">
-<p>在本問題中，二元樹以節點來表示。每個節點以一對(n,s)來表示。n代表此節點的值，s為一字串，代表從根節點到達此節點的路徑。其中L代表往左，R代表往右。所以在上方的圖中內容為13的節點其表示法為(13,RL)，而內容為2的節點其表示法為(2,LLR)，而根節點為(5,)。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p122/#more" rel="contents">
               閱讀全文 &raquo;
             </a>
           </div>
@@ -1205,280 +1465,6 @@ Number of Tiles : <span class="number">6</span>
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/10038/" itemprop="url">
-                  10038 - Jolly Jumpers
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/10038/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10038.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-12-25T00:00:00+08:00" content="2002-12-25">
-              2002-12-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 100</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=979" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>有 <span>$n$</span><!-- Has MathJax --> 個整數的序列我們稱為 <em>jolly jumper</em>，如果相鄰兩數的差的絕對值恰好為 <span>$1$</span><!-- Has MathJax --> 到 <span>$n-1$</span><!-- Has MathJax -->。例如：</p>
-<p><code>1 4 2 3</code></p>
-<p>就是 jolly jumper (<span>$n=4$</span><!-- Has MathJax -->)。因為相鄰兩數的差的絕對值為 3,2,1，就是 <span>$1$</span><!-- Has MathJax --> 到 <span>$n-1$</span><!-- Has MathJax -->。但是</p>
-<p><code>1 4 2 -1 6</code></p>
-<p>不是 jolly jumper (<span>$n=5$</span><!-- Has MathJax -->)。因為相鄰兩數的差的絕對值為 3,2,3,7，並非 <span>$1$</span><!-- Has MathJax --> 到 <span>$n-1$</span><!-- Has MathJax -->。</p>
-<p>你的任務是寫一個程式來判斷一個整數序列是否為 jolly jumper。</p>
-<h2 id="Input">Input</h2><p>每組測試資料一列，第一個正整數為 <span>$n$</span><!-- Has MathJax --> (<span>$n &lt; 3000$</span><!-- Has MathJax -->)，代表此整數序列的長度。接下來有 <span>$n$</span><!-- Has MathJax --> 個整數，代表此整數序列。請參考 Sample Input。</p>
-<h2 id="Output">Output</h2><p>對每一組測試資料，輸出此整數序列是否為 jolly jumper。請參考 Sample Output。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">4</span> <span class="number">1</span> <span class="number">4</span> <span class="number">2</span> <span class="number">3</span>
-<span class="number">5</span> <span class="number">1</span> <span class="number">4</span> <span class="number">2</span> -<span class="number">1</span> <span class="number">6</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Jolly
-<span class="literal">Not</span> jolly
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/10004/" itemprop="url">
-                  10004 - Bicoloring
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/10004/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10004.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-12-23T00:00:00+08:00" content="2002-12-23">
-              2002-12-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 100</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=945" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>1976 年，在電腦協助之下證明了 4 色理論 (Four Color Map Theorem)。就是僅以 4 種顏色在地圖上不同的區域塗色，使得相鄰的區域顏色均不相同。</p>
-<p>現在，你要解決一個類似，但比較簡單的問題。給你一個相連的圖，請你在節點上塗色 (只有 2 種不同的顏色)，並且回答是否可以使得相鄰的節點顏色均不相同。為了使問題簡單一些，你可以假設：</p>
-<ul>
-<li>沒有節點會有連向自己的邊。</li>
-<li>邊是沒有方向性的，也就是說如果節點 A 可以連到節點 B，那麼代表節點 B 也可以連到節點 A。</li>
-<li>圖形是強連通的，也就是說任 2 節點之間皆有路徑相連。</li>
-</ul>
-<h2 id="Input">Input</h2><p>輸入含有多組測試資料。每組測試資料的第一列有一個正整數 <span>$n$</span><!-- Has MathJax --> (<span>$1 &lt; n &lt; 200$</span><!-- Has MathJax -->) 代表節點的數目。第二列有一個正整數 <span>$m$</span><!-- Has MathJax -->，代表邊的數目。接下來的 <span>$m$</span><!-- Has MathJax --> 列每列有 2 個整數代表邊所連接的 2 個節點的代號。這 <span>$n$</span><!-- Has MathJax --> 個節點的代號分別為 0 到 n - 1。</p>
-<p><span>$n=0$</span><!-- Has MathJax --> 代表輸入結束。</p>
-<h2 id="Output">Output</h2><p>對每一組測試資料輸出是否可以用 2 種顏色塗節點使得相鄰的節點顏色均不相同。若可以請輸出：<code>BICOLORABLE.</code>，否則輸出：<code>NOT BICOLORABLE.</code>。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">3</span>
-<span class="number">3</span>
-<span class="number">0</span> <span class="number">1</span>
-<span class="number">1</span> <span class="number">2</span>
-<span class="number">2</span> <span class="number">0</span>
-<span class="number">9</span>
-<span class="number">8</span>
-<span class="number">0</span> <span class="number">1</span>
-<span class="number">0</span> <span class="number">2</span>
-<span class="number">0</span> <span class="number">3</span>
-<span class="number">0</span> <span class="number">4</span>
-<span class="number">0</span> <span class="number">5</span>
-<span class="number">0</span> <span class="number">6</span>
-<span class="number">0</span> <span class="number">7</span>
-<span class="number">0</span> <span class="number">8</span>
-<span class="number">0</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="variable">NOT</span> <span class="variable">BICOLORABLE</span>.
-<span class="variable">BICOLORABLE</span>.
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1525,7 +1511,7 @@ Number of Tiles : <span class="number">6</span>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">202</span>
+              <span class="site-state-item-count">204</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1539,7 +1525,7 @@ Number of Tiles : <span class="number">6</span>
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">37</span>
+              <span class="site-state-item-count">36</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

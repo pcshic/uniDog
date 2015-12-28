@@ -212,6 +212,298 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/11992/" itemprop="url">
+                  11992 - Fast Matrix Operations
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/11992/">
+              <span>許胖</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="/uniDog/problem/11992/" target="_blank">
+              <span>uniDog</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2015-12-29T03:39:06+08:00" content="2015-12-29">
+              2015-12-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-119/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 119</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3143" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>一個最多不超過 <span>$10^6$</span><!-- Has MathJax --> 個元素的矩陣有 <span>$r$</span><!-- Has MathJax --> 列 (row) 和 <span>$c$</span><!-- Has MathJax --> 行 (column)，每個元素的位置為 <span>$(x,y)$</span><!-- Has MathJax -->，其中 <span>$1\leq{x}\leq{r}$</span><!-- Has MathJax -->，<span>$1\leq{y}\leq{c}$</span><!-- Has MathJax -->。一開始所有元素都是 <span>$0$</span><!-- Has MathJax -->，你必須處理以下三種操作：</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>$1$</span><!-- Has MathJax --> <span>$x_1$</span><!-- Has MathJax --> <span>$y_1$</span><!-- Has MathJax --> <span>$x_2$</span><!-- Has MathJax --> <span>$y_2$</span><!-- Has MathJax --> <span>$v$</span><!-- Has MathJax --></td>
+<td>將子矩陣 <span>$(x_1,y_1,x_2,y_2)$</span><!-- Has MathJax --> 中每個元素 <span>$(x,y)$</span><!-- Has MathJax --> 遞增 <span>$v$</span><!-- Has MathJax --> (<span>$v &gt; 0$</span><!-- Has MathJax -->)</td>
+</tr>
+<tr>
+<td><span>$2$</span><!-- Has MathJax --> <span>$x_1$</span><!-- Has MathJax --> <span>$y_1$</span><!-- Has MathJax --> <span>$x_2$</span><!-- Has MathJax --> <span>$y_2$</span><!-- Has MathJax --> <span>$v$</span><!-- Has MathJax --></td>
+<td>將子矩陣 <span>$(x_1,y_1,x_2,y_2)$</span><!-- Has MathJax --> 中每個元素 <span>$(x,y)$</span><!-- Has MathJax --> 設為 <span>$v$</span><!-- Has MathJax --></td>
+</tr>
+<tr>
+<td><span>$3$</span><!-- Has MathJax --> <span>$x_1$</span><!-- Has MathJax --> <span>$y_1$</span><!-- Has MathJax --> <span>$x_2$</span><!-- Has MathJax --> <span>$y_2$</span><!-- Has MathJax --></td>
+<td>輸出子矩陣 <span>$(x_1,y_1,x_2,y_2)$</span><!-- Has MathJax --> 的<em>總和</em>、<em>最小值</em>和<em>最大值</em></td>
+</tr>
+</tbody>
+</table>
+<p>在上面的描述中，子矩陣 <span>$(x_1,y_1,x_2,y_2)$</span><!-- Has MathJax --> 表示所有滿足 <span>$x_1\leq{x}\leq{x_2}$</span><!-- Has MathJax --> 和 <span>$y_1\leq{y}\leq{y_2}$</span><!-- Has MathJax --> 的元素 <span>$(x,y)$</span><!-- Has MathJax -->，輸入中保證 <span>$1\leq{x_1}\leq{x_2}\leq{r}$</span><!-- Has MathJax -->，<span>$1\leq{y_1}\leq{y_2}\leq{c}$</span><!-- Has MathJax -->，而對於任意操作，矩陣內所有元素總和不會超過 <span>$10^9$</span><!-- Has MathJax -->。</p>
+<h2 id="Input">Input</h2><p>有數筆測試資料，每筆的第一行包含三個正整數 <span>$r,c,m$</span><!-- Has MathJax -->，其中 <span>$m$</span><!-- Has MathJax --> (<span>$1\leq{m}\leq{20,000}$</span><!-- Has MathJax -->) 是操作的總數量。接下來 <span>$m$</span><!-- Has MathJax --> 行中，每一行包含一種查詢，矩陣最多有 20 列。輸入以 EOF 作為結束。</p>
+<h2 id="Output">Output</h2><p>對於每個第 3 類查詢，輸出總和、最小值和最大值。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">4</span> <span class="number">4</span> <span class="number">8</span>
+<span class="number">1</span> <span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">4</span> <span class="number">5</span>
+<span class="number">3</span> <span class="number">2</span> <span class="number">1</span> <span class="number">4</span> <span class="number">4</span>
+<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">3</span> <span class="number">4</span> <span class="number">2</span>
+<span class="number">3</span> <span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">4</span>
+<span class="number">3</span> <span class="number">1</span> <span class="number">1</span> <span class="number">3</span> <span class="number">4</span>
+<span class="number">2</span> <span class="number">2</span> <span class="number">1</span> <span class="number">4</span> <span class="number">4</span> <span class="number">2</span>
+<span class="number">3</span> <span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">4</span>
+<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">4</span> <span class="number">3</span> <span class="number">3</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">45</span> <span class="number">0</span> <span class="number">5</span>
+<span class="number">78</span> <span class="number">5</span> <span class="number">7</span>
+<span class="number">69</span> <span class="number">2</span> <span class="number">7</span>
+<span class="number">39</span> <span class="number">2</span> <span class="number">7</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/11990/" itemprop="url">
+                  11990 - ``Dynamic'' Inversion
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/11990/">
+              <span>許胖</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="/uniDog/problem/11990/" target="_blank">
+              <span>uniDog</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2015-12-29T03:19:50+08:00" content="2015-12-29">
+              2015-12-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-119/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 119</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3141" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>給你 <span>$\{1,2,3,\cdots{},n\}$</span><!-- Has MathJax --> 的一個排序，依序移除 <span>$m$</span><!-- Has MathJax --> 個數字，然後輸出<strong>移除前</strong>逆序數對 (inversion pairs) 的數量，一個陣列 <span>$A$</span><!-- Has MathJax --> 的逆序數對總數就是對於所有有序數對 <span>$(i, j)$</span><!-- Has MathJax -->，使得 <span>$i &lt; j$</span><!-- Has MathJax --> 而 <span>$A[i] &gt; A[j]$</span><!-- Has MathJax --> 的總數。</p>
+<h2 id="Input">Input</h2><p>輸入包含數組測試資料，每組測試資料的第一行包含兩個整數 <span>$n$</span><!-- Has MathJax --> 和 <span>$m$</span><!-- Has MathJax --> (<span>$1\leq{n}\leq{200,000}$</span><!-- Has MathJax -->、<span>$1\leq{m}\leq{100,000}$</span><!-- Has MathJax -->)，接著有 <span>$n$</span><!-- Has MathJax --> 行，代表初始排列。</p>
+<p>接下來有 <span>$m$</span><!-- Has MathJax --> 行，代表依序被移除的整數，沒有一個整數會被移除兩次以上。輸入最後以 EOF 結束。</p>
+<h2 id="Output">Output</h2><p>對於每次移除數字，輸出移除前逆序數對的數量。</p>
+<p><strong> 解說 </strong>：<span>$\texttt{(1,5,3,4,2)-&gt;(1,3,4,2)-&gt;(3,4,2)-&gt;(3,2)-&gt;(3)}$</span><!-- Has MathJax --></p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span> <span class="number">4</span>
+<span class="number">1</span>
+<span class="number">5</span>
+<span class="number">3</span>
+<span class="number">4</span>
+<span class="number">2</span>
+<span class="number">5</span>
+<span class="number">1</span>
+<span class="number">4</span>
+<span class="number">2</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">5</span>
+<span class="number">2</span>
+<span class="number">2</span>
+<span class="number">1</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/11601/" itemprop="url">
                   11601 - Avoiding Overlaps
                 </a>
@@ -556,7 +848,7 @@ d <span class="number">1000240</span>
         
           <span itemprop="articleBody">
             
-              <p>快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 <strong>Hit</strong>)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體中讀取進來，計算機架構師總是會去參考快取的 <strong>Miss</strong> 率 (每一百次有多少次資料不在快取中)。</p>
+              <p>快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 <strong>Hit</strong>)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體中讀取進來，計算機架構師總是會去參考快取的 <strong>miss</strong> 率 (每一百次有多少次資料不在快取中)。</p>
 <p>當一次 miss 發生時，新的資料要被放進快取中，而某些舊的資料就要從快取當中移除，這裡有幾個決策法來選擇要移除的資料，一個在計算機系統中最普遍的方法叫做 LRU (最少使用替換演算法，Least Recently Used)，在這個方案裡，最不常用的資料會被移除，讓我們解釋一下這個方案是怎麼運作的。</p>
 <p>假設有一個快取有 4 個空間，如果處理器依照 1, 2, 3, 4, 5, 2, 3, 99, 2, 5, 4 的順序拿資料，則狀況如下所述：</p>
 <table>
@@ -1429,261 +1721,6 @@ beware.<span class="number">_</span>dogs<span class="number">_</span>barking
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p11100/" itemprop="url">
-                  11100 - The Trip, 2007
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p11100/">
-              <span>許胖</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="/uniDog/problem/p11100/" target="_blank">
-              <span>uniDog</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2014-11-20T14:23:38+08:00" content="2014-11-20">
-              2014-11-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-111/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 111</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2041" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <img src="/uniDog/images/111/p11100.jpg">
-<p>社團的一群學生每年會到外地旅遊，他們過去曾經去過印第安納波利斯 (Indianapolis)、鳳凰城 (Phoenix)、納許維爾 (Nashville)、費城 (Philadelphia)、聖荷西 (San Jose)、亞特蘭大 (Atlanta)、恩荷芬 (Eindhoven)、奧蘭多 (Orlando)、溫哥華 (Vancouver)、檀香山 (Honolulu)、比佛利山 (Beverly Hills)、布拉格 (Prague)、上海 (Shanghai)、和聖安東尼奧 (San Antonio)。今年春天他們希望有個類似的旅行，但是並不確定時間和地點。</p>
-<p>旅程中，他們慷慨的贊助商總是給他們很多種背包和手提包，他們必須在回家前把這些包包整理好。但是機場只允許運送一定數量的行李，他們決定將禮物放到一個包包、再將這包包放到另外一個包包中，使得產生的行李儘可能地少。</p>
-<p>所有的包包形狀都是相同的，只有他們的線性維度不同，而線性維度是一個正整數且不超過 1000000，一個維度較小的包包可以放入一個維度較大的包包。您必須去計算哪個包包要放入其他包包使得行李的總數要最小 (也就是最外層包包的數量)，於此同時，在行李數量最少的情況下，也要讓每個行李中包包的數量儘可能地少。</p>
-<p>標準輸入包含多組測試資料，每組測試資料包含一個整數 <span>$1\leq{n}\leq{10000}$</span><!-- Has MathJax --> 代表包包的數量，接著有 n 個數字分別在一到數行中，每個數字代表包包的線性維度。最後一組測資後有一數字 0。對於每組測資，輸出最小的行李數 k，接著有 k 行，每行輸出每件行李中所有包包的維度，這些維度由空白隔開。每個在輸入內的線性維度只會在輸出中出現恰好一次，且每行中，若有多於一種答案，則輸出任何一種皆可。對於每組測資間輸出一空白行。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">6</span>
-<span class="number">1</span> <span class="number">1</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">3</span>
-<span class="number">0</span>
-</code></pre><h2 id="Output_for_Sample_Input">Output for Sample Input</h2><pre><code><span class="number">3</span>
-<span class="number">1</span> <span class="number">2</span>
-<span class="number">1</span> <span class="number">2</span>
-<span class="number">3</span> <span class="number">2</span>
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p12100/" itemprop="url">
-                  12100 - Printer Queue
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p12100/">
-              <span>許胖</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="/uniDog/problem/p12100/" target="_blank">
-              <span>uniDog</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2014-10-23T20:44:14+08:00" content="2014-10-23">
-              2014-10-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-121/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 121</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3252" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>在計算機科學學生會唯一一台印表機的工作量相當繁重，有時這台印表機上有上百個工作在列印佇列 (printer queue) 中，使得你要花上數小時的等待去拿到僅有一頁的輸出。</p>
-<p>因為有些工作比其他工作更重要，「黑客將軍 (Hacker General)」發明了一套簡單的優先權系統來管理列印佇列。現在，每個工作的優先權為 1 和 9 之間 (9 是最高優先權，1為最低)，印表機的操作如下：</p>
-<ul>
-<li>把在佇列的第一個工作 J 從佇列中取出。</li>
-<li>如果有些在佇列中的工作，其優先權比 J 更高，那麼將 J 移至佇列尾端而不進行列印。</li>
-<li>否則，執行工作 J (並且不要把它放回佇列)。</li>
-</ul>
-<p>這樣一來，黑客將軍想要列印的所有重要的杯子蛋糕 (muffin) 食譜可以很迅速的被印出來。當然，像那些煩人的學期論文這一類的文件就可能要等待一段時間，但，這就是生活。</p>
-<p>對於新的做法，你的問題是這樣的做法在估計何時完成你的列印工作時變得很棘手，你決定寫一支程式來找出完成時間，這個程式會給定當前佇列 (所有工作的優先權)，以及你的工作在佇列中的位置，你必須計算你的工作何時結束，假設接下來不會有新的工作加入佇列，為了簡化問題，我們假設每個工作列印時間總是一分鐘，把工作加入佇列或從佇列中移除都是瞬間完成。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p12100/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1730,7 +1767,7 @@ beware.<span class="number">_</span>dogs<span class="number">_</span>barking
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">202</span>
+              <span class="site-state-item-count">204</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1744,7 +1781,7 @@ beware.<span class="number">_</span>dogs<span class="number">_</span>barking
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">37</span>
+              <span class="site-state-item-count">36</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
