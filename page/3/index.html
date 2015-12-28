@@ -212,6 +212,376 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/10635/" itemprop="url">
+                  10635 - Prince and Princess
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/10635/">
+              <span>Luckycat</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10635.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2013-06-13T00:00:00+08:00" content="2013-06-13">
+              2013-06-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-106/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 106</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1576" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>在一個 <span>$n\times{n}$</span><!-- Has MathJax --> 的棋盤，王子和公主玩一個遊戲。棋盤的格子以 <span>$1,2,3,\ldots{},n\times{n}$</span><!-- Has MathJax --> 來編號，如下圖：</p>
+<img src="/uniDog/images/106/p10635a.jpg">
+<p>王子從在格子 <span>$1$</span><!-- Has MathJax -->，跳了 <span>$p$</span><!-- Has MathJax --> 步之後抵達格子 n * n。他進入一個格子最多一次。所以如果我們用 <span>$x_i$</span><!-- Has MathJax --> 代表他 <span>$i$</span><!-- Has MathJax --> 個進入的格子，那 <span>$x_1,x_2,x_3,\ldots{},x_{p+1}$</span><!-- Has MathJax --> 都是不同的。請注意 <span>$x_1=1,x_{p+1}=n\times{n}$</span><!-- Has MathJax -->。公主也做類似的動作，從格子 <span>$1$</span><!-- Has MathJax --> 開始，跳了 <span>$q$</span><!-- Has MathJax --> 次後抵達格子 n * n。我們用 <span>$y_1,y_2,y_3,\ldots{},y_{q+1}$</span><!-- Has MathJax --> 來表示這過程經過的格子。同樣的這 <span>$q+1$</span><!-- Has MathJax --> 個數也都不相同。下面圖 2 為一個 3 * 3 的格子矩陣，王子和公主有不同的跳躍路徑。</p>
+<img src="/uniDog/images/106/p10635b.jpg">
+<p>王子的路徑：<span>$1 \rightarrow{7} \rightarrow{5} \rightarrow{4} \rightarrow{8} \rightarrow{3} \rightarrow{9}$</span><!-- Has MathJax --> (黑色箭頭)<br>公主的路徑：<span>$1 \rightarrow{4} \rightarrow{3} \rightarrow{5} \rightarrow{6} \rightarrow{2} \rightarrow{8} \rightarrow{9}$</span><!-- Has MathJax --> (白色箭頭)</p>
+<p>王子和公主的父親，也就是國王，看到他們玩的遊戲，他說：「為什麼要分開跳？你們是兄妹啊！忽略某些跳躍，使得你們總是在一起。」<br>假如王子忽略了他的第 2、第 3、第 6 跳，他的路徑變成 <span>$1 \rightarrow{4} \rightarrow{8} \rightarrow{9}$</span><!-- Has MathJax -->。假如公主忽略了她的第 3、第 4、第 5、第 6 跳，她的路徑變成 <span>$1 \rightarrow{4} \rightarrow{8} \rightarrow{9}$</span><!-- Has MathJax -->。這共同的路徑 (如圖 3) 就滿足了國王的要求。</p>
+<p>國王想要知道王子和公主可以一起移動的最長路徑是多少，你能告訴他嗎？</p>
+<h2 id="Input">Input</h2><p>輸入的第一列有一個整數，代表以下有多筆測資。<br>每筆測資的第一列有 3 個整數 <span>$n,p,q$</span><!-- Has MathJax --> (<span>$2\leq{n}\leq{250},1\leq{p,q}&lt; n\times{n}$</span><!-- Has MathJax -->)，其代表的意義如題目所述。接下來的一列有 <span>$p+1$</span><!-- Has MathJax --> 個整數，代表王子的路徑，再接下來的一列有 <span>$q+1$</span><!-- Has MathJax --> 個整數，代表公主的路徑。</p>
+<h2 id="Output">Output</h2><p>每組測資輸出這是第幾組測資以及王子和公主最長共同路徑是多長。輸出格式請參考 Sample Output。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">1</span>
+<span class="number">3</span> <span class="number">6</span> <span class="number">7</span>
+<span class="number">1</span> <span class="number">7</span> <span class="number">5</span> <span class="number">4</span> <span class="number">8</span> <span class="number">3</span> <span class="number">9</span>
+<span class="number">1</span> <span class="number">4</span> <span class="number">3</span> <span class="number">5</span> <span class="number">6</span> <span class="number">2</span> <span class="number">8</span> <span class="number">9</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Case <span class="number">1</span>: <span class="number">4</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/10306/" itemprop="url">
+                  10306 - e-Coins
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/10306/">
+              <span>許胖</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="/uniDog/problem/10306/" target="_blank">
+              <span>uniDog</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2013-01-13T12:34:00+08:00" content="2013-01-13">
+              2013-01-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-103/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 103</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1247" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>在 Department for Bills and Coins 中，現今貨幣制度提出新的擴展形式以適應新的經濟體系。將來一些被稱為 e-coin 的新貨幣會被製造出來，除了傳統的價值 (conventional value) 外，還會賦予稱為 InfoTechnological 的價值。當然，這種改良的目標就是為了落實經濟上的正義，尤其是針對那些為數眾多的網際網路公司 (dotcom company)，事實上，這些公司擁有很少的錢但卻擁有很多 IT 技術在裡面。因此，所有舊樣式的貨幣在新的制度下將會保持原本傳統的價值和零 InfoTechnological 值。</p>
+<p>為了成功在新的貨幣系統下做比較，因此引進一種叫做 e-modulus 的概念。他的計算方式是 <strong>SQRT(X*X+Y*Y)</strong>，其中 X 和 Y 分別是傳統價值和 InfoTechnological 值的總和，舉例來說，有 3 元的傳統價值和 4 元的 InfoTechnological 值的錢的 e-modulus 值將會是 5 元。請記得，你必須在算出 e-modulus 之前，先分別算出傳統價值和 InfoTechnological 值的總和。</p>
+<img src="/uniDog/images/103/p10306.jpg">
+<p>為了簡化 e-currency 這種措施，你被分派去寫一支程式。給你一個必須達到的 e-modulus 值和一列不同種類的 e-coin，計算最少需要多少 e-coin 來達到相應的 e-modulus 值。在這裡，每種 e-coin 在湊出相應的 e-modulus 時，e-coin 的使用數量上沒有限制。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/10306/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p12575/" itemprop="url">
+                  12575 - Sin Cos Problem
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p12575/">
+              <span>許胖</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="/uniDog/problem/p12575/" target="_blank">
+              <span>uniDog</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2012-12-06T10:39:00+08:00" content="2012-12-06">
+              2012-12-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-125/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 125</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4020" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>給你 A 和 B，你必須求出以下函數的最大值：<br><span>$F(\theta{})=A\times{\sin{\theta}}+B\times{\cos{\theta}}$</span><!-- Has MathJax --></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p12575/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/p12279/" itemprop="url">
                   12279 - Emoogle Balance
                 </a>
@@ -1146,413 +1516,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/10036/" itemprop="url">
-                  10036 - Divisibility
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/10036/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10036.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2012-09-06T00:00:00+08:00" content="2012-09-06">
-              2012-09-06
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 100</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=977" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>給你一序列 N 個整數，然後在數字之間插入加或減號，這樣可以得到不同的運算結果。例如：給你 4 個整數：17, 5, -21, 15，就會有 8 種不同的結果：</p>
-<pre><code><span class="number">17</span>    +    <span class="number">5</span>    +    -<span class="number">21</span>    +    <span class="number">15</span>    =    <span class="number">16</span>
-<span class="number">17</span>    +    <span class="number">5</span>    +    -<span class="number">21</span>    -    <span class="number">15</span>    =    -<span class="number">14</span>
-<span class="number">17</span>    +    <span class="number">5</span>    -    -<span class="number">21</span>    +    <span class="number">15</span>    =    <span class="number">58</span>
-<span class="number">17</span>    +    <span class="number">5</span>    -    -<span class="number">21</span>    -    <span class="number">15</span>    =    <span class="number">28</span>
-<span class="number">17</span>    -    <span class="number">5</span>    +    -<span class="number">21</span>    +    <span class="number">15</span>    =    <span class="number">6</span>
-<span class="number">17</span>    -    <span class="number">5</span>    +    -<span class="number">21</span>    -    <span class="number">15</span>    =    -<span class="number">24</span>
-<span class="number">17</span>    -    <span class="number">5</span>    -    -<span class="number">21</span>    +    <span class="number">15</span>    =    <span class="number">48</span>
-<span class="number">17</span>    -    <span class="number">5</span>    -    -<span class="number">21</span>    -    <span class="number">15</span>    =    <span class="number">18</span>
-</code></pre><p>假如其中任一運算的結果可以被 <span>$K$</span><!-- Has MathJax --> 整除，我們稱這一序列的整數是 「可被 K 整除的 (<strong>divisible</strong> by <em>K</em>)」，在上例中，此一序列可被 <span>$7$</span><!-- Has MathJax --> 整除 (<span>$17+5+-21-15=-14$</span><!-- Has MathJax -->)，但是無法被 <span>$5$</span><!-- Has MathJax --> 整除。</p>
-<p>你的任務是寫一個程式判斷一序列整數的可整除性。</p>
-<h2 id="Input">Input</h2><p>輸入一開始會有一個整數 <span>$M$</span><!-- Has MathJax --> 表示測試資料的組數。</p>
-<p>每組資料的第一列會有 2 個整數 <span>$N,K$</span><!-- Has MathJax --> (<span>$1\leq{N}\leq{10000}, 2\leq{K}\leq{100}$</span><!-- Has MathJax -->) 。第二列含有 <span>$N$</span><!-- Has MathJax --> 個整數，代表此序列中的 <span>$N$</span><!-- Has MathJax --> 個整數。每個數字的大小其絕對值不會超過 <span>$10000$</span><!-- Has MathJax -->。</p>
-<h2 id="Output">Output</h2><p>對每組測試資料，如果在這 <span>$N$</span><!-- Has MathJax --> 個整數之間任意插入 <code>+</code> 或 <code>-</code> 運算的結果可以被 <span>$K$</span><!-- Has MathJax --> 整除，請輸出 <code>Divisible</code>，否則請輸出 <code>Not divisible</code>。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
-<span class="number">4</span> <span class="number">7</span>
-<span class="number">17</span> <span class="number">5</span> -<span class="number">21</span> <span class="number">15</span>
-<span class="number">4</span> <span class="number">5</span>
-<span class="number">17</span> <span class="number">5</span> -<span class="number">21</span> <span class="number">15</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="keyword">Divisible</span>
-<span class="keyword">Not</span> divisible
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/11235/" itemprop="url">
-                  11235 - Frequent values
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/11235/">
-              <span>Purple People Eater</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://rubyacm.blogspot.tw/2011/12/11235-frequent-values.html" target="_blank">
-              <span>Ruby 兔</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2011-12-17T00:00:00+08:00" content="2011-12-17">
-              2011-12-17
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-112/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 112</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2176" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>給定一個有 <span>$n$</span><!-- Has MathJax --> 個整數的數列 <span>$a_1, a_2, \cdots{}, a_n$</span><!-- Has MathJax -->，且數列以非遞減的次序排列，並給定多組整數對 <span>$i, j$</span><!-- Has MathJax --> (<span>$1\leq{i}\leq{j}\leq{n}$</span><!-- Has MathJax -->)，請你從 <span>$a_i, \cdots{}, a_j$</span><!-- Has MathJax --> 中找出出現次數最多的數值共出現幾次。</p>
-<h2 id="Input">Input</h2><p>輸入有多組測試資料，每組資料的第一列有兩個整數 <span>$n, q$</span><!-- Has MathJax --> (<span>$1\leq{n, q}\leq{100000}$</span><!-- Has MathJax -->)。下一列有 <span>$n$</span><!-- Has MathJax --> 個以空白字元隔開的整數 <span>$a_1, a_2, \cdots{}, a_n$</span><!-- Has MathJax --> (<span>$-100000\leq{a_i}\leq{100000}$</span><!-- Has MathJax -->，其中 <span>$i$</span><!-- Has MathJax --> 為 <span>$1$</span><!-- Has MathJax --> 到 <span>$n$</span><!-- Has MathJax -->)，接下來有 <span>$q$</span><!-- Has MathJax --> 列每列表示一組 <span>$i, j$</span><!-- Has MathJax -->。</p>
-<p>最後一組測試資料以一列一個 <code>0</code> 表示測試資料結束。</p>
-<h2 id="Output">Output</h2><p>請對每次查詢的數對中找出其範圍內同一數值出現最多次的次數。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">10</span> <span class="number">3</span>
--<span class="number">1</span> -<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">3</span> <span class="number">10</span> <span class="number">10</span> <span class="number">10</span>
-<span class="number">2</span> <span class="number">3</span>
-<span class="number">1</span> <span class="number">10</span>
-<span class="number">5</span> <span class="number">10</span>
-<span class="number">0</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">1</span>
-<span class="number">4</span>
-<span class="number">3</span>
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/990/" itemprop="url">
-                  990 - Diving for Gold
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/990/">
-              <span>Purple People Eater</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://rubyacm.blogspot.tw/2011/12/990-diving-for-gold.html" target="_blank">
-              <span>Ruby 兔</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2011-12-17T00:00:00+08:00" content="2011-12-17">
-              2011-12-17
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-009/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 009</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=931" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>John 是一位寶物獵人，他知道附近海域所有沉在海裡的金幣的位置及深度，及其金幣的數量，不過他只帶了一個氧氣桶過來，所需的氧氣量可能不夠讓他將所有的寶物全都打撈上來，請你幫忙計算他最多可帶回多少金幣，需符合下列限制條件： </p>
-<ul>
-<li>金幣所在 <span>$n$</span><!-- Has MathJax --> 個不同的位置，以 <span>$\{(d_1,v_1), (d_2,v_2), \cdots{},(d_n,v_n)\}$</span><!-- Has MathJax --> 表示這 <span>$n$</span><!-- Has MathJax --> 個位置的 (深度, 金幣的數量)，<span>$n$</span><!-- Has MathJax --> 最大為 30。</li>
-<li>氧氧桶最多可使用 <span>$t$</span><!-- Has MathJax --> 秒，<span>$t$</span><!-- Has MathJax --> 最多 1000 秒。</li>
-<li>每一次潛下水面，他可帶回所有沉在該位置的金幣。</li>
-<li>下沉所需的時間 <span>${td}_i$</span><!-- Has MathJax --> 為 <span>$w\times{d_i}$</span><!-- Has MathJax -->，<span>$w$</span><!-- Has MathJax --> 為一常數。</li>
-<li>浮起所需的時間 <span>${ta}_i$</span><!-- Has MathJax --> 為 <span>$2w\times{d_i}$</span><!-- Has MathJax -->，<span>$w$</span><!-- Has MathJax --> 為一常數。</li>
-<li>輸入的所有數值皆為整數。</li>
-</ul>
-<h2 id="Input">Input</h2><p>輸入有多組測試資料，每組資料的第一列有兩個整數分別表示 <span>$t,w$</span><!-- Has MathJax -->，第二列有一個整數為 <span>$n$</span><!-- Has MathJax -->，接下來的 <span>$n$</span><!-- Has MathJax --> 列，每列有兩個整數分別表示金幣所在的深度 <span>$d_i$</span><!-- Has MathJax --> 及數量 <span>$v_i$</span><!-- Has MathJax -->。</p>
-<p>每組測試資料間有一空行隔開。</p>
-<h2 id="Output">Output</h2><p>請在每組測試資料的第一列輸出 John 可找到的所有金幣的數量，第二列輸出共需潛水幾次，之後的每一列輸出每次潛水的深度及帶回的金幣數量，其輸出順序需與輸入資料的金幣出現順序相同。</p>
-<p>請在每組輸出資料間以一列空行隔開。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">210</span> <span class="number">4</span>
-<span class="number">3</span>
-<span class="number">10</span> <span class="number">5</span>
-<span class="number">10</span> <span class="number">1</span>
-<span class="number">7</span> <span class="number">2</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">7</span>
-<span class="number">2</span>
-<span class="number">10</span> <span class="number">5</span>
-<span class="number">7</span> <span class="number">2</span>
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1599,7 +1562,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">197</span>
+              <span class="site-state-item-count">200</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1613,7 +1576,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

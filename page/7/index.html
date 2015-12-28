@@ -212,6 +212,413 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/p125/" itemprop="url">
+                  125 - Numbering Paths
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p125/">
+              <span>Purple People Eater</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://rubyacm.blogspot.tw/2011/05/125-numbering-paths.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2011-05-22T00:00:00+08:00" content="2011-05-22">
+              2011-05-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=61" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Background">Background</h2><p>由輸入資料產生出肯定或否定(yes or no)兩種答案的問題被稱為「判定性問題」(decision problems)。一個典型的判定性問題是NP-完備性問題(NP-complete problems)，這種問題並無法用一般通用而有效率的方法處理。有些問題與判定性問題一樣單純，不過要試著列舉出所有肯定的答案就很困難了(或至少會花很多時間)。</p>
+<p>這問題關於車輛在一個僅含單向道路的城市中，如何決定所有可能路徑的總數。</p>
+<h2 id="The_Problem">The Problem</h2><p>給定城市中所有由道路連接的交叉點，你必須寫一個程式決定每個交叉點之間所有可能路徑的總數，一條路徑是由一節點到另一節點之間所依序經過的道路集合。</p>
+<p>城市內的點由 0 開始被賦予編號，一條單向道路會由兩個節點來指定，例如 $ j \; k $ 表示由節點 j 到節點 k 的單向道路，注意，雙向道路可藉由定義兩條對向的道路來處理：$ j \; k $ 與 $ k \; j $ 。</p>
+<p>考慮一個有四個節點，並以以下四條單向道路所連結的城市：</p>
+<pre><code><span class="number">0</span>  <span class="number">1</span>
+<span class="number">0</span>  <span class="number">2</span>
+<span class="number">1</span>  <span class="number">2</span>
+<span class="number">2</span>  <span class="number">3</span>
+</code></pre><p>由 0 到 1 之間共有 1 條可能的路徑，由 0 到 2 之間共有 2 條可能的路徑($0\rightarrow 1\rightarrow 2$ 及 $0 \rightarrow 2$ )，由 0 到 3 有 2 條路徑，1 到 2 有 1 條，1到 3 有 1 條，2 到 3 有 1 條。<br>兩點之間的路徑可能存在有無限多條，例如上例中再增加一條由 3 到 2 的路徑，則由 0 到 2 的路徑選擇會變的有無限多條，因為可藉由 2 3 之間來來回回來增加路徑總數，因此路徑 $0\rightarrow 2\rightarrow 3\rightarrow 2\rightarrow 3\rightarrow 2$ 與路徑 $0\rightarrow 2\rightarrow 3\rightarrow 2$ 是不同的。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p125/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p123/" itemprop="url">
+                  123 - Searching Quickly
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p123/">
+              <span>Purple People Eater</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://rubyacm.blogspot.tw/2011/05/123-searching-quickly.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2011-05-21T00:00:00+08:00" content="2011-05-21">
+              2011-05-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=59" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>給你一組標題字串，並告訴你那些是相對不重要的字，請你寫一個程式找出標題字串中所有關鍵字(Key Word In Context)，並依照關鍵字的字典順序依序列出。</p>
+<p>關鍵字是除了所有不重要的字以外的字，而我們會給你那些不重要的字。</p>
+<p>例如，不重要的字若為：``the, of, and, as, a’’，且有四組標題列：</p>
+<pre><code>Descent <span class="keyword">of</span> <span class="keyword">Man</span>
+The Ascent <span class="keyword">of</span> <span class="keyword">Man</span>
+The Old <span class="keyword">Man</span> and The Sea
+A Portrait <span class="keyword">of</span> The Artist As a Young <span class="keyword">Man</span>
+</code></pre><p>而我們需要你依字典順序找出所有關鍵字後，把整個標題列出，並把關鍵字改為大寫：</p>
+<pre><code>                      <span class="operator">a</span> portrait <span class="operator">of</span> <span class="operator">the</span> ARTIST <span class="keyword">as</span> <span class="operator">a</span> young man
+                              <span class="operator">the</span> ASCENT <span class="operator">of</span> man
+                                  DESCENT <span class="operator">of</span> man
+                       descent <span class="operator">of</span> MAN
+                    <span class="operator">the</span> ascent <span class="operator">of</span> MAN
+                          <span class="operator">the</span> old MAN <span class="operator">and</span> <span class="operator">the</span> sea
+<span class="operator">a</span> portrait <span class="operator">of</span> <span class="operator">the</span> artist <span class="keyword">as</span> <span class="operator">a</span> young MAN
+                              <span class="operator">the</span> OLD man <span class="operator">and</span> <span class="operator">the</span> sea
+                                <span class="operator">a</span> PORTRAIT <span class="operator">of</span> <span class="operator">the</span> artist <span class="keyword">as</span> <span class="operator">a</span> young man
+              <span class="operator">the</span> old man <span class="operator">and</span> <span class="operator">the</span> SEA
+    <span class="operator">a</span> portrait <span class="operator">of</span> <span class="operator">the</span> artist <span class="keyword">as</span> <span class="operator">a</span> YOUNG man
+</code></pre>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p123/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/231/" itemprop="url">
+                  231 - Testing the CATCHER
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/231/">
+              <span>Purple People Eater</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://rubyacm.blogspot.tw/2011/05/10267-graphical-editor_20.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2011-05-20T00:00:00+08:00" content="2011-05-20">
+              2011-05-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-002/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 002</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=167" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>國防部的軍事武器承包商剛完成一種新式飛彈防禦系統的測試工作，該系統稱為 CATCHER，可以攔截朝我方發射過來的飛彈，該系統非常強大，有極佳的機動性及自我防禦能力，但它有一個缺點：雖然它能攔截的飛彈高度沒有上限，但是能攔截的飛彈高度只能比上一次攔截的高度更低或相等，它沒有足夠的動力攔截更高的飛彈。</p>
+<p>承包商所做的電腦模擬測試相當簡單，僅僅只做高度測試，也就是每隔一段時間就會有一顆欲攔截的飛彈，並顯示該飛彈可以被攔截到的高度，所有飛彈都是循序的。</p>
+<p>測試報告中只會循序顯示所模擬的飛彈高度，及所有這些飛彈中可以被 CATCHER 攔截到的總數。</p>
+<p>現在國防部需要驗證承包商所做的測試報告的正確性，你必須幫忙寫一個程式循序讀入多組飛彈高度，並計算 CATCHER 系統最多可攔截的飛彈總數，請注意到 CATCHER 系統本身的限制，當他選擇攔截某一顆飛彈之後，再也不能攔截更高的飛彈了。</p>
+<h2 id="Input">Input</h2><p>輸入包含多組測試資料，每組資料會有多非負整數，其值介於 0 ~ 32767 之間，用來表示飛彈的高度，測試資料的最後以 -1 表示該組資料結束，並非表示飛彈的高度。如果該組測試資料的第一個數值為 -1，表示測試資料結束。</p>
+<h2 id="Output">Output</h2><p>請輸出每組測試資料的編號 (<code>Test #1</code>、<code>Test #2</code>、…)，及在該組資料下 CATCHER 系統所能攔截到的最大飛彈總數，輸出的格式如下所示。並請注意每組輸出資料之間請以空行隔開。</p>
+<p>注意：每組測試資料的飛彈總數並沒有限制，所以一個效率不佳的演算法可能無法在時限內完成問題。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">389</span>
+<span class="number">207</span>
+<span class="number">155</span>
+<span class="number">300</span>
+<span class="number">299</span>
+<span class="number">170</span>
+<span class="number">158</span>
+<span class="number">65</span>
+-<span class="number">1</span>
+<span class="number">23</span>
+<span class="number">34</span>
+<span class="number">21</span>
+-<span class="number">1</span>
+-<span class="number">1</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Test <span class="preprocessor">#<span class="number">1</span>:</span>
+maximum possible interceptions: <span class="number">6</span>
+
+Test <span class="preprocessor">#<span class="number">2</span>:</span>
+maximum possible interceptions: <span class="number">2</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/900/" itemprop="url">
                   900 - Brick Wall Patterns
                 </a>
@@ -468,6 +875,125 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/p121/" itemprop="url">
+                  121 - Pipe Fitters
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p121/">
+              <span>Purple People Eater</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://rubyacm.blogspot.tw/2010/08/121-pipe-fitters.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2010-08-25T00:00:00+08:00" content="2010-08-25">
+              2010-08-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=57" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="Background">Background</h2><p>Filters(一種程式，用於資料過濾並重新格式化輸出)是UNIX系統上的一個重要的程式類別，而管線(pipe)是作業系統裡的一個概念，能讓資料在行程(processe)間流通(並使多個filter能輕易地串在一起)。</p>
+<p>本題討論如何使裝進容器內的管線(pipe)數量最大化，但這並非是一個裝箱問題 (bin packing problem)，而是一個 pipe fitting problem。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p121/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/p151/" itemprop="url">
                   151 - Power Crisis
                 </a>
@@ -546,125 +1072,6 @@
 <p>請寫出一個程式讀取 N 值，並計算達成條件要求的最小 m 值為何。</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/uniDog/problem/p151/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p121/" itemprop="url">
-                  121 - Pipe Fitters
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p121/">
-              <span>Purple People Eater</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://rubyacm.blogspot.tw/2010/08/121-pipe-fitters.html" target="_blank">
-              <span>Ruby 兔</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2010-08-25T00:00:00+08:00" content="2010-08-25">
-              2010-08-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=57" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="Background">Background</h2><p>Filters(一種程式，用於資料過濾並重新格式化輸出)是UNIX系統上的一個重要的程式類別，而管線(pipe)是作業系統裡的一個概念，能讓資料在行程(processe)間流通(並使多個filter能輕易地串在一起)。</p>
-<p>本題討論如何使裝進容器內的管線(pipe)數量最大化，但這並非是一個裝箱問題 (bin packing problem)，而是一個 pipe fitting problem。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p121/#more" rel="contents">
               閱讀全文 &raquo;
             </a>
           </div>
@@ -1065,366 +1472,6 @@ PREDA → {all predicates}
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p135/" itemprop="url">
-                  135 - No Rectangles
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p135/">
-              <span>Devymex</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://www.cnblogs.com/devymex/archive/2010/08/20/1804917.html" target="_blank">
-              <span>《程序控》</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2010-08-20T23:40:00+08:00" content="2010-08-20">
-              2010-08-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=71" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>想像一個n行n列的網格，我們要在每行每列都標註k個交點，使得這些交點中的任意4個所構成的矩形（如果可以構成矩形），都不存在與網格線平行的邊。比如 k = 2 和 n = 3 的情況，可能的解如下：</p>
-<img src="/uniDog/images/1/p135.png">
-<p>易知，對於任意的 k，n 的最小值為：$k^{2}-k+1$。更進一步來講，n 也不會比這個值更大。</p>
-<p>寫一個程序，計算所有 k ≤ 32 的解。 k-1 可能是0，1 或任何素數。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p135/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p132/" itemprop="url">
-                  132 - Bumpy Objects
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p132/">
-              <span>Devymex</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://www.cnblogs.com/devymex/archive/2010/08/20/1804606.html" target="_blank">
-              <span>《程序控》</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2010-08-20T19:26:00+08:00" content="2010-08-20">
-              2010-08-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=68" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>觀察上圖中的三個物體。它們均由多邊形表示，並給定其重心和各頂點的坐標。在上圖中，重心由黑色方塊表示。頂點的編號按逆時針方向依次給出。</p>
-<p>將一個物體的輪廓多邊形上某兩個頂點連成一條線段，且該線段未穿越多邊形的內部，然後通過旋轉多邊形使該線段達到水平，若重心在這條線段之上且位於線段兩端點之間，就認為該物體可以擺放平穩。一般情況下，物體有多個可以放穩的位置，每個穩定位置均由對應的線段（稱作“基線”）表示。一條基線會經過至少兩個多邊形上的點（即端點），基線就由這些點中最大的編號表示。</p>
-<p>寫一個程序計算出編號最小的基線。對於上圖中的物體，“object 1”要求的基線為 6，“object 2”為6，“square”為 2。你可以假設物體都是規則的，即不存在自相交的輪廓多邊形，但有可能是凹多邊形。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p132/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p137/" itemprop="url">
-                  137 - Polygons
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p137/">
-              <span>Devymex</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://www.cnblogs.com/devymex/archive/2010/08/20/1802911.html" target="_blank">
-              <span>《程序控》</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2010-08-20T14:12:00+08:00" content="2010-08-20">
-              2010-08-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=73" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>給定兩個可能相互重疊的凸多邊形。如果存在重疊，其重疊的角度和方向各異。你要寫一個程序讀入兩個凸多邊形各角點的坐標，併計算出二者“異或”得到的區域的面積，也就是在二者全部區域中僅存在其中一個多邊形的區域。要求的面積如下圖所示：</p>
-<img src="/uniDog/images/1/p137.png">
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p137/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1471,7 +1518,7 @@ PREDA → {all predicates}
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">197</span>
+              <span class="site-state-item-count">200</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1485,7 +1532,7 @@ PREDA → {all predicates}
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

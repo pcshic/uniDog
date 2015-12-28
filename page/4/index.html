@@ -212,6 +212,413 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/10036/" itemprop="url">
+                  10036 - Divisibility
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/10036/">
+              <span>Luckycat</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10036.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2012-09-06T00:00:00+08:00" content="2012-09-06">
+              2012-09-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 100</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=977" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>給你一序列 N 個整數，然後在數字之間插入加或減號，這樣可以得到不同的運算結果。例如：給你 4 個整數：17, 5, -21, 15，就會有 8 種不同的結果：</p>
+<pre><code><span class="number">17</span>    +    <span class="number">5</span>    +    -<span class="number">21</span>    +    <span class="number">15</span>    =    <span class="number">16</span>
+<span class="number">17</span>    +    <span class="number">5</span>    +    -<span class="number">21</span>    -    <span class="number">15</span>    =    -<span class="number">14</span>
+<span class="number">17</span>    +    <span class="number">5</span>    -    -<span class="number">21</span>    +    <span class="number">15</span>    =    <span class="number">58</span>
+<span class="number">17</span>    +    <span class="number">5</span>    -    -<span class="number">21</span>    -    <span class="number">15</span>    =    <span class="number">28</span>
+<span class="number">17</span>    -    <span class="number">5</span>    +    -<span class="number">21</span>    +    <span class="number">15</span>    =    <span class="number">6</span>
+<span class="number">17</span>    -    <span class="number">5</span>    +    -<span class="number">21</span>    -    <span class="number">15</span>    =    -<span class="number">24</span>
+<span class="number">17</span>    -    <span class="number">5</span>    -    -<span class="number">21</span>    +    <span class="number">15</span>    =    <span class="number">48</span>
+<span class="number">17</span>    -    <span class="number">5</span>    -    -<span class="number">21</span>    -    <span class="number">15</span>    =    <span class="number">18</span>
+</code></pre><p>假如其中任一運算的結果可以被 <span>$K$</span><!-- Has MathJax --> 整除，我們稱這一序列的整數是 「可被 K 整除的 (<strong>divisible</strong> by <em>K</em>)」，在上例中，此一序列可被 <span>$7$</span><!-- Has MathJax --> 整除 (<span>$17+5+-21-15=-14$</span><!-- Has MathJax -->)，但是無法被 <span>$5$</span><!-- Has MathJax --> 整除。</p>
+<p>你的任務是寫一個程式判斷一序列整數的可整除性。</p>
+<h2 id="Input">Input</h2><p>輸入一開始會有一個整數 <span>$M$</span><!-- Has MathJax --> 表示測試資料的組數。</p>
+<p>每組資料的第一列會有 2 個整數 <span>$N,K$</span><!-- Has MathJax --> (<span>$1\leq{N}\leq{10000}, 2\leq{K}\leq{100}$</span><!-- Has MathJax -->) 。第二列含有 <span>$N$</span><!-- Has MathJax --> 個整數，代表此序列中的 <span>$N$</span><!-- Has MathJax --> 個整數。每個數字的大小其絕對值不會超過 <span>$10000$</span><!-- Has MathJax -->。</p>
+<h2 id="Output">Output</h2><p>對每組測試資料，如果在這 <span>$N$</span><!-- Has MathJax --> 個整數之間任意插入 <code>+</code> 或 <code>-</code> 運算的結果可以被 <span>$K$</span><!-- Has MathJax --> 整除，請輸出 <code>Divisible</code>，否則請輸出 <code>Not divisible</code>。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
+<span class="number">4</span> <span class="number">7</span>
+<span class="number">17</span> <span class="number">5</span> -<span class="number">21</span> <span class="number">15</span>
+<span class="number">4</span> <span class="number">5</span>
+<span class="number">17</span> <span class="number">5</span> -<span class="number">21</span> <span class="number">15</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="keyword">Divisible</span>
+<span class="keyword">Not</span> divisible
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/990/" itemprop="url">
+                  990 - Diving for Gold
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/990/">
+              <span>Purple People Eater</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://rubyacm.blogspot.tw/2011/12/990-diving-for-gold.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2011-12-17T00:00:00+08:00" content="2011-12-17">
+              2011-12-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-009/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 009</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=931" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>John 是一位寶物獵人，他知道附近海域所有沉在海裡的金幣的位置及深度，及其金幣的數量，不過他只帶了一個氧氣桶過來，所需的氧氣量可能不夠讓他將所有的寶物全都打撈上來，請你幫忙計算他最多可帶回多少金幣，需符合下列限制條件： </p>
+<ul>
+<li>金幣所在 <span>$n$</span><!-- Has MathJax --> 個不同的位置，以 <span>$\{(d_1,v_1), (d_2,v_2), \cdots{},(d_n,v_n)\}$</span><!-- Has MathJax --> 表示這 <span>$n$</span><!-- Has MathJax --> 個位置的 (深度, 金幣的數量)，<span>$n$</span><!-- Has MathJax --> 最大為 30。</li>
+<li>氧氧桶最多可使用 <span>$t$</span><!-- Has MathJax --> 秒，<span>$t$</span><!-- Has MathJax --> 最多 1000 秒。</li>
+<li>每一次潛下水面，他可帶回所有沉在該位置的金幣。</li>
+<li>下沉所需的時間 <span>${td}_i$</span><!-- Has MathJax --> 為 <span>$w\times{d_i}$</span><!-- Has MathJax -->，<span>$w$</span><!-- Has MathJax --> 為一常數。</li>
+<li>浮起所需的時間 <span>${ta}_i$</span><!-- Has MathJax --> 為 <span>$2w\times{d_i}$</span><!-- Has MathJax -->，<span>$w$</span><!-- Has MathJax --> 為一常數。</li>
+<li>輸入的所有數值皆為整數。</li>
+</ul>
+<h2 id="Input">Input</h2><p>輸入有多組測試資料，每組資料的第一列有兩個整數分別表示 <span>$t,w$</span><!-- Has MathJax -->，第二列有一個整數為 <span>$n$</span><!-- Has MathJax -->，接下來的 <span>$n$</span><!-- Has MathJax --> 列，每列有兩個整數分別表示金幣所在的深度 <span>$d_i$</span><!-- Has MathJax --> 及數量 <span>$v_i$</span><!-- Has MathJax -->。</p>
+<p>每組測試資料間有一空行隔開。</p>
+<h2 id="Output">Output</h2><p>請在每組測試資料的第一列輸出 John 可找到的所有金幣的數量，第二列輸出共需潛水幾次，之後的每一列輸出每次潛水的深度及帶回的金幣數量，其輸出順序需與輸入資料的金幣出現順序相同。</p>
+<p>請在每組輸出資料間以一列空行隔開。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">210</span> <span class="number">4</span>
+<span class="number">3</span>
+<span class="number">10</span> <span class="number">5</span>
+<span class="number">10</span> <span class="number">1</span>
+<span class="number">7</span> <span class="number">2</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">7</span>
+<span class="number">2</span>
+<span class="number">10</span> <span class="number">5</span>
+<span class="number">7</span> <span class="number">2</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/11235/" itemprop="url">
+                  11235 - Frequent values
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/11235/">
+              <span>Purple People Eater</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://rubyacm.blogspot.tw/2011/12/11235-frequent-values.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2011-12-17T00:00:00+08:00" content="2011-12-17">
+              2011-12-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-112/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 112</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2176" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>給定一個有 <span>$n$</span><!-- Has MathJax --> 個整數的數列 <span>$a_1, a_2, \cdots{}, a_n$</span><!-- Has MathJax -->，且數列以非遞減的次序排列，並給定多組整數對 <span>$i, j$</span><!-- Has MathJax --> (<span>$1\leq{i}\leq{j}\leq{n}$</span><!-- Has MathJax -->)，請你從 <span>$a_i, \cdots{}, a_j$</span><!-- Has MathJax --> 中找出出現次數最多的數值共出現幾次。</p>
+<h2 id="Input">Input</h2><p>輸入有多組測試資料，每組資料的第一列有兩個整數 <span>$n, q$</span><!-- Has MathJax --> (<span>$1\leq{n, q}\leq{100000}$</span><!-- Has MathJax -->)。下一列有 <span>$n$</span><!-- Has MathJax --> 個以空白字元隔開的整數 <span>$a_1, a_2, \cdots{}, a_n$</span><!-- Has MathJax --> (<span>$-100000\leq{a_i}\leq{100000}$</span><!-- Has MathJax -->，其中 <span>$i$</span><!-- Has MathJax --> 為 <span>$1$</span><!-- Has MathJax --> 到 <span>$n$</span><!-- Has MathJax -->)，接下來有 <span>$q$</span><!-- Has MathJax --> 列每列表示一組 <span>$i, j$</span><!-- Has MathJax -->。</p>
+<p>最後一組測試資料以一列一個 <code>0</code> 表示測試資料結束。</p>
+<h2 id="Output">Output</h2><p>請對每次查詢的數對中找出其範圍內同一數值出現最多次的次數。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">10</span> <span class="number">3</span>
+-<span class="number">1</span> -<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">3</span> <span class="number">10</span> <span class="number">10</span> <span class="number">10</span>
+<span class="number">2</span> <span class="number">3</span>
+<span class="number">1</span> <span class="number">10</span>
+<span class="number">5</span> <span class="number">10</span>
+<span class="number">0</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">1</span>
+<span class="number">4</span>
+<span class="number">3</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/11310/" itemprop="url">
                   11310 - DELIVERY DEBACLE
                 </a>
@@ -307,6 +714,255 @@
 </code></pre>
             
           </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p148/" itemprop="url">
+                  148 - Anagram checker
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p148/">
+              <span>Purple People Eater</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://rubyacm.blogspot.tw/2011/10/148-anagram-checker.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2011-10-22T00:00:00+08:00" content="2011-10-22">
+              2011-10-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=84" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>重新排列一段文字的字母而得到另一段文字有時候還蠻有趣的，例如重組原始文字：”WILLIAM SHAKESPEARE” 可得到重組字：”SPEAK REALISM AWHILE”。</p>
+<p>本題請你寫一個程式讀取一部字典及數列文字，請你從字典中選出一些單字，該組單字的字母經過重新排列後可組成原始的文字，請你從字典中找出所有可能的單字組合，且勿與原始的文字相同，若不存在任何一組重組字，請不做任何輸出，甚至連一列空行也不輸出。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p148/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p129/" itemprop="url">
+                  129 - Krypton Factor
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p129/">
+              <span>Purple People Eater</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://rubyacm.blogspot.tw/2011/10/129-krypton-factor.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2011-10-22T00:00:00+08:00" content="2011-10-22">
+              2011-10-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=65" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>在一個字串中如果相同的兩個子字串相鄰地靠在一起，我們稱該字串為”easy”，否則稱為”hard”。<br>下例為easy字串：</p>
+<ul>
+<li>BB</li>
+<li>ABCDACABCAB</li>
+<li>ABCDABCD</li>
+</ul>
+<p>下例為hard字串：</p>
+<ul>
+<li>D</li>
+<li>DC</li>
+<li>ABDAB</li>
+<li>CBABCBA</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p129/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -465,8 +1121,8 @@
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p129/" itemprop="url">
-                  129 - Krypton Factor
+                <a class="post-title-link" href="/uniDog/problem/p139/" itemprop="url">
+                  139 - Telephone Tangles
                 </a>
               
             
@@ -475,14 +1131,14 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p129/">
+            <a href="/uniDog/problem/p139/">
               <span>Purple People Eater</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://rubyacm.blogspot.tw/2011/10/129-krypton-factor.html" target="_blank">
+            <a href="http://rubyacm.blogspot.tw/2011/10/139-telephone-tangles.html" target="_blank">
               <span>Ruby 兔</span>
             </a>
           </span>
@@ -514,7 +1170,7 @@
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=65" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=75" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -538,21 +1194,10 @@
 
       
         
-          <p>在一個字串中如果相同的兩個子字串相鄰地靠在一起，我們稱該字串為”easy”，否則稱為”hard”。<br>下例為easy字串：</p>
-<ul>
-<li>BB</li>
-<li>ABCDACABCAB</li>
-<li>ABCDABCD</li>
-</ul>
-<p>下例為hard字串：</p>
-<ul>
-<li>D</li>
-<li>DC</li>
-<li>ABDAB</li>
-<li>CBABCBA</li>
-</ul>
+          <p>有一間公司想要控管員工撥打私人電話的電話費成本，所有通話會被記錄下來，包含撥打的號碼(最多 15 位數字)、通話時間。請你寫一個程式處理通話記錄，並整理成一份報表。</p>
+<p>國際電話號碼以兩個零開頭(00)，接著一組國碼(1~3位數)，最後再接著一組用戶號碼(4~10位數)。國內長途電話號碼以一個零開頭(0)， 接著一組區碼(1~5位數)，最後再接著一組用戶號碼(4~7位數)。每通的通話費取決於所撥打的地區與通話時間。國內短途電話號碼以任何非零數字開頭，且通話費用為零。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p129/#more" rel="contents">
+            <a class="btn" href="/uniDog/problem/p139/#more" rel="contents">
               閱讀全文 &raquo;
             </a>
           </div>
@@ -827,642 +1472,6 @@ Can <span class="keyword">be</span> divided.
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p139/" itemprop="url">
-                  139 - Telephone Tangles
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p139/">
-              <span>Purple People Eater</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://rubyacm.blogspot.tw/2011/10/139-telephone-tangles.html" target="_blank">
-              <span>Ruby 兔</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2011-10-22T00:00:00+08:00" content="2011-10-22">
-              2011-10-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=75" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>有一間公司想要控管員工撥打私人電話的電話費成本，所有通話會被記錄下來，包含撥打的號碼(最多 15 位數字)、通話時間。請你寫一個程式處理通話記錄，並整理成一份報表。</p>
-<p>國際電話號碼以兩個零開頭(00)，接著一組國碼(1~3位數)，最後再接著一組用戶號碼(4~10位數)。國內長途電話號碼以一個零開頭(0)， 接著一組區碼(1~5位數)，最後再接著一組用戶號碼(4~7位數)。每通的通話費取決於所撥打的地區與通話時間。國內短途電話號碼以任何非零數字開頭，且通話費用為零。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p139/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p148/" itemprop="url">
-                  148 - Anagram checker
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p148/">
-              <span>Purple People Eater</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://rubyacm.blogspot.tw/2011/10/148-anagram-checker.html" target="_blank">
-              <span>Ruby 兔</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2011-10-22T00:00:00+08:00" content="2011-10-22">
-              2011-10-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=84" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>重新排列一段文字的字母而得到另一段文字有時候還蠻有趣的，例如重組原始文字：”WILLIAM SHAKESPEARE” 可得到重組字：”SPEAK REALISM AWHILE”。</p>
-<p>本題請你寫一個程式讀取一部字典及數列文字，請你從字典中選出一些單字，該組單字的字母經過重新排列後可組成原始的文字，請你從字典中找出所有可能的單字組合，且勿與原始的文字相同，若不存在任何一組重組字，請不做任何輸出，甚至連一列空行也不輸出。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p148/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/10130/" itemprop="url">
-                  10130 - SuperSale
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/10130/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10130.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2011-10-06T00:00:00+08:00" content="2011-10-06">
-              2011-10-06
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-101/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 101</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1071" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>在 SuperHiperMarket 有一個超級拍賣。每一個人每樣商品只能拿一個，也就是一台電視機，一根紅蘿蔔，一台腳踏車，但是一個人不能拿 2 台電視機。現在有一家人到超級拍賣會去。每個人可以盡可能的拿商品，只要他搬的動。我們手上有所有商品的價格及重量，我們也知道這家人每個人最多能搬的重量。請問這家人能從超級拍賣會搬到的最大價格是多少？</p>
-<h2 id="Input">Input</h2><p>輸入的第一列有一個整數代表以下有多少組測試資料。</p>
-<p>每組測試資料的第一列有一個整數 <span>$N$</span><!-- Has MathJax --> (<span>$1\leq{N}\leq{1000}$</span><!-- Has MathJax -->) 代表有多少種商品。接下來的 <span>$N$</span><!-- Has MathJax --> 列每列有 <span>$2$</span><!-- Has MathJax --> 個整數 <span>$P$</span><!-- Has MathJax --> 和 <span>$W$</span><!-- Has MathJax -->，分別代表該項商品的價格和重量 (<span>$1\leq{P}\leq{1000}, 1\leq{W}\leq{30}$</span><!-- Has MathJax -->)。再下一列有一個整數 <span>$G$</span><!-- Has MathJax --> 代表這家共有多少人，再接下來的 <span>$G$</span><!-- Has MathJax --> 列每列有一個整數 <span>$MW$</span><!-- Has MathJax --> (<span>$1\leq{MW}\leq{30}$</span><!-- Has MathJax -->) 代表某個人最多能搬的重量。請參考 Sample Input。</p>
-<h2 id="Output">Output</h2><p>每組測試資料輸出這個家庭能搬到的最大價格是多少。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
-<span class="number">3</span>
-<span class="number">72</span> <span class="number">17</span>
-<span class="number">44</span> <span class="number">23</span>
-<span class="number">31</span> <span class="number">24</span>
-<span class="number">1</span>
-<span class="number">26</span>
-<span class="number">6</span>
-<span class="number">64</span> <span class="number">26</span>
-<span class="number">85</span> <span class="number">22</span>
-<span class="number">52</span> <span class="number">4</span>
-<span class="number">99</span> <span class="number">18</span>
-<span class="number">39</span> <span class="number">13</span>
-<span class="number">54</span> <span class="number">9</span>
-<span class="number">4</span>
-<span class="number">23</span>
-<span class="number">20</span>
-<span class="number">20</span>
-<span class="number">26</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">72</span>
-<span class="number">514</span>
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p11332/" itemprop="url">
-                  11332 - Summing Digits
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p11332/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q11332.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2011-10-03T00:00:00+08:00" content="2011-10-03">
-              2011-10-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-113/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 113</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2307" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>對一個正整數 n，f(n) 表示 n 以十進位表示時所有位數的和。顯而易見地，數列 n, f(n), f(f(n)), f(f(f(n))), …一直重覆下去最後會變成一個一位數的整數。這個一位數字以 g(n) 表示。</p>
-<p>例如，若 n = 1234567892，則：</p>
-<p>f(n) = 1+2+3+4+5+6+7+8+9+2 = 47</p>
-<p>f(f(n)) = 4+7 = 11</p>
-<p>f(f(f(n))) = 1+1 = 2</p>
-<p>因此， g(1234567892) = 2。</p>
-<img src="/uniDog/images/113/p11332.png">
-<h2 id="Input">Input</h2><p>每筆測試資料一列。每列都有一個大不於 2,000,000,000 的正整數 n。當 n = 0 時代表輸入結束，不用輸出 n = 0 這筆資料。請參考 Sample Input。</p>
-<h2 id="Output">Output</h2><p>每筆測試資料輸出一列 g(n)。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
-<span class="number">11</span>
-<span class="number">47</span>
-<span class="number">1234567892</span>
-<span class="number">0</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">2</span>
-<span class="number">2</span>
-<span class="number">2</span>
-<span class="number">2</span>
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p143/" itemprop="url">
-                  143 - Orchard Trees
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p143/">
-              <span>B88000005</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://zerojudge.tw/ShowProblem?problemid=d135" target="_blank">
-              <span>ZeroJudge</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2011-09-21T00:00:00+08:00" content="2011-09-21">
-              2011-09-21
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=79" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>一個農夫種植一個長方形的果園，果園中每棵樹木的間隔皆相同。因此，樹木形成一個長方形的網格，假設樹木是整數座標，則座標的原點是在左下角，如下圖：</p>
-<img src="/uniDog/images/1/p143.png">
-<p>我們現在有一些三角形柵欄，三角形柵欄的頂點可在的座標範圍0.0至100.0，而樹木的座標範圍則在 1 至 99。上圖有兩個柵欄。</p>
-<p>農夫要求你編寫一個程式，算出有多少樹木是包含在三角形柵欄內的。不考慮樹的大小，若樹在柵欄上，則當做樹在柵欄內。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p143/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1509,7 +1518,7 @@ Can <span class="keyword">be</span> divided.
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">197</span>
+              <span class="site-state-item-count">200</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1523,7 +1532,7 @@ Can <span class="keyword">be</span> divided.
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

@@ -212,6 +212,458 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/11423/" itemprop="url">
+                  11423 - Cache Simulator
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/11423/">
+              <span>許胖</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="/uniDog/problem/11423/" target="_blank">
+              <span>uniDog</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2015-12-22T03:29:00+08:00" content="2015-12-22">
+              2015-12-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-114/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 114</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2418" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 <strong>Hit</strong>)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體鍾讀取進來，計算機架構師總是會去參考快取的失誤率 (每一百次有多少次資料不在快取中)。</p>
+<p>Cache is a special type of memory providing very small latency for accessing. The basic idea of using cache is to keep recently used data close to processors. So, modern processors use small cache along with large main memory. Program performance depends on the cache performance. If data is found in cache (Hit), execution can proceed normally. On the other hand if data is not found in cache, execution stalls until that data is fetched from main memory. Computer architects always looks for miss rate of cache (# of misses per 100 accesses).</p>
+<p>當一次失誤發生時，新的資料要被放進快取中，而某些舊的資料就要從快取當中移除，這裡有幾個決策法來選擇要移除的資料，一個在計算機系統中最普遍的方法叫做 LRU (最少使用替換演算法，Least Recently Used)</p>
+<p>When a miss occurs, the new data is kept in the cache and some existing data is removed from cache. There are several policies to select which one to evict. A common technique used in any computer systems is LRU (Least Recently Used). According to this scheme, the data that has not been used for longest time is evicted. Let us explain how this scheme works Assume a cache with 4 entries. So, if the processor accesses data 1, 2, 3, 4, 5, 2, 3, 99, 2, 5, 4 the following things will occur</p>
+<p>Here for 11 data references, we have 7 misses. In this problem you have to find the number of misses for different cache sizes. You will be given data references in several ways</p>
+<p>a) <code>ADDR x</code>：Processor will access data x<br>b) <code>RANGE b y n</code>：Processor will access all data references in the form b + y ∗ k, where k is 0 to n − 1</p>
+<p>Your will also be given commands <code>STAT</code> to print the number of misses for each cache (excluding the misses occurred before last <code>STAT</code> command). The above example can be abstracted in the following way</p>
+<h2 id="Input">Input</h2><p>Your program starts with a positive integer N (1 ≤ N ≤ 30), which is the number of caches. The next line contains size of each cache (in increasing order). Cache size will be at least 2 but not exceeding 220.</p>
+<p>The next few lines will contain any of ‘RANGE’, ‘ADDR’, or ‘STAT’. The last line will contain ‘STAT’. Total number of data references (all data accessed by processor) will not exceed 107. For the sample input, total number of data references is 30 (5+2+1+1+2+10+5+4). Also, the processor uses 24-bit address, no data reference will exceed 224 − 1 and will be non-negative. The value of b, y, n (in ‘RANGE’), and x (in ‘ADDR’) will be consistent with all restrictions. Input is terminated by a line containing ‘END’. The input file has around 20000 lines of inputs.</p>
+<h2 id="Output">Output</h2><p>對於每個 <code>STAT</code> 指令，。</p>
+<p>For each STAT command just print the numbers of misses (as described above) in a line.</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
+<span class="number">4</span> <span class="number">8</span>
+RANGE <span class="number">1</span> <span class="number">1</span> <span class="number">5</span>
+RANGE <span class="number">2</span> <span class="number">1</span> <span class="number">2</span>
+ADDR <span class="number">99</span>
+STAT
+ADDR <span class="number">2</span>
+RANGE <span class="number">5</span> -<span class="number">1</span> <span class="number">2</span>
+STAT
+RANGE <span class="number">0</span> <span class="number">10000</span> <span class="number">10</span>
+RANGE <span class="number">0</span> <span class="number">20000</span> <span class="number">5</span>
+RANGE <span class="number">0</span> <span class="number">30000</span> <span class="number">4</span>
+STAT
+END
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">6</span> <span class="number">6</span>
+<span class="number">1</span> <span class="number">0</span>
+<span class="number">18</span> <span class="number">13</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/11402/" itemprop="url">
+                  11402 - Ahoy, Pirates!
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/11402/">
+              <span>許胖</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="/uniDog/problem/11402/" target="_blank">
+              <span>uniDog</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2015-12-21T23:31:50+08:00" content="2015-12-21">
+              2015-12-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-114/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 114</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2397" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>在遙遠的大海賊時代，海盜大陸 (Pirate Land) 有著兩批海盜集團，稱為「西印度海盜」(Buccaneer) 和「巴巴利海盜」(Barbary)。每個海盜的身分並不是固定的，有時一個海盜被對方的海盜集團攻擊後，他的身分就會變成攻擊者的身分。突然有一天，一位魔法師出現在海盜大陸，只要他念一聲咒語，他就可以隨意地變換海盜的身分，這個過程稱為「轉移」(mutating)。</p>
+<p>大陸上有 <span>$N$</span><!-- Has MathJax --> 個海盜，每個海盜的編號依序為 <span>$0$</span><!-- Has MathJax --> 到 <span>$N-1$</span><!-- Has MathJax -->，大魔法師可以轉移連續編號的海盜變成某種海盜。</p>
+<p>假設有 100 個巴巴利海盜在海盜大陸上，接著魔法師可施展一個魔法，把編號 10 到 33 的海盜變成西印度海盜，此時有 24 個西印度海盜和 76 個巴巴利海盜。</p>
+<p>魔法師施展魔法的速度很快，這讓神開始不開心，因為神比較偏好西印度海盜，因此會問魔法師：「告訴我，在編號 2 到 30 號之間有幾個西印度海盜？」現在，魔法師陷入苦思，因為他只善於施法，而不是計數 XD。</p>
+<p>於是聰明的魔法師去地球抓了一個聰明的人，但很不幸的就是你！因此你必須去回答神的問題。</p>
+<h2 id="Input">Input</h2><p>輸入的第一行包含測資組數 <span>$T$</span><!-- Has MathJax -->，接著對於每筆測資：</p>
+<p>第一部分描述海盜大陸，最多會有 <span>$N$</span><!-- Has MathJax --> (<span>$1\leq{N}\leq{1024000}$</span><!-- Has MathJax -->) 個海盜，每個海盜不是西印度海盜，就是巴巴利海盜，西印度海盜以 <code>1</code> 表示、巴巴利海盜以 <code>0</code> 表示。所有海盜種類的資訊會以一系列的資料表示。</p>
+<p>此部分第一行有一個整數 <span>$M$</span><!-- Has MathJax --> (<span>$M\leq{100}$</span><!-- Has MathJax -->)，接下來有 <span>$M$</span><!-- Has MathJax --> 組，每一組有兩行，每組第一行有個整數 <span>$T$</span><!-- Has MathJax -->，另一行是一個非空字串 <strong>Pirates</strong> (由 <code>0</code> 和 <code>1</code> 組成，<code>0</code> 代表巴巴利、<code>1</code> 代表西印度，長度最長為 50)，代表 <strong>Pirates</strong> 字串要重複 <span>$T$</span><!-- Has MathJax --> 次。接著串接起這 <span>$M$</span><!-- Has MathJax --> 組資料就是代表海盜種類的資訊。</p>
+<p>第二部分的輸入包含了多筆詢問，此部分第一行有一整數 <span>$Q$</span><!-- Has MathJax --> 代表 <span>$Q$</span><!-- Has MathJax --> 筆詢問，接下來的 <span>$Q$</span><!-- Has MathJax --> (<span>$1\leq{Q}\leq{1000}$</span><!-- Has MathJax -->) 行代表每筆詢問，每個詢問有一個字串，<code>F</code>、<code>E</code>、<code>I</code> 或 <code>S</code>，和兩個代表編號的整數 <code>a</code> 和 <code>b</code>，以下是每個詢問的意思：</p>
+<ul>
+<li><code>F a b</code> 代表把編號從 a 到 b 的海盜轉移成西印度海盜</li>
+<li><code>E a b</code> 代表把編號從 a 到 b 的海盜轉移成巴巴利海盜</li>
+<li><code>I a b</code> 代表把編號從 a 到 b 的海盜轉移成另一種海盜</li>
+<li><code>S a b</code> 代表「神之查詢」神會問一個問題：「告訴我，在區間 a 到 b 之間有多少個西印度海盜？」</li>
+</ul>
+<p>(<span>$a\leq{b}$</span><!-- Has MathJax -->, <span>$0\leq{a} &lt; n$</span><!-- Has MathJax -->, <span>$0\leq{b} &lt; n$</span><!-- Has MathJax -->, 編號範圍是有包含 <span>$[a, b]$</span><!-- Has MathJax -->)</p>
+<h2 id="Output">Output</h2><p>對於每筆測資，輸出 <code>Case #:</code>，而對於每組神之查詢則輸出 <code>Q#:</code>，請參考 Sample Output。</p>
+<p><strong>解釋：</strong><br>Case 1：<br>海盜大陸長這樣 (<span>$N=18$</span><!-- Has MathJax -->)</p>
+<pre><code><span class="number">101010101010001000</span>
+</code></pre><p>在神的第一次查詢前，樣子如下</p>
+<pre><code><span class="number">000000111111111111</span>
+</code></pre><p>Case 2：<br>海盜大陸長這樣 (<span>$N=9$</span><!-- Has MathJax -->)</p>
+<pre><code><span class="number">111000000</span>
+</code></pre><h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
+<span class="number">2</span>
+<span class="number">5</span>
+<span class="number">10</span>
+<span class="number">2</span>
+<span class="number">1000</span>
+<span class="number">5</span>
+F <span class="number">0</span> <span class="number">17</span>
+I <span class="number">0</span> <span class="number">5</span>
+S <span class="number">1</span> <span class="number">10</span>
+E <span class="number">4</span> <span class="number">9</span>
+S <span class="number">2</span> <span class="number">10</span>
+<span class="number">3</span>
+<span class="number">3</span>
+<span class="number">1</span>
+<span class="number">4</span>
+<span class="number">0</span>
+<span class="number">2</span>
+<span class="number">0</span>
+<span class="number">2</span>
+I <span class="number">0</span> <span class="number">2</span>
+S <span class="number">0</span> <span class="number">8</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Case <span class="number">1</span>:
+Q1: <span class="number">5</span>
+Q2: <span class="number">1</span>
+Case <span class="number">2</span>:
+Q1: <span class="number">0</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/11297/" itemprop="url">
+                  11297 - Census
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/11297/">
+              <span>許胖</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="/uniDog/problem/11297/" target="_blank">
+              <span>uniDog</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2015-12-21T19:38:11+08:00" content="2015-12-21">
+              2015-12-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-112/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 112</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2272" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>今年，我們遇到了很多人口統計的問題，因為在有些城市中有許多移民，或者人口增長非常快。每一年，計數成員協會 (Association for Counting Members, ACM) 在每個區域實施人口普查，這個國家被切割成 <span>$N^2$</span><!-- Has MathJax --> 個區域，由 <span>$N\times{N}$</span><!-- Has MathJax --> 的網格所組成。你的任務是找出某些區域中最小與最大人口數，因為一年當中會改變的人口數並不是很巨大，因此用一個數字來表示由移民而改變的人口數。</p>
+<h2 id="Input">Input</h2><p>第一行有一個整數 <span>$N$</span><!-- Has MathJax --> (<span>$0\leq{N}\leq{500}$</span><!-- Has MathJax -->)，接著有 <span>$N$</span><!-- Has MathJax --> 行，每行有 <span>$N$</span><!-- Has MathJax --> 個數字，代表城市 <span>$C[i, j]$</span><!-- Has MathJax --> 的人口數。接著有一個數字 <span>$Q$</span><!-- Has MathJax --> (<span>$Q\leq{40000}$</span><!-- Has MathJax -->)，代表接下來有 <span>$Q$</span><!-- Has MathJax --> 筆詢問。</p>
+<p>詢問有兩種可能：</p>
+<ul>
+<li><code>q x1 y1 x2 y2</code> 代表左上角和右下角的座標，你必須計算區間內最大與最小人口數。</li>
+<li><code>c x y v</code> 代表城市 <span>$C[i,j]$</span><!-- Has MathJax --> 的人口改變了 <span>$v$</span><!-- Has MathJax -->。</li>
+</ul>
+<h2 id="Output">Output</h2><p>對於每筆 <code>q x1 y1 x2 y2</code> 的詢問，印出有最大以及最小人口數的一行，中間以空白分隔。</p>
+<p><strong>注意:</strong> 只有一筆測資。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span>
+<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span>
+<span class="number">0</span> <span class="number">9</span> <span class="number">2</span> <span class="number">1</span> <span class="number">3</span>
+<span class="number">0</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">1</span>
+<span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">5</span>
+<span class="number">8</span> <span class="number">5</span> <span class="number">3</span> <span class="number">1</span> <span class="number">4</span>
+<span class="number">4</span>
+q <span class="number">1</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span>
+c <span class="number">2</span> <span class="number">3</span> <span class="number">10</span>
+q <span class="number">1</span> <span class="number">1</span> <span class="number">5</span> <span class="number">5</span>
+q <span class="number">1</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">9</span> <span class="number">0</span>
+<span class="number">10</span> <span class="number">0</span>
+<span class="number">9</span> <span class="number">2</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/p11054/" itemprop="url">
                   11054 - Wine trading in Gergovia
                 </a>
@@ -1130,379 +1582,6 @@ beware.<span class="number">_</span>dogs<span class="number">_</span>barking
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p11525/" itemprop="url">
-                  11525 - Permutation
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p11525/">
-              <span>許胖</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="/uniDog/problem/p11525/" target="_blank">
-              <span>uniDog</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2014-10-23T02:49:56+08:00" content="2014-10-23">
-              2014-10-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-115/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 115</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2520" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>給定 <span>$N$</span><!-- Has MathJax --> 和 <span>$K$</span><!-- Has MathJax -->，請從 1 到 <span>$K$</span><!-- Has MathJax --> 的字典順序排列中，找出第 <span>$N$</span><!-- Has MathJax --> 個排列，<span>$N$</span><!-- Has MathJax --> 從 0 開始，因為 <span>$N$</span><!-- Has MathJax --> 會很大，因此我們用 K 個非負整數 <span>$S_1$</span><!-- Has MathJax -->, <span>$S_2$</span><!-- Has MathJax -->, <span>$\cdots{}$</span><!-- Has MathJax -->, <span>$S_k$</span><!-- Has MathJax --> 來表示。從這一系列的數字，我們可以用下面的公式計算 <span>$N$</span><!-- Has MathJax -->：</p>
-<span>$\sum^{K}_{i=1}{S_i\times{(K-i)!}}$</span><!-- Has MathJax -->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p11525/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/12086/" itemprop="url">
-                  12086 - Potentiometers
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/12086/">
-              <span>許胖</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="/uniDog/problem/12086/" target="_blank">
-              <span>uniDog</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2014-10-23T01:45:55+08:00" content="2014-10-23">
-              2014-10-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-120/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 120</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3238" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>電位計 (potentiometer，簡稱 potmeter) 是一種有可變電阻的電子設備，它有兩個接點 (terminal) 和一些控制結構 (通常是刻度盤、齒輪或者滑塊) 使得我們可以調整兩接點間的電阻值從 0 (無電阻) 到一個最大值。電阻的單位是歐姆 (Ohm)，當有兩個以上的電阻串聯 (也就是一個接著一個連接) 在一起，總電阻就會是個別電阻的總和。</p>
-<p>在這個問題中，我們考慮 <span>$N$</span><!-- Has MathJax --> 個串聯的電位計，從左到右分別編號為 1 號到 <span>$N$</span><!-- Has MathJax --> 號，第 <span>$x$</span><!-- Has MathJax --> 號的電位計左側接點和第 <span>$x-1$</span><!-- Has MathJax --> 號的右側相連，且第 <span>$x$</span><!-- Has MathJax --> 號的電位計右側接點和第 <span>$x+1$</span><!-- Has MathJax --> 號的左側相連，而 1 號電位計的左側接點和 <span>$N$</span><!-- Has MathJax --> 號的右側接點並沒有接上其他東西。</p>
-<p>一開始所有電位計會有介於 0 到 1000 歐姆的電阻，我們可以做兩件事：</p>
-<ul>
-<li>設定其中一個電位計為另一個電阻值</li>
-<li>測量任意兩個接點之間的電阻</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/12086/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p162/" itemprop="url">
-                  162 - Beggar My Neighbour
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p162/">
-              <span>M</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="/uniDog/problem/p162/" target="_blank">
-              <span>uniDog</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2014-07-08T16:41:40+08:00" content="2014-07-08">
-              2014-07-08
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=98" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>Beggar My Neighbour 這一款紙牌遊戲，另一個名稱為 StripJackNaked，設計用來介紹給新手學習認識撲克牌的大小和數值。</p>
-<p>經過洗牌之後，依序發給兩名玩家，第一張牌發給新手，下一張給老手，依序交替直到每名玩家都有 26 張牌，並且由老手拿到最後一張牌。</p>
-<p>由新手先出牌，他必須將面朝下的一疊牌中由頂端依序出牌，打出的第一張牌也就是倒數第二張發出的牌。</p>
-<p>後手必須根據前一回合最後一張牌出相，並且依序蓋住前面那一個人的牌，出牌直到出現 <code>J Q K A</code> 中一張牌，便可以換手。但是如果前一個人留下的牌為</p>
-<ul>
-<li>前一個留下 JACK，則最多出 1 張牌</li>
-<li>前一個留下 QUEEN，則最多出 2 張牌</li>
-<li>前一個留下 KING，則最多出 3 張牌</li>
-<li>前一個留下 ACE，則最多出 4 張牌</li>
-<li>其他，則出一張牌之後換手</li>
-</ul>
-<p>如果在指定次數內出牌多次沒有出現 <code>J Q K A</code> 其中一張牌，則必須將之前出在盤面上的所有牌覆蓋後收入收牌最下方，然後打出一張牌後換手。遊戲直到任何一方手牌為空。</p>
-<p>寫程式模擬這一款遊戲。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p162/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1549,7 +1628,7 @@ beware.<span class="number">_</span>dogs<span class="number">_</span>barking
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">197</span>
+              <span class="site-state-item-count">200</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1563,7 +1642,7 @@ beware.<span class="number">_</span>dogs<span class="number">_</span>barking
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

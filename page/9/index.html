@@ -212,6 +212,558 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/p10050/" itemprop="url">
+                  10050 - Hartals
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p10050/">
+              <span>Purple People Eater</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://rubyacm.blogspot.tw/2010/07/10050-hartals.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2010-07-30T00:00:00+08:00" content="2010-07-30">
+              2010-07-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 100</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=991" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>社會研究組識決定採用一組簡單的參數，用來模擬我國政黨運作的行為，其中一個參數為正整數 h (稱為 “罷會參數 (hartal parameter)”) 用來表示同一個政黨連續兩次罷會的間隔時間，雖然這個參數太過簡略了，但還是可以用來預測政黨罷會所帶來的負面影響。接下來的例子會有清楚的說明：</p>
+<p>考慮有三個政黨的情況，假設 <span>$h_1 = 3, h_2 = 4, h_3 = 8$</span><!-- Has MathJax -->，其中 <span>$h_i$</span><!-- Has MathJax --> 為政黨 i (i=1, 2, 3) 的 “罷會參數”，接下來我們摸擬這三個政黨在 N = 14 天內的罷會行為，模擬的情況總是設定第一天為星期日，並且每週的例假日 (星期五與星期六) 不會有罷會的情況。</p>
+<table>
+<thead>
+<tr>
+<th>Days</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Su</td>
+<td>Mo</td>
+<td>Tu</td>
+<td>We</td>
+<td>Th</td>
+<td>Fr</td>
+<td>Sa</td>
+</tr>
+<tr>
+<td>Party 1</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+</tr>
+<tr>
+<td>Party 2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Party 3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hartals</td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Days</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Su</td>
+<td>Mo</td>
+<td>Tu</td>
+<td>We</td>
+<td>Th</td>
+<td>Fr</td>
+<td>Sa</td>
+</tr>
+<tr>
+<td>Party 1</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Party 2</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Party 3</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>4</td>
+<td></td>
+<td></td>
+<td>5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>上述的模擬結果顯示 14 天內將罷會 5 天 (第 3, 4, 8, 9, 12 日)，而第 6 天沒有罷會是因為該天是例假日星期五，因此可看出兩週的議程已去掉了 5 天。</p>
+<p>本問題會給定各個黨政的 “罷會參數” 與總議程的天數 N，你的任務是算出在 N 天內共有多少個工作天因為各政黨的罷會而導致議程延宕。</p>
+<h2 id="Input">Input</h2><p>輸入的第一列為一個用來表示有幾組測試資料的整數 T。</p>
+<p>每組測試資料的第一列為整數 N (<span>$7 \leq N \leq 3650$</span><!-- Has MathJax -->) ，用來表示所模擬議程的天數。下一列為另一個整數 P (<span>$1 \leq P \leq 100$</span><!-- Has MathJax -->) 表示共有 P 個政黨，接下來的 P 列分別為各政黨的 “罷會參數” (絕不會為 7 的倍數)。</p>
+<h2 id="Output">Output</h2><p>輸出的每一列表示每一組測試資料所模擬出來的罷會天數 (損失多少個工作天)。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
+<span class="number">14</span>
+<span class="number">3</span>
+<span class="number">3</span>
+<span class="number">4</span>
+<span class="number">8</span>
+<span class="number">100</span>
+<span class="number">4</span>
+<span class="number">12</span>
+<span class="number">15</span>
+<span class="number">25</span>
+<span class="number">40</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">5</span>
+<span class="number">15</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p499/" itemprop="url">
+                  499 - What's The Frequency, Kenneth
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p499/">
+              <span>Purple People Eater</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://rubyacm.blogspot.tw/2010/07/499-whats-frequency-kenneth.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2010-07-29T00:00:00+08:00" content="2010-07-29">
+              2010-07-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-004/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 004</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=440" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <pre><code><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span>
+
+main()
+{
+  <span class="keyword">int</span> i;
+  <span class="keyword">char</span> *suffix[]= { <span class="string">"st"</span>, <span class="string">"nd"</span>, <span class="string">"rd"</span> };
+  <span class="keyword">char</span> *item[]= { <span class="string">"Unix"</span> , <span class="string">"cat"</span>, <span class="string">"sed"</span>, <span class="string">"awk"</span>, <span class="string">"grep"</span>, <span class="string">"ed"</span>, <span class="string">"vi"</span>};
+
+  <span class="built_in">printf</span>(<span class="string">"In the beginning, there was nothing.\n"</span>);
+  <span class="keyword">for</span> (i= <span class="number">0</span>; i &lt; <span class="number">7</span>; i++)
+    <span class="built_in">printf</span>(<span class="string">"And on the %d%s day, God created %s. And it was good.\n"</span>,
+           i + <span class="number">1</span>, (i &lt; <span class="number">3</span>) ? suffix[i] : <span class="string">"th"</span>, item[i]);
+}
+</code></pre><p>神創造了好用的 Unix 工具之後，祂發現 vi 會使人禁不起誘惑而墮落，因為 vi 功能強大，讓人不願意使用 make, dbx, RCS 等完善的工具，反而用了命令列來編譯、<code>printf()</code>來除錯、磁帶備份來當版本控管的手段。</p>
+<p>所以上帝下了命令：因為工程師們褻瀆了我所創造的 vi，所以我決定創造 emacs，這是一個功能強大到無法言喻的文字編輯器，至此，工程師們只要用過一次 vi，就必須為此飽受磨難，注意！磨難必定是痛苦的，一路上將會荊棘遍佈哀鴻遍野，工程師必須讀取很多列文字，並告訴我每一列中出現頻率最高的字母為何，及它總出現幾次。</p>
+<p>我命令你們遵守我訂下的鐵則：“不要讓你的朋友使用 vi”</p>
+<h2 id="Input_and_Output">Input and Output</h2><p>輸出的每一列要包含一列輸入中出現頻率最高的所有字母，並顯示出現多少次。</p>
+<p>輸出的字母必須按照字母順序來排序，並且所有大寫字母必須擺在小寫字母之前。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code>When riding your bicycle backwards down a one-way street,<span class="instruction"> if </span>the
+wheel falls of a canoe, how many ball bearings does it take to<span class="instruction"> fill
+</span>up a water buffalo?
+Hello Howard.
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>e <span class="number">6</span>
+al <span class="number">7</span>
+a <span class="number">3</span>
+Hlo <span class="number">2</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p575/" itemprop="url">
+                  575 - Skew Binary
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p575/">
+              <span>Purple People Eater</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://rubyacm.blogspot.tw/2010/07/575-skew-binary.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2010-07-25T00:00:00+08:00" content="2010-07-25">
+              2010-07-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-005/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 005</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=516" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>當一數值以十進位表示時，第 k 位數表示 <span>$10^k$</span><!-- Has MathJax --> (十進制由右至左編碼，最低有效位數為第 0 位)。例如：</p>
+<span>$81307_{10} = 8 \times 10^4 + 1 \times 10^3 + 3 \times 10^2 + 0 \times 10^1 + 7 \times 10^0 = 80000 + 1000 + 300 + 0 + 7 = 81307$</span><!-- Has MathJax -->
+<p>當一數值以二進制表示時，第 k 位數表示 <span>$2^k$</span><!-- Has MathJax -->。例如：</p>
+<span>$10011_2 = 1 \times 2^4 + 0 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0 = 16 + 0 + 0 + 2 + 1 = 19$</span><!-- Has MathJax -->
+<p>當一數值以 “斜偏二進制 (Skew Binary)” 表示時，第 k 位數表示 <span>$2^{k+1} - 1$</span><!-- Has MathJax -->。除了最低非零的位數可能等於2之外，所有數值皆為 0 或 1。例如：</p>
+<span>$10120_{skew} = 1 \times (2^5 - 1) + 0 \times (2^4-1) + 1 \times (2^3-1) + 2 \times (2^2-1) + 0 \times (2^1-1) = 31 + 0 + 7 + 6 + 0 = 44$</span><!-- Has MathJax -->
+<p>前十個斜偏二進制 (skew binary) 的數值為 0, 1, 2, 10, 11, 12, 20, 100, 101, 102。(skew binary 在某些領域特別有用，因為它使一數值加上 1 之後，最多只進位一次，但這方面的議題與本題目無關)</p>
+<h2 id="Input">Input</h2><p>輸入檔案有多列，每一列為一整數 n。假如 n=0 代表輸入結束，否則 n 為以斜偏二進制 (skew binary) 表示的非負整數。</p>
+<h2 id="Output">Output</h2><p>對每一個輸入值，輸出它的十進制表示式。n 的十進位值最大可能到 <span>$2^{31} - 1 = 2147483647$</span><!-- Has MathJax -->。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">10120</span>
+<span class="number">200000000000000000000000000000</span>
+<span class="number">10</span>
+<span class="number">1000000000000000000000000000000</span>
+<span class="number">11</span>
+<span class="number">100</span>
+<span class="number">11111000001110000101101102000</span>
+<span class="number">0</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">44</span>
+<span class="number">2147483646</span>
+<span class="number">3</span>
+<span class="number">2147483647</span>
+<span class="number">4</span>
+<span class="number">7</span>
+<span class="number">1041110737</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/p11210/" itemprop="url">
                   11210 - Chinese Mahjong
                 </a>
@@ -1100,363 +1652,6 @@ TH <span class="number">2</span>D JS <span class="number">9</span>D <span class=
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p11793/" itemprop="url">
-                  11793 - Electoral Districts
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p11793/">
-              <span>許胖</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="/uniDog/problem/p11793/" target="_blank">
-              <span>uniDog</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2010-05-23T22:18:57+08:00" content="2010-05-23">
-              2010-05-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-117/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 117</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2893" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="Background">Background</h2><p>在某些民主國家中，執政黨會重劃選區以便在下次選舉時對他們有利。每個選區選出一位代表，在兩黨制的政體中，每個地區選舉的票數只要高於對手即可。</p>
-<h2 id="The_Problem">The Problem</h2><p>某個國家被切割成 <span>$N\times{N}$</span><!-- Has MathJax --> 個正方形區域，這些區域將會被合併為 N 個選區，每個選區包含 N 個相連的區域，這代表著我們可以上、下、左、右，移動至選區內所有的區域。</p>
-<p>假定執政黨為 A，在野黨為 B，從上一次的選舉中，我們可以知道每個區域的投票情況。現在給你兩個 <span>$N\times{N}$</span><!-- Has MathJax --> 的矩陣，第一個是政黨 A 的投票情況，第二個則是政黨 B 的投票情況，對於每個選區，我們將包含在內所有區域的票數取總和，這時總票數多的政黨將會贏得選舉，如果兩黨的票數一樣，則此選區不會被選出代表。</p>
-<p>現在政黨 A 僱用你去計算出，在重劃選區的情況下，最大可能的代表數差。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p11793/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p11727/" itemprop="url">
-                  11727 - Cost Cutting
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p11727/">
-              <span>許胖</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="/uniDog/problem/p11727/" target="_blank">
-              <span>uniDog</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2009-12-18T16:45:26+08:00" content="2009-12-18">
-              2009-12-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-117/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 117</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2827" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>給妳三個數字輸出中間的即可。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p11727/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p11597/" itemprop="url">
-                  11597 - Spanning Subtrees
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p11597/">
-              <span>許胖</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="/uniDog/problem/p11597/" target="_blank">
-              <span>uniDog</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2009-12-18T16:45:26+08:00" content="2009-12-18">
-              2009-12-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-115/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 115</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2644" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>假設 <span>$K_n$</span><!-- Has MathJax --> 為 n 個節點的完全無向圖且 n 為偶數，換句話說，<span>$K_n$</span><!-- Has MathJax --> 中兩個點皆連通。你的任務就是去找出 <span>$K_n$</span><!-- Has MathJax --> 所有擴張樹最大數量，而且這些擴張樹之間皆沒有共同的邊。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p11597/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1503,7 +1698,7 @@ TH <span class="number">2</span>D JS <span class="number">9</span>D <span class=
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">197</span>
+              <span class="site-state-item-count">200</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1517,7 +1712,7 @@ TH <span class="number">2</span>D JS <span class="number">9</span>D <span class=
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
