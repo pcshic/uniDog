@@ -53,16 +53,16 @@
 
 
 
-<meta name="description" content="快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 Hit)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體鍾讀取進來，計算機架構師總是會去參考快取的失誤率 (每一百次有">
+<meta name="description" content="快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 Hit)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體中讀取進來，計算機架構師總是會去參考快取的 Miss 率 (每">
 <meta property="og:type" content="article">
 <meta property="og:title" content="11423 - Cache Simulator">
 <meta property="og:url" content="http://pcshic.github.io/uniDog/problem/11423/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 Hit)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體鍾讀取進來，計算機架構師總是會去參考快取的失誤率 (每一百次有">
-<meta property="og:updated_time" content="2015-12-28T10:15:50.519Z">
+<meta property="og:description" content="快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 Hit)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體中讀取進來，計算機架構師總是會去參考快取的 Miss 率 (每">
+<meta property="og:updated_time" content="2015-12-28T16:33:45.413Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="11423 - Cache Simulator">
-<meta name="twitter:description" content="快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 Hit)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體鍾讀取進來，計算機架構師總是會去參考快取的失誤率 (每一百次有">
+<meta name="twitter:description" content="快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 Hit)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體中讀取進來，計算機架構師總是會去參考快取的 Miss 率 (每">
 
 
 
@@ -274,17 +274,96 @@
       
 
       
-        <span itemprop="articleBody"><p>快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 <strong>Hit</strong>)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體鍾讀取進來，計算機架構師總是會去參考快取的失誤率 (每一百次有多少次資料不在快取中)。</p>
-<p>Cache is a special type of memory providing very small latency for accessing. The basic idea of using cache is to keep recently used data close to processors. So, modern processors use small cache along with large main memory. Program performance depends on the cache performance. If data is found in cache (Hit), execution can proceed normally. On the other hand if data is not found in cache, execution stalls until that data is fetched from main memory. Computer architects always looks for miss rate of cache (# of misses per 100 accesses).</p>
-<p>當一次失誤發生時，新的資料要被放進快取中，而某些舊的資料就要從快取當中移除，這裡有幾個決策法來選擇要移除的資料，一個在計算機系統中最普遍的方法叫做 LRU (最少使用替換演算法，Least Recently Used)</p>
-<p>When a miss occurs, the new data is kept in the cache and some existing data is removed from cache. There are several policies to select which one to evict. A common technique used in any computer systems is LRU (Least Recently Used). According to this scheme, the data that has not been used for longest time is evicted. Let us explain how this scheme works Assume a cache with 4 entries. So, if the processor accesses data 1, 2, 3, 4, 5, 2, 3, 99, 2, 5, 4 the following things will occur</p>
-<p>Here for 11 data references, we have 7 misses. In this problem you have to find the number of misses for different cache sizes. You will be given data references in several ways</p>
-<p>a) <code>ADDR x</code>：Processor will access data x<br>b) <code>RANGE b y n</code>：Processor will access all data references in the form b + y ∗ k, where k is 0 to n − 1</p>
-<p>Your will also be given commands <code>STAT</code> to print the number of misses for each cache (excluding the misses occurred before last <code>STAT</code> command). The above example can be abstracted in the following way</p>
-<h2 id="Input">Input</h2><p>Your program starts with a positive integer N (1 ≤ N ≤ 30), which is the number of caches. The next line contains size of each cache (in increasing order). Cache size will be at least 2 but not exceeding 220.</p>
-<p>The next few lines will contain any of ‘RANGE’, ‘ADDR’, or ‘STAT’. The last line will contain ‘STAT’. Total number of data references (all data accessed by processor) will not exceed 107. For the sample input, total number of data references is 30 (5+2+1+1+2+10+5+4). Also, the processor uses 24-bit address, no data reference will exceed 224 − 1 and will be non-negative. The value of b, y, n (in ‘RANGE’), and x (in ‘ADDR’) will be consistent with all restrictions. Input is terminated by a line containing ‘END’. The input file has around 20000 lines of inputs.</p>
-<h2 id="Output">Output</h2><p>對於每個 <code>STAT</code> 指令，。</p>
-<p>For each STAT command just print the numbers of misses (as described above) in a line.</p>
+        <span itemprop="articleBody"><p>快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 <strong>Hit</strong>)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體中讀取進來，計算機架構師總是會去參考快取的 <strong>Miss</strong> 率 (每一百次有多少次資料不在快取中)。</p>
+<p>當一次 miss 發生時，新的資料要被放進快取中，而某些舊的資料就要從快取當中移除，這裡有幾個決策法來選擇要移除的資料，一個在計算機系統中最普遍的方法叫做 LRU (最少使用替換演算法，Least Recently Used)，在這個方案裡，最不常用的資料會被移除，讓我們解釋一下這個方案是怎麼運作的。</p>
+<p>假設有一個快取有 4 個空間，如果處理器依照 1, 2, 3, 4, 5, 2, 3, 99, 2, 5, 4 的順序拿資料，則狀況如下所述：</p>
+<table>
+<thead>
+<tr>
+<th><strong>快取記憶體</strong></th>
+<th><strong>Hit/Miss</strong></th>
+<th><strong>移除資料</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Miss (1)</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Miss (2)</td>
+<td></td>
+</tr>
+<tr>
+<td>1 2</td>
+<td>Miss (3)</td>
+<td></td>
+</tr>
+<tr>
+<td>1 2 3</td>
+<td>Miss (4)</td>
+<td></td>
+</tr>
+<tr>
+<td>1 2 3 4</td>
+<td>Miss (5)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2 3 4 5</td>
+<td>Hit (2)</td>
+<td></td>
+</tr>
+<tr>
+<td>2 3 4 5</td>
+<td>Hit (3)</td>
+<td></td>
+</tr>
+<tr>
+<td>2 3 4 5</td>
+<td>Miss (99)</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2 3 5 99</td>
+<td>Hit (2)</td>
+<td></td>
+</tr>
+<tr>
+<td>2 3 5 99</td>
+<td>Hit (5)</td>
+<td></td>
+</tr>
+<tr>
+<td>2 3 5 99</td>
+<td>Miss (4)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2 4 5 99</td>
+<td></td>
+<td>　</td>
+</tr>
+</tbody>
+</table>
+<p>我們使用了 11 次資料，而有 7 次 miss。在這個問題中，你需要去找出在不同快取記憶體的大小中 miss 的數量，給定以下指令會有以下形式：</p>
+<ol>
+<li><code>ADDR x</code>：處理器會去讀取資料 <code>x</code></li>
+<li><code>RANGE b y n</code>：處理器會去讀取形如 <span>$b+y\times{k}$</span><!-- Has MathJax --> 的資料，<span>$k$</span><!-- Has MathJax --> 的範圍是從 <span>$0$</span><!-- Has MathJax --> 到 <span>$n-1$</span><!-- Has MathJax -->。</li>
+</ol>
+<p>你也會收到一個指令 <code>STAT</code> 去印出目前 miss 的數量 (不包括上一個 <code>STAT</code> 之前的指令)，以上範例可以總結如下</p>
+<pre><code>RANGE <span class="number">1</span> <span class="number">1</span> <span class="number">5</span>
+RANGE <span class="number">2</span> <span class="number">1</span> <span class="number">2</span>
+ADDR <span class="number">99</span>
+STAT          ---------------------------------- <span class="number">6</span>
+ADDR <span class="number">2</span>
+RANGE <span class="number">5</span> -<span class="number">1</span> <span class="number">2</span>
+STAT          ---------------------------------- <span class="number">1</span>
+</code></pre><h2 id="Input">Input</h2><p>你的程式以一行 <span>$N$</span><!-- Has MathJax --> (<span>$1\leq{N}\leq{30}$</span><!-- Has MathJax -->) 開始，代表有 <span>$N$</span><!-- Has MathJax --> 個快取記憶體，接下來有每個快取記憶體的大小 (遞增排序)，快取記憶體的大小至少為 <span>$2$</span><!-- Has MathJax --> 且不超過 <span>$2^{20}$</span><!-- Has MathJax -->。</p>
+<p>接下來數行包含 <code>RANGE</code>、<code>ADDR</code> 和 <code>STAT</code> 指令，最後一行有 <code>STAT</code>。所有資料的大小不會超過 <span>$10^7$</span><!-- Has MathJax -->，對於範例輸入而言，資料總使用次數為 30 次 (5 + 2 + 1 + 1 + 2 + 10 + 5 + 4)，因為處理器是使用 24 位元定址，因此資料範圍不會超過 <span>$2^{24}-1$</span><!-- Has MathJax --> 並且是非負的，在 <code>RANGE</code> 中的 <span>$b,y,n$</span><!-- Has MathJax --> 和在 <code>ADDR</code> 中的 <span>$x$</span><!-- Has MathJax --> 會滿足所有條件。輸入以 <code>END</code> 作為結束，輸入檔有大約 20000 行。</p>
+<h2 id="Output">Output</h2><p>如上所述，對於每個 <code>STAT</code> 指令，印出 miss 數量的一行。</p>
 <h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
 <span class="number">4</span> <span class="number">8</span>
 RANGE <span class="number">1</span> <span class="number">1</span> <span class="number">5</span>
@@ -320,6 +399,10 @@ END
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/uniDog/problem/11610/" rel="prev" title="11610 - Reverse Prime">
+                11610 - Reverse Prime <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -387,21 +470,21 @@ END
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">200</span>
+              <span class="site-state-item-count">202</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/uniDog/categories">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">32</span>
               <span class="site-state-item-name">分類</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-count">37</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

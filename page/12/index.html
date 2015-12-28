@@ -212,6 +212,284 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/p541/" itemprop="url">
+                  541 - Error Correction
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p541/">
+              <span>kid</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q541.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2006-09-04T00:00:00+08:00" content="2006-09-04">
+              2006-09-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-005/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 005</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=482" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>當一個布林矩陣每一行的和與每一列的和都是偶數的時候，我們稱這種性質為等價。</p>
+<p>例如，下面是一個 4x4 的一個等價短陣。 </p>
+<pre><code><span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>
+<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>
+<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>
+<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span>
+</code></pre><p>每一列的和分別是 2,0,4,2；而每一行的和分別是 2,2,2,2。</p>
+<p>你的工作即是要寫個程式讀入矩陣且檢查他有沒有等價。如果沒有，你得檢查能不能在只改變一個位元的狀況下使他等價，如果不行，那這個矩陣就得歸類為損毀 (corrupt)。</p>
+<h2 id="Input">Input</h2><p>輸入包含一或數個測資。</p>
+<p>每個測資的第一列是一個整數 n (n &lt; 100)，代表矩陣的大小；接下來的 n 列，每行有 n 個數字，即為矩陣。在矩陣中只會出現 0 及 1。當 n=0 時代表輸入結束。</p>
+<h2 id="Output">Output</h2><p>對於每一個矩陣請輸出一列。</p>
+<p>如果該矩陣已經是等價的，請輸出 <code>OK</code>；如果經由改變第 i 列第 j 行的位元即可成為等價，請輸出 <code>Change bit (i,j)</code>；否則請輸出 <code>Corrupt</code>。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">4</span>
+<span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>
+<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>
+<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>
+<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span>
+<span class="number">4</span>
+<span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>
+<span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>
+<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>
+<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span>
+<span class="number">4</span>
+<span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>
+<span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span>
+<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>
+<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span>
+<span class="number">0</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="function">OK
+Change <span class="title">bit</span> <span class="params">(<span class="number">2</span>,<span class="number">3</span>)</span>
+Corrupt</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/11000/" itemprop="url">
+                  11000 - Bee
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/11000/">
+              <span>Luckycat</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q11000.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2006-03-15T00:00:00+08:00" content="2006-03-15">
+              2006-03-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-110/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 110</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1941" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>在非洲有一種非常特別的蜜蜂。每一年母蜂會生一隻公蜂，而公蜂會生一隻公蜂和一隻母蜂，然後死去。</p>
+<p>現在，科學家在偶然中發現了一隻這種品種的母蜂，而且這是一隻「神奇」的母蜂，因為她永遠都不會死，而且每年都可以像其他正常的母蜂一樣生一隻公蜂。科學家想要知道，在 <span>$N$</span><!-- Has MathJax --> 年後會有多少隻蜜蜂。請寫一個程式幫他們算出在 <span>$N$</span><!-- Has MathJax --> 年後公蜂的數目以及所有蜜蜂的數目。</p>
+<h2 id="Input">Input</h2><p>輸入含有多組測試資料。每組測試資料一列，有 1 個正整數 <span>$N$</span><!-- Has MathJax --> (<span>$N\geq{0}$</span><!-- Has MathJax -->)。</p>
+<p>當 <span>$N=-1$</span><!-- Has MathJax --> 時代表輸入結束。請參考 Sample Input。</p>
+<h2 id="Output">Output</h2><p>對每一組測試資料輸出一列，第一個數字為 <span>$N$</span><!-- Has MathJax --> 年後公蜂的數目，第二個數字為 <span>$N$</span><!-- Has MathJax --> 年後所有蜜蜂的數目。</p>
+<p>這2個數都不會超過 <span>$2^{32}$</span><!-- Has MathJax -->。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">1</span>
+<span class="number">3</span>
+<span class="number">10</span>
+-<span class="number">1</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">1</span> <span class="number">2</span>
+<span class="number">4</span> <span class="number">7</span>
+<span class="number">143</span> <span class="number">232</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/p10783/" itemprop="url">
                   10783 - Odd Sum
                 </a>
@@ -1232,265 +1510,12 @@ N! = N * (N-1)!$$</span><!-- Has MathJax -->
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p10812/" itemprop="url">
-                  10812 - Beat the Spread!
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p10812/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10812.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2005-03-11T00:00:00+08:00" content="2005-03-11">
-              2005-03-11
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-108/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 108</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1753" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>超級盃又來了，為了打發中場休息時間，大家就來下注最後的結果會如何。大家下注的目標為兩隊最後的分數和，或者兩隊最後分數差的絕對值。</p>
-<img src="/uniDog/images/108/p10812.jpg">
-<p>給你這 2 個值，你能推出這 2 隊最後的得分是多少嗎？</p>
-<h2 id="Input">Input</h2><p>輸入的第一列有一個整數，代表以下有多少組測試資料。</p>
-<p>每組測試資料一列，有 2 個大於等於 0 的整數 s、d，s 代表比賽結束時 2 隊分數的總和， d 代表比賽結束時 2 隊分數差的絕對值。</p>
-<h2 id="Output">Output</h2><p>對每組測試資料輸出一列，包含 2 個整數代表比賽結束時這 2 隊的分數，分數大的在前。如果沒有這樣的分數，請輸出「<code>impossible</code>」。</p>
-<p>請記得：美式足球的分數一定是大於等於 0 的整數。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">4</span>
-<span class="number">40</span> <span class="number">20</span>
-<span class="number">20</span> <span class="number">40</span>
-<span class="number">5</span> <span class="number">1</span>
-<span class="number">100</span> <span class="number">1</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">30</span> <span class="number">10</span>
-impossible
-<span class="number">3</span> <span class="number">2</span>
-impossible
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p104/" itemprop="url">
-                  104 - Arbitrage
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p104/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q104.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2005-02-23T00:00:00+08:00" content="2005-02-23">
-              2005-02-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=40" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>所謂的「三角套匯 (arbitrage)」就是在幾種外幣中做金錢的交易，期待從匯差中獲取少許的利潤。例如：1 元美金可以買 0.7 英鎊，1 元英鎊可以買 9.5 法朗，1 元法朗可以買 0.16 美金。所以如果我們把 1 元美金換成英鎊，再把英鎊換成法朗，最後再把法朗換回美金，那麼最後得到的美金將是：1*0.7*9.5*0.16=1.064 美元。也就是說我們可以從中獲取匯差 0.064 美元，相當於賺了 6.4% 。</p>
-<p>請你寫一個程式找出是否有這樣套匯的情況，可以獲取如上所述的利益。</p>
-<p>要產生一個成功的套匯，在換外幣的過程中，開始的幣種一定得等於最後的幣種。但是從哪一種開始都可以。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p104/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/uniDog/page/11/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/uniDog/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/uniDog/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/uniDog/page/20/">20</a><a class="extend next" rel="next" href="/uniDog/page/13/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/uniDog/page/11/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/uniDog/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/uniDog/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/uniDog/page/21/">21</a><a class="extend next" rel="next" href="/uniDog/page/13/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1531,21 +1556,21 @@ impossible
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">200</span>
+              <span class="site-state-item-count">202</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/uniDog/categories">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">32</span>
               <span class="site-state-item-name">分類</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-count">37</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
