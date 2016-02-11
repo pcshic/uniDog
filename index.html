@@ -212,6 +212,141 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/12299/" itemprop="url">
+                  12299 - RMQ with Shifts
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/12299/">
+              <span>許胖</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="/uniDog/problem/12299/" target="_blank">
+              <span>uniDog</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2015-12-29T15:33:59+08:00" content="2015-12-29">
+              2015-12-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-122/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 122</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3720" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>在傳統的 RMQ (Range Minimum Query) 問題中，我們有靜態的陣列 <span>$A$</span><!-- Has MathJax -->，對於每次查詢 <span>$(L,R)$</span><!-- Has MathJax --> (<span>$L\leq{R}$</span><!-- Has MathJax -->)，我們回傳 <span>$A[L],A[L+1],\cdots{},A[R]$</span><!-- Has MathJax --> 之間的最小值。注意陣列的足標從 1 開始，例如陣列最左邊的元素就是 <span>$A[1]$</span><!-- Has MathJax -->。</p>
+<p>在這個問題中，陣列 <span>$A$</span><!-- Has MathJax --> 不再是靜態的，我們需要支援另一個操作如下：</p>
+<span>$shift(i_1,i_2,i_3,\cdots{},i_k)(i_1 &lt; i_2 &lt; \cdots{} &lt; i_k, k &gt; 1)$</span><!-- Has MathJax -->
+<p>　<br>代表對 <span>$A[i_1],A[i_2],\cdots{},A[i_k]$</span><!-- Has MathJax --> 做「左環形位移」(left circular shift)。</p>
+<p>例如，如果 <span>$A=\{6,2,4,8,5,1,4\}$</span><!-- Has MathJax -->，則 <span>$shift(2,4,5,7)$</span><!-- Has MathJax --> 會產生 <span>$6,8,4,5,4,1,2$</span><!-- Has MathJax -->，若繼續做 <span>$shift(1,2)$</span><!-- Has MathJax --> 則會變成 <span>$8,6,4,5,4,1,2$</span><!-- Has MathJax -->。</p>
+<h2 id="Input">Input</h2><p>只有一筆測試資料，一開始有兩個整數 <span>$n,q$</span><!-- Has MathJax --> (<span>$1\leq{n}\leq{100,000}$</span><!-- Has MathJax -->、<span>$1\leq{q}\leq{250,000}$</span><!-- Has MathJax -->)，分別代表陣列 <span>$A$</span><!-- Has MathJax --> 的整數數量、和操作的數量。下一行有 <span>$n$</span><!-- Has MathJax --> 個不超過 <span>$100,000$</span><!-- Has MathJax --> 的整數，代表一開始 <span>$A$</span><!-- Has MathJax --> 當中的整數。接著 <span>$q$</span><!-- Has MathJax --> 行，每行有一長度不超過 30 的字串，並且沒有空白字元。所有的操作指令保證都是合法的。</p>
+<p><strong> 注意 </strong>：測資很大，最好使用快速的 I/O 方法。</p>
+<h2 id="Output">Output</h2><p>對於每個查詢，印出範圍內的最小值。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">7</span> <span class="number">5</span>
+<span class="number">6</span> <span class="number">2</span> <span class="number">4</span> <span class="number">8</span> <span class="number">5</span> <span class="number">1</span> <span class="number">4</span>
+query(<span class="number">3</span>,<span class="number">7</span>)
+shift(<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">7</span>)
+query(<span class="number">1</span>,<span class="number">4</span>)
+shift(<span class="number">1</span>,<span class="number">2</span>)
+query(<span class="number">2</span>,<span class="number">2</span>)
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">1</span>
+<span class="number">4</span>
+<span class="number">6</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/11992/" itemprop="url">
                   11992 - Fast Matrix Operations
                 </a>
@@ -285,9 +420,7 @@
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>一個最多不超過 <span>$10^6$</span><!-- Has MathJax --> 個元素的矩陣有 <span>$r$</span><!-- Has MathJax --> 列 (row) 和 <span>$c$</span><!-- Has MathJax --> 行 (column)，每個元素的位置為 <span>$(x,y)$</span><!-- Has MathJax -->，其中 <span>$1\leq{x}\leq{r}$</span><!-- Has MathJax -->，<span>$1\leq{y}\leq{c}$</span><!-- Has MathJax -->。一開始所有元素都是 <span>$0$</span><!-- Has MathJax -->，你必須處理以下三種操作：</p>
+          <p>一個最多不超過 <span>$10^6$</span><!-- Has MathJax --> 個元素的矩陣有 <span>$r$</span><!-- Has MathJax --> 列 (row) 和 <span>$c$</span><!-- Has MathJax --> 行 (column)，每個元素的位置為 <span>$(x,y)$</span><!-- Has MathJax -->，其中 <span>$1\leq{x}\leq{r}$</span><!-- Has MathJax -->，<span>$1\leq{y}\leq{c}$</span><!-- Has MathJax -->。一開始所有元素都是 <span>$0$</span><!-- Has MathJax -->，你必須處理以下三種操作：</p>
 <table>
 <thead>
 <tr>
@@ -311,24 +444,11 @@
 </tbody>
 </table>
 <p>在上面的描述中，子矩陣 <span>$(x_1,y_1,x_2,y_2)$</span><!-- Has MathJax --> 表示所有滿足 <span>$x_1\leq{x}\leq{x_2}$</span><!-- Has MathJax --> 和 <span>$y_1\leq{y}\leq{y_2}$</span><!-- Has MathJax --> 的元素 <span>$(x,y)$</span><!-- Has MathJax -->，輸入中保證 <span>$1\leq{x_1}\leq{x_2}\leq{r}$</span><!-- Has MathJax -->，<span>$1\leq{y_1}\leq{y_2}\leq{c}$</span><!-- Has MathJax -->，而對於任意操作，矩陣內所有元素總和不會超過 <span>$10^9$</span><!-- Has MathJax -->。</p>
-<h2 id="Input">Input</h2><p>有數筆測試資料，每筆的第一行包含三個正整數 <span>$r,c,m$</span><!-- Has MathJax -->，其中 <span>$m$</span><!-- Has MathJax --> (<span>$1\leq{m}\leq{20,000}$</span><!-- Has MathJax -->) 是操作的總數量。接下來 <span>$m$</span><!-- Has MathJax --> 行中，每一行包含一種查詢，矩陣最多有 20 列。輸入以 EOF 作為結束。</p>
-<h2 id="Output">Output</h2><p>對於每個第 3 類查詢，輸出總和、最小值和最大值。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">4</span> <span class="number">4</span> <span class="number">8</span>
-<span class="number">1</span> <span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">4</span> <span class="number">5</span>
-<span class="number">3</span> <span class="number">2</span> <span class="number">1</span> <span class="number">4</span> <span class="number">4</span>
-<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">3</span> <span class="number">4</span> <span class="number">2</span>
-<span class="number">3</span> <span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">4</span>
-<span class="number">3</span> <span class="number">1</span> <span class="number">1</span> <span class="number">3</span> <span class="number">4</span>
-<span class="number">2</span> <span class="number">2</span> <span class="number">1</span> <span class="number">4</span> <span class="number">4</span> <span class="number">2</span>
-<span class="number">3</span> <span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">4</span>
-<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">4</span> <span class="number">3</span> <span class="number">3</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">45</span> <span class="number">0</span> <span class="number">5</span>
-<span class="number">78</span> <span class="number">5</span> <span class="number">7</span>
-<span class="number">69</span> <span class="number">2</span> <span class="number">7</span>
-<span class="number">39</span> <span class="number">2</span> <span class="number">7</span>
-</code></pre>
-            
-          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/11992/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -441,30 +561,12 @@
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>給你 <span>$\{1,2,3,\cdots{},n\}$</span><!-- Has MathJax --> 的一個排序，依序移除 <span>$m$</span><!-- Has MathJax --> 個數字，然後輸出<strong>移除前</strong>逆序數對 (inversion pairs) 的數量，一個陣列 <span>$A$</span><!-- Has MathJax --> 的逆序數對總數就是對於所有有序數對 <span>$(i, j)$</span><!-- Has MathJax -->，使得 <span>$i &lt; j$</span><!-- Has MathJax --> 而 <span>$A[i] &gt; A[j]$</span><!-- Has MathJax --> 的總數。</p>
-<h2 id="Input">Input</h2><p>輸入包含數組測試資料，每組測試資料的第一行包含兩個整數 <span>$n$</span><!-- Has MathJax --> 和 <span>$m$</span><!-- Has MathJax --> (<span>$1\leq{n}\leq{200,000}$</span><!-- Has MathJax -->、<span>$1\leq{m}\leq{100,000}$</span><!-- Has MathJax -->)，接著有 <span>$n$</span><!-- Has MathJax --> 行，代表初始排列。</p>
-<p>接下來有 <span>$m$</span><!-- Has MathJax --> 行，代表依序被移除的整數，沒有一個整數會被移除兩次以上。輸入最後以 EOF 結束。</p>
-<h2 id="Output">Output</h2><p>對於每次移除數字，輸出移除前逆序數對的數量。</p>
-<p><strong> 解說 </strong>：<span>$\texttt{(1,5,3,4,2)-&gt;(1,3,4,2)-&gt;(3,4,2)-&gt;(3,2)-&gt;(3)}$</span><!-- Has MathJax --></p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span> <span class="number">4</span>
-<span class="number">1</span>
-<span class="number">5</span>
-<span class="number">3</span>
-<span class="number">4</span>
-<span class="number">2</span>
-<span class="number">5</span>
-<span class="number">1</span>
-<span class="number">4</span>
-<span class="number">2</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">5</span>
-<span class="number">2</span>
-<span class="number">2</span>
-<span class="number">1</span>
-</code></pre>
-            
-          </span>
+          <p>給你 <span>$\{1,2,3,\cdots{},n\}$</span><!-- Has MathJax --> 的一個排序，依序移除 <span>$m$</span><!-- Has MathJax --> 個數字，然後輸出<strong>移除前</strong>逆序數對 (inversion pairs) 的數量，一個陣列 <span>$A$</span><!-- Has MathJax --> 的逆序數對總數就是對於所有有序數對 <span>$(i, j)$</span><!-- Has MathJax -->，使得 <span>$i &lt; j$</span><!-- Has MathJax --> 而 <span>$A[i] &gt; A[j]$</span><!-- Has MathJax --> 的總數。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/11990/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -577,21 +679,13 @@
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>依序給你 <span>$N$</span><!-- Has MathJax --> 個正規矩形 (regular rectangle) 去畫，如果一個矩形沒有跟之前被畫出的矩形重疊，則畫出該矩形。請算出所有被畫出來的矩形的總面積。</p>
+          <p>依序給你 <span>$N$</span><!-- Has MathJax --> 個正規矩形 (regular rectangle) 去畫，如果一個矩形沒有跟之前被畫出的矩形重疊，則畫出該矩形。請算出所有被畫出來的矩形的總面積。</p>
 <p><strong>註</strong>：一個矩形如果是正規的若且唯若他的邊都和 x 軸 y 軸平行。</p>
-<h2 id="Input">Input</h2><p>輸入的第一行包含一個整數 <span>$T$</span><!-- Has MathJax --> (<span>$1\leq{T}\leq{100}$</span><!-- Has MathJax -->)，每組測試資料以單一行包含一個整數 <span>$N$</span><!-- Has MathJax --> (<span>$0\leq{N}\leq{10000}$</span><!-- Has MathJax -->) 作為開始，代表接下來矩形的數量。接下來 <span>$N$</span><!-- Has MathJax --> 行代表矩形，每一行有四個整數 <span>$x_1,y_1,x_2,y_2$</span><!-- Has MathJax --> (<span>$-100 &lt; x_1,y_1,x_2,y_2 &lt; 100$</span><!-- Has MathJax -->、<span>$x_1 &lt; x_2$</span><!-- Has MathJax -->、<span>$y_1 &lt; y_2$</span><!-- Has MathJax -->) 代表一個矩形，在此 <span>$(x_1,y_1)$</span><!-- Has MathJax --> 代表矩形的左下角，而 <span>$(x_2,y_2)$</span><!-- Has MathJax --> 代表矩形的右上角。</p>
-<h2 id="Output">Output</h2><p>對於每組測資，輸出 <code>Case #:</code> 和一個整數，代表你畫出來的矩形的總面積。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">1</span>
-<span class="number">3</span>
--<span class="number">1</span> -<span class="number">1</span> <span class="number">1</span> <span class="number">1</span>
-<span class="number">0</span> <span class="number">0</span> <span class="number">10</span> <span class="number">10</span>
-<span class="number">1</span> <span class="number">0</span> <span class="number">2</span> <span class="number">2</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Case <span class="number">1</span>: <span class="number">6</span>
-</code></pre>
-            
-          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/11601/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -704,36 +798,12 @@
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>有一些七位數的正整數，其左右相反是質數，且小於 <span>$10^6$</span><!-- Has MathJax -->。例如：<span>$1000070$</span><!-- Has MathJax -->、<span>$1000090$</span><!-- Has MathJax -->、<span>$1000240$</span><!-- Has MathJax --> 是前幾個顛倒質數 (reverse prime)，因為他們都是七位數，而且左右相反後是一個小於 <span>$10^6$</span><!-- Has MathJax --> 的質數。你必須找出所有七位數顛倒質數和他質因數的個數。一個整數的質因數是質數且剛好整除該數，例如 24 的質因數有 2、2、2 和 3。</p>
-<h2 id="Input">Input</h2><p>在這個問題中，你會遇到兩種輸入：</p>
-<ul>
-<li><strong> 查詢 </strong>：這種輸入格式為 <code>q i</code></li>
-<li><strong> 刪除 </strong>：這種輸入的格式為 <code>d 顛倒質數</code></li>
-</ul>
-<p>輸入保證 <code>i</code> 會是合法的足標，且顛倒質數也會是合法的 7 位顛倒質數，且輸入中也不會有兩個相同的顛倒質數。</p>
-<p>測資中最多會有 71000 個查詢和 3500 個刪除操作，程式會以 <code>EOF</code> 作為結束。</p>
-<h2 id="Output">Output</h2><p>對於查詢操作，你必須計算出第 <span>$0$</span><!-- Has MathJax --> 個到第 <span>$i-1$</span><!-- Has MathJax --> 個顛倒質數中所有質因數的數量和。</p>
-<p>對於刪除操作，你必須刪除集合內的顛倒質數並且更新您的質因數數量和，此狀況沒有輸出。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="tag">q</span> <span class="number">0</span>
-<span class="tag">q</span> <span class="number">1</span>
-<span class="tag">q</span> <span class="number">2</span>
-d <span class="number">1000070</span>
-d <span class="number">1000090</span>
-<span class="tag">q</span> <span class="number">0</span>
-d <span class="number">1000240</span>
-<span class="tag">q</span> <span class="number">0</span>
-<span class="tag">q</span> <span class="number">1</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">4</span>
-<span class="number">10</span>
-<span class="number">16</span>
-<span class="number">6</span>
-<span class="number">3</span>
-<span class="number">7</span>
-</code></pre>
-            
-          </span>
+          <p>有一些七位數的正整數，其左右相反是質數，且小於 <span>$10^6$</span><!-- Has MathJax -->。例如：<span>$1000070$</span><!-- Has MathJax -->、<span>$1000090$</span><!-- Has MathJax -->、<span>$1000240$</span><!-- Has MathJax --> 是前幾個顛倒質數 (reverse prime)，因為他們都是七位數，而且左右相反後是一個小於 <span>$10^6$</span><!-- Has MathJax --> 的質數。你必須找出所有七位數顛倒質數和他質因數的個數。一個整數的質因數是質數且剛好整除該數，例如 24 的質因數有 2、2、2 和 3。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/11610/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -846,118 +916,14 @@ d <span class="number">1000240</span>
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 <strong>Hit</strong>)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體中讀取進來，計算機架構師總是會去參考快取的 <strong>miss</strong> 率 (每一百次有多少次資料不在快取中)。</p>
+          <p>快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 <strong>Hit</strong>)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體中讀取進來，計算機架構師總是會去參考快取的 <strong>miss</strong> 率 (每一百次有多少次資料不在快取中)。</p>
 <p>當一次 miss 發生時，新的資料要被放進快取中，而某些舊的資料就要從快取當中移除，這裡有幾個決策法來選擇要移除的資料，一個在計算機系統中最普遍的方法叫做 LRU (最少使用替換演算法，Least Recently Used)，在這個方案裡，最不常用的資料會被移除，讓我們解釋一下這個方案是怎麼運作的。</p>
 <p>假設有一個快取有 4 個空間，如果處理器依照 1, 2, 3, 4, 5, 2, 3, 99, 2, 5, 4 的順序拿資料，則狀況如下所述：</p>
-<table>
-<thead>
-<tr>
-<th><strong>快取記憶體</strong></th>
-<th><strong>Hit/Miss</strong></th>
-<th><strong>移除資料</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>Miss (1)</td>
-<td></td>
-</tr>
-<tr>
-<td>1</td>
-<td>Miss (2)</td>
-<td></td>
-</tr>
-<tr>
-<td>1 2</td>
-<td>Miss (3)</td>
-<td></td>
-</tr>
-<tr>
-<td>1 2 3</td>
-<td>Miss (4)</td>
-<td></td>
-</tr>
-<tr>
-<td>1 2 3 4</td>
-<td>Miss (5)</td>
-<td>1</td>
-</tr>
-<tr>
-<td>2 3 4 5</td>
-<td>Hit (2)</td>
-<td></td>
-</tr>
-<tr>
-<td>2 3 4 5</td>
-<td>Hit (3)</td>
-<td></td>
-</tr>
-<tr>
-<td>2 3 4 5</td>
-<td>Miss (99)</td>
-<td>4</td>
-</tr>
-<tr>
-<td>2 3 5 99</td>
-<td>Hit (2)</td>
-<td></td>
-</tr>
-<tr>
-<td>2 3 5 99</td>
-<td>Hit (5)</td>
-<td></td>
-</tr>
-<tr>
-<td>2 3 5 99</td>
-<td>Miss (4)</td>
-<td>3</td>
-</tr>
-<tr>
-<td>2 4 5 99</td>
-<td></td>
-<td>　</td>
-</tr>
-</tbody>
-</table>
-<p>我們使用了 11 次資料，而有 7 次 miss。在這個問題中，你需要去找出在不同快取記憶體的大小中 miss 的數量，給定以下指令會有以下形式：</p>
-<ol>
-<li><code>ADDR x</code>：處理器會去讀取資料 <code>x</code></li>
-<li><code>RANGE b y n</code>：處理器會去讀取形如 <span>$b+y\times{k}$</span><!-- Has MathJax --> 的資料，<span>$k$</span><!-- Has MathJax --> 的範圍是從 <span>$0$</span><!-- Has MathJax --> 到 <span>$n-1$</span><!-- Has MathJax -->。</li>
-</ol>
-<p>你也會收到一個指令 <code>STAT</code> 去印出目前 miss 的數量 (不包括上一個 <code>STAT</code> 之前的指令)，以上範例可以總結如下</p>
-<pre><code>RANGE <span class="number">1</span> <span class="number">1</span> <span class="number">5</span>
-RANGE <span class="number">2</span> <span class="number">1</span> <span class="number">2</span>
-ADDR <span class="number">99</span>
-STAT          ---------------------------------- <span class="number">6</span>
-ADDR <span class="number">2</span>
-RANGE <span class="number">5</span> -<span class="number">1</span> <span class="number">2</span>
-STAT          ---------------------------------- <span class="number">1</span>
-</code></pre><h2 id="Input">Input</h2><p>你的程式以一行 <span>$N$</span><!-- Has MathJax --> (<span>$1\leq{N}\leq{30}$</span><!-- Has MathJax -->) 開始，代表有 <span>$N$</span><!-- Has MathJax --> 個快取記憶體，接下來有每個快取記憶體的大小 (遞增排序)，快取記憶體的大小至少為 <span>$2$</span><!-- Has MathJax --> 且不超過 <span>$2^{20}$</span><!-- Has MathJax -->。</p>
-<p>接下來數行包含 <code>RANGE</code>、<code>ADDR</code> 和 <code>STAT</code> 指令，最後一行有 <code>STAT</code>。所有資料的大小不會超過 <span>$10^7$</span><!-- Has MathJax -->，對於範例輸入而言，資料總使用次數為 30 次 (5 + 2 + 1 + 1 + 2 + 10 + 5 + 4)，因為處理器是使用 24 位元定址，因此資料範圍不會超過 <span>$2^{24}-1$</span><!-- Has MathJax --> 並且是非負的，在 <code>RANGE</code> 中的 <span>$b,y,n$</span><!-- Has MathJax --> 和在 <code>ADDR</code> 中的 <span>$x$</span><!-- Has MathJax --> 會滿足所有條件。輸入以 <code>END</code> 作為結束，輸入檔有大約 20000 行。</p>
-<h2 id="Output">Output</h2><p>如上所述，對於每個 <code>STAT</code> 指令，印出 miss 數量的一行。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
-<span class="number">4</span> <span class="number">8</span>
-RANGE <span class="number">1</span> <span class="number">1</span> <span class="number">5</span>
-RANGE <span class="number">2</span> <span class="number">1</span> <span class="number">2</span>
-ADDR <span class="number">99</span>
-STAT
-ADDR <span class="number">2</span>
-RANGE <span class="number">5</span> -<span class="number">1</span> <span class="number">2</span>
-STAT
-RANGE <span class="number">0</span> <span class="number">10000</span> <span class="number">10</span>
-RANGE <span class="number">0</span> <span class="number">20000</span> <span class="number">5</span>
-RANGE <span class="number">0</span> <span class="number">30000</span> <span class="number">4</span>
-STAT
-END
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">6</span> <span class="number">6</span>
-<span class="number">1</span> <span class="number">0</span>
-<span class="number">18</span> <span class="number">13</span>
-</code></pre>
-            
-          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/11423/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1070,61 +1036,16 @@ END
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>在遙遠的大海賊時代，海盜大陸 (Pirate Land) 有著兩批海盜集團，稱為「西印度海盜」(Buccaneer) 和「巴巴利海盜」(Barbary)。每個海盜的身分並不是固定的，有時一個海盜被對方的海盜集團攻擊後，他的身分就會變成攻擊者的身分。突然有一天，一位魔法師出現在海盜大陸，只要他念一聲咒語，他就可以隨意地變換海盜的身分，這個過程稱為「轉移」(mutating)。</p>
+          <p>在遙遠的大海賊時代，海盜大陸 (Pirate Land) 有著兩批海盜集團，稱為「西印度海盜」(Buccaneer) 和「巴巴利海盜」(Barbary)。每個海盜的身分並不是固定的，有時一個海盜被對方的海盜集團攻擊後，他的身分就會變成攻擊者的身分。突然有一天，一位魔法師出現在海盜大陸，只要他念一聲咒語，他就可以隨意地變換海盜的身分，這個過程稱為「轉移」(mutating)。</p>
 <p>大陸上有 <span>$N$</span><!-- Has MathJax --> 個海盜，每個海盜的編號依序為 <span>$0$</span><!-- Has MathJax --> 到 <span>$N-1$</span><!-- Has MathJax -->，大魔法師可以轉移連續編號的海盜變成某種海盜。</p>
 <p>假設有 100 個巴巴利海盜在海盜大陸上，接著魔法師可施展一個魔法，把編號 10 到 33 的海盜變成西印度海盜，此時有 24 個西印度海盜和 76 個巴巴利海盜。</p>
 <p>魔法師施展魔法的速度很快，這讓神開始不開心，因為神比較偏好西印度海盜，因此會問魔法師：「告訴我，在編號 2 到 30 號之間有幾個西印度海盜？」現在，魔法師陷入苦思，因為他只善於施法，而不是計數 XD。</p>
 <p>於是聰明的魔法師去地球抓了一個聰明的人，但很不幸的就是你！因此你必須去回答神的問題。</p>
-<h2 id="Input">Input</h2><p>輸入的第一行包含測資組數 <span>$T$</span><!-- Has MathJax -->，接著對於每筆測資：</p>
-<p>第一部分描述海盜大陸，最多會有 <span>$N$</span><!-- Has MathJax --> (<span>$1\leq{N}\leq{1024000}$</span><!-- Has MathJax -->) 個海盜，每個海盜不是西印度海盜，就是巴巴利海盜，西印度海盜以 <code>1</code> 表示、巴巴利海盜以 <code>0</code> 表示。所有海盜種類的資訊會以一系列的資料表示。</p>
-<p>此部分第一行有一個整數 <span>$M$</span><!-- Has MathJax --> (<span>$M\leq{100}$</span><!-- Has MathJax -->)，接下來有 <span>$M$</span><!-- Has MathJax --> 組，每一組有兩行，每組第一行有個整數 <span>$T$</span><!-- Has MathJax -->，另一行是一個非空字串 <strong>Pirates</strong> (由 <code>0</code> 和 <code>1</code> 組成，<code>0</code> 代表巴巴利、<code>1</code> 代表西印度，長度最長為 50)，代表 <strong>Pirates</strong> 字串要重複 <span>$T$</span><!-- Has MathJax --> 次。接著串接起這 <span>$M$</span><!-- Has MathJax --> 組資料就是代表海盜種類的資訊。</p>
-<p>第二部分的輸入包含了多筆詢問，此部分第一行有一整數 <span>$Q$</span><!-- Has MathJax --> 代表 <span>$Q$</span><!-- Has MathJax --> 筆詢問，接下來的 <span>$Q$</span><!-- Has MathJax --> (<span>$1\leq{Q}\leq{1000}$</span><!-- Has MathJax -->) 行代表每筆詢問，每個詢問有一個字串，<code>F</code>、<code>E</code>、<code>I</code> 或 <code>S</code>，和兩個代表編號的整數 <code>a</code> 和 <code>b</code>，以下是每個詢問的意思：</p>
-<ul>
-<li><code>F a b</code> 代表把編號從 a 到 b 的海盜轉移成西印度海盜</li>
-<li><code>E a b</code> 代表把編號從 a 到 b 的海盜轉移成巴巴利海盜</li>
-<li><code>I a b</code> 代表把編號從 a 到 b 的海盜轉移成另一種海盜</li>
-<li><code>S a b</code> 代表「神之查詢」神會問一個問題：「告訴我，在區間 a 到 b 之間有多少個西印度海盜？」</li>
-</ul>
-<p>(<span>$a\leq{b}$</span><!-- Has MathJax -->, <span>$0\leq{a} &lt; n$</span><!-- Has MathJax -->, <span>$0\leq{b} &lt; n$</span><!-- Has MathJax -->, 編號範圍是有包含 <span>$[a, b]$</span><!-- Has MathJax -->)</p>
-<h2 id="Output">Output</h2><p>對於每筆測資，輸出 <code>Case #:</code>，而對於每組神之查詢則輸出 <code>Q#:</code>，請參考 Sample Output。</p>
-<p><strong>解釋：</strong><br>Case 1：<br>海盜大陸長這樣 (<span>$N=18$</span><!-- Has MathJax -->)</p>
-<pre><code><span class="number">101010101010001000</span>
-</code></pre><p>在神的第一次查詢前，樣子如下</p>
-<pre><code><span class="number">000000111111111111</span>
-</code></pre><p>Case 2：<br>海盜大陸長這樣 (<span>$N=9$</span><!-- Has MathJax -->)</p>
-<pre><code><span class="number">111000000</span>
-</code></pre><h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
-<span class="number">2</span>
-<span class="number">5</span>
-<span class="number">10</span>
-<span class="number">2</span>
-<span class="number">1000</span>
-<span class="number">5</span>
-F <span class="number">0</span> <span class="number">17</span>
-I <span class="number">0</span> <span class="number">5</span>
-S <span class="number">1</span> <span class="number">10</span>
-E <span class="number">4</span> <span class="number">9</span>
-S <span class="number">2</span> <span class="number">10</span>
-<span class="number">3</span>
-<span class="number">3</span>
-<span class="number">1</span>
-<span class="number">4</span>
-<span class="number">0</span>
-<span class="number">2</span>
-<span class="number">0</span>
-<span class="number">2</span>
-I <span class="number">0</span> <span class="number">2</span>
-S <span class="number">0</span> <span class="number">8</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Case <span class="number">1</span>:
-Q1: <span class="number">5</span>
-Q2: <span class="number">1</span>
-Case <span class="number">2</span>:
-Q1: <span class="number">0</span>
-</code></pre>
-            
-          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/11402/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1237,34 +1158,12 @@ Q1: <span class="number">0</span>
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>今年，我們遇到了很多人口統計的問題，因為在有些城市中有許多移民，或者人口增長非常快。每一年，計數成員協會 (Association for Counting Members, ACM) 在每個區域實施人口普查，這個國家被切割成 <span>$N^2$</span><!-- Has MathJax --> 個區域，由 <span>$N\times{N}$</span><!-- Has MathJax --> 的網格所組成。你的任務是找出某些區域中最小與最大人口數，因為一年當中會改變的人口數並不是很巨大，因此用一個數字來表示由移民而改變的人口數。</p>
-<h2 id="Input">Input</h2><p>第一行有一個整數 <span>$N$</span><!-- Has MathJax --> (<span>$0\leq{N}\leq{500}$</span><!-- Has MathJax -->)，接著有 <span>$N$</span><!-- Has MathJax --> 行，每行有 <span>$N$</span><!-- Has MathJax --> 個數字，代表城市 <span>$C[i, j]$</span><!-- Has MathJax --> 的人口數。接著有一個數字 <span>$Q$</span><!-- Has MathJax --> (<span>$Q\leq{40000}$</span><!-- Has MathJax -->)，代表接下來有 <span>$Q$</span><!-- Has MathJax --> 筆詢問。</p>
-<p>詢問有兩種可能：</p>
-<ul>
-<li><code>q x1 y1 x2 y2</code> 代表左上角和右下角的座標，你必須計算區間內最大與最小人口數。</li>
-<li><code>c x y v</code> 代表城市 <span>$C[i,j]$</span><!-- Has MathJax --> 的人口改變了 <span>$v$</span><!-- Has MathJax -->。</li>
-</ul>
-<h2 id="Output">Output</h2><p>對於每筆 <code>q x1 y1 x2 y2</code> 的詢問，印出有最大以及最小人口數的一行，中間以空白分隔。</p>
-<p><strong>注意:</strong> 只有一筆測資。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span>
-<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span>
-<span class="number">0</span> <span class="number">9</span> <span class="number">2</span> <span class="number">1</span> <span class="number">3</span>
-<span class="number">0</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">1</span>
-<span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">5</span>
-<span class="number">8</span> <span class="number">5</span> <span class="number">3</span> <span class="number">1</span> <span class="number">4</span>
-<span class="number">4</span>
-q <span class="number">1</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span>
-c <span class="number">2</span> <span class="number">3</span> <span class="number">10</span>
-q <span class="number">1</span> <span class="number">1</span> <span class="number">5</span> <span class="number">5</span>
-q <span class="number">1</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">9</span> <span class="number">0</span>
-<span class="number">10</span> <span class="number">0</span>
-<span class="number">9</span> <span class="number">2</span>
-</code></pre>
-            
-          </span>
+          <p>今年，我們遇到了很多人口統計的問題，因為在有些城市中有許多移民，或者人口增長非常快。每一年，計數成員協會 (Association for Counting Members, ACM) 在每個區域實施人口普查，這個國家被切割成 <span>$N^2$</span><!-- Has MathJax --> 個區域，由 <span>$N\times{N}$</span><!-- Has MathJax --> 的網格所組成。你的任務是找出某些區域中最小與最大人口數，因為一年當中會改變的人口數並不是很巨大，因此用一個數字來表示由移民而改變的人口數。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/11297/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1551,176 +1450,6 @@ Sheet <span class="number">1</span>, back : <span class="number">2</span>, <span
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p641/" itemprop="url">
-                  641 -  Do the Untwist
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p641/">
-              <span>許胖</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="/uniDog/problem/p641/" target="_blank">
-              <span>uniDog</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2014-12-20T03:28:50+08:00" content="2014-12-20">
-              2014-12-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-006/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 006</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=582" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p><strong>密碼學 (Cryptography)</strong> 是一套關於如何將訊息 (又稱為<strong>明文 (plaintext)</strong>) 轉換成暗號 (又稱為<strong>密文 (ciphertext)</strong>) 的秘密通訊方法，除非你是接收者，否則沒有人可以從密文中找出原本的明文。而將明文轉換成密文的過程，我們稱為<strong>加密 (encryption)</strong>；反之，把密文轉成明文的過程被稱為<strong>解密 (decryption)</strong>。現在有一個簡單的加密方法叫做「<strong>Twist</strong>」，傳送者和接收者必須要約定一個正整數 k，做為密鑰 (secret key)。</p>
-<p>「Twist」加密法要使用到四個陣列：<em>plaintext</em> 和 <em>ciphertext</em> 是字元陣列，而 <em>plaincode</em> 和 <em>ciphercode</em> 是整數陣列，所有陣列的長度為 n，n 代表要被加密訊息的長度。所有陣列一開始的初始值為 0，每個陣列的元素從 0 編號到 n - 1。在這問題中，所有的訊息只會包含小寫字母、一個點 <code>.</code> 和底線 <code>_</code> (用來代表空白)。</p>
-<p>要被加密的訊息會儲存在 <em>plaintext</em> 中。給你一個密鑰 k，下面是加密的過程：首先，將 <em>plaintext</em> 的字元，用下面的規則轉換成正整數並儲存在 <em>plaincode</em> 中：<code>_</code> = 0、<code>a</code> = 1、<code>b</code> = 2、…、<code>z</code> = 26、<code>.</code> = 27；接著，利用下面的公式，將 <em>plaincode</em> 轉換到 <em>ciphercode</em> 中，公式是對於所有 <span>$i$</span><!-- Has MathJax --> 從 0 到 n - 1，</p>
-<span>$ciphercode[i] = (plaincode[ki \bmod n] - i) \bmod 28.$</span><!-- Has MathJax -->
-<p>(在這裡 <span>$x \bmod y$</span><!-- Has MathJax --> 代表 x 除以 y 的餘數，例如 <span>$3 \bmod 7 = 3$</span><!-- Has MathJax -->、<span>$22 \bmod 8 = 6$</span><!-- Has MathJax --> 且 <span>$-1 \bmod 28 = 27$</span><!-- Has MathJax -->。你可以利用 C 語言的 <code>%</code> 運算子或是 Pascal 中 <code>mod</code> 運算子來計算，如果你算出是負數，就只要加個 <strong>y</strong> 就可以求出餘數)</p>
-<p>最後，將 <em>ciphercode</em> 利用上面字元轉換的規則，轉成 <em>ciphertext</em>，因此最終的「twist 訊息」就存在 <em>ciphertext</em> 中。例如下面就是將 <code>cat</code> 字串用密鑰 5 做 twist 加密的結果：</p>
-<table>
-<thead>
-<tr>
-<th>陣列</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>plaintext</em></td>
-<td><code>c</code></td>
-<td><code>a</code></td>
-<td><code>t</code></td>
-</tr>
-<tr>
-<td><em>plaincode</em></td>
-<td>3</td>
-<td>1</td>
-<td>20</td>
-</tr>
-<tr>
-<td><em>ciphercode</em></td>
-<td>3</td>
-<td>19</td>
-<td>27</td>
-</tr>
-<tr>
-<td><em>ciphertext</em></td>
-<td><code>c</code></td>
-<td><code>s</code></td>
-<td><code>.</code></td>
-</tr>
-</tbody>
-</table>
-<p>你的任務就是去寫一個程式去解密，也就是說給你一個密鑰 k，要你從密文反過來推出明文。例如，給你密鑰是 5 和密文 <code>cs.</code>，你的程式必須輸出明文 <code>cat</code>。</p>
-<h2 id="Input">Input</h2><p>輸入檔案包含一至多筆測試資料，最後會有一行只有 <code>0</code> 的測試資料，代表檔案結束。每筆測試資料只有一行，包含一把密鑰 k、一個空白、還有一個 twist 加密後的訊息，訊息長度最多有 70 個字元，密鑰 k 是一個正整數且不超過 300。</p>
-<h2 id="Output">Output</h2><p>對於每筆測資，輸出一行解密的訊息。</p>
-<p>註：你可以假設解密一段訊息總是產生唯一解。(對於那些了解初等數論和抽象代數的人，這題目提供的所有測試資料中，k 和 n 的最大公因數都會是 1)</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span> cs.
-<span class="number">101</span> thqqxw<span class="class">.lui</span><span class="class">.qswer</span>
-<span class="number">3</span> b_ylxmhzjsys<span class="class">.virpbkr</span>
-<span class="number">0</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>cat
-<span class="keyword">this</span><span class="number">_</span><span class="keyword">is</span><span class="number">_</span>a<span class="number">_</span>secret
-beware.<span class="number">_</span>dogs<span class="number">_</span>barking
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1767,7 +1496,7 @@ beware.<span class="number">_</span>dogs<span class="number">_</span>barking
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">204</span>
+              <span class="site-state-item-count">205</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1781,7 +1510,7 @@ beware.<span class="number">_</span>dogs<span class="number">_</span>barking
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">36</span>
+              <span class="site-state-item-count">37</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
@@ -1827,7 +1556,7 @@ beware.<span class="number">_</span>dogs<span class="number">_</span>barking
         <div class="copyright" >
   
   &copy;  2014 - 
-  <span itemprop="copyrightYear">2015</span>
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>

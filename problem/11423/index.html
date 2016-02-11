@@ -59,7 +59,7 @@
 <meta property="og:url" content="http://pcshic.github.io/uniDog/problem/11423/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
 <meta property="og:description" content="快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 Hit)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體中讀取進來，計算機架構師總是會去參考快取的 miss 率 (每">
-<meta property="og:updated_time" content="2015-12-28T19:05:02.100Z">
+<meta property="og:updated_time" content="2016-02-11T17:37:49.581Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="11423 - Cache Simulator">
 <meta name="twitter:description" content="快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 Hit)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體中讀取進來，計算機架構師總是會去參考快取的 miss 率 (每">
@@ -277,6 +277,7 @@
         <span itemprop="articleBody"><p>快取記憶體 (Cache) 是一種特別的記憶體，用來縮小讀取中的延遲時間。快取記憶體最基礎的應用就是去保留處理器最常用的的資料，因此現代的處理器使用的主記憶體都擁有一小塊快取記憶體。程式的效能取決於快取的效能，如果資料是在快取記憶體中 (稱為 <strong>Hit</strong>)，那麼就可以正常的執行；反之，如果資料不在快取記憶體中，程式就會暫停直到資料從主記憶體中讀取進來，計算機架構師總是會去參考快取的 <strong>miss</strong> 率 (每一百次有多少次資料不在快取中)。</p>
 <p>當一次 miss 發生時，新的資料要被放進快取中，而某些舊的資料就要從快取當中移除，這裡有幾個決策法來選擇要移除的資料，一個在計算機系統中最普遍的方法叫做 LRU (最少使用替換演算法，Least Recently Used)，在這個方案裡，最不常用的資料會被移除，讓我們解釋一下這個方案是怎麼運作的。</p>
 <p>假設有一個快取有 4 個空間，如果處理器依照 1, 2, 3, 4, 5, 2, 3, 99, 2, 5, 4 的順序拿資料，則狀況如下所述：</p>
+<a id="more"></a>
 <table>
 <thead>
 <tr>
@@ -470,7 +471,7 @@ END
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">204</span>
+              <span class="site-state-item-count">205</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -484,7 +485,7 @@ END
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">36</span>
+              <span class="site-state-item-count">37</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
@@ -547,7 +548,7 @@ END
         <div class="copyright" >
   
   &copy;  2014 - 
-  <span itemprop="copyrightYear">2015</span>
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>

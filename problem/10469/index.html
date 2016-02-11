@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="直觀解,簡單題," />
 
 
 
@@ -53,19 +53,16 @@
 
 
 
-<meta name="description" content="某一個粒子有一初速度和等加速度。假設在 t 秒後此粒子的速度為 v ，請問這個粒子在 $2t$&amp;lt;!-- Has MathJax --&amp;gt; 秒後所經過的距離是多少。
-Input每組測試資料 1 列，有 2 個整數，分別代表 v ($-100\leq{v}\leq{100}$&amp;lt;!-- Has MathJax --&amp;gt;) 和 t ($0\leq{t}\leq{200}$&amp;lt;!-- Has MathJax --">
+<meta name="description" content="$6+9=15$&amp;lt;!-- Has MathJax --&amp;gt; 看起來似乎是沒問題的。可是為什麼 $4+6=2$&amp;lt;!-- Has MathJax --&amp;gt; 呢？如你所見，Mofiz 在數位邏輯課中始終非常努力，然而在某次考試中 Mofiz 執行一個範圍為 32bit 的加法時，他在設計的部份犯了一些錯誤。經過了半小時後，他終於發現問題所在了！當他在執行二進位加法的過程中，原本進位時該補 1 到下一位卻沒有">
 <meta property="og:type" content="article">
-<meta property="og:title" content="10071 - Back to High School Physics">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p10071/index.html">
+<meta property="og:title" content="10469 - To Carry or not to Carry">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/10469/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="某一個粒子有一初速度和等加速度。假設在 t 秒後此粒子的速度為 v ，請問這個粒子在 $2t$&amp;lt;!-- Has MathJax --&amp;gt; 秒後所經過的距離是多少。
-Input每組測試資料 1 列，有 2 個整數，分別代表 v ($-100\leq{v}\leq{100}$&amp;lt;!-- Has MathJax --&amp;gt;) 和 t ($0\leq{t}\leq{200}$&amp;lt;!-- Has MathJax --">
-<meta property="og:updated_time" content="2015-11-22T08:52:07.476Z">
+<meta property="og:description" content="$6+9=15$&amp;lt;!-- Has MathJax --&amp;gt; 看起來似乎是沒問題的。可是為什麼 $4+6=2$&amp;lt;!-- Has MathJax --&amp;gt; 呢？如你所見，Mofiz 在數位邏輯課中始終非常努力，然而在某次考試中 Mofiz 執行一個範圍為 32bit 的加法時，他在設計的部份犯了一些錯誤。經過了半小時後，他終於發現問題所在了！當他在執行二進位加法的過程中，原本進位時該補 1 到下一位卻沒有">
+<meta property="og:updated_time" content="2016-02-11T17:37:49.514Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="10071 - Back to High School Physics">
-<meta name="twitter:description" content="某一個粒子有一初速度和等加速度。假設在 t 秒後此粒子的速度為 v ，請問這個粒子在 $2t$&amp;lt;!-- Has MathJax --&amp;gt; 秒後所經過的距離是多少。
-Input每組測試資料 1 列，有 2 個整數，分別代表 v ($-100\leq{v}\leq{100}$&amp;lt;!-- Has MathJax --&amp;gt;) 和 t ($0\leq{t}\leq{200}$&amp;lt;!-- Has MathJax --">
+<meta name="twitter:title" content="10469 - To Carry or not to Carry">
+<meta name="twitter:description" content="$6+9=15$&amp;lt;!-- Has MathJax --&amp;gt; 看起來似乎是沒問題的。可是為什麼 $4+6=2$&amp;lt;!-- Has MathJax --&amp;gt; 呢？如你所見，Mofiz 在數位邏輯課中始終非常努力，然而在某次考試中 Mofiz 執行一個範圍為 32bit 的加法時，他在設計的部份犯了一些錯誤。經過了半小時後，他終於發現問題所在了！當他在執行二進位加法的過程中，原本進位時該補 1 到下一位卻沒有">
 
 
 
@@ -77,7 +74,7 @@ Input每組測試資料 1 列，有 2 個整數，分別代表 v ($-100\leq{v}\l
   };
 </script>
 
-  <title> 10071 - Back to High School Physics | uniDog 的 ACM 園地 </title>
+  <title> 10469 - To Carry or not to Carry | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -207,7 +204,7 @@ Input每組測試資料 1 列，有 2 個整數，分別代表 v ($-100\leq{v}\l
             
             
               
-                10071 - Back to High School Physics
+                10469 - To Carry or not to Carry
               
             
           </h1>
@@ -215,22 +212,22 @@ Input每組測試資料 1 列，有 2 個整數，分別代表 v ($-100\leq{v}\l
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10071/">
-              <span>Luckycat</span>
+            <a href="/uniDog/problem/10469/">
+              <span>Seki</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10071.htm" target="_blank">
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10469.htm" target="_blank">
               <span>Lucky 貓</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-03-27T00:00:00+08:00" content="2002-03-27">
-              2002-03-27
+            <time itemprop="dateCreated" datetime="2007-06-06T00:00:00+08:00" content="2007-06-06">
+              2007-06-06
             </time>
           </span>
 
@@ -239,8 +236,8 @@ Input每組測試資料 1 列，有 2 個整數，分別代表 v ($-100\leq{v}\l
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 100</span>
+                  <a href="/uniDog/categories/Volume-104/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 104</span>
                   </a>
                 </span>
 
@@ -254,7 +251,7 @@ Input每組測試資料 1 列，有 2 個整數，分別代表 v ($-100\leq{v}\l
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1012" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1410" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -277,34 +274,44 @@ Input每組測試資料 1 列，有 2 個整數，分別代表 v ($-100\leq{v}\l
       
 
       
-        <span itemprop="articleBody"><p>某一個粒子有一初速度和等加速度。假設在 t 秒後此粒子的速度為 v ，請問這個粒子在 <span>$2t$</span><!-- Has MathJax --> 秒後所經過的距離是多少。</p>
-<h2 id="Input">Input</h2><p>每組測試資料 1 列，有 2 個整數，分別代表 v (<span>$-100\leq{v}\leq{100}$</span><!-- Has MathJax -->) 和 t (<span>$0\leq{t}\leq{200}$</span><!-- Has MathJax -->)。</p>
-<h2 id="Output">Output</h2><p>對每組測試資料請輸出這個粒子在 <span>$2t$</span><!-- Has MathJax --> 秒後所經過的距離是多少。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">0</span> <span class="number">0</span>
-<span class="number">5</span> <span class="number">12</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">0</span>
-<span class="number">120</span>
+        <span itemprop="articleBody"><span>$6+9=15$</span><!-- Has MathJax --> 看起來似乎是沒問題的。可是為什麼 <span>$4+6=2$</span><!-- Has MathJax --> 呢？<br><br>如你所見，Mofiz 在數位邏輯課中始終非常努力，然而在某次考試中 Mofiz 執行一個範圍為 32bit 的加法時，他在設計的部份犯了一些錯誤。經過了半小時後，他終於發現問題所在了！當他在執行二進位加法的過程中，原本進位時該補 1 到下一位卻沒有補，以致於進位動作沒有完全。就像下例一樣：<br><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="number">4</span> = <span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000100</span></span><br><span class="line">+<span class="number">6</span> = <span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000110</span></span><br><span class="line">----------------------------------------</span><br><span class="line"> <span class="number">2</span> = <span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000010</span></span><br></pre></td></tr></table></figure>
+<p>對 Mofiz 來說，能夠發現問題所在是件好事，可惜似乎有點太晚了。講師考慮到 Mofiz 上課的用心，決定再給 Mofiz 一次機會。這次 Mofiz 必須設計出一個有效率的程式，這個程式能夠將 2 個無正負號 10 進位的整數相加，並輸出兩者的和 (以 10 進位表示)，而加法的運算方式必須像 Mofiz 剛剛的做法一樣，也就是進位時不補 1 到下一位。</p>
+<a id="more"></a>
+<h2 id="Input">Input</h2><p>每組測試資料一列，有 2 個 10 進位的無正負號整數。整數的範圍不會超過 <span>$2^{32}$</span><!-- Has MathJax -->。</p>
+<h2 id="Output">Output</h2><p>對於每組測試資料，輸出 1 個 10 進位的無正負號整數 -- 這個整數為使用 Mofiz 方法作兩數相加的和。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">4</span> <span class="number">6</span>
+<span class="number">6</span> <span class="number">9</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">2</span>
+<span class="number">15</span>
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/直觀解/" rel="tag">#直觀解</a>
+          
+            <a href="/uniDog/tags/簡單題/" rel="tag">#簡單題</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p10370/" rel="next" title="10370 - Above Average">
-                <i class="fa fa-chevron-left"></i> 10370 - Above Average
+              <a href="/uniDog/problem/11172/" rel="next" title="11172 - Relational Operators">
+                <i class="fa fa-chevron-left"></i> 11172 - Relational Operators
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/p374/" rel="prev" title="374 - Big Mod">
-                374 - Big Mod <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p10167/" rel="prev" title="10167 - Birthday Cake">
+                10167 - Birthday Cake <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -373,7 +380,7 @@ Input每組測試資料 1 列，有 2 個整數，分別代表 v ($-100\leq{v}\l
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">204</span>
+              <span class="site-state-item-count">205</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -387,7 +394,7 @@ Input每組測試資料 1 列，有 2 個整數，分別代表 v ($-100\leq{v}\l
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">36</span>
+              <span class="site-state-item-count">37</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
@@ -450,7 +457,7 @@ Input每組測試資料 1 列，有 2 個整數，分別代表 v ($-100\leq{v}\l
         <div class="copyright" >
   
   &copy;  2014 - 
-  <span itemprop="copyrightYear">2015</span>
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>

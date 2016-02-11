@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="直觀解,簡單題," />
 
 
 
@@ -55,23 +55,20 @@
 
 <meta name="description" content="有一個工頭與一群伐木工，工頭很喜歡找伐木工們的麻煩，他會要求伐木工們以十個一組按照他們的鬍子長短依序排成一列。
 你請寫一個程式判斷伐木工是否以由長到短，或以由短到長的順序排成一列。不會有人的鬍子一樣長。
-Input第一列有一個整數 N ($0 &amp;lt; N &amp;lt; 20$&amp;lt;!-- Has MathJax --&amp;gt;)表示測試資料的組數，接下來有N列，每列有10個相異的正整數表示每人鬍子的長短。
-Ou">
+Input第一列有一個整數 $N$&amp;lt;!-- Has MathJax --&amp;gt; ($0 &amp;lt; N &amp;lt; 20$&amp;lt;!-- Has MathJax --&amp;gt;) 表示測試資料的組數，接下來有 $N$&amp;lt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="11942 - Lumberjack Sequencing">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p11942/index.html">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/11942/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
 <meta property="og:description" content="有一個工頭與一群伐木工，工頭很喜歡找伐木工們的麻煩，他會要求伐木工們以十個一組按照他們的鬍子長短依序排成一列。
 你請寫一個程式判斷伐木工是否以由長到短，或以由短到長的順序排成一列。不會有人的鬍子一樣長。
-Input第一列有一個整數 N ($0 &amp;lt; N &amp;lt; 20$&amp;lt;!-- Has MathJax --&amp;gt;)表示測試資料的組數，接下來有N列，每列有10個相異的正整數表示每人鬍子的長短。
-Ou">
-<meta property="og:updated_time" content="2015-11-22T08:52:08.693Z">
+Input第一列有一個整數 $N$&amp;lt;!-- Has MathJax --&amp;gt; ($0 &amp;lt; N &amp;lt; 20$&amp;lt;!-- Has MathJax --&amp;gt;) 表示測試資料的組數，接下來有 $N$&amp;lt;">
+<meta property="og:updated_time" content="2016-02-11T17:37:49.601Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="11942 - Lumberjack Sequencing">
 <meta name="twitter:description" content="有一個工頭與一群伐木工，工頭很喜歡找伐木工們的麻煩，他會要求伐木工們以十個一組按照他們的鬍子長短依序排成一列。
 你請寫一個程式判斷伐木工是否以由長到短，或以由短到長的順序排成一列。不會有人的鬍子一樣長。
-Input第一列有一個整數 N ($0 &amp;lt; N &amp;lt; 20$&amp;lt;!-- Has MathJax --&amp;gt;)表示測試資料的組數，接下來有N列，每列有10個相異的正整數表示每人鬍子的長短。
-Ou">
+Input第一列有一個整數 $N$&amp;lt;!-- Has MathJax --&amp;gt; ($0 &amp;lt; N &amp;lt; 20$&amp;lt;!-- Has MathJax --&amp;gt;) 表示測試資料的組數，接下來有 $N$&amp;lt;">
 
 
 
@@ -221,7 +218,7 @@ Ou">
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p11942/">
+            <a href="/uniDog/problem/11942/">
               <span>Purple People Eater</span>
             </a>
           </span>
@@ -285,21 +282,29 @@ Ou">
       
         <span itemprop="articleBody"><p>有一個工頭與一群伐木工，工頭很喜歡找伐木工們的麻煩，他會要求伐木工們以十個一組按照他們的鬍子長短依序排成一列。</p>
 <p>你請寫一個程式判斷伐木工是否以由長到短，或以由短到長的順序排成一列。不會有人的鬍子一樣長。</p>
-<h2 id="Input">Input</h2><p>第一列有一個整數 N (<span>$0 &lt; N &lt; 20$</span><!-- Has MathJax -->)表示測試資料的組數，接下來有N列，每列有10個相異的正整數表示每人鬍子的長短。</p>
+<h2 id="Input">Input</h2><p>第一列有一個整數 <span>$N$</span><!-- Has MathJax --> (<span>$0 &lt; N &lt; 20$</span><!-- Has MathJax -->) 表示測試資料的組數，接下來有 <span>$N$</span><!-- Has MathJax --> 列，每列有 <span>$10$</span><!-- Has MathJax --> 個相異的正整數表示每人鬍子的長短。</p>
 <h2 id="Output">Output</h2><p>請以 <code>Ordered</code> 表示有照順序排列，以 <code>Unordered</code> 表示沒有照順序排列，第一列請輸出 <code>Lumberjacks:</code>。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">3</span> 
-<span class="number">13</span> <span class="number">25</span> <span class="number">39</span> <span class="number">40</span> <span class="number">55</span> <span class="number">62</span> <span class="number">68</span> <span class="number">77</span> <span class="number">88</span> <span class="number">95</span> 
-<span class="number">88</span> <span class="number">62</span> <span class="number">77</span> <span class="number">20</span> <span class="number">40</span> <span class="number">10</span> <span class="number">99</span> <span class="number">56</span> <span class="number">45</span> <span class="number">36</span> 
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">3</span>
+<span class="number">13</span> <span class="number">25</span> <span class="number">39</span> <span class="number">40</span> <span class="number">55</span> <span class="number">62</span> <span class="number">68</span> <span class="number">77</span> <span class="number">88</span> <span class="number">95</span>
+<span class="number">88</span> <span class="number">62</span> <span class="number">77</span> <span class="number">20</span> <span class="number">40</span> <span class="number">10</span> <span class="number">99</span> <span class="number">56</span> <span class="number">45</span> <span class="number">36</span>
 <span class="number">91</span> <span class="number">78</span> <span class="number">61</span> <span class="number">59</span> <span class="number">54</span> <span class="number">49</span> <span class="number">43</span> <span class="number">33</span> <span class="number">26</span> <span class="number">18</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="label">Lumberjacks:</span> 
-Ordered 
-Unordered 
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="label">Lumberjacks:</span>
+Ordered
+Unordered
 Ordered
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/直觀解/" rel="tag">#直觀解</a>
+          
+            <a href="/uniDog/tags/簡單題/" rel="tag">#簡單題</a>
+          
+        </div>
       
 
       
@@ -384,7 +389,7 @@ Ordered
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">204</span>
+              <span class="site-state-item-count">205</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -398,7 +403,7 @@ Ordered
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">36</span>
+              <span class="site-state-item-count">37</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
@@ -461,7 +466,7 @@ Ordered
         <div class="copyright" >
   
   &copy;  2014 - 
-  <span itemprop="copyrightYear">2015</span>
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>

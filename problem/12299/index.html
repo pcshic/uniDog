@@ -53,22 +53,16 @@
 
 
 
-<meta name="description" content="Hashmat 是一個勇敢的將領，他帶著年輕的士兵從這個城市移動到另一個城市與敵人對抗。在打仗之前他會計算己方與敵方士兵的數目差距，來決定是要開打或不開打。Hashmat 的士兵數絕不會比敵人的士兵數大。
-Input每組測試資料 1 列，有 2 個整數，代表 Hashmat 及敵人的士兵數或反之。這些數不會超過 $2^{32}$&amp;lt;!-- Has MathJax --&amp;gt;。
-Output對每組測試資料">
+<meta name="description" content="在傳統的 RMQ (Range Minimum Query) 問題中，我們有靜態的陣列 $A$&amp;lt;!-- Has MathJax --&amp;gt;，對於每次查詢 $(L,R)$&amp;lt;!-- Has MathJax --&amp;gt; ($L\leq{R}$&amp;lt;!-- Has MathJax --&amp;gt;)，我們回傳 $A[L],A[L+1],\cdots{},A[R]$&amp;lt;!-- Has MathJax --&amp;gt; 之間的最小值。注意陣列">
 <meta property="og:type" content="article">
-<meta property="og:title" content="10055 - Hashmat the brave warrior">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p10055/index.html">
+<meta property="og:title" content="12299 - RMQ with Shifts">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/12299/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="Hashmat 是一個勇敢的將領，他帶著年輕的士兵從這個城市移動到另一個城市與敵人對抗。在打仗之前他會計算己方與敵方士兵的數目差距，來決定是要開打或不開打。Hashmat 的士兵數絕不會比敵人的士兵數大。
-Input每組測試資料 1 列，有 2 個整數，代表 Hashmat 及敵人的士兵數或反之。這些數不會超過 $2^{32}$&amp;lt;!-- Has MathJax --&amp;gt;。
-Output對每組測試資料">
-<meta property="og:updated_time" content="2015-11-22T08:52:07.452Z">
+<meta property="og:description" content="在傳統的 RMQ (Range Minimum Query) 問題中，我們有靜態的陣列 $A$&amp;lt;!-- Has MathJax --&amp;gt;，對於每次查詢 $(L,R)$&amp;lt;!-- Has MathJax --&amp;gt; ($L\leq{R}$&amp;lt;!-- Has MathJax --&amp;gt;)，我們回傳 $A[L],A[L+1],\cdots{},A[R]$&amp;lt;!-- Has MathJax --&amp;gt; 之間的最小值。注意陣列">
+<meta property="og:updated_time" content="2016-02-11T17:37:49.620Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="10055 - Hashmat the brave warrior">
-<meta name="twitter:description" content="Hashmat 是一個勇敢的將領，他帶著年輕的士兵從這個城市移動到另一個城市與敵人對抗。在打仗之前他會計算己方與敵方士兵的數目差距，來決定是要開打或不開打。Hashmat 的士兵數絕不會比敵人的士兵數大。
-Input每組測試資料 1 列，有 2 個整數，代表 Hashmat 及敵人的士兵數或反之。這些數不會超過 $2^{32}$&amp;lt;!-- Has MathJax --&amp;gt;。
-Output對每組測試資料">
+<meta name="twitter:title" content="12299 - RMQ with Shifts">
+<meta name="twitter:description" content="在傳統的 RMQ (Range Minimum Query) 問題中，我們有靜態的陣列 $A$&amp;lt;!-- Has MathJax --&amp;gt;，對於每次查詢 $(L,R)$&amp;lt;!-- Has MathJax --&amp;gt; ($L\leq{R}$&amp;lt;!-- Has MathJax --&amp;gt;)，我們回傳 $A[L],A[L+1],\cdots{},A[R]$&amp;lt;!-- Has MathJax --&amp;gt; 之間的最小值。注意陣列">
 
 
 
@@ -80,7 +74,7 @@ Output對每組測試資料">
   };
 </script>
 
-  <title> 10055 - Hashmat the brave warrior | uniDog 的 ACM 園地 </title>
+  <title> 12299 - RMQ with Shifts | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -210,7 +204,7 @@ Output對每組測試資料">
             
             
               
-                10055 - Hashmat the brave warrior
+                12299 - RMQ with Shifts
               
             
           </h1>
@@ -218,22 +212,22 @@ Output對每組測試資料">
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p10055/">
-              <span>Luckycat</span>
+            <a href="/uniDog/problem/12299/">
+              <span>許胖</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10055.htm" target="_blank">
-              <span>Lucky 貓</span>
+            <a href="/uniDog/problem/12299/" target="_blank">
+              <span>uniDog</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-04-16T00:00:00+08:00" content="2002-04-16">
-              2002-04-16
+            <time itemprop="dateCreated" datetime="2015-12-29T15:33:59+08:00" content="2015-12-29">
+              2015-12-29
             </time>
           </span>
 
@@ -242,8 +236,8 @@ Output對每組測試資料">
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 100</span>
+                  <a href="/uniDog/categories/Volume-122/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 122</span>
                   </a>
                 </span>
 
@@ -257,7 +251,7 @@ Output對每組測試資料">
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=996" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3720" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -280,15 +274,24 @@ Output對每組測試資料">
       
 
       
-        <span itemprop="articleBody"><p>Hashmat 是一個勇敢的將領，他帶著年輕的士兵從這個城市移動到另一個城市與敵人對抗。在打仗之前他會計算己方與敵方士兵的數目差距，來決定是要開打或不開打。Hashmat 的士兵數絕不會比敵人的士兵數大。</p>
-<h2 id="Input">Input</h2><p>每組測試資料 1 列，有 2 個整數，代表 Hashmat 及敵人的士兵數或反之。這些數不會超過 <span>$2^{32}$</span><!-- Has MathJax -->。</p>
-<h2 id="Output">Output</h2><p>對每組測試資料請輸出 Hashmat 與敵人士兵數目的差 (正數)。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">10</span> <span class="number">12</span>
-<span class="number">14</span> <span class="number">10</span>
-<span class="number">100</span> <span class="number">200</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">2</span>
+        <span itemprop="articleBody"><p>在傳統的 RMQ (Range Minimum Query) 問題中，我們有靜態的陣列 <span>$A$</span><!-- Has MathJax -->，對於每次查詢 <span>$(L,R)$</span><!-- Has MathJax --> (<span>$L\leq{R}$</span><!-- Has MathJax -->)，我們回傳 <span>$A[L],A[L+1],\cdots{},A[R]$</span><!-- Has MathJax --> 之間的最小值。注意陣列的足標從 1 開始，例如陣列最左邊的元素就是 <span>$A[1]$</span><!-- Has MathJax -->。</p>
+<p>在這個問題中，陣列 <span>$A$</span><!-- Has MathJax --> 不再是靜態的，我們需要支援另一個操作如下：</p>
+<span>$shift(i_1,i_2,i_3,\cdots{},i_k)(i_1 &lt; i_2 &lt; \cdots{} &lt; i_k, k &gt; 1)$</span><!-- Has MathJax -->
+<p>　<br>代表對 <span>$A[i_1],A[i_2],\cdots{},A[i_k]$</span><!-- Has MathJax --> 做「左環形位移」(left circular shift)。</p>
+<p>例如，如果 <span>$A=\{6,2,4,8,5,1,4\}$</span><!-- Has MathJax -->，則 <span>$shift(2,4,5,7)$</span><!-- Has MathJax --> 會產生 <span>$6,8,4,5,4,1,2$</span><!-- Has MathJax -->，若繼續做 <span>$shift(1,2)$</span><!-- Has MathJax --> 則會變成 <span>$8,6,4,5,4,1,2$</span><!-- Has MathJax -->。</p>
+<h2 id="Input">Input</h2><p>只有一筆測試資料，一開始有兩個整數 <span>$n,q$</span><!-- Has MathJax --> (<span>$1\leq{n}\leq{100,000}$</span><!-- Has MathJax -->、<span>$1\leq{q}\leq{250,000}$</span><!-- Has MathJax -->)，分別代表陣列 <span>$A$</span><!-- Has MathJax --> 的整數數量、和操作的數量。下一行有 <span>$n$</span><!-- Has MathJax --> 個不超過 <span>$100,000$</span><!-- Has MathJax --> 的整數，代表一開始 <span>$A$</span><!-- Has MathJax --> 當中的整數。接著 <span>$q$</span><!-- Has MathJax --> 行，每行有一長度不超過 30 的字串，並且沒有空白字元。所有的操作指令保證都是合法的。</p>
+<p><strong> 注意 </strong>：測資很大，最好使用快速的 I/O 方法。</p>
+<h2 id="Output">Output</h2><p>對於每個查詢，印出範圍內的最小值。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">7</span> <span class="number">5</span>
+<span class="number">6</span> <span class="number">2</span> <span class="number">4</span> <span class="number">8</span> <span class="number">5</span> <span class="number">1</span> <span class="number">4</span>
+query(<span class="number">3</span>,<span class="number">7</span>)
+shift(<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">7</span>)
+query(<span class="number">1</span>,<span class="number">4</span>)
+shift(<span class="number">1</span>,<span class="number">2</span>)
+query(<span class="number">2</span>,<span class="number">2</span>)
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">1</span>
 <span class="number">4</span>
-<span class="number">100</span>
+<span class="number">6</span>
 </code></pre></span>
       
     </div>
@@ -300,17 +303,13 @@ Output對每組測試資料">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/p382/" rel="next" title="382 - Perfection">
-                <i class="fa fa-chevron-left"></i> 382 - Perfection
+              <a href="/uniDog/problem/11992/" rel="next" title="11992 - Fast Matrix Operations">
+                <i class="fa fa-chevron-left"></i> 11992 - Fast Matrix Operations
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/uniDog/problem/10035/" rel="prev" title="10035 - Primary Arithmetic">
-                10035 - Primary Arithmetic <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -378,7 +377,7 @@ Output對每組測試資料">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">204</span>
+              <span class="site-state-item-count">205</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -392,7 +391,7 @@ Output對每組測試資料">
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">36</span>
+              <span class="site-state-item-count">37</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
@@ -455,7 +454,7 @@ Output對每組測試資料">
         <div class="copyright" >
   
   &copy;  2014 - 
-  <span itemprop="copyrightYear">2015</span>
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>
