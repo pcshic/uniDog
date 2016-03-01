@@ -212,6 +212,144 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/272/" itemprop="url">
+                  272 - TeX Quotes
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/272/">
+              <span>untitled</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q272.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2003-03-21T00:00:00+08:00" content="2003-03-21">
+              2003-03-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-002/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 002</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=208" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p><span>$\TeX$</span><!-- Has MathJax --> 是一種由 Donald Knuth 所發展出的一套文書排版軟體。這套軟體可以將原始文件檔加上一些像字型等型態後，轉成一份很漂亮的文件。而一份漂亮的文件是需要用 <code>&#96;&#96;</code> 和 <code>&quot;</code> 來把別人說的話給「引」出來，而不是用大部份鍵盤上有的 <code>&quot;</code>。雖然鍵盤裡通常不會有這種有方向的雙引號鍵，不過上面有左單引號 <code>&#96;</code> (有人叫 backquote)，和右單引號 <code>&#39;</code> (有人叫 apostrophe 或 quote)。你可以在你的鍵盤上找一下，不過要小心不要將 <code>&#96;</code> 與 <code>\</code> (backslash 鍵) 搞混了。而在 <span>$\TeX$</span><!-- Has MathJax --> 裡，使用者可以輸入兩個左單引號 <code>&#96;&#96;</code> 來構成一個左雙引號 <code>&#96;&#96;</code>，或者是兩個右單引號 <code>&#39;&#39;</code> 來構造一個右雙引號 <code>&#39;&#39;</code>，不過呢，通常大家打字時都很習慣用普通的雙引號 <code>&quot;</code> 來引述別人的話。</p>
+<p>如果原始文件檔內容是：</p>
+<p><code>&quot;To be or not to be,&quot; quoth the bard, &quot;that is the question.&quot;</code></p>
+<p>則 TeX 作出來的文件並不會是我們所想要的：</p>
+<p><code>``To be or not to be,&quot; quoth the bard, ``that is the question.&quot;</code></p>
+<p>為了要得到上面的文件，我們需要把原始文件變成這個樣子：</p>
+<p><code>``To be or not to be,&#39;&#39; quoth the bard, ``that is the question.&#39;&#39;</code></p>
+<p>你現在必須要寫一個程式，將普通的雙引號 (<code>&quot;</code>)，轉成有方向性的雙引號，而其它文字則不變。而在把普通的雙引號換掉的時候，要特別注意，當要開始引述一句話時要用 <code>&#96;&#96;</code>，而結束引述時要用 <code>&#39;&#39;</code>。不用擔心會有多層巢狀引號的情形，也就是第一個引號一定是用 <code>&#96;&#96;</code> 來代替，再來用 <code>&#39;&#39;</code>，然後用 <code>&#96;&#96;</code>，接著用 <code>&#39;&#39;</code>，依此類推。</p>
+<h2 id="Input_and_Output">Input and Output</h2><p>輸入是若干列的文字，其中有偶數個雙引號 (<code>&quot;</code>)，以 end-of-file 做結束。輸出的文字必須和輸入的一模一樣，除了：</p>
+<ul>
+<li>每一組雙引號的第一個 <code>&quot;</code> 必須用兩個 <code>&#96;</code> 字元 (就是 <code>&#96;&#96;</code>) 來代替</li>
+<li>每一組雙引號的第二個 <code>&quot;</code> 必須用兩個 <code>&#39;</code> 字元 (就是 <code>&#39;&#39;</code>) 來代替。</li>
+</ul>
+<h2 id="Sample_Input">Sample Input</h2><pre><code>"To <span class="keyword">be</span> <span class="keyword">or</span> <span class="keyword">not</span> to <span class="keyword">be</span>," quoth the Bard, "<span class="keyword">that</span>
+<span class="keyword">is</span> the question".
+The programming contestant replied: "I must disagree.
+To `C' <span class="keyword">or</span> <span class="keyword">not</span> to `C', <span class="keyword">that</span> <span class="keyword">is</span> The Question!"
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>``<span class="keyword">To</span> be <span class="keyword">or</span> <span class="keyword">not</span> <span class="keyword">to</span> be,<span class="string">''</span> quoth the Bard, ``that
+<span class="keyword">is</span> the question<span class="string">''</span>.
+The programming contestant replied: ``I must disagree.
+<span class="keyword">To</span> `C<span class="string">' or not to `C'</span>, that <span class="keyword">is</span> The Question!<span class="string">''</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/p118/" itemprop="url">
                   118 - Mutant Flatworld Expolrers
                 </a>
@@ -1116,128 +1254,6 @@ Number of Tiles : <span class="number">6</span>
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p122/" itemprop="url">
-                  122 - Trees on the level
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p122/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q122.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2003-02-10T00:00:00+08:00" content="2003-02-10">
-              2003-02-10
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=58" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>樹狀結構在電腦科學的許多領域中都相當重要。本問題牽涉到建立樹及走訪樹。</p>
-<p>給你一二元樹，你的任務是寫一個程式來列印依「階層（level-order）」走訪的結果。在本問題中，二元樹的每個節點含有一個正整數，並且節點的數目最少1個，最多256個。</p>
-<p>在「階層」走訪中，依階層從低到高，同階層從左到右的次序來列印。例如以下的二元樹階層走訪的結果為：5, 4, 8, 11, 13, 4, 7, 2, 1</p>
-<img src="/uniDog/images/1/p122.gif">
-<p>在本問題中，二元樹以節點來表示。每個節點以一對(n,s)來表示。n代表此節點的值，s為一字串，代表從根節點到達此節點的路徑。其中L代表往左，R代表往右。所以在上方的圖中內容為13的節點其表示法為(13,RL)，而內容為2的節點其表示法為(2,LLR)，而根節點為(5,)。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p122/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/uniDog/problem/p112/" itemprop="url">
                   112 - Tree Summing
                 </a>
@@ -1362,8 +1378,8 @@ Number of Tiles : <span class="number">6</span>
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p108/" itemprop="url">
-                  108 - Maximum Sum
+                <a class="post-title-link" href="/uniDog/problem/p122/" itemprop="url">
+                  122 - Trees on the level
                 </a>
               
             
@@ -1372,22 +1388,22 @@ Number of Tiles : <span class="number">6</span>
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p108/">
+            <a href="/uniDog/problem/p122/">
               <span>Luckycat</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q108.htm" target="_blank">
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q122.htm" target="_blank">
               <span>Lucky 貓</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2003-01-22T00:00:00+08:00" content="2003-01-22">
-              2003-01-22
+            <time itemprop="dateCreated" datetime="2003-02-10T00:00:00+08:00" content="2003-02-10">
+              2003-02-10
             </time>
           </span>
 
@@ -1411,7 +1427,7 @@ Number of Tiles : <span class="number">6</span>
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=44" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=58" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -1435,12 +1451,13 @@ Number of Tiles : <span class="number">6</span>
 
       
         
-          <p>給你一個 NxN 的陣列，請你找出有最大和的子區域 (sub-rectangle) 其和為多少。一個區域的和指的是該區域中所有元素值的和。一個區域是指相連的任意大小的子陣列。例如，對以下的二維陣列：</p>
-<img src="/uniDog/images/1/p108-1.gif">
-<p>其最大和的子區域位於左下角，並且其和為 15。如下所示：</p>
-<img src="/uniDog/images/1/p108-2.gif">
+          <p>樹狀結構在電腦科學的許多領域中都相當重要。本問題牽涉到建立樹及走訪樹。</p>
+<p>給你一二元樹，你的任務是寫一個程式來列印依「階層（level-order）」走訪的結果。在本問題中，二元樹的每個節點含有一個正整數，並且節點的數目最少1個，最多256個。</p>
+<p>在「階層」走訪中，依階層從低到高，同階層從左到右的次序來列印。例如以下的二元樹階層走訪的結果為：5, 4, 8, 11, 13, 4, 7, 2, 1</p>
+<img src="/uniDog/images/1/p122.gif">
+<p>在本問題中，二元樹以節點來表示。每個節點以一對(n,s)來表示。n代表此節點的值，s為一字串，代表從根節點到達此節點的路徑。其中L代表往左，R代表往右。所以在上方的圖中內容為13的節點其表示法為(13,RL)，而內容為2的節點其表示法為(2,LLR)，而根節點為(5,)。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p108/#more" rel="contents">
+            <a class="btn" href="/uniDog/problem/p122/#more" rel="contents">
               閱讀全文 &raquo;
             </a>
           </div>
@@ -1508,14 +1525,14 @@ Number of Tiles : <span class="number">6</span>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">205</span>
+              <span class="site-state-item-count">206</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/uniDog/categories">
-              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">分類</span>
               </a>
           </div>

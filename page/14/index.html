@@ -212,6 +212,154 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/437/" itemprop="url">
+                  437 - The Tower of Babylon
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/437/">
+              <span>Luckycat</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q437.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2003-12-18T00:00:00+08:00" content="2003-12-18">
+              2003-12-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-004/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 004</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=378" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>或許你曾聽過巴比倫塔的傳說，現在這個故事的許多細節已經被遺忘了。現在，我們要告訴你整個故事：</p>
+<p>巴比倫人有 n 種不同的積木，每種積木都是實心長方體，且數目都是無限的。第 i 種積木的長寬高分別為 <span>$(x_i,y_i,z_i)$</span><!-- Has MathJax -->。積木可以被旋轉，所以前面的長寬高是可以互相換的。也就是其中 2 個組成底部的長方形，剩下的一個為高度。巴比倫人想要盡可能的用積木來堆高塔，但是兩塊積木要疊在一起是有條件的：只有在第一塊積木的底部 2 個邊均小於第二塊積木的底部相對的 2 個邊時，第一塊積木才可以疊在第二塊積木上方。例如：底部為 3x8 的積木可以放在底部為 4x10 的積木上，但是無法放在底部為 6x7 的積木上。</p>
+<p>給你一些積木的資料，你的任務是寫一個程式算出可以堆出的塔最高是多少。</p>
+<h2 id="Input">Input</h2><p>輸入含有多組測試資料。每組測試資料的第一列含有 1 個整數 <span>$n$</span><!-- Has MathJax --> (<span>$n\leq{30}$</span><!-- Has MathJax -->)，代表以下有幾種不同的方塊。接下的 <span>$n$</span><!-- Has MathJax --> 列每列有 3 個整數 <span>$x_i,y_i,z_i$</span><!-- Has MathJax -->，代表某一種積木的 3 個邊長。</p>
+<p><span>$n=0$</span><!-- Has MathJax --> 代表輸入結束，請參考 Sample Input。</p>
+<h2 id="Output">Output</h2><p>對每組測試資料輸出可以堆出的塔最高是多少。</p>
+<p>輸出格式請參考 Sample Output。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">1</span>
+<span class="number">10</span> <span class="number">20</span> <span class="number">30</span>
+<span class="number">2</span>
+<span class="number">6</span> <span class="number">8</span> <span class="number">10</span>
+<span class="number">5</span> <span class="number">5</span> <span class="number">5</span>
+<span class="number">7</span>
+<span class="number">1</span> <span class="number">1</span> <span class="number">1</span>
+<span class="number">2</span> <span class="number">2</span> <span class="number">2</span>
+<span class="number">3</span> <span class="number">3</span> <span class="number">3</span>
+<span class="number">4</span> <span class="number">4</span> <span class="number">4</span>
+<span class="number">5</span> <span class="number">5</span> <span class="number">5</span>
+<span class="number">6</span> <span class="number">6</span> <span class="number">6</span>
+<span class="number">7</span> <span class="number">7</span> <span class="number">7</span>
+<span class="number">5</span>
+<span class="number">31</span> <span class="number">41</span> <span class="number">59</span>
+<span class="number">26</span> <span class="number">53</span> <span class="number">58</span>
+<span class="number">97</span> <span class="number">93</span> <span class="number">23</span>
+<span class="number">84</span> <span class="number">62</span> <span class="number">64</span>
+<span class="number">33</span> <span class="number">83</span> <span class="number">27</span>
+<span class="number">0</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Case <span class="number">1</span>: maximum height = <span class="number">40</span>
+Case <span class="number">2</span>: maximum height = <span class="number">21</span>
+Case <span class="number">3</span>: maximum height = <span class="number">28</span>
+Case <span class="number">4</span>: maximum height = <span class="number">342</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/10465/" itemprop="url">
                   10465 - Homer Simpson
                 </a>
@@ -1375,144 +1523,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/272/" itemprop="url">
-                  272 - TeX Quotes
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/272/">
-              <span>untitled</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q272.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2003-03-21T00:00:00+08:00" content="2003-03-21">
-              2003-03-21
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-002/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 002</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=208" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p><span>$\TeX$</span><!-- Has MathJax --> 是一種由 Donald Knuth 所發展出的一套文書排版軟體。這套軟體可以將原始文件檔加上一些像字型等型態後，轉成一份很漂亮的文件。而一份漂亮的文件是需要用 <code>&#96;&#96;</code> 和 <code>&quot;</code> 來把別人說的話給「引」出來，而不是用大部份鍵盤上有的 <code>&quot;</code>。雖然鍵盤裡通常不會有這種有方向的雙引號鍵，不過上面有左單引號 <code>&#96;</code> (有人叫 backquote)，和右單引號 <code>&#39;</code> (有人叫 apostrophe 或 quote)。你可以在你的鍵盤上找一下，不過要小心不要將 <code>&#96;</code> 與 <code>\</code> (backslash 鍵) 搞混了。而在 <span>$\TeX$</span><!-- Has MathJax --> 裡，使用者可以輸入兩個左單引號 <code>&#96;&#96;</code> 來構成一個左雙引號 <code>&#96;&#96;</code>，或者是兩個右單引號 <code>&#39;&#39;</code> 來構造一個右雙引號 <code>&#39;&#39;</code>，不過呢，通常大家打字時都很習慣用普通的雙引號 <code>&quot;</code> 來引述別人的話。</p>
-<p>如果原始文件檔內容是：</p>
-<p><code>&quot;To be or not to be,&quot; quoth the bard, &quot;that is the question.&quot;</code></p>
-<p>則 TeX 作出來的文件並不會是我們所想要的：</p>
-<p><code>``To be or not to be,&quot; quoth the bard, ``that is the question.&quot;</code></p>
-<p>為了要得到上面的文件，我們需要把原始文件變成這個樣子：</p>
-<p><code>``To be or not to be,&#39;&#39; quoth the bard, ``that is the question.&#39;&#39;</code></p>
-<p>你現在必須要寫一個程式，將普通的雙引號 (<code>&quot;</code>)，轉成有方向性的雙引號，而其它文字則不變。而在把普通的雙引號換掉的時候，要特別注意，當要開始引述一句話時要用 <code>&#96;&#96;</code>，而結束引述時要用 <code>&#39;&#39;</code>。不用擔心會有多層巢狀引號的情形，也就是第一個引號一定是用 <code>&#96;&#96;</code> 來代替，再來用 <code>&#39;&#39;</code>，然後用 <code>&#96;&#96;</code>，接著用 <code>&#39;&#39;</code>，依此類推。</p>
-<h2 id="Input_and_Output">Input and Output</h2><p>輸入是若干列的文字，其中有偶數個雙引號 (<code>&quot;</code>)，以 end-of-file 做結束。輸出的文字必須和輸入的一模一樣，除了：</p>
-<ul>
-<li>每一組雙引號的第一個 <code>&quot;</code> 必須用兩個 <code>&#96;</code> 字元 (就是 <code>&#96;&#96;</code>) 來代替</li>
-<li>每一組雙引號的第二個 <code>&quot;</code> 必須用兩個 <code>&#39;</code> 字元 (就是 <code>&#39;&#39;</code>) 來代替。</li>
-</ul>
-<h2 id="Sample_Input">Sample Input</h2><pre><code>"To <span class="keyword">be</span> <span class="keyword">or</span> <span class="keyword">not</span> to <span class="keyword">be</span>," quoth the Bard, "<span class="keyword">that</span>
-<span class="keyword">is</span> the question".
-The programming contestant replied: "I must disagree.
-To `C' <span class="keyword">or</span> <span class="keyword">not</span> to `C', <span class="keyword">that</span> <span class="keyword">is</span> The Question!"
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>``<span class="keyword">To</span> be <span class="keyword">or</span> <span class="keyword">not</span> <span class="keyword">to</span> be,<span class="string">''</span> quoth the Bard, ``that
-<span class="keyword">is</span> the question<span class="string">''</span>.
-The programming contestant replied: ``I must disagree.
-<span class="keyword">To</span> `C<span class="string">' or not to `C'</span>, that <span class="keyword">is</span> The Question!<span class="string">''</span>
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1559,14 +1569,14 @@ The programming contestant replied: ``I must disagree.
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">205</span>
+              <span class="site-state-item-count">206</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/uniDog/categories">
-              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">分類</span>
               </a>
           </div>

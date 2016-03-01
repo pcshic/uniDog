@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="直觀解,簡單數學,簡單題,迴圈," />
 
 
 
@@ -54,21 +54,18 @@
 
 
 <meta name="description" content="據說，90% 的大學一年級新生期望他們自己的成績能在全班平均之上，請你來幫忙驗證看看他們有沒有達成目標。
-Input輸入的第一列有一個整數 C 代表以下有多少組測試資料。每組資料的第一個整數 N 代表班級總人數 (1 &amp;lt;= N &amp;lt;= 1000)。接下來有 N 個以空白或換行來間隔的整數，代表每個學生的期末總成績 (0 &amp;lt;= 分數 &amp;lt;= 100)。
-Output對每組測試資料">
+Input輸入的第一列有一個整數 $C$&amp;lt;!-- Has MathJax --&amp;gt; 代表以下有多少組測試資料。每組資料的第一個整數 $N$&amp;lt;!-- Has MathJax --&amp;gt; 代表班級總人數 ($1\leq{N}\leq{1000}$&amp;lt;!-- Has MathJax --&amp;gt;)。接下來有 $N">
 <meta property="og:type" content="article">
 <meta property="og:title" content="10370 - Above Average">
 <meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p10370/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
 <meta property="og:description" content="據說，90% 的大學一年級新生期望他們自己的成績能在全班平均之上，請你來幫忙驗證看看他們有沒有達成目標。
-Input輸入的第一列有一個整數 C 代表以下有多少組測試資料。每組資料的第一個整數 N 代表班級總人數 (1 &amp;lt;= N &amp;lt;= 1000)。接下來有 N 個以空白或換行來間隔的整數，代表每個學生的期末總成績 (0 &amp;lt;= 分數 &amp;lt;= 100)。
-Output對每組測試資料">
-<meta property="og:updated_time" content="2016-02-11T17:37:49.741Z">
+Input輸入的第一列有一個整數 $C$&amp;lt;!-- Has MathJax --&amp;gt; 代表以下有多少組測試資料。每組資料的第一個整數 $N$&amp;lt;!-- Has MathJax --&amp;gt; 代表班級總人數 ($1\leq{N}\leq{1000}$&amp;lt;!-- Has MathJax --&amp;gt;)。接下來有 $N">
+<meta property="og:updated_time" content="2016-03-01T07:28:23.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="10370 - Above Average">
 <meta name="twitter:description" content="據說，90% 的大學一年級新生期望他們自己的成績能在全班平均之上，請你來幫忙驗證看看他們有沒有達成目標。
-Input輸入的第一列有一個整數 C 代表以下有多少組測試資料。每組資料的第一個整數 N 代表班級總人數 (1 &amp;lt;= N &amp;lt;= 1000)。接下來有 N 個以空白或換行來間隔的整數，代表每個學生的期末總成績 (0 &amp;lt;= 分數 &amp;lt;= 100)。
-Output對每組測試資料">
+Input輸入的第一列有一個整數 $C$&amp;lt;!-- Has MathJax --&amp;gt; 代表以下有多少組測試資料。每組資料的第一個整數 $N$&amp;lt;!-- Has MathJax --&amp;gt; 代表班級總人數 ($1\leq{N}\leq{1000}$&amp;lt;!-- Has MathJax --&amp;gt;)。接下來有 $N">
 
 
 
@@ -281,7 +278,7 @@ Output對每組測試資料">
 
       
         <span itemprop="articleBody"><p>據說，90% 的大學一年級新生期望他們自己的成績能在全班平均之上，請你來幫忙驗證看看他們有沒有達成目標。</p>
-<h2 id="Input">Input</h2><p>輸入的第一列有一個整數 C 代表以下有多少組測試資料。每組資料的第一個整數 N 代表班級總人數 (1 &lt;= N &lt;= 1000)。接下來有 N 個以空白或換行來間隔的整數，代表每個學生的期末總成績 (0 &lt;= 分數 &lt;= 100)。</p>
+<h2 id="Input">Input</h2><p>輸入的第一列有一個整數 <span>$C$</span><!-- Has MathJax --> 代表以下有多少組測試資料。每組資料的第一個整數 <span>$N$</span><!-- Has MathJax --> 代表班級總人數 (<span>$1\leq{N}\leq{1000}$</span><!-- Has MathJax -->)。接下來有 <span>$N$</span><!-- Has MathJax --> 個以空白或換行來間隔的整數，代表每個學生的期末總成績 (<span>$0\leq{\text{分數}}\leq{100}$</span><!-- Has MathJax -->)。</p>
 <h2 id="Output">Output</h2><p>對每組測試資料輸出一列，算出有多少百分比的學生成績比全班平均高，請四捨五入到小數第三位。</p>
 <h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">5</span>
 <span class="number">5</span> <span class="number">50</span> <span class="number">50</span> <span class="number">70</span> <span class="number">80</span> <span class="number">100</span>
@@ -299,6 +296,18 @@ Output對每組測試資料">
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/直觀解/" rel="tag">#直觀解</a>
+          
+            <a href="/uniDog/tags/簡單數學/" rel="tag">#簡單數學</a>
+          
+            <a href="/uniDog/tags/簡單題/" rel="tag">#簡單題</a>
+          
+            <a href="/uniDog/tags/迴圈/" rel="tag">#迴圈</a>
+          
+        </div>
       
 
       
@@ -383,14 +392,14 @@ Output對每組測試資料">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/uniDog/archives">
-              <span class="site-state-item-count">205</span>
+              <span class="site-state-item-count">206</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/uniDog/categories">
-              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">分類</span>
               </a>
           </div>
