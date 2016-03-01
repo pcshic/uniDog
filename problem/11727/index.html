@@ -37,7 +37,7 @@
 <link href="/uniDog/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, UVa, Luckycat, 翻譯, algorithm, 演算法" />
+  <meta name="keywords" content="直觀解,簡單題," />
 
 
 
@@ -53,25 +53,16 @@
 
 
 
-<meta name="description" content="本題請你做四則運算，計算某數 n 乘上 567 後除以 9，再加上 7492，再乘上 235，再除以 47，最後減掉 498，請問其值的十位數值是多少？
-Input第一列的整數 t 表示測試資料的組數，每組測試資料有一個整數 n ($-1000\leq{n}\leq{1000}$&amp;lt;!-- Has MathJax --&amp;gt;)，一筆資料一列。
-Output請依要求輸出每筆資料的結果。
-Sample In">
+<meta name="description" content="給妳三個數字輸出中間的即可。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="11547 - Automatic Answer">
-<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/p11547/index.html">
+<meta property="og:title" content="11727 - Cost Cutting">
+<meta property="og:url" content="http://pcshic.github.io/uniDog/problem/11727/index.html">
 <meta property="og:site_name" content="uniDog 的 ACM 園地">
-<meta property="og:description" content="本題請你做四則運算，計算某數 n 乘上 567 後除以 9，再加上 7492，再乘上 235，再除以 47，最後減掉 498，請問其值的十位數值是多少？
-Input第一列的整數 t 表示測試資料的組數，每組測試資料有一個整數 n ($-1000\leq{n}\leq{1000}$&amp;lt;!-- Has MathJax --&amp;gt;)，一筆資料一列。
-Output請依要求輸出每筆資料的結果。
-Sample In">
-<meta property="og:updated_time" content="2016-02-11T17:37:49.836Z">
+<meta property="og:description" content="給妳三個數字輸出中間的即可。">
+<meta property="og:updated_time" content="2016-03-01T05:17:48.432Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="11547 - Automatic Answer">
-<meta name="twitter:description" content="本題請你做四則運算，計算某數 n 乘上 567 後除以 9，再加上 7492，再乘上 235，再除以 47，最後減掉 498，請問其值的十位數值是多少？
-Input第一列的整數 t 表示測試資料的組數，每組測試資料有一個整數 n ($-1000\leq{n}\leq{1000}$&amp;lt;!-- Has MathJax --&amp;gt;)，一筆資料一列。
-Output請依要求輸出每筆資料的結果。
-Sample In">
+<meta name="twitter:title" content="11727 - Cost Cutting">
+<meta name="twitter:description" content="給妳三個數字輸出中間的即可。">
 
 
 
@@ -83,7 +74,7 @@ Sample In">
   };
 </script>
 
-  <title> 11547 - Automatic Answer | uniDog 的 ACM 園地 </title>
+  <title> 11727 - Cost Cutting | uniDog 的 ACM 園地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
@@ -213,7 +204,7 @@ Sample In">
             
             
               
-                11547 - Automatic Answer
+                11727 - Cost Cutting
               
             
           </h1>
@@ -221,22 +212,22 @@ Sample In">
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p11547/">
-              <span>Purple People Eater</span>
+            <a href="/uniDog/problem/11727/">
+              <span>許胖</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://rubyacm.blogspot.tw/2011/05/11547-automatic-answer.html" target="_blank">
-              <span>Ruby 兔</span>
+            <a href="/uniDog/problem/11727/" target="_blank">
+              <span>uniDog</span>
             </a>
           </span>
           
           <span class="post-time">
             &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2011-05-28T00:00:00+08:00" content="2011-05-28">
-              2011-05-28
+            <time itemprop="dateCreated" datetime="2009-12-18T16:45:26+08:00" content="2009-12-18">
+              2009-12-18
             </time>
           </span>
 
@@ -245,8 +236,8 @@ Sample In">
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-115/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 115</span>
+                  <a href="/uniDog/categories/Volume-117/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 117</span>
                   </a>
                 </span>
 
@@ -260,7 +251,7 @@ Sample In">
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2542" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2827" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -283,35 +274,46 @@ Sample In">
       
 
       
-        <span itemprop="articleBody"><p>本題請你做四則運算，計算某數 n 乘上 567 後除以 9，再加上 7492，再乘上 235，再除以 47，最後減掉 498，請問其值的十位數值是多少？</p>
-<h2 id="Input">Input</h2><p>第一列的整數 t 表示測試資料的組數，每組測試資料有一個整數 n (<span>$-1000\leq{n}\leq{1000}$</span><!-- Has MathJax -->)，一筆資料一列。</p>
-<h2 id="Output">Output</h2><p>請依要求輸出每筆資料的結果。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
-<span class="number">637</span>
--<span class="number">120</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">1</span>
-<span class="number">3</span>
+        <span itemprop="articleBody"><p>給妳三個數字輸出中間的即可。</p>
+<a id="more"></a>
+<h2 id="Input">Input</h2><p>第一行為接下來測資數 <span>$T$</span><!-- Has MathJax --> (<span>$T &lt; 20$</span><!-- Has MathJax -->)。每組測資有三個正整數，範圍介於 1000 ~ 10000。</p>
+<h2 id="Output">Output</h2><p>每組測資輸出中間的數，格式參考範例輸出。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">3</span>
+<span class="number">1000</span> <span class="number">2000</span> <span class="number">3000</span>
+<span class="number">3000</span> <span class="number">2500</span> <span class="number">1500</span>
+<span class="number">1500</span> <span class="number">1200</span> <span class="number">1800</span>
+</code></pre><h2 id="Output_for_Sample_Input">Output for Sample Input</h2><pre><code>Case <span class="number">1</span>: <span class="number">2000</span>
+Case <span class="number">2</span>: <span class="number">2500</span>
+Case <span class="number">3</span>: <span class="number">1500</span>
 </code></pre></span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/uniDog/tags/直觀解/" rel="tag">#直觀解</a>
+          
+            <a href="/uniDog/tags/簡單題/" rel="tag">#簡單題</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uniDog/problem/164/" rel="next" title="164 - String Computer">
-                <i class="fa fa-chevron-left"></i> 164 - String Computer
+              <a href="/uniDog/problem/p11173/" rel="next" title="11173 - Grey Codes">
+                <i class="fa fa-chevron-left"></i> 11173 - Grey Codes
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uniDog/problem/11942/" rel="prev" title="11942 - Lumberjack Sequencing">
-                11942 - Lumberjack Sequencing <i class="fa fa-chevron-right"></i>
+              <a href="/uniDog/problem/p11597/" rel="prev" title="11597 - Spanning Subtrees">
+                11597 - Spanning Subtrees <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -394,7 +396,7 @@ Sample In">
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">37</span>
+              <span class="site-state-item-count">40</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
@@ -436,7 +438,7 @@ Sample In">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Input"><span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Output"><span class="nav-text">Sample Output</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample_Input"><span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output_for_Sample_Input"><span class="nav-text">Output for Sample Input</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

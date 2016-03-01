@@ -212,8 +212,8 @@
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/10192/" itemprop="url">
-                  10192 - Vacation
+                <a class="post-title-link" href="/uniDog/problem/10405/" itemprop="url">
+                  10405 - Longest Common Subsequence
                 </a>
               
             
@@ -222,14 +222,14 @@
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/10192/">
+            <a href="/uniDog/problem/10405/">
               <span>Luckycat</span>
             </a>
           </span>
           
           <span class="post-translate-url">
             &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10192.htm" target="_blank">
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10405.htm" target="_blank">
               <span>Lucky 貓</span>
             </a>
           </span>
@@ -246,8 +246,8 @@
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-101/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 101</span>
+                  <a href="/uniDog/categories/Volume-104/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 104</span>
                   </a>
                 </span>
 
@@ -261,7 +261,7 @@
           
             <span class="post-original" >
               &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1133" target="_blank">
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1346" target="_blank">
                 <span>UVa</span>
               </a>
             </span>
@@ -287,24 +287,23 @@
         
           <span itemprop="articleBody">
             
-              <p>你正計畫去歐洲旅行，但是你不知道該到哪些城市，所以你就向父母尋求建議。</p>
-<p>你的母親說：「兒子呀！你應該去巴黎、馬德里、里斯本和倫敦，而且要按照這樣的順序去玩。」</p>
-<p>你的父親卻說：「No,No,No, 你應該先去巴黎，然後里斯本，然後倫敦，最後才去馬德里。相信我。」</p>
-<p>現在你陷入一個困境中了，如果你聽從父親的建議，那會傷了母親的心。如果你聽從了母親的建議，那會傷了父親的心。但是如果你不管他們的建議，更可能傷了他們 2 個人的心。</p>
-<p>所以你決定盡可能的聽從他們 2 人的建議。所以你決定了：巴黎，里斯本，倫敦這樣順序的旅程，以滿足你的父母親。雖然這個決定使你只能到巴黎，里斯本，倫敦這 3 個城市去，而無法去馬德里。</p>
-<p>如果你的父親建議：「倫敦–巴黎–里斯本–馬德里」這樣的旅程，那麼你將有 2 組組合：「巴黎–里斯本」及「巴黎–馬德里」來盡可能滿足你的父母。在這個情況下，你就只能去 2 個城市玩了。</p>
-<p>你想要避免將來要面臨這樣的難題，如果他們建議的城市更多的話。所以你想要寫一個程式來幫助你。你將每個城市以一個字元來表示，這些字元包括大小寫英文字母，數字，以及空白字元。因此，你可以到 63 個城市可以去玩。但是請注意：你可能會到一個城市不止一次。</p>
-<p>假如你以 <code>a</code> 代表巴黎，<code>b</code> 代表馬德里，<code>c</code> 代表里斯本，<code>d</code> 代表倫敦，那你母親建議的旅程順序就是：<code>abcd</code>，而你父親建議的則是：<code>acdb</code> (上面的第一個例子)</p>
-<p>程式必須輸入父母所建議的 2 個旅程，然後回答在盡可能滿足你父母的情況下，你最多可以去多少個城市旅行。</p>
-<h2 id="Input">Input</h2><p>輸入含有多組測試資料。每一組測試資料 2 列，分別代表你父母所建議的 2 個旅程 (每列最多 100 個字元)。當遇到一列內容為單一 <code>#</code> 時，代表輸入結束。請參考 Sample Input。</p>
-<h2 id="Output">Output</h2><p>每組測試資料輸出在盡可能滿足你父母的情況下，你最多可以去多少個城市旅行。請參考 Sample Output。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="title">abcd</span>
-acdb
-abcd
-dacb
-<span class="comment">#</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>Case <span class="preprocessor">#<span class="number">1</span>: you can visit at most <span class="number">3</span> cities.</span>
-Case <span class="preprocessor">#<span class="number">2</span>: you can visit at most <span class="number">2</span> cities.</span>
+              <p>給你 2 個字串，請你輸出他們的最長共同子字串 (longest common subsequence) 的長度。例如：給你以下 2 個字串：</p>
+<p>abcdgh<br>aedfhr</p>
+<p>他們的最長共同子字串為 adh，長度為 3。</p>
+<h2 id="Input">Input</h2><p>輸入含有多組測試資料。每一組測試資料 2 列，分別代表這 2 個字串 (最多 1000 個字元)。</p>
+<h2 id="Output">Output</h2><p>每組測試資料輸出他們的最長共同子字串 (longest common subsequence) 的長度。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code>a<span class="number">1b2c3d4</span>e
+zz1yy2xx3ww4vv
+abcdgh
+aedfhr
+abcdefghijklmnopqrstuvwxyz
+a<span class="number">0b0c0d0</span>e<span class="number">0f0g0h0</span>i<span class="number">0j0k0l0</span>m<span class="number">0n0o0p0</span>q<span class="number">0r0s0t0</span>u<span class="number">0v0w0x0</span>y0z0
+abcdefghijklmnzyxwvutsrqpo
+opqrstuvwxyzabcdefghijklmn
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">4</span>
+<span class="number">3</span>
+<span class="number">26</span>
+<span class="number">14</span>
 </code></pre>
             
           </span>
@@ -468,125 +467,6 @@ Case <span class="preprocessor">#<span class="number">2</span>: you can visit at
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p107/" itemprop="url">
-                  107 - The Cat in the Hat
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p107/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q107.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-11-11T00:00:00+08:00" content="2002-11-11">
-              2002-11-11
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 001</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=43" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>一隻神奇聰明貓走進了一間亂七八糟的房間，他不想自己動手收拾，他決定要找幫手來工作。於是他從他的帽子中變出了N隻小貓來幫他（變出來的貓，高度為原來貓的 1/(N+1) ）。這些小貓也有帽子，所以每一隻小貓又從他的帽子中變出N隻小小貓來幫他。如此一直下去，直到這些小小小….貓小到不能再小（高度＝1），他們的帽子無法再變出更小的貓來幫忙，而這些最小的貓只得動手打掃房間。注意：所有貓的高度都是正整數。</p>
-<p>在這個問題中，給你一開始那隻貓的高度，以及最後動手工作的貓的數目（也就是高度為1的貓的數目）。要請你求出有多少隻貓是沒有在工作的，以及所有貓的高度的總和。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/p107/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/uniDog/problem/10131/" itemprop="url">
                   10131 - Is Bigger Smarter ?
                 </a>
@@ -686,6 +566,125 @@ Case <span class="preprocessor">#<span class="number">2</span>: you can visit at
 </code></pre>
             
           </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/p107/" itemprop="url">
+                  107 - The Cat in the Hat
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p107/">
+              <span>Luckycat</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q107.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2002-11-11T00:00:00+08:00" content="2002-11-11">
+              2002-11-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-001/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 001</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=43" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>一隻神奇聰明貓走進了一間亂七八糟的房間，他不想自己動手收拾，他決定要找幫手來工作。於是他從他的帽子中變出了N隻小貓來幫他（變出來的貓，高度為原來貓的 1/(N+1) ）。這些小貓也有帽子，所以每一隻小貓又從他的帽子中變出N隻小小貓來幫他。如此一直下去，直到這些小小小….貓小到不能再小（高度＝1），他們的帽子無法再變出更小的貓來幫忙，而這些最小的貓只得動手打掃房間。注意：所有貓的高度都是正整數。</p>
+<p>在這個問題中，給你一開始那隻貓的高度，以及最後動手工作的貓的數目（也就是高度為1的貓的數目）。要請你求出有多少隻貓是沒有在工作的，以及所有貓的高度的總和。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/p107/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1143,146 +1142,6 @@ ababac
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/10008/" itemprop="url">
-                  10008 - What's Cryptanalysis
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/10008/">
-              <span>Luckycat</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10008.htm" target="_blank">
-              <span>Lucky 貓</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2002-10-04T00:00:00+08:00" content="2002-10-04">
-              2002-10-04
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 100</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=949" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>密碼翻譯 (cryptanalysis) 是指把某個人寫的密文 (cryptographic writing) 加以分解。這個程序通常會對密文訊息做統計分析。你的任務就是寫一個程式來對密文作簡單的分析。</p>
-<h2 id="Input">Input</h2><p>輸入的第 1 列有一個正整數 n，代表以下有多少列需要作分析的密文。</p>
-<p>接下來的 n 列，每列含有 0 或多個字元 (可能包含空白字元)</p>
-<h2 id="Output">Output</h2><p>每列包含一個大寫字元 (<code>A</code> ~ <code>Z</code>) 和一個正整數。這個正整數代表該字元在輸入中出現的次數。輸入中大小寫 (例如：<code>A</code> 及 <code>a</code>) 視為相同的字元。輸出時請按照字元出現的次數由大到小排列，如果有 2 個以上的字元出現次數相同的話，則按照字元的大小 (例如：<code>A</code> 在 <code>H</code> 之前) 由小到大排列。</p>
-<p>請注意：如果某一字元未出現在輸入中，那他也不應出現在輸出中。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">3</span>
-This is a test.
-Count me <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5.</span>
-Wow!!!! Is <span class="keyword">this</span> question easy?
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>S <span class="number">7</span>
-T <span class="number">6</span>
-I <span class="number">5</span>
-E <span class="number">4</span>
-O <span class="number">3</span>
-A <span class="number">2</span>
-H <span class="number">2</span>
-N <span class="number">2</span>
-U <span class="number">2</span>
-W <span class="number">2</span>
-C <span class="number">1</span>
-M <span class="number">1</span>
-Q <span class="number">1</span>
-Y <span class="number">1</span>
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/uniDog/problem/10018/" itemprop="url">
                   10018 - Reverse and Add
                 </a>
@@ -1392,6 +1251,146 @@ Y <span class="number">1</span>
 <span class="number">3</span> <span class="number">6666</span>
 <span class="number">1</span> <span class="number">4</span>
 <span class="number">6</span> <span class="number">79497</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/10008/" itemprop="url">
+                  10008 - What's Cryptanalysis
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/10008/">
+              <span>Luckycat</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://luckycat.kshs.kh.edu.tw/homework/q10008.htm" target="_blank">
+              <span>Lucky 貓</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2002-10-04T00:00:00+08:00" content="2002-10-04">
+              2002-10-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-100/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 100</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=949" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>密碼翻譯 (cryptanalysis) 是指把某個人寫的密文 (cryptographic writing) 加以分解。這個程序通常會對密文訊息做統計分析。你的任務就是寫一個程式來對密文作簡單的分析。</p>
+<h2 id="Input">Input</h2><p>輸入的第 1 列有一個正整數 n，代表以下有多少列需要作分析的密文。</p>
+<p>接下來的 n 列，每列含有 0 或多個字元 (可能包含空白字元)</p>
+<h2 id="Output">Output</h2><p>每列包含一個大寫字元 (<code>A</code> ~ <code>Z</code>) 和一個正整數。這個正整數代表該字元在輸入中出現的次數。輸入中大小寫 (例如：<code>A</code> 及 <code>a</code>) 視為相同的字元。輸出時請按照字元出現的次數由大到小排列，如果有 2 個以上的字元出現次數相同的話，則按照字元的大小 (例如：<code>A</code> 在 <code>H</code> 之前) 由小到大排列。</p>
+<p>請注意：如果某一字元未出現在輸入中，那他也不應出現在輸出中。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">3</span>
+This is a test.
+Count me <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5.</span>
+Wow!!!! Is <span class="keyword">this</span> question easy?
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code>S <span class="number">7</span>
+T <span class="number">6</span>
+I <span class="number">5</span>
+E <span class="number">4</span>
+O <span class="number">3</span>
+A <span class="number">2</span>
+H <span class="number">2</span>
+N <span class="number">2</span>
+U <span class="number">2</span>
+W <span class="number">2</span>
+C <span class="number">1</span>
+M <span class="number">1</span>
+Q <span class="number">1</span>
+Y <span class="number">1</span>
 </code></pre>
             
           </span>
@@ -1619,7 +1618,7 @@ Max hits: <span class="number">2</span>
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">37</span>
+              <span class="site-state-item-count">40</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

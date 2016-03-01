@@ -212,6 +212,159 @@
             
               
                 
+                <a class="post-title-link" href="/uniDog/problem/p10600/" itemprop="url">
+                  10600 - ACM Contest and Blackout
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/p10600/">
+              <span>Purple People Eater</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://rubyacm.blogspot.tw/2011/08/10600-acm-contest-and-blackout.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2011-08-12T00:00:00+08:00" content="2011-08-12">
+              2011-08-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-106/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 106</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1541" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>為了舉辦「國際ACM世界學校競賽」，市長決定為每所學校提供穩定可靠的電力，為了達成這個目標，其中某一所學校的電力系統必須與發電廠直接連接，且部份學校間的電力系統亦需互相連接。</p>
+<p>用來評估一所學校的電力是否穩定的原則為：</p>
+<ol>
+<li>若某學校的電力系統與發電廠直接相連，則該學校的電力是穩定的，</li>
+<li>或某學校與另一所電力穩定的學校直接相連，則該學校的電力也是穩定的。</li>
+</ol>
+<p>給定學校間彼此連線的成本，市長必須決定兩種可能的連線路線使得成本最小。成本 的計算為學校間的連線成本總和。請你幫市長找出兩種最便宜的連線路徑。</p>
+<h2 id="Input">Input</h2><p>輸入的一開始有一個整數 T (<span>$1\leq{T}\leq{15}$</span><!-- Has MathJax -->) 表示測試資料的組數，接下有來 T 組測試資料，每組資料的一開始有兩個以空白字元隔開的整數 N、M，N (<span>$3\leq{N}\leq{100}$</span><!-- Has MathJax -->) 表示學校的總數，M 表示學校間可能的連線數，接下來有 M 組連線，每組有三個整數 <span>$A_i, B_i, C_i$</span><!-- Has MathJax -->，<span>$C_i$</span><!-- Has MathJax --> (<span>$1\leq{C_i}\leq{300}$</span><!-- Has MathJax -->) 表示 <span>$A_i$</span><!-- Has MathJax --> 與 <span>$B_i$</span><!-- Has MathJax --> 兩所學校的連線成本。學校的編號為 1 到 N。</p>
+<h2 id="Output">Output</h2><p>每組測試資料輸出一列，每列有兩個以空白字元隔開的整數 <span>$S_1, S_2$</span><!-- Has MathJax -->，分別表示最低連線成本與次低連線成本，<span>$S_1\leq{S_2}$</span><!-- Has MathJax -->。你可以假設 <span>$S_1, S_2$</span><!-- Has MathJax --> 必存在。</p>
+<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
+<span class="number">5</span> <span class="number">8</span>
+<span class="number">1</span> <span class="number">3</span> <span class="number">75</span>
+<span class="number">3</span> <span class="number">4</span> <span class="number">51</span>
+<span class="number">2</span> <span class="number">4</span> <span class="number">19</span>
+<span class="number">3</span> <span class="number">2</span> <span class="number">95</span>
+<span class="number">2</span> <span class="number">5</span> <span class="number">42</span>
+<span class="number">5</span> <span class="number">4</span> <span class="number">31</span>
+<span class="number">1</span> <span class="number">2</span> <span class="number">9</span>
+<span class="number">3</span> <span class="number">5</span> <span class="number">66</span>
+<span class="number">9</span> <span class="number">14</span>
+<span class="number">1</span> <span class="number">2</span> <span class="number">4</span>
+<span class="number">1</span> <span class="number">8</span> <span class="number">8</span>
+<span class="number">2</span> <span class="number">8</span> <span class="number">11</span>
+<span class="number">3</span> <span class="number">2</span> <span class="number">8</span>
+<span class="number">8</span> <span class="number">9</span> <span class="number">7</span>
+<span class="number">8</span> <span class="number">7</span> <span class="number">1</span>
+<span class="number">7</span> <span class="number">9</span> <span class="number">6</span>
+<span class="number">9</span> <span class="number">3</span> <span class="number">2</span>
+<span class="number">3</span> <span class="number">4</span> <span class="number">7</span>
+<span class="number">3</span> <span class="number">6</span> <span class="number">4</span>
+<span class="number">7</span> <span class="number">6</span> <span class="number">2</span>
+<span class="number">4</span> <span class="number">6</span> <span class="number">14</span>
+<span class="number">4</span> <span class="number">5</span> <span class="number">9</span>
+<span class="number">5</span> <span class="number">6</span> <span class="number">10</span>
+</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">110</span> <span class="number">121</span>
+<span class="number">37</span> <span class="number">37</span>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/uniDog/problem/p362/" itemprop="url">
                   362 - 18,000 Seconds Remaining
                 </a>
@@ -348,159 +501,6 @@ Total <span class="keyword">time</span>: <span class="number">4</span> seconds
    <span class="keyword">Time</span> remaining: <span class="number">0</span> seconds
 Total <span class="keyword">time</span>: <span class="number">20</span> seconds
 　</span>
-</code></pre>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uniDog/problem/p10600/" itemprop="url">
-                  10600 - ACM Contest and Blackout
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/p10600/">
-              <span>Purple People Eater</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://rubyacm.blogspot.tw/2011/08/10600-acm-contest-and-blackout.html" target="_blank">
-              <span>Ruby 兔</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2011-08-12T00:00:00+08:00" content="2011-08-12">
-              2011-08-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-106/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 106</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1541" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>為了舉辦「國際ACM世界學校競賽」，市長決定為每所學校提供穩定可靠的電力，為了達成這個目標，其中某一所學校的電力系統必須與發電廠直接連接，且部份學校間的電力系統亦需互相連接。</p>
-<p>用來評估一所學校的電力是否穩定的原則為：</p>
-<ol>
-<li>若某學校的電力系統與發電廠直接相連，則該學校的電力是穩定的，</li>
-<li>或某學校與另一所電力穩定的學校直接相連，則該學校的電力也是穩定的。</li>
-</ol>
-<p>給定學校間彼此連線的成本，市長必須決定兩種可能的連線路線使得成本最小。成本 的計算為學校間的連線成本總和。請你幫市長找出兩種最便宜的連線路徑。</p>
-<h2 id="Input">Input</h2><p>輸入的一開始有一個整數 T (<span>$1\leq{T}\leq{15}$</span><!-- Has MathJax -->) 表示測試資料的組數，接下有來 T 組測試資料，每組資料的一開始有兩個以空白字元隔開的整數 N、M，N (<span>$3\leq{N}\leq{100}$</span><!-- Has MathJax -->) 表示學校的總數，M 表示學校間可能的連線數，接下來有 M 組連線，每組有三個整數 <span>$A_i, B_i, C_i$</span><!-- Has MathJax -->，<span>$C_i$</span><!-- Has MathJax --> (<span>$1\leq{C_i}\leq{300}$</span><!-- Has MathJax -->) 表示 <span>$A_i$</span><!-- Has MathJax --> 與 <span>$B_i$</span><!-- Has MathJax --> 兩所學校的連線成本。學校的編號為 1 到 N。</p>
-<h2 id="Output">Output</h2><p>每組測試資料輸出一列，每列有兩個以空白字元隔開的整數 <span>$S_1, S_2$</span><!-- Has MathJax -->，分別表示最低連線成本與次低連線成本，<span>$S_1\leq{S_2}$</span><!-- Has MathJax -->。你可以假設 <span>$S_1, S_2$</span><!-- Has MathJax --> 必存在。</p>
-<h2 id="Sample_Input">Sample Input</h2><pre><code><span class="number">2</span>
-<span class="number">5</span> <span class="number">8</span>
-<span class="number">1</span> <span class="number">3</span> <span class="number">75</span>
-<span class="number">3</span> <span class="number">4</span> <span class="number">51</span>
-<span class="number">2</span> <span class="number">4</span> <span class="number">19</span>
-<span class="number">3</span> <span class="number">2</span> <span class="number">95</span>
-<span class="number">2</span> <span class="number">5</span> <span class="number">42</span>
-<span class="number">5</span> <span class="number">4</span> <span class="number">31</span>
-<span class="number">1</span> <span class="number">2</span> <span class="number">9</span>
-<span class="number">3</span> <span class="number">5</span> <span class="number">66</span>
-<span class="number">9</span> <span class="number">14</span>
-<span class="number">1</span> <span class="number">2</span> <span class="number">4</span>
-<span class="number">1</span> <span class="number">8</span> <span class="number">8</span>
-<span class="number">2</span> <span class="number">8</span> <span class="number">11</span>
-<span class="number">3</span> <span class="number">2</span> <span class="number">8</span>
-<span class="number">8</span> <span class="number">9</span> <span class="number">7</span>
-<span class="number">8</span> <span class="number">7</span> <span class="number">1</span>
-<span class="number">7</span> <span class="number">9</span> <span class="number">6</span>
-<span class="number">9</span> <span class="number">3</span> <span class="number">2</span>
-<span class="number">3</span> <span class="number">4</span> <span class="number">7</span>
-<span class="number">3</span> <span class="number">6</span> <span class="number">4</span>
-<span class="number">7</span> <span class="number">6</span> <span class="number">2</span>
-<span class="number">4</span> <span class="number">6</span> <span class="number">14</span>
-<span class="number">4</span> <span class="number">5</span> <span class="number">9</span>
-<span class="number">5</span> <span class="number">6</span> <span class="number">10</span>
-</code></pre><h2 id="Sample_Output">Sample Output</h2><pre><code><span class="number">110</span> <span class="number">121</span>
-<span class="number">37</span> <span class="number">37</span>
 </code></pre>
             
           </span>
@@ -794,132 +794,6 @@ Total <span class="keyword">time</span>: <span class="number">20</span> seconds
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/12002/" itemprop="url">
-                  12002 - Happy Birthday
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-translator">
-            <a href="/uniDog/problem/12002/">
-              <span>Purple People Eater</span>
-            </a>
-          </span>
-          
-          <span class="post-translate-url">
-            &nbsp; | &nbsp; 來自
-            <a href="http://rubyacm.blogspot.tw/2011/07/12002-happy-birthday.html" target="_blank">
-              <span>Ruby 兔</span>
-            </a>
-          </span>
-          
-          <span class="post-time">
-            &nbsp; | &nbsp; 發表於
-            <time itemprop="dateCreated" datetime="2011-07-29T00:00:00+08:00" content="2011-07-29">
-              2011-07-29
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/uniDog/categories/Volume-120/" itemprop="url" rel="index">
-                    <span itemprop="name">Volume - 120</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            <span class="post-original" >
-              &nbsp; | &nbsp;
-              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3153" target="_blank">
-                <span>UVa</span>
-              </a>
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>當生日派對結束之後，大家拍拍屁股走人，留下壽星一個人整理客廰，他開始把客廳桌上的盤子拿到廚房清洗，他雖然很強壯可以一次拿得動所有盤子，但是卻害怕自已笨手笨腳打破盤子，所以希望所收捨的盤子可以穩穩地疊在一起，避免拿到廚房的途中摔破盤子而花上更多時間清理。讓盤子穩穩地疊在一起的方法是下層的盤子必須大於或等於上層盤子的大小。</p>
-<p>一開始他兩手空空站在桌旁的一端，他沿著桌子走到另一端，沿途選擇一些盤子拿在手上，每當他發現一個盤子時，他可以：</p>
-<ul>
-<li>不理它。</li>
-<li>如果他手上沒有盤子，他可以拿起那個盤子。</li>
-<li>如果他手上有一疊盤子，他可以拿起桌上的盤子放到手上的那疊盤子上。</li>
-<li>如果他手上有一疊盤子，他可以把手上的盤子疊在桌上的盤子上，再把整盤拿在手上 (包含最下面的那個)。</li>
-</ul>
-<p>他希望儘可能地拿最多盤子到廚房，請你幫他選擇取盤子的順序。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/uniDog/problem/12002/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/uniDog/problem/11137/" itemprop="url">
                   11137 - Ingenuous Cubrency
                 </a>
@@ -1014,6 +888,132 @@ Total <span class="keyword">time</span>: <span class="number">20</span> seconds
 </code></pre>
             
           </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/uniDog/problem/12002/" itemprop="url">
+                  12002 - Happy Birthday
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-translator">
+            <a href="/uniDog/problem/12002/">
+              <span>Purple People Eater</span>
+            </a>
+          </span>
+          
+          <span class="post-translate-url">
+            &nbsp; | &nbsp; 來自
+            <a href="http://rubyacm.blogspot.tw/2011/07/12002-happy-birthday.html" target="_blank">
+              <span>Ruby 兔</span>
+            </a>
+          </span>
+          
+          <span class="post-time">
+            &nbsp; | &nbsp; 發表於
+            <time itemprop="dateCreated" datetime="2011-07-29T00:00:00+08:00" content="2011-07-29">
+              2011-07-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/uniDog/categories/Volume-120/" itemprop="url" rel="index">
+                    <span itemprop="name">Volume - 120</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            <span class="post-original" >
+              &nbsp; | &nbsp;
+              <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3153" target="_blank">
+                <span>UVa</span>
+              </a>
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>當生日派對結束之後，大家拍拍屁股走人，留下壽星一個人整理客廰，他開始把客廳桌上的盤子拿到廚房清洗，他雖然很強壯可以一次拿得動所有盤子，但是卻害怕自已笨手笨腳打破盤子，所以希望所收捨的盤子可以穩穩地疊在一起，避免拿到廚房的途中摔破盤子而花上更多時間清理。讓盤子穩穩地疊在一起的方法是下層的盤子必須大於或等於上層盤子的大小。</p>
+<p>一開始他兩手空空站在桌旁的一端，他沿著桌子走到另一端，沿途選擇一些盤子拿在手上，每當他發現一個盤子時，他可以：</p>
+<ul>
+<li>不理它。</li>
+<li>如果他手上沒有盤子，他可以拿起那個盤子。</li>
+<li>如果他手上有一疊盤子，他可以拿起桌上的盤子放到手上的那疊盤子上。</li>
+<li>如果他手上有一疊盤子，他可以把手上的盤子疊在桌上的盤子上，再把整盤拿在手上 (包含最下面的那個)。</li>
+</ul>
+<p>他希望儘可能地拿最多盤子到廚房，請你幫他選擇取盤子的順序。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/uniDog/problem/12002/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1452,7 +1452,7 @@ Ordered
             
               
                 
-                <a class="post-title-link" href="/uniDog/problem/p11547/" itemprop="url">
+                <a class="post-title-link" href="/uniDog/problem/11547/" itemprop="url">
                   11547 - Automatic Answer
                 </a>
               
@@ -1462,7 +1462,7 @@ Ordered
 
         <div class="post-meta">
           <span class="post-translator">
-            <a href="/uniDog/problem/p11547/">
+            <a href="/uniDog/problem/11547/">
               <span>Purple People Eater</span>
             </a>
           </span>
@@ -1616,7 +1616,7 @@ Ordered
 
           <div class="site-state-item site-state-tags">
             <a href="/uniDog/tags">
-              <span class="site-state-item-count">37</span>
+              <span class="site-state-item-count">40</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
